@@ -2,6 +2,7 @@
 
 int main() {
     int myNum=15;
-    printf("myNum= %d \n", myNum);
+    char myChar=m;
+    printf("myNum= %d, myChar=%c \n", myNum, myChar);
     return 0;
     }
