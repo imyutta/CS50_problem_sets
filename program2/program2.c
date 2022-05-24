@@ -3,13 +3,13 @@
 int main() {
     int time=20;
     switch (time) {
-        case time>0:
+        case 20:
           printf("positive");
           break;
-        case time<0:
+        case -20:
           printf("negative");
           break;
-        case time==0:
+        case 0:
           printf("=0");
           break;
 
