@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 int main() {
-    int time=20;
-    switch (time) {
-        case 20:
-          printf("positive");
+    int day=4;
+    switch (day) {
+        case 6:
+          printf("Saturday");
+
+        case 6:
+          printf("Sunday");
           break;
-        case -20:
-          printf("negative");
-          break;
-        case 0:
-          printf("=0");
+        default:
+          printf("weekday");
           break;
 
     }
