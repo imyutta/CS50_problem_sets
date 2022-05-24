@@ -1,17 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    int day=4;
-    switch (day) {
-        case 6:
-          printf("Saturday");
+    int i=1;
 
-        case 6:
-          printf("Sunday");
-          break;
-        default:
-          printf("weekday");
-          break;
+    while (i<5) {
+      printf("%d",i);
+      i++;
     }
      return 0;
 }
