@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 int main() {
-    int myNum=15;
-    char myChar='m';
-    printf("myNum= %d, myChar=%c \n", myNum, myChar);
+    int x=15;
+    char y='m';
+    int sum=x+y;
+    printf("%s \n", sum);
     return 0;
     }
