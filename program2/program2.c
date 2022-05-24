@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int x=5;
-    int z=2;
+    float x=5;
+    float z=2;
 
-    printf("%lf\n", x/z);
+    printf("%f\n", x/z);
     return 0;
     }
 
