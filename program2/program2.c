@@ -1,8 +1,19 @@
 #include <stdio.h>
 
 int main() {
-    int x=20;
-    (x>0)? printf (">"):printf("<");
-        return 0;
+    int time=20;
+    switch (time) {
+        case >0:
+          printf("positive");
+          break;
+        case <0:
+          printf("negative");
+          break;
+        case ==0:
+          printf("=0");
+          break;
+
+    }
+     return 0;
 }
 
