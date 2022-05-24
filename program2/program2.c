@@ -12,7 +12,6 @@ int main() {
         default:
           printf("weekday");
           break;
-
     }
      return 0;
 }
