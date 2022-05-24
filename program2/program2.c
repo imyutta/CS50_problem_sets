@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 int main() {
-    int x=15;
-    char y='m';
-    char sum=x+y;
-    printf("%c \n", sum);
+    int x,y,z;
+    x=y=z=5;
+    printf("%d \n", x+y+z);
     return 0;
     }
