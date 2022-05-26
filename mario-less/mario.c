@@ -6,7 +6,7 @@ int main(void)
     int h;
     do
     {
-        i = get_int("Pyramid height: ");
+        h = get_int("Pyramid height: ");
     }
     while (h<1 || h>8);
 
