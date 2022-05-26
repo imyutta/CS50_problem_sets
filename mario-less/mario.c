@@ -16,9 +16,10 @@ int main(void)
 
     for (i=0; i<h; i++)
     {
-    p=h-1;
 
-           for (j=0; j<(p; j++)
+           for (p=1; p<)
+
+           for (j=0; j<(h-p); j++)
            {
                printf(" ");
            }
