@@ -12,18 +12,20 @@ int main(void)
 
 
     int i,j,p;
-    p=h-1;
+
 
     for (i=0; i<h; i++)
     {
-        for (j=0; j<(h-1); j++)
-        {
-            for (p)
-            {
-                printf (" ");
-            }
-        }
-        printf("#");
-        break;
+    p=h-1;
+
+           for (j=0; j<(h-1); j++)
+           {
+               
+
+           }
+
+
+
+
     }
 }
