@@ -3,9 +3,10 @@
 
 int main(void)
 {
+    int i;
     do
     {
-        int i = get_int("Pyramid height");
+        i = get_int("Pyramid height");
     }
     while (i<1 && i>8);
 }
