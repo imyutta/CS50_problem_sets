@@ -1,14 +1,11 @@
+#include <cs50.h>
 #include <stdio.h>
 
-int main() {
-    int i;
+float discount(float price);
 
-    for (i=1; i<=11; i++) {
-      if (i==7){
-        continue;
-      }
-      printf("%d\n",i);
-    }
-     return 0;
+int main(void) {
+   float regular = get_float("Regular Price: ");
+   float sale = regular * .85;
+   printf("Sale Price: %.2f\n", sale);
 }
 
