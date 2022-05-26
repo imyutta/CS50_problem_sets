@@ -3,10 +3,15 @@
 
 int main(void)
 {
-    int i;
+    int h;
     do
     {
         i = get_int("Pyramid height: ");
     }
-    while (i<1 || i>8);
+    while (h<1 || h>8);
+
+    for (i=0; i<h; i++)
+    {
+        printf ("#");
+    }
 }
