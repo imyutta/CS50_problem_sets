@@ -12,6 +12,9 @@ int main(void)
 
     for (i=0; i<h; i++)
     {
-        printf ("#");
+        for (j=0; j<h; j++)
+        {
+            printf ("#");
+        }
     }
 }
