@@ -10,30 +10,30 @@ int main(void)
     {
         h = get_int("Pyramid height: ");
     }
-    while (h<1 || h>8);
+    while (h < 1 || h > 8);
 
 
-    int i,j,p;
+    int i, j, p;
 
 //for each line:
-    for (i=0; i<h; i++)
+    for (i = 0; i < h; i++)
     {
 //the amount of # will be
-     p=i+1;
+        p = i + 1;
 
 //the amount of _ will be:
-        for (j=0; j<(h-p); j++)
+        for (j = 0; j < (h - p); j++)
         {
-           printf(" ");
+            printf(" ");
         }
 
 //printing "#"s at the end of the line
-        while (p>0)
+        while (p > 0)
         {
-        printf("#");
+            printf("#");
             p--;
         }
 //new line
-    printf("\n");
+        printf("\n");
     }
 }
