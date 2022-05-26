@@ -16,5 +16,7 @@ int main(void)
         {
             printf (" ");
         }
+        printf("#");
+        break;
     }
 }
