@@ -18,11 +18,11 @@ int main(void)
     {
     p=h-1;
 
-           for (j=0; j<(h-1); j++)
+           for (j=0; j<p; j++)
            {
-               
-
+               printf(" ");
            }
+           printf("#");
 
 
 
