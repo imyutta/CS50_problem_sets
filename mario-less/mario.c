@@ -11,7 +11,7 @@ int main(void)
     while (h<1 || h>8);
 
 
-    int i,j,p;
+    int i,j,p,b;
 
 
     for (i=0; i<h; i++)
@@ -25,12 +25,13 @@ int main(void)
                {
                    printf(" ");
                }
-               printf ("#");
-           }
 
-           for (p=)
-           printf("#\n");
-    p--;
+               for (b=0; b<p; b++)
+               {
+                   printf ("#");
+               }
+            printf ("\n");
+           }
 
     }
 }
