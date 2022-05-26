@@ -18,17 +18,17 @@ int main(void)
     {
      p=i+1;
 
-               for (j=0; j<(h-p); j++)
-               {
-                   printf(" ");
-               }
+        for (j=0; j<(h-p); j++)
+        {
+           printf(" ");
+        }
 
-               while (p>0)
-               {
-                   printf ("#");
-                   p--;
-               }
-            printf ("\n");
+        while (p>0)
+        {
+        printf("#");
+            p--;
+        }
+        printf("\n");
 
 
     }
