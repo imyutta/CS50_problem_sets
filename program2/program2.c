@@ -11,5 +11,6 @@ int main(void) {
 
 float discount(float price)
 {
-  float sale = regular
+  float sale = price*.85;
+  return sale;
 }
