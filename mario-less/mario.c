@@ -11,27 +11,25 @@ int main(void)
     while (h<1 || h>8);
 
 
-    int i,j,p,b;
+    int i,j,p;
 
 
     for (i=0; i<h; i++)
     {
-
-           for (p=1; p<h; p++)
-           {
-
+     p=i+1;
 
                for (j=0; j<(h-p); j++)
                {
                    printf(" ");
                }
 
-               for (b=0; b<p; b++)
+               while (p>0)
                {
                    printf ("#");
+                   p--;
                }
             printf ("\n");
-           }
+
 
     }
 }
