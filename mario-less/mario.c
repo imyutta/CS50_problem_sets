@@ -4,6 +4,8 @@
 int main(void)
 {
     int h;
+
+    //Ask user what is the pyramid height?
     do
     {
         h = get_int("Pyramid height: ");
@@ -13,23 +15,25 @@ int main(void)
 
     int i,j,p;
 
-
+//for each line:
     for (i=0; i<h; i++)
     {
+//the amount of # will be
      p=i+1;
 
+//the amount of _ will be:
         for (j=0; j<(h-p); j++)
         {
            printf(" ");
         }
 
+//printing "#"s at the end of the line
         while (p>0)
         {
         printf("#");
             p--;
         }
-        printf("\n");
-
-
+//new line
+    printf("\n");
     }
 }
