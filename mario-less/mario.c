@@ -12,7 +12,7 @@ int main(void)
 
     for (i=0; i<h; i++)
     {
-        for (j=0; j<h; j++)
+        for (j=0; j<(h-1); j++)
         {
             printf (" ");
         }
