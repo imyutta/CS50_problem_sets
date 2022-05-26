@@ -23,9 +23,7 @@ int main(void)
                printf(" ");
            }
            printf("#");
-
-
-
+    p--;
 
     }
 }
