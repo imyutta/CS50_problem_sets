@@ -18,11 +18,13 @@ int main(void)
     {
     p=h-1;
 
-           for (j=0; j<p; j++)
+           for (j=0; j<(p; j++)
            {
                printf(" ");
            }
-           printf("#");
+
+           for (p=)
+           printf("#\n");
     p--;
 
     }
