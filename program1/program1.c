@@ -5,11 +5,8 @@ int main(void)
 {
 
     int n;
-    do
-    {
-        n=get_int("Size: ");
-    }
-    while (n<1);
+    while (true)
+    
 
     for (int i=0; i<n; i++)
     {
