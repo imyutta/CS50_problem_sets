@@ -10,11 +10,15 @@ int main(void)
     }
     while (h<1 || h>8);
 
+
+    int i,j,p;
+    p=h-1;
+
     for (i=0; i<h; i++)
     {
         for (j=0; j<(h-1); j++)
         {
-            for ()
+            for (p)
             {
                 printf (" ");
             }
