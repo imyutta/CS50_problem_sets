@@ -9,3 +9,7 @@ int main(void) {
    printf("Sale Price: %.2f\n", sale);
 }
 
+float discount(float price)
+{
+  float sale = regular
+}
