@@ -51,6 +51,7 @@ int get_cents()
 int calculate_quarters(int cents)
 {
     // Calculate quarters
+    if (cents / 25 >= 1)
     return 0;
 }
 
