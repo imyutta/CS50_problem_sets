@@ -9,6 +9,9 @@ int main(void)
 
 // sum2 where sum1 plus the sum of digits thah weren't multiplied by 2
 
-// sum2% = 0?
+// If sum2% = 0 check this
+
+
+// If sum2% !=0 print INVALID
 
 }
