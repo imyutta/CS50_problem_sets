@@ -15,8 +15,8 @@ int main(void)
 //the amount of lines will be
     for (i = 0; i < h; i++)
     {
-//the amount of #'s will be
-       p = p +
+//the amount of #'s in the current line will be
+       p = p + 1;
 
     }
 }
