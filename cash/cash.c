@@ -35,7 +35,7 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(void)
+int get_cents(centsf)
 {
     // Ask how many cents are owed?
     do
