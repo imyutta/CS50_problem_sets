@@ -36,6 +36,7 @@ int main(void)
        while (z > 0)
        {
          printf("#");
+         z--;
        }
        printf("\n");
     }
