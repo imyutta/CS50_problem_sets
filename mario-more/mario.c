@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int h,i;
+    int h,i,p;
 
 // Ask user for a positive number from 1 to 8
     do
