@@ -17,7 +17,7 @@ int main(void)
     {
 
 //printing first dots "     "
-        for (spaces = 0; spaces < (h - p); spaces++)
+        for (spaces = 0; spaces < (h - line - 1); spaces++)
         {
             printf(" ");
         }
