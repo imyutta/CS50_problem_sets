@@ -40,6 +40,7 @@ int get_cents(void)
     // Ask how many cents are owed?
     do
     {
+        printf();
         coins = get_int
 
     }
