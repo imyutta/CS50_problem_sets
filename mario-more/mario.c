@@ -3,21 +3,21 @@
 
 int main(void)
 {
-    int h, line, p, spaces;
+    int height, line, p, space;
 
 // Ask user for a positive number from 1 to 8
     do
     {
-        h = get_int("Height: \n");
+        height = get_int("Height: \n");
     }
-    while (h < 1 || h > 8);
+    while (height < 1 || height > 8);
 
 //the amount of lines will be
-    for (line = 0; line < h; line++)
+    for (line = 0; line < height; line++)
     {
 
 //printing first dots "     "
-        for (spaces = 0; spaces < (h - line - 1); spaces++)
+        for (space = 0; space < (height - line - 1); space++)
         {
             printf(" ");
         }
