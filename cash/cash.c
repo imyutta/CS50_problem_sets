@@ -43,7 +43,7 @@ int get_cents(centsf)
         int centsf = get_int("How many cents are owed? ")
 
     }
-    while (cents < 0);
+    while (centsf < 0);
 }
 
 int calculate_quarters(int cents)
