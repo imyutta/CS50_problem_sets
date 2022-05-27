@@ -7,6 +7,7 @@ int main(void)
 
 // underline every other digit, starting with the number's second-to-last digit
 
+
 // multiply each of the underlined digits by 2
 
 // sum1: add those products' digits together
