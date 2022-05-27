@@ -41,7 +41,7 @@ int get_cents(void)
     do
     {
         printf();
-        cents = get_int("%s")
+        centsf = get_int("%s")
 
     }
     while (cents < 0);
