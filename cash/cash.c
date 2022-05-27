@@ -40,7 +40,8 @@ int get_cents()
     // Ask how many cents are owed?
     do
     {
-        return = get_int("How many cents are owed? ")
+        return = get_int("How many cents are owed? ");
+        return 
 
     }
     while (centsf < 0);
