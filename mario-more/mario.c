@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int h,i,p,j;
+    int h,i,p,j,z;
 
 // Ask user for a positive number from 1 to 8
     do
@@ -16,7 +16,7 @@ int main(void)
     for (i = 0; i < h; i++)
     {
 //the amount of #'s (line i, first mount) will be
-       p,z = i + 1;
+       p = z = i + 1;
 
 //printing first dots "     "
        for (j = 0; j < (h-p); j++)
@@ -37,5 +37,6 @@ int main(void)
        {
          printf("#");
        }
+       printf("\n");
     }
 }
