@@ -40,12 +40,12 @@ int get_cents()
     // Ask how many cents are owed?
     do
     {
-        return = get_int("How many cents are owed? ");
-        return 
-
+        int number_of_cents = get_int("How many cents are owed? ");
     }
     while (centsf < 0);
+    return number_of_cents;
 }
+
 
 int calculate_quarters(int cents)
 {
