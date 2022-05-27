@@ -3,7 +3,7 @@
 
 int main(void)
 {
-    int h, i, p, j;
+    int h, line, p, spaces;
 
 // Ask user for a positive number from 1 to 8
     do
@@ -13,12 +13,11 @@ int main(void)
     while (h < 1 || h > 8);
 
 //the amount of lines will be
-    for (i = 0; i < h; i++)
+    for (line = 0; line < h; line++)
     {
-//the amount of #'s (line i, first mount) will be
 
 //printing first dots "     "
-        for (j = 0; j < (h - p); j++)
+        for (spaces = 0; spaces < (h - p); spaces++)
         {
             printf(" ");
         }
@@ -28,7 +27,7 @@ int main(void)
         //     printf("#");
         //     p--;
         // }
-        for (p = i + 1; p > 0; p--)
+        for (p = line + 1; p > 0; p--)
         {
             printf("#");
         }
@@ -41,7 +40,7 @@ int main(void)
         //     printf("#");
         //     z--;
         // }
-        for (p = i + 1; p > 0; p--)
+        for (p = line + 1; p > 0; p--)
         {
             printf("#");
         }
