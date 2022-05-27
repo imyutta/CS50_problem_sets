@@ -20,11 +20,13 @@ int main(void)
     //the first digit=34 or 37?
     // print American express
 
-    // the first numbers are 51,52,53,54 or 55?
     //the amount of numbers = 16?
+    // the first numbers are 51,52,53,54 or 55?
     // print mastercard
 
-    
+    // the amount of numbers is 13?
+    // the first is 4?
+    // print visa
 
 // If sum2% !=0 print INVALID
 
