@@ -16,7 +16,8 @@ int main(void)
 // sum3 = sum1+sum2
 
 // If sum2% = 0 check this
-
+    // the amount of digits=15?
+    //
 
 // If sum2% !=0 print INVALID
 
