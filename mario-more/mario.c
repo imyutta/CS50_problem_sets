@@ -16,7 +16,7 @@ int main(void)
     for (i = 0; i < h; i++)
     {
 //the amount of #'s (line i, first mount) will be
-       p = i + 1;
+       p,z = i + 1;
 
 //printing first dots "     "
        for (j = 0; j < (h-p); j++)
@@ -32,7 +32,10 @@ int main(void)
 //printing second dots ".."
        printf("  ");
 
-       while ((i + 1) > 0)
-       printf("#");
+//printing second #'s
+       while (z > 0)
+       {
+         printf("#");
+       }
     }
 }
