@@ -29,7 +29,7 @@ int main(void)
          printf("#");
          p--;
        }
-//printing second dots".."
+//printing second dots ".."
        printf("  ");
 
        while ((i + 1) > 0)
