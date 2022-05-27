@@ -4,10 +4,16 @@
 int main(void)
 {
     long int card_number = get_long(What is your card number? );
-// sum1 of every other digit, starting with the second-ti-last digit, miltiplied by 2
 
+// underline every other digit, starting with the number's second-to-last digit
 
-// sum2 where sum1 plus the sum of digits thah weren't multiplied by 2
+// multiply each of the underlined digits by 2
+
+// sum1: add those products' digits together
+
+// sum2: sum of digits thah weren't multiplied by 2
+
+// sum3 = sum1+sum2
 
 // If sum2% = 0 check this
 
