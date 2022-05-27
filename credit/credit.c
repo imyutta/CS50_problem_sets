@@ -3,5 +3,9 @@
 
 int main(void)
 {
-    int
+    do
+    {
+       long int card_number = get_long(What is your card number? );
+    }
+    while (card_number );
 }
