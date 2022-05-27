@@ -58,7 +58,7 @@ int calculate_nickels(int cents)
     // TODO
     return 0;
 }
-
+ 
 int calculate_pennies(int cents)
 {
     // TODO
