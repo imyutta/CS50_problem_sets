@@ -50,7 +50,7 @@ int get_cents()
 
 int calculate_quarters(int cents)
 {
-    // TODO
+    // Calculate quarters
     return 0;
 }
 
