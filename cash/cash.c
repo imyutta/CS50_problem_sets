@@ -42,7 +42,7 @@ int get_cents()
     {
         int number_of_cents = get_int("How many cents are owed? ");
     }
-    while (centsf < 0);
+    while (number_of_cents < 0);
     return number_of_cents;
 }
 
