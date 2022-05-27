@@ -40,8 +40,7 @@ int get_cents(centsf)
     // Ask how many cents are owed?
     do
     {
-        printf();
-        centsf = get_int("%s")
+        int centsf = get_int("How many cents are owed? ")
 
     }
     while (cents < 0);
