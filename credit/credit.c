@@ -17,7 +17,14 @@ int main(void)
 
 // If sum2% = 0 check this
     // the amount of digits=15?
-    //
+    //the first digit=34 or 37?
+    // print American express
+
+    // the first numbers are 51,52,53,54 or 55?
+    //the amount of numbers = 16?
+    // print mastercard
+
+    
 
 // If sum2% !=0 print INVALID
 
