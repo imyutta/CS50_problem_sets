@@ -38,9 +38,10 @@ int main(void)
 int get_cents()
 {
     // Ask how many cents are owed?
+    int number_of_cents;
     do
     {
-        int number_of_cents = get_int("How many cents are owed? ");
+        number_of_cents = get_int("How many cents are owed? ");
     }
     while (number_of_cents < 0);
     return number_of_cents;
