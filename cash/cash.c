@@ -35,12 +35,12 @@ int main(void)
     printf("%i\n", coins);
 }
 
-int get_cents(centsf)
+int get_cents()
 {
     // Ask how many cents are owed?
     do
     {
-        int centsf = get_int("How many cents are owed? ")
+        return = get_int("How many cents are owed? ")
 
     }
     while (centsf < 0);
