@@ -32,7 +32,7 @@ int main(void)
 //printing second dots".."
        printf("  ");
 
-       while (p > 0)
+       while ((i + 1) > 0)
        printf("#");
     }
 }
