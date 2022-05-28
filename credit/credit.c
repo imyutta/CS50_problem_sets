@@ -14,9 +14,15 @@ int main(void)
     printf("%i\n", a1);
     int a3 = (floor((card_number % 1000) / 100)) * 2;
     printf("%i\n", a3);
-    int a5 = (floor((card_number % 100000) / 10000)) *2;
+    int a5 = (floor((card_number % 100000) / 10000)) * 2;
 
-    int a7 = (floor((card_number % 10000000) / 1000000)) *2;
+    int a7 = (floor((card_number % 10000000) / 1000000)) * 2;
+
+    int a9 = (floor((card_number % 1000000000) / 100000000)) * 2;
+
+    int a11 = (floor((card_number % 100000000000) / 10000000000)) * 2;
+
+    int a11 = (floor((card_number % 10000000000000) / 1000000000000)) * 2;
 
 
 
