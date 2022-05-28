@@ -76,10 +76,10 @@ int main(void)
 int int_length(card_number)
 {
   int length;
-  for (length = 0; card_number>0; length++)
+  for (length = 0; card_number > 0; length++)
   {
     card_number /= 10;
 
   }
-  while (card_number/10 <= 0);
+  return length;
 }
