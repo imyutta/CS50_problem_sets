@@ -3,7 +3,7 @@
 #include <math.h>
 #include <string.h>
 
-int number_length(card_number);
+
 
 int main(void)
 {
@@ -35,7 +35,7 @@ int main(void)
      }
 
      //checking
-     if ((sum_mult_digit2 + sum_digit1)=0 && .. && ..)
+     if ((sum_mult_digit2 + sum_digit1)== 0 && strlen(card_number)==15)
      {
        printf("AMEX\n");
     // the amount of digits=15?
@@ -43,7 +43,7 @@ int main(void)
 
 
      }
-     else if ((sum_mult_digit2 + sum_digit1)=0 && .. && ..)
+     else if ((sum_mult_digit2 + sum_digit1)=0 && strlen(card_number)==16)
      {
        printf("MASTERCARD\n");
      }
@@ -51,9 +51,9 @@ int main(void)
     // the first numbers are 51,52,53,54 or 55?
     // print mastercard
 
-     else if ((sum_mult_digit2 + sum_digit1)=0 && .. && ..)
+     else if ((sum_mult_digit2 + sum_digit1)=0 && strlen(card_number)==13)
      {
-     // the amount of numbers is 13?
+     // the amount of numbers is 13 ..16?
     // the first is 4?
        printf("MASTERCARD\n");
      }
@@ -72,8 +72,3 @@ int main(void)
 
 }
 
-int number_length(card_number)
-{
-  if (card_number >= 10^15 && card_number < 10^16 ) return 15;
-  if (card_number >= 10^15 && card_number < 10^16 ) return 15;
-}
