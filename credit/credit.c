@@ -31,10 +31,10 @@ int main(void)
      for (n=1; n<= 100000000000000; n *= 100)
      {
         sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);
-        printf("%i, sum_digit1\n", sum_digit1);
+      // if you need to check: printf("%i, sum_digit1\n", sum_digit1);
      }
 
-     //checking
+     //checking whether it is AMEX or MASTERCARD or VISA
 
      if ((sum_mult_digit2 + sum_digit1)== 0 && int_length(card_number)==15)
      {
