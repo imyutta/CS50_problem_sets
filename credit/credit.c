@@ -35,7 +35,8 @@ int main(void)
      }
 
      //checking
-     if ((sum_mult_digit2 + sum_digit1)== 0 && strlen(string card_number)==15)
+     string card_number_string=card_number;
+     if ((sum_mult_digit2 + sum_digit1)== 0 && strlen(card_number_string)==15)
      {
        printf("AMEX\n");
     // the amount of digits=15?
