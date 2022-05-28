@@ -29,7 +29,7 @@ int main(void)
   }
 
 
-  switch
+  
 
   //checking whether it is AMEX or MASTERCARD or VISA
   if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15 && (floor (card_number / 10000000000000) == 34 || floor (card_number / 10000000000000) == 37))
