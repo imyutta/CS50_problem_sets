@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
+#include <string.h>
 
 int number_length(card_number);
 
