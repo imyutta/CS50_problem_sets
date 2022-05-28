@@ -8,7 +8,7 @@ int main(void)
 
 // underline every other digit, starting with the number's second-to-last digit
 // multiply each of the underlined digits by 2
-    long int n = 1;
+    long int n = 10;
     int digit2, sum1;
 
     do
