@@ -12,19 +12,19 @@ int main(void)
     //for
     int a1 = ((card_number % N) * 2);
     printf("%i\n", a1);
-    int a3 = (floor((card_number % ) pow(N, 3)/ pow(N, 2))) * 2;
-    printf("%i\n", a3);
+    int a3 = (floor((card_number % pow(N, 3))/ pow(N, 2))) * 2;
+
     int a5 = (floor((card_number % pow(N, 5)) / pow(N, 4))) * 2;
 
     int a7 = (floor((card_number % pow(N, 7)) / pow(N, 6))) * 2;
 
-    int a9 = (floor((card_number % 1000000000) / 100000000)) * 2;
+    int a9 = (floor((card_number % pow(N, 9)) / pow(N, 8))) * 2;
 
-    int a11 = (floor((card_number % 100000000000) / 10000000000)) * 2;
+    int a11 = (floor((card_number % pow(N, 11)) / pow(N, 10))) * 2;
 
-    int a13 = (floor((card_number % 10000000000000) / 1000000000000)) * 2;
+    int a13 = (floor((card_number % pow(N, 13)) / pow(N, 12))) * 2;
 
-    int a15 = (floor((card_number % 1000000000000000) / 100000000000000)) * 2;
+    int a15 = (floor((card_number % pow(N, 15)) / pow(N, 14))) * 2;
     printf("%i\n", a15);
 
 
