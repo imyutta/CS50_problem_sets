@@ -78,7 +78,7 @@ int int_length(card_number)
   int length = 0;
   do
   {
-    
+    card_number /= 10;
 
   }
   while (card_number/10 <= 0);
