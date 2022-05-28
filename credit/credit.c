@@ -16,22 +16,12 @@ int main(void)
     n *= 10;
     printf("%i\n", a1);
     }
-    while (n <= (float pow(n,14)));
+    while (n <= 100000000000000);
 
-    // int a3 = (floor((card_number % (n * 10)) / n)) * 2;
 
-    // int a5 = (floor((card_number % pow(N, 5)) / pow(N, 4))) * 2;
 
-    // int a7 = (floor((card_number % pow(N, 7)) / pow(N, 6))) * 2;
-
-    // int a9 = (floor((card_number % pow(N, 9)) / pow(N, 8))) * 2;
-
-    // int a11 = (floor((card_number % pow(N, 11)) / pow(N, 10))) * 2;
-
-    // // ne rabotaet int a13 = (floor((card_number % pow(N, 13)) / pow(N, 12))) * 2;
-    // int a13 = (floor((card_number % pow(N, 13)) / pow(N, 12))) * 2;
-
-    // int a15 = (floor((card_number % pow(N, 15)) / pow(N, 14))) * 2;
+    // ne rabotaet int a15 = (floor((card_number % pow(N, 15)) / pow(N, 14))) * 2;
+    // ne rabotaet while (n <= pow(n,14));
     // printf("%i\n", a15);
 
 
