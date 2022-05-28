@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int int_length(card_number);
+int int_length(int card_number);
 
 
 int main(void)
@@ -73,7 +73,7 @@ int main(void)
 
 }
 
-int int_length(card_number)
+int int_length(int card_number)
 {
   int length;
   for (length = 0; card_number > 0; length++)
