@@ -8,14 +8,13 @@ int main(void)
 
 // underline every other digit, starting with the number's second-to-last digit
 // multiply each of the underlined digits by 2
-    const int N = 10;
-
-    int a1 = ((card_number % N) * 2);
+    int n = 10;
+    int a1 = ((card_number % n) * 2);
 
     while...
-    n
+    n*=10
 
-    int a3 = (floor((card_number % 1000)/ 100)) * 2;
+    int a3 = (floor((card_number % (n * 10)) / n)) * 2;
 
     int a5 = (floor((card_number % pow(N, 5)) / pow(N, 4))) * 2;
 
