@@ -22,7 +22,7 @@ int main(void)
       // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
       sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
 
-      printf("%i, %i\n", mult_digit2, sum_mult_digit2);
+      // if you need to check: printf("%i, %i\n", mult_digit2, sum_mult_digit2);
     }
 
 
