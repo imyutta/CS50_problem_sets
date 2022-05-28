@@ -6,11 +6,12 @@ int main(void)
     long int card_number = get_long(What is your card number? );
 
 // underline every other digit, starting with the number's second-to-last digit
-    int sum1 =
-    a1 = ((card_number % 10) * 2);
-    a2 = card_number - (card_number % 100) -
-
 // multiply each of the underlined digits by 2
+
+    int a1 = ((card_number % 10) * 2);
+    int a2 = (card_number % 1000) - (card_number % 100) -
+
+
 
 // sum1: add those products' digits together
 
