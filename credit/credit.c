@@ -58,7 +58,7 @@ int main(void)
      {
      // the amount of numbers is 13 ..16?
     // the first is 4?
-       printf("MASTERCARD\n");
+       printf("VISA\n");
      }
 
      else
@@ -82,7 +82,7 @@ int int_length(int card_number)
   {
     card_number /= 10;
   }
-  
+
   printf(" %i ", length);
   return length;
 }
