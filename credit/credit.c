@@ -6,21 +6,19 @@ int main(void)
 {
     long int card_number = get_long("What is your card number? ");
 
-// underline every other digit, starting with the number's second-to-last digit
-// multiply each of the underlined digits by 2
     long int n;
     int mult_digit2;
     int sum1 = 0;
 
-
     for (n=10; n <= 1000000000000000; n*=100)
     {
-    mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;
-    n *= 100;
-    printf("%i\n", mult_digit2);
+      // multiply every other second-to-last digit by 2
+      mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;
 
-    sum1 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
-    printf("%i, %i", mult_digit2, sum1);
+      // sum1: add those mult_digits2 together (not the numbers, but their digits)
+      sum1 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
+
+      printf("%i, %i\n", mult_digit2, sum1);
     }
 
 
@@ -30,11 +28,7 @@ int main(void)
     // printf("%i\n", a15);
 
 
-
-
-// sum1: add those products' digits together
-
-// sum2: sum of digits thah weren't multiplied by 2
+// sum2: sum of digits that weren't multiplied by 2
 
 // sum3 = sum1+sum2
 
