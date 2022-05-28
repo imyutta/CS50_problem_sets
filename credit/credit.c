@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int int_length(int card_number);
+int int_length(int);
 
 
 int main(void)
