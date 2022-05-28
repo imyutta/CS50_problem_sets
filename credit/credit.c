@@ -10,7 +10,7 @@ int main(void)
 // multiply each of the underlined digits by 2
     long int n = 1;
 
-    while n< 100 0000 0000 0001
+
 
     int a1 = (floor((card_number % (n * 10)) / n)) * 2;
     n *= 10;
