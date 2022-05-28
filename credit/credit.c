@@ -14,10 +14,10 @@ int main(void)
     do
     {
     digit2 = (floor((card_number % (n * 10)) / n)) * 2;
-    n *= 10;
+    n *= 100;
     printf("%i\n", digit2);
 
-    sum1 = digit2
+    //sum1 = digit2
     }
     while (n <= 100000000000000);
 
