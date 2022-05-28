@@ -16,7 +16,7 @@ int main(void)
     n *= 10;
     printf("%i\n", a1);
     }
-    while (n<= pow(n, 14));
+    while (n <= 100000000000000);
 
     // int a3 = (floor((card_number % (n * 10)) / n)) * 2;
 
