@@ -10,7 +10,7 @@ int main(void)
 // multiply each of the underlined digits by 2
     int n = 1;
 
-    while...
+    while card_number
 
     int a1 = (floor((card_number % (n * 10)) / n)) * 2;
     n *= 10;
@@ -25,6 +25,7 @@ int main(void)
 
     int a11 = (floor((card_number % pow(N, 11)) / pow(N, 10))) * 2;
 
+    // ne rabotaet int a13 = (floor((card_number % pow(N, 13)) / pow(N, 12))) * 2;
     int a13 = (floor((card_number % pow(N, 13)) / pow(N, 12))) * 2;
 
     int a15 = (floor((card_number % pow(N, 15)) / pow(N, 14))) * 2;
