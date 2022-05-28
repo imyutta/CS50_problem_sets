@@ -75,5 +75,5 @@ int main(void)
 
 int int_length(card_number)
 {
-  card_number
+  card_number/10 > 0?
 }
