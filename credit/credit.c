@@ -19,11 +19,11 @@ int main(void)
       // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
       sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
 
-      printf("%i, %i\n", mult_digit2, sum1);
+      printf("%i, %i\n", mult_digit2, sum_mult_digit2);
     }
       // sum_digit1: sum of every second digit (counting from the 1st!!! from the end)
 
-     for (n=1; n<=....; n *= 100)
+     for (n=1; n<= 100000000000000; n *= 100)
      {
         sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);
         printf("%i, sum_digit1\n", sum_digit1);
