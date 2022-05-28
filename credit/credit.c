@@ -9,12 +9,15 @@ int main(void)
 // underline every other digit, starting with the number's second-to-last digit
 // multiply each of the underlined digits by 2
     long int n = 1;
+    int second_digit, sum1;
 
     do
     {
-    int a2 = (floor((card_number % (n * 10)) / n)) * 2;
+    second_digit = (floor((card_number % (n * 10)) / n)) * 2;
     n *= 10;
-    printf("%i\n", a2);
+    printf("%i\n", second_digit);
+
+    sum1 = second_digit
     }
     while (n <= 100000000000000);
 
@@ -22,9 +25,6 @@ int main(void)
     // ne rabotaet int a15 = (floor((card_number % pow(N, 15)) / pow(N, 14))) * 2;
     // ne rabotaet while (n <= pow(n,14));
     // printf("%i\n", a15);
-
-
-
 
 
 
