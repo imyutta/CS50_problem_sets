@@ -8,19 +8,19 @@ int main(void)
 
     long int n;
     int mult_digit2;
-    int sum1 = 0;
+    int sum_mult_digit2 = 0;
 
     for (n=10; n <= 1000000000000000; n*=100)
     {
       // multiply every other second-to-last digit by 2
       mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;
 
-      // sum1: add those mult_digits2 together (not the numbers, but their digits)
-      sum1 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
+      // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
+      sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
 
       printf("%i, %i\n", mult_digit2, sum1);
     }
-
+      // sum_digit1: sum2 of digits that weren't multiplied by 2
 
 
     // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
@@ -28,7 +28,7 @@ int main(void)
     // printf("%i\n", a15);
 
 
-// sum2: sum of digits that weren't multiplied by 2
+
 
 // sum3 = sum1+sum2
 
