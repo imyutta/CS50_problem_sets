@@ -9,12 +9,14 @@ int main(void)
 // underline every other digit, starting with the number's second-to-last digit
 // multiply each of the underlined digits by 2
     const int N = 10;
-    //for
+
     int a1 = ((card_number % N) * 2);
-    printf("%i\n", a1);
+
+    while...
+
     int a3 = (floor((card_number % 1000)/ 100)) * 2;
 
-    float a5 = (floor((card_number % pow(N, 5)) / pow(N, 4))) * 2;
+    int a5 = (floor((card_number % pow(N, 5)) / pow(N, 4))) * 2;
 
     int a7 = (floor((card_number % pow(N, 7)) / pow(N, 6))) * 2;
 
