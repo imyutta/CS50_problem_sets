@@ -28,7 +28,19 @@ int main(void)
         sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);
         printf("%i, sum_digit1\n", sum_digit1);
      }
+
+     //
      if ((sum_mult_digit2 + sum_digit1)>0)
+     {
+
+
+     }
+
+
+     else
+     {
+         printf("the number is not valid\n");
+     }
 
     // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
     // ne rabotaet while (n <= pow(n,15));
