@@ -35,7 +35,7 @@ int main(void)
      }
 
      //checking whether it is AMEX or MASTERCARD or VISA
-     printf("%i, %i\n", sum_mult_digit2 + sum_digit1, length);
+     printf("%i ", sum_mult_digit2 + sum_digit1);
 
      if ((sum_mult_digit2 + sum_digit1)== 0 && int_length(card_number)==15)
      {
@@ -81,5 +81,6 @@ int int_length(int card_number)
     card_number /= 10;
 
   }
+  printf(" %i ", length);
   return length;
 }
