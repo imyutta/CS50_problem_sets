@@ -37,7 +37,7 @@ int main(void)
 
 
      //checking whether it is AMEX or MASTERCARD or VISA
-     printf("last digit: %i. ", (sum_mult_digit2 + sum_digit1) % 10);
+     printf("last digit: %i. Card number: %li", (sum_mult_digit2 + sum_digit1) % 10, card_number);
 
      if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15)
      {
