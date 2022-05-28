@@ -29,36 +29,32 @@ int main(void)
         printf("%i, sum_digit1\n", sum_digit1);
      }
 
-     //
-     if ((sum_mult_digit2 + sum_digit1)>0)
+     //check if the last digit of two sums = 0
+     if ((sum_mult_digit2 + sum_digit1)=0)
      {
+    // the amount of digits=15?
+    //the first digit=34 or 37?
+    // print American express
 
 
      }
-
+     else if
+   //the amount of numbers = 16?
+    // the first numbers are 51,52,53,54 or 55?
+    // print mastercard
 
      else
      {
          printf("the number is not valid\n");
      }
 
-    // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
-    // ne rabotaet while (n <= pow(n,15));
-    // printf("%i\n", a15);
 
 
 
 
-// sum3 = sum1+sum2
 
-// If sum2% = 0 check this
-    // the amount of digits=15?
-    //the first digit=34 or 37?
-    // print American express
 
-    //the amount of numbers = 16?
-    // the first numbers are 51,52,53,54 or 55?
-    // print mastercard
+
 
     // the amount of numbers is 13?
     // the first is 4?
@@ -66,4 +62,7 @@ int main(void)
 
 // If sum2% !=0 print INVALID
 
+    // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
+    // ne rabotaet while (n <= pow(n,15));
+    // printf("%i\n", a15);
 }
