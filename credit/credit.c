@@ -14,9 +14,9 @@ int main(void)
     {
     int a1 = (floor((card_number % (n * 10)) / n)) * 2;
     n *= 10;
-    printf("%i\n", a1");
+    printf("%i\n", a1);
     }
-    while n<= pow(n, 14);
+    while (n<= pow(n, 14));
 
     // int a3 = (floor((card_number % (n * 10)) / n)) * 2;
 
