@@ -39,10 +39,6 @@ int main(void)
     return 0;
   }
 
-  switch (true)
-  {
-    case
-  }
 
 
   //checking whether it is AMEX or MASTERCARD or VISA
