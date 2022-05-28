@@ -30,7 +30,8 @@ int main(void)
 
 
   int lenght = int_length(card_number);
-  int firstTwoDigits = get_
+  int firstTwoDigits = get_first_digets(card_number, 2);
+  int firstDigit = get_first_digets(card_number, 1);
 
   //checking whether it is AMEX or MASTERCARD or VISA
   if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15 && (floor (card_number / 10000000000000) == 34 || floor (card_number / 10000000000000) == 37))
