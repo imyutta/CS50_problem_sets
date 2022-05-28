@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <math.h>
 
-int int_length(int);
+int int_length(long int);
 
 
 int main(void)
@@ -16,13 +16,10 @@ int main(void)
 
     for (n=10; n <= 1000000000000000; n*=100)
     {
-      // multiply every 2nd digit (counting from the 2nd from the end) by 2
-      mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;
 
-      // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
-      sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
+      mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2; // multiply every 2nd digit (counting from the 2nd from the end) by 2
+      sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10)); // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
 
-      //printf("%i, %i\n", mult_digit2, sum_mult_digit2);
     }
 
 
@@ -37,7 +34,7 @@ int main(void)
 
 
      //checking whether it is AMEX or MASTERCARD or VISA
-     printf("last digit: %i. Card number: %li", (sum_mult_digit2 + sum_digit1) % 10, card_number);
+     printf("last digit: %i. ", (sum_mult_digit2 + sum_digit1) % 10);
 
      if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15)
      {
@@ -71,20 +68,17 @@ int main(void)
 
     // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
     // ne rabotaet while (n <= pow(n,15));
-    // printf("%i\n", a15);
+
 
 }
 
-int int_length(int x)
+int int_length(long int x)
 {
   int length = 0;
   while (x > 0)
   {
     x /= 10;
     length += 1;
-    printf(" %i ", length);
   }
-
-  printf("final length = %i ", length);
   return length;
 }
