@@ -10,7 +10,7 @@ int main(void)
 // multiply each of the underlined digits by 2
     const int N = 10;
     //for
-    int a1 = ((card_number % 10) * 2);
+    int a1 = ((card_number % N) * 2);
     printf("%i\n", a1);
     int a3 = (floor((card_number % 1000) / 100)) * 2;
     printf("%i\n", a3);
