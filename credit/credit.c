@@ -29,7 +29,7 @@ int main(void)
   }
 
 
-  int lenght = int_length(card_number);
+  int length = int_length(card_number);
   int first_two_digits = get_first_digets(card_number, 2);
   int first_digit = get_first_digets(card_number, 1);
   bool is_card_hash_valid = (sum_mult_digit2 + sum_digit1) % 10 == 0;
@@ -61,7 +61,7 @@ int int_length(long int x)
 int get_first_digets(long int x, int digets)
 {
   int length = int_length(x);
-  return floor(x / pow(10, length - digets))
+  return floor(x / pow(10, length - digets));
 }
 
 
