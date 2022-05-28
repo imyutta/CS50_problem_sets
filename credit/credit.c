@@ -73,5 +73,5 @@ int main(void)
 
 int number_length(card_number)
 {
-  if csrd_number >= 
+  if (card_number >= 1000000000000000 && card_number) return 16
 }
