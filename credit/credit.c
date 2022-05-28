@@ -86,6 +86,7 @@ int int_length(long int x)
 
 int get_first_digets(long int x, int digets)
 {
+  int length = int_length(x);
   return floor(x / pow(10, length - digets))
 }
 
