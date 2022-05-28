@@ -18,7 +18,7 @@ int main(void)
     n *= 100;
     printf("%i\n", mult_digit2);
 
-    sum1 = sum1 + (mult_digit2 % 10) + (floor(mult_digit2 / 10));
+    sum1 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
     }
     while (n <= 1000000000000000);
 
