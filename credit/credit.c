@@ -7,7 +7,7 @@ int main(void)
 
 // underline every other digit, starting with the number's second-to-last digit
     int sum1 =
-    a1 = (card_number % 10);
+    a1 = (card_number % 10) * 2;
     a2 = card_number - (card_number % 100) -
 
 // multiply each of the underlined digits by 2
