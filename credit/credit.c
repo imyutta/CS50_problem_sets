@@ -77,13 +77,14 @@ int main(void)
 
 int int_length(int x)
 {
-  int length;
-  for (length = 0; x > 0; length++)
+  int length = 0;
+  while (x > 0)
   {
     x /= 10;
+    length += 1;
     printf(" %i ", length);
   }
 
-  printf(" %i ", length);
+  printf("final length = %i ", length);
   return length;
 }
