@@ -32,6 +32,7 @@ int main(void)
      //check if the last digit of two sums = 0
      if ((sum_mult_digit2 + sum_digit1)=0)
      {
+       switch
     // the amount of digits=15?
     //the first digit=34 or 37?
     // print American express
