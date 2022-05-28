@@ -81,3 +81,5 @@ int get_first_digets(long int x, int digets)
 {
   return floor(x / pow(10, length - digets))
 }
+
+
