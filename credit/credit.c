@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <math.h>
 
+int number_length(card_number);
+
 int main(void)
 {
     long int card_number = get_long("What is your card number? ");
@@ -66,4 +68,10 @@ int main(void)
     // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
     // ne rabotaet while (n <= pow(n,15));
     // printf("%i\n", a15);
+
+}
+
+int number_length(card_number)
+{
+  if csrd_number >= 
 }
