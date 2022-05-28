@@ -9,10 +9,11 @@ int main(void)
     long int n;
     int mult_digit2;
     int sum_mult_digit2 = 0;
+    int sum_digit1 = 0;
 
     for (n=10; n <= 1000000000000000; n*=100)
     {
-      // multiply every other second-to-last digit by 2
+      // multiply every second digit (counting from the 2nd from the end) by 2
       mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;
 
       // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
@@ -20,7 +21,13 @@ int main(void)
 
       printf("%i, %i\n", mult_digit2, sum1);
     }
-      // sum_digit1: sum2 of digits that weren't multiplied by 2
+      // sum_digit1: sum of every second digit (counting from the 1st!!! from the end)
+
+     for (n=1; n<=....; n *= 100)
+     {
+        sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);
+        printf("%i, sum_digit1\n", sum_digit1);
+     }
 
 
     // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
