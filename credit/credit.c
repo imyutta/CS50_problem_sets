@@ -12,12 +12,11 @@ int main(void)
 
     do
     {
-    int a1 = (floor((card_number % (n * 10)) / n)) * 2;
+    int a2 = (floor((card_number % (n * 10)) / n)) * 2;
     n *= 10;
-    printf("%i\n", a1);
+    printf("%i\n", a2);
     }
     while (n <= 100000000000000);
-
 
 
     // ne rabotaet int a15 = (floor((card_number % pow(N, 15)) / pow(N, 14))) * 2;
