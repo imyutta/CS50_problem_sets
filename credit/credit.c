@@ -3,7 +3,7 @@
 #include <math.h>
 
 int int_length(long int);
-
+int get_first_digets(long int, int);
 
 int main(void)
 {
