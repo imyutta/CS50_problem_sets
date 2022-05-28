@@ -35,13 +35,12 @@ int main(void)
      }
 
      //checking whether it is AMEX or MASTERCARD or VISA
+     printf("%i, %i\n", sum_mult_digit2 + sum_digit1, length);
 
      if ((sum_mult_digit2 + sum_digit1)== 0 && int_length(card_number)==15)
      {
-       printf("%i, %i\n", sum_mult_digit2 + sum_digit1, sum_mult_digit2);
-
        printf("AMEX\n");
-    // the amount of digits=15?
+
     //the first digit=34 or 37?
 
 
@@ -50,9 +49,8 @@ int main(void)
      {
        printf("MASTERCARD\n");
      }
-   //the amount of numbers = 16?
-    // the first numbers are 51,52,53,54 or 55?
-    // print mastercard
+       // the first numbers are 51,52,53,54 or 55?
+
 
      else if ((sum_mult_digit2 + sum_digit1)==0 && int_length(card_number)==13)
      {
