@@ -38,8 +38,12 @@ int main(void)
     printf("INVALID\n");
   } else if (length == 15 && (first_two_digits == 34 || first_two_digits == 37)) {
     printf("AMEX\n");
-  } else if () {
-    
+  } else if (length == 16 && first_two_digits >= 51 && first_two_digits <= 55) {
+    printf("MASTERCARD\n");
+  } else if ((length == 13 || length == 16) && first_digit == 4) {
+    printf("VISA\n");
+  } else {
+    printf("INVALID\n");
   }
 
 
