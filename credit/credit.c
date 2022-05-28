@@ -9,7 +9,7 @@ int main(void)
 // multiply each of the underlined digits by 2
 
     int a1 = ((card_number % 10) * 2);
-    int a2 = ((card_number % 1000) - (card_number % 100)) /100 * 2;
+    int a2 = (((card_number % 1000) /100) * 2;
 
 
 
