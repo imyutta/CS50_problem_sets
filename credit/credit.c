@@ -22,7 +22,7 @@ int main(void)
       printf("%i, %i\n", mult_digit2, sum_mult_digit2);
     }
 
-    
+
       // sum_digit1: sum of every 2nd digit (counting from the 1st!!! from the end)
 
      for (n=1; n<= 100000000000000; n *= 100)
@@ -31,39 +31,37 @@ int main(void)
         printf("%i, sum_digit1\n", sum_digit1);
      }
 
-     //check if the last digit of two sums = 0
+     //checking
      if ((sum_mult_digit2 + sum_digit1)=0 && .. && ..)
      {
-       printf("AMEX");
+       printf("AMEX\n");
     // the amount of digits=15?
     //the first digit=34 or 37?
-    // print American express
 
 
      }
-     else if
+     else if ((sum_mult_digit2 + sum_digit1)=0 && .. && ..)
+     {
+       printf("MASTERCARD\n");
+     }
    //the amount of numbers = 16?
     // the first numbers are 51,52,53,54 or 55?
     // print mastercard
 
+     else if ((sum_mult_digit2 + sum_digit1)=0 && .. && ..)
+     {
+     // the amount of numbers is 13?
+    // the first is 4?
+       printf("MASTERCARD\n");
+     }
+
      else
      {
-         printf("the number is not valid\n");
+         printf("INVALID\n");
      }
 
 
 
-
-
-
-
-
-
-    // the amount of numbers is 13?
-    // the first is 4?
-    // print visa
-
-// If sum2% !=0 print INVALID
 
     // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
     // ne rabotaet while (n <= pow(n,15));
