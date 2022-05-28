@@ -17,25 +17,19 @@ int main(void)
     for (n=10; n <= 1000000000000000; n*=100)
     {
 
-      mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2; // multiply every 2nd digit (counting from the 2nd from the end) by 2
-      sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10)); // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
+      mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;    // multiply every 2nd digit (counting from the 2nd from the end) by 2
+      sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));    // add those mult_digits2 together (not the numbers, but their digits)
 
     }
 
 
-      // sum_digit1: sum of every 2nd digit (counting from the 1st!!! from the end)
-
      for (n=1; n<= 100000000000000; n *= 100)
      {
-        sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);
-
-      //printf("%i, sum_digit1\n", sum_digit1);
+        sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);     // sum of every 2nd digit (counting from the 1st!!! from the end)
      }
 
 
      //checking whether it is AMEX or MASTERCARD or VISA
-     printf("last digit: %i. ", (sum_mult_digit2 + sum_digit1) % 10);
-
      if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15)
      {
        printf("AMEX\n");
@@ -64,9 +58,6 @@ int main(void)
      }
 
 
-
-
-    // ne rabotaet int a15 = (floor((card_number % pow(N, 16)) / pow(N, 15))) * 2;
     // ne rabotaet while (n <= pow(n,15));
 
 
