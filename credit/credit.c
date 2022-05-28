@@ -37,7 +37,7 @@ int main(void)
      }
 
 
-     else if ((sum_mult_digit2 + sum_digit1) % 10 ==0 && int_length(card_number)==16 && (floor (card_number / 10000000000000) == 51 || floor (card_number / 10000000000000) == 52 || floor (card_number / 10000000000000) == 53 || floor (card_number / 10000000000000) == 54 || floor (card_number / 10000000000000) == 55)
+     else if ((sum_mult_digit2 + sum_digit1) % 10 ==0 && int_length(card_number)==16 && (floor (card_number / 10000000000000) == 51 || floor (card_number / 10000000000000) == 52 || floor (card_number / 10000000000000) == 53 || floor (card_number / 10000000000000) == 54 || floor (card_number / 10000000000000) == 55))
      {
       printf("MASTERCARD\n");
      }
