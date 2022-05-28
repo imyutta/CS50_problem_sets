@@ -13,6 +13,7 @@ int main(void)
     int a1 = ((card_number % N) * 2);
 
     while...
+    n
 
     int a3 = (floor((card_number % 1000)/ 100)) * 2;
 
