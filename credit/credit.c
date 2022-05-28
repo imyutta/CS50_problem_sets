@@ -75,5 +75,11 @@ int main(void)
 
 int int_length(card_number)
 {
-  card_number/10 > 0?
+  int length = 0;
+  do
+  {
+    
+
+  }
+  while (card_number/10 <= 0);
 }
