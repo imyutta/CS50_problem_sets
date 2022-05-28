@@ -81,6 +81,7 @@ int int_length(int card_number)
   for (length = 0; card_number > 0; length++)
   {
     card_number /= 10;
+    printf(" %i ", length);
   }
 
   printf(" %i ", length);
