@@ -8,11 +8,13 @@ int main(void)
 
 // underline every other digit, starting with the number's second-to-last digit
 // multiply each of the underlined digits by 2
-
+    for 
     int a1 = ((card_number % 10) * 2);
     printf("%i\n", a1);
-    int a2 = (floor((card_number % 1000) /100)) * 2;
+    int a2 = (floor((card_number % 1000) / 100)) * 2;
     printf("%i\n", a2);
+    int a3 = (floor((card_number % 100000) / 10000)) *2;
+
 
 
 
