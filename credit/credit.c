@@ -36,7 +36,10 @@ int main(void)
 
   if (!is_card_hash_valid) {
     printf("INVALID\n");
-    return 0;
+  } else if (length == 15 && (first_two_digits == 34 || first_two_digits == 37)) {
+    printf("AMEX\n");
+  } else if () {
+    
   }
 
 
