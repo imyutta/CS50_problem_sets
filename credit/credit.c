@@ -73,5 +73,6 @@ int main(void)
 
 int number_length(card_number)
 {
-  if (card_number >= 100000000000000 && card_number <=) return 16
+  if (card_number >= 10^15 && card_number < 10^16 ) return 15;
+  if (card_number >= 10^15 && card_number < 10^16 ) return 15;
 }
