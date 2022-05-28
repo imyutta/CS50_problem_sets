@@ -38,6 +38,8 @@ int main(void)
 
      if ((sum_mult_digit2 + sum_digit1)== 0 && int_length(card_number)==15)
      {
+       printf("%i, %i\n", sum_mult_digit2 + sum_digit1, sum_mult_digit2);
+
        printf("AMEX\n");
     // the amount of digits=15?
     //the first digit=34 or 37?
