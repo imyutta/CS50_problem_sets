@@ -75,12 +75,12 @@ int main(void)
 
 }
 
-int int_length(int card_number)
+int int_length(int x)
 {
   int length;
-  for (length = 0; card_number > 0; length++)
+  for (length = 0; x > 0; length++)
   {
-    card_number /= 10;
+    x /= 10;
     printf(" %i ", length);
   }
 
