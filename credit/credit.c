@@ -45,32 +45,6 @@ int main(void)
   } else {
     printf("INVALID\n");
   }
-
-
-
-  //checking whether it is AMEX or MASTERCARD or VISA
-  if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15 && (floor (card_number / 10000000000000) == 34 || floor (card_number / 10000000000000) == 37))
-  {
-    printf("AMEX\n");
-    //the first digit=34 or 37?
-  }
-  else if ((sum_mult_digit2 + sum_digit1) % 10 ==0 && int_length(card_number)==16 && (floor (card_number / 10000000000000) == 51 || floor (card_number / 10000000000000) == 52 || floor (card_number / 10000000000000) == 53 || floor (card_number / 10000000000000) == 54 || floor (card_number / 10000000000000) == 55))
-  {
-    printf("MASTERCARD\n");
-  }
-  else if ((sum_mult_digit2 + sum_digit1)==0 && (int_length(card_number)==13 || int_length(card_number)==16) && floor (card_number / 10000000000000) == 4)
-  {
-    printf("VISA\n");
-  }
-  else
-  {
-    printf("INVALID\n");
-  }
-
-
-    // ne rabotaet while (n <= pow(n,15));
-
-
 }
 
 int int_length(long int x)
