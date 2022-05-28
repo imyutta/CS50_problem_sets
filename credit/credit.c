@@ -22,7 +22,7 @@ int main(void)
       // sum_mult_digit2: add those mult_digits2 together (not the numbers, but their digits)
       sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));
 
-      // if you need to check: printf("%i, %i\n", mult_digit2, sum_mult_digit2);
+      //printf("%i, %i\n", mult_digit2, sum_mult_digit2);
     }
 
 
@@ -31,25 +31,27 @@ int main(void)
      for (n=1; n<= 100000000000000; n *= 100)
      {
         sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);
-      // if you need to check: printf("%i, sum_digit1\n", sum_digit1);
+
+      //printf("%i, sum_digit1\n", sum_digit1);
      }
 
      //checking whether it is AMEX or MASTERCARD or VISA
-     printf("%i ", (sum_mult_digit2 + sum_digit1) % 10);
+
+     printf("last digit: %i. ", (sum_mult_digit2 + sum_digit1) % 10);
 
      if ((sum_mult_digit2 + sum_digit1) % 10 == 0 && int_length(card_number)==15)
      {
        printf("AMEX\n");
-
     //the first digit=34 or 37?
-
-
      }
+
+
      else if ((sum_mult_digit2 + sum_digit1) % 10 ==0 && int_length(card_number)==16)
      {
+      // the first numbers are 51,52,53,54 or 55?
        printf("MASTERCARD\n");
      }
-       // the first numbers are 51,52,53,54 or 55?
+
 
 
      else if ((sum_mult_digit2 + sum_digit1)==0 && int_length(card_number)==13)
