@@ -13,38 +13,37 @@ int main(void)
     int mult_digit2;
     int sum_mult_digit2 = 0;
     int sum_digit1 = 0;
-
     for (n=10; n <= 1000000000000000; n*=100)
-  {
+    {
 
-    mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;    // multiply every 2nd digit (counting from the 2nd from the end) by 2
-    sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));    // add those mult_digits2 together (not the numbers, but their digits)
+      mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;    // multiply every 2nd digit (counting from the 2nd from the end) by 2
+      sum_mult_digit2 += (mult_digit2 % 10) + (floor(mult_digit2 / 10));    // add those mult_digits2 together (not the numbers, but their digits)
 
-  }
-
-
-  for (n=1; n<= 100000000000000; n *= 100)
-  {
-    sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);     // sum of every 2nd digit (counting from the 1st!!! from the end)
-  }
+    }
 
 
-  int length = int_length(card_number);
-  int first_two_digits = get_first_digets(card_number, 2);
-  int first_digit = get_first_digets(card_number, 1);
-  bool is_card_hash_valid = (sum_mult_digit2 + sum_digit1) % 10 == 0;
+    for (n=1; n<= 100000000000000; n *= 100)
+    {
+      sum_digit1 = sum_digit1 + (floor (card_number % (n*10)) / n);     // sum of every 2nd digit (counting from the 1st!!! from the end)
+    }
 
-  if (!is_card_hash_valid) {
-    printf("INVALID\n");
-  } else if (length == 15 && (first_two_digits == 34 || first_two_digits == 37)) {
-    printf("AMEX\n");
-  } else if (length == 16 && first_two_digits >= 51 && first_two_digits <= 55) {
-    printf("MASTERCARD\n");
-  } else if ((length == 13 || length == 16) && first_digit == 4) {
-    printf("VISA\n");
-  } else {
-    printf("INVALID\n");
-  }
+
+    int length = int_length(card_number);
+    int first_two_digits = get_first_digets(card_number, 2);
+    int first_digit = get_first_digets(card_number, 1);
+    bool is_card_hash_valid = (sum_mult_digit2 + sum_digit1) % 10 == 0;
+
+    if (!is_card_hash_valid) {
+      printf("INVALID\n");
+    } else if (length == 15 && (first_two_digits == 34 || first_two_digits == 37)) {
+      printf("AMEX\n");
+    } else if (length == 16 && first_two_digits >= 51 && first_two_digits <= 55) {
+      printf("MASTERCARD\n");
+    } else if ((length == 13 || length == 16) && first_digit == 4) {
+      printf("VISA\n");
+    } else {
+      printf("INVALID\n");
+    }
 }
 
 int int_length(long int x)
