@@ -28,12 +28,16 @@ int main(void)
         sum_digit1 = sum_digit1 + (floor(card_number % (n * 10)) / n);
     }
 
-    //
+    //card number length.
     int length = int_length(card_number);
+    //first two numbers check
     int first_two_digits = get_first_digits(card_number, 2);
+    //first number check
     int first_digit = get_first_digits(card_number, 1);
+    //check is the second digit after the multiplication and addition is 0
     bool is_card_hash_valid = (sum_mult_digit2 + sum_digit1) % 10 == 0;
 
+    // define what type of a card is it
     if (!is_card_hash_valid)
     {
         printf("INVALID\n");
@@ -56,6 +60,7 @@ int main(void)
     }
 }
 
+// a function that gets length of a long int variable
 int int_length(long int x)
 {
     int length = 0;
@@ -67,6 +72,7 @@ int int_length(long int x)
     return length;
 }
 
+// a funtion that 
 int get_first_digits(long int x, int digits)
 {
     int length = int_length(x);
