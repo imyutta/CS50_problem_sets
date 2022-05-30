@@ -7,14 +7,14 @@ int get_first_digets(long int, int);
 
 int main(void)
 {
-  long int card_number = get_long("What is your card number? ");
+    long int card_number = get_long("What is your card number? ");
 
-  long int n;
-  int mult_digit2;
-  int sum_mult_digit2 = 0;
-  int sum_digit1 = 0;
+    long int n;
+    int mult_digit2;
+    int sum_mult_digit2 = 0;
+    int sum_digit1 = 0;
 
-  for (n=10; n <= 1000000000000000; n*=100)
+    for (n=10; n <= 1000000000000000; n*=100)
   {
 
     mult_digit2 = (floor((card_number % (n * 10)) / n)) * 2;    // multiply every 2nd digit (counting from the 2nd from the end) by 2
