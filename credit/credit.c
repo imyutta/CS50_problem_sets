@@ -3,7 +3,7 @@
 #include <math.h>
 
 int int_length(long int);
-int get_first_digets(long int, int);
+int get_first_digits(long int, int);
 
 int main(void)
 {
@@ -30,8 +30,8 @@ int main(void)
 
 
     int length = int_length(card_number);
-    int first_two_digits = get_first_digets(card_number, 2);
-    int first_digit = get_first_digets(card_number, 1);
+    int first_two_digits = get_first_digits(card_number, 2);
+    int first_digit = get_first_digits(card_number, 1);
     bool is_card_hash_valid = (sum_mult_digit2 + sum_digit1) % 10 == 0;
 
     if (!is_card_hash_valid)
@@ -67,10 +67,10 @@ int int_length(long int x)
     return length;
 }
 
-int get_first_digets(long int x, int digets)
+int get_first_digits(long int x, int digits)
 {
     int length = int_length(x);
-    return floor(x / pow(10, length - digets));
+    return floor(x / pow(10, length - digits));
 }
 
 
