@@ -36,23 +36,23 @@ int main(void)
 
     if (!is_card_hash_valid)
     {
-      printf("INVALID\n");
+        printf("INVALID\n");
     }
     else if (length == 15 && (first_two_digits == 34 || first_two_digits == 37))
     {
-      printf("AMEX\n");
+        printf("AMEX\n");
     }
     else if (length == 16 && first_two_digits >= 51 && first_two_digits <= 55)
     {
-      printf("MASTERCARD\n");
+        printf("MASTERCARD\n");
     }
     else if ((length == 13 || length == 16) && first_digit == 4)
     {
-      printf("VISA\n");
+        printf("VISA\n");
     }
     else
     {
-      printf("INVALID\n");
+        printf("INVALID\n");
     }
 }
 
@@ -61,8 +61,8 @@ int int_length(long int x)
     int length = 0;
     while (x > 0)
     {
-      x /= 10;
-      length += 1;
+        x /= 10;
+        length += 1;
     }
     return length;
 }
