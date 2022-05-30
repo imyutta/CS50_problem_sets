@@ -28,7 +28,7 @@ int main(void)
         sum_digit1 = sum_digit1 + (floor(card_number % (n * 10)) / n);
     }
 
-
+    //
     int length = int_length(card_number);
     int first_two_digits = get_first_digits(card_number, 2);
     int first_digit = get_first_digits(card_number, 1);
