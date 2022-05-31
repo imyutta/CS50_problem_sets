@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  int myNumbers[4];
+  int hisAge[4];
   myNumbers[0] = 25;
   int i;
 
