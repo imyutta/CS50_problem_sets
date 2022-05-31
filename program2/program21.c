@@ -3,8 +3,10 @@
 int main ()
 {
     char greetings[] = "Hello World";
+    greetings[0] = 'J';
+    printf("%s", greetings);
 
-    printf("%c\n", greetings[0]);
+
 
 return 0;
 
