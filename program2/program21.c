@@ -6,7 +6,7 @@ int main ()
     printf("enter a first name: \n");
     scanf("%s", firstName);
     printf("Hello %s!\n", firstName);
-    printf("%c\n", firstName[6]);
+    printf("%p\n", &firstName);
 
 
 return 0;
