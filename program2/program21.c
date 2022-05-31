@@ -1,15 +1,13 @@
 #include <stdio.h>
 
-int main ()
-{
-    char firstName[5];
-    printf("enter a first name: \n");
-    scanf("%s", firstName);
-    printf("Hello %s!\n", firstName);
-    printf("%p\n", &firstName);
+int main() {
+  int myNumbers[4];
+  myNumbers[0] = 25;
+  int i;
 
+  for (i = 0; i < 4; i++) {
+    printf("%d\n", myNumbers[i]);
+  }
 
-return 0;
-
-
+  return 0;
 }
