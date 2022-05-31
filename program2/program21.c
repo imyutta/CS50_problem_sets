@@ -2,8 +2,10 @@
 
 int main ()
 {
-    char greetings[] = {'H', 'e', 'l', 'l', 'o', '\n'};
-    printf("%s", greetings);
+    int myNum;
+    printf("Type a number: \n");
+    scanf("%d", &myNum);
+    printf("Number is: %d\n", myNum);
 
 
 
