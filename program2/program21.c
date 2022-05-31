@@ -1,13 +1,9 @@
 #include <stdio.h>
 
 int main() {
-  int hisAge[4];
-  myNumbers[0] = 25;
-  int i;
+  where are you?
+  if us printf 6 2
+  else printf 2  6
+  
 
-  for (i = 0; i < 4; i++) {
-    printf("%d\n", myNumbers[i]);
-  }
-
-  return 0;
 }
