@@ -9,7 +9,7 @@ int main ()
     {
         printf("%d\n", myNumbers[i]);
     }
-
+return 0;
 
 
 }
