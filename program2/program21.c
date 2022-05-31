@@ -2,13 +2,10 @@
 
 int main ()
 {
-    int myNumbers[4];
-    myNumbers[0] = 25;
-    int i;
-    for (i = 0; i < 4; i++)
-    {
-        printf("%d\n", myNumbers[i]);
-    }
+    char greetings[] = "Hello World";
+
+    printf("%s\n", greetings);
+
 return 0;
 
 
