@@ -4,7 +4,7 @@ int main ()
 {
     char greetings[] = "Hello World";
 
-    printf("%s\n", greetings);
+    printf("%c\n", greetings[0]);
 
 return 0;
 
