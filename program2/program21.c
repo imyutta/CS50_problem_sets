@@ -2,10 +2,10 @@
 
 int main ()
 {
-    int myNum;
-    printf("Type a number: \n");
-    scanf("%d", &myNum);
-    printf("Number is: %d\n", myNum);
+    char firstName[5];
+    printf("enter a first name: \n");
+    scanf("%s", firstName);
+    printf("Hello %s!\n", firstName);
 
 
 
