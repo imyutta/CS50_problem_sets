@@ -8,11 +8,10 @@ int main() {
   if (day == 'y' || day == 'Y') {
     date[15] = '2';
     printf("%s", date);
-    printf("You are "%i", yourAge+=1);
+    printf("You are %i!\n", yourAge += 1);
     printf("Happy birthday!\n");
     printf("I love you!\n");
-    printf("P.S. you spoiled all the gifts that I'd come up with");
-
+ 
   }
 
 
