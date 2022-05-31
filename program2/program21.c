@@ -3,15 +3,17 @@
 
 int main() {
   int yourAge = 30;
-  char date[] = "Today is June 01!\n";
+  char date[] = "Today is June 1st!\n";
   char day = get_char("Is it June 2nd today? y/n\n");
   if (day == 'y' || day == 'Y') {
-    date[15] = '2';
+    date[14] = '2';
+    date[15] = 'n';
+    date[16] = 'd';
     printf("%s", date);
     printf("You are %i!\n", yourAge += 1);
     printf("Happy birthday!\n");
     printf("I love you!\n");
- 
+
   }
 
 
