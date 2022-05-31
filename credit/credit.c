@@ -72,7 +72,7 @@ int int_length(long int x)
     return length;
 }
 
-// a funtion that 
+// a funtion that
 int get_first_digits(long int x, int digits)
 {
     int length = int_length(x);
