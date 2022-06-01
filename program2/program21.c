@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <cs50.h>
+#include <string.h>
 
 struct myStructure
 {
@@ -9,11 +9,11 @@ struct myStructure
 };
 
 int main() {
-  struct myStructure s1;
-  strcpy(s1.myString, "Some text");
+  struct myStructure s1 = {13, 'B', "Some text"};
+  struct myStructure s2;
+  s2=s1;
 
-
-  printf("my string: %s\n", s1.myString);
+  printf("%d, %c, %s\n", s2.myNum, s2.myLetter, s2.myString);
 
 
   }
