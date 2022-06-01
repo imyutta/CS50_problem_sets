@@ -13,7 +13,7 @@ int main() {
   strcpy(s1.myString, "Some text");
 
 
-  printf("my number: %s\n", s1.mymyString);
+  printf("my string: %s\n", s1.myString);
 
 
   }
