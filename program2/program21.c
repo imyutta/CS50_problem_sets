@@ -2,7 +2,7 @@
 
 int main() {
   // Create a string
-  char firstName[30];
+  char firstName[4];
 
   // Ask the user to input some text
   printf("Enter your first name: \n");
