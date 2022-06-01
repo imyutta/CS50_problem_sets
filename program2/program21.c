@@ -5,15 +5,16 @@ struct myStructure
 {
   int myNum;
   char myLetter;
+  char myString[30];
 };
 
 int main() {
   struct myStructure s1;
-  s1.myNum = 13;
-  s1.myLetter = 'B';
+  strcpy(s1.myString, "Some text");
 
-  printf("my number: %d\n", s1.myNum);
-  printf("my letter: %c\n", s1.myLetter);
+
+  printf("my number: %s\n", s1.mymyString);
+
 
   }
 
