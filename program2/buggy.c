@@ -5,7 +5,7 @@ int main(void)
 {
     for (int i=0; i<=3; i++)
     {
-        print("i is %i\n", i);
+        printf("i is %i\n", i);
         printf("#\n");
     }
 }
