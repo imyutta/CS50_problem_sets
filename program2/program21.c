@@ -1,20 +1,10 @@
+#include <cs50.h>
 #include <stdio.h>
 
-int main() {
-  // Create a string
-  char firstName[4];
-
-  // Ask the user to input some text
-  printf("Enter your first name: \n");
-
-  // Get and save the text
-  scanf("%s", firstName);
-
-  // Output the text
-  printf("Hello %s.", firstName);
-
-  return 0;
-
+int main(void)
+{
+    string name = get_string("What's your name? ");
+    printf("hello, %s\n", name);
 }
 
 
