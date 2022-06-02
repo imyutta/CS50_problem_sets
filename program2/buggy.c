@@ -5,19 +5,11 @@ int get_negative_int(void);
 
 int main(void)
 {
-    int i = get_negative_int();
-    printf("%i\n",i);
-}
+    int score1 = 72;
+    int score2 = 73;
+    int score3 = 33;
 
-int get_negative_int(void)
-{
-    int n;
-    do
-    {
-        n = get_int("Negative Integer: ");
-    }
-    while (n<0);
-    return n;
+    printf("Average: %f\n", (score1 + score2 + score3)/3);
 }
 
 
