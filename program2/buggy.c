@@ -10,7 +10,7 @@ int main(void)
     printf("%i\n", length);
 }
 
-int string_length(string s);
+int string_length(string s)
 {
     int i = 0;
     while (s[i] != '\0')
