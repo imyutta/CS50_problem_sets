@@ -8,7 +8,7 @@ int main(void)
     string s = "Hi!";
 
 
-    printf("%s\n", s);
+    printf("%s\n", s[0], s[1], s[2]);
 }
 
 
