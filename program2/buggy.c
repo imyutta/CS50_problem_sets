@@ -16,7 +16,7 @@
 int main(int argc, string argv[])
 {
     printf("hello, %s\n", argv[1]);
-        printf("hello, %s\n", argv[1]);
+    printf("hello, %s\n", argv[0]);
 
     printf("argc = %i\n", argc);
 }
