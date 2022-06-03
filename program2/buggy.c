@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int get_negative_int(void);
+int string_length(string);
 
 int main(void)
 {
@@ -17,7 +17,6 @@ int string_length(string s);
     {
         i++;
     }
-
 
     return i;
 }
