@@ -3,7 +3,7 @@
 #include <string.h>
 
 
-int main(int argc, string argv [])
+int main(int argc, string argv[])
 {
     printf("hello, %s\n", argv[0]);
 
