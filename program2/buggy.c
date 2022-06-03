@@ -1,24 +1,17 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
-int string_length(string);
 
 int main(void)
 {
-    string name = get_string("Name: ");
-    int length = string_length(name);
-    printf("%i\n", length);
-}
-
-int string_length(string s)
-{
-    int i = 0;
-    while (s[i] != '\0')
+    string s = get_string("Input: ");
+    printf("Output: ");
+    for (int i = 0; i < strlen(s); i++)
     {
-        i++;
+        printf("%c", s[i]);
     }
-
-    return i;
+    printf("\n");
 }
 
 
