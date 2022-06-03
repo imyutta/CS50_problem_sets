@@ -5,14 +5,12 @@ int get_negative_int(void);
 
 int main(void)
 {
-    int scores[3];
-
-    scores[0] = 72;
-    scores[1] = 73;
-    scores[2] = 33;
+    char c1 = 'H';
+    char c2 = 'I';
+    char c3 = '!';
 
 
-    printf("Average: %f\n", (scores[0] + scores[1] + scores[2])/3.0);
+    printf("%i %i %i\n", c1, c2, c3);
 }
 
 
