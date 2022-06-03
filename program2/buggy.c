@@ -5,10 +5,15 @@ int get_negative_int(void);
 
 int main(void)
 {
-    string s = "Hi!";
+    string name = get_string("Name: ");
+    int i = 0;
+    while (name[i] != '\0')
+    {
+        i++;
+    }
 
 
-    printf("%i %i %i %i %i\n", s[0], s[1], s[2], s[3], s[4]);
+    printf("%i\n", i);
 }
 
 
