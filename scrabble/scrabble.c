@@ -43,7 +43,8 @@ int compute_score(string word)
 
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        if (int word[i] >= 65 && int word[i] <= int letterUpDec = toupper(word[i]);
+        if (int word[i] >= 65 && int word[i] <=
+        int letterUpDec = toupper(word[i]);
         int letterNewPosition = letterUpDec - 64;
         pointSum += POINTS[letterNewPosition];
     }
