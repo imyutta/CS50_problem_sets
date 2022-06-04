@@ -37,11 +37,17 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
-    // take a word
-    // word length = ?
+    // word length = n
 
-    //for (int i = 0, int n = )
-    //uppercase. 65-90
-    
+    for (int i = 0, int n = strlen(word); i < n; i++)
+    {
+        int letter = toupper(name[i])
+    }
+    //uppercase.
+    // int = ?
+    //65-90. int letter -65
+    //points[]
+    // sum points
+
 
 }
