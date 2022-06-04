@@ -38,11 +38,12 @@ int compute_score(string word)
 {
     // TODO: Compute and return score for string
     // word length = n
+    int pointSum =0;
 
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        int letterNum = toupper(name[i]) - 64;
-        int pointSum += POINTS[letterNum];
+        int letterNum = toupper(word[i]) - 64;
+        pointSum += POINTS[letterNum];
     }
     return pointSum;
 
