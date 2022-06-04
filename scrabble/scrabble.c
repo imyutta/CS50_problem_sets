@@ -40,13 +40,19 @@ int compute_score(string word)
     // word length = n
     int pointSum =0;
 
-
     for (int i = 0, n = strlen(word); i < n; i++)
     {
-        if (int word[i] >= 65 && int word[i] <= 90
-        int letterUpDec = toupper(word[i]);
-        int letterNewPosition = letterUpDec - 64;
-        pointSum += POINTS[letterNewPosition];
+        int letterOldPosition = word[i];
+        if (letterOldPosition >= 65 && letterOldPosition <= 90)
+        {
+            int letterNewPosition = letterOldPosition - 64;
+            pointSum += POINTS[letterNewPosition];
+        }
+        else if (letterOldPosition >= 97 && letterOldPosition <= 122)
+        {
+            int letterNewPosition = letterOldPosition - 96;
+            pointSum += POINTS[letterNewPosition];
+        }
     }
     return pointSum;
 
