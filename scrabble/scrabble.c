@@ -41,6 +41,6 @@ int compute_score(string word)
     // word length = ?
 
     //for (int i = 0, int n = )
-    //letter 1 is lowercase? int letter = ?
+    //letter 1 is lowercase? int letter = ? lovercase. 
 
 }
