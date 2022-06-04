@@ -41,13 +41,10 @@ int compute_score(string word)
 
     for (int i = 0, int n = strlen(word); i < n; i++)
     {
-        int letter = toupper(name[i])
+        int letterNum = toupper(name[i]) - 64;
+        int pointSum += POINTS[letterNum];
     }
-    //uppercase.
-    // int = ?
-    //65-90. int letter -65
-    //points[]
-    // sum points
+    return pointSum;
 
 
 }
