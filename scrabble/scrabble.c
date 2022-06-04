@@ -37,6 +37,9 @@ int main(void)
 int compute_score(string word)
 {
     // TODO: Compute and return score for string
+    // take a word
+    // words length = ?
+    
     for (int i = 0, int n = )
 
 }
