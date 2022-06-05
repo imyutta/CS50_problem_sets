@@ -28,7 +28,7 @@ int main(void)
     printf ("INDEX %i\n", indexNew);
 
 
-    if (indexNew >= 1 && indexNew <= 16)
+    if (indexNew >= 1 && indexNew < 16)
     {
         printf("Grade %i\n", indexNew);
     }
