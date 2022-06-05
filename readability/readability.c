@@ -83,7 +83,7 @@ int count_words(string text)
 
 }
 
-counting sentences in text
+//counting sentences in text
 int count_sentences(string text)
 {
     int count_sentences = 0;
