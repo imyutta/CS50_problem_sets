@@ -18,9 +18,9 @@ int main(void)
     float sentences_amount = count_sentences(text);
     //printf("%f letters\n%f words\n%f sentences\n", letters_amount, words_amount, sentences_amount);
 
-    //average number of letters per 100 words in the text
+    //average number of letters per 100 words in text
     float l = (letters_amount / words_amount) * 100;
-    //average number of sentences per 100 words in the text
+    //average number of sentences per 100 words in text
     float s = (sentences_amount / words_amount) * 100;
 
     //Coleman-Liau index
