@@ -19,10 +19,11 @@ int main(void)
     printf("%i letters\n%i words\n%i sentences\n", letters_amount, words_amount, sentences_amount);
 
     int l = (letters_amount / words_amount) * 100;
+    printf ("l= %i\n", l);
     int s = (sentences_amount / words_amount) * 100;
 
     float index = 0.0588 * l - 0.296 * s - 15.8;
-    printf ("INDEX %f\n", index);
+
     int indexNew = round(index);
     printf ("INDEX %i\n", indexNew);
 
