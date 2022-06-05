@@ -20,17 +20,17 @@ int main(void)
 
     float l = (letters_amount / words_amount) * 100;
     float s = (sentences_amount / words_amount) * 100;
-    float index = round (0.0588 * l - 0.296 * s - 15.8);
+    float index = 0.0588 * l - 0.296 * s - 15.8;
 
-    //int indexNew = round(index);
+    int indexNew = round(index);
     //printf ("INDEX %i\n", indexNew);
 
 
-    if (index >= 1 && index < 16)
+    if (indexNew >= 1 && indexNew < 16)
     {
-        printf("Grade %i\n", index);
+        printf("Grade %i\n", indexNew);
     }
-    else if (index < 1)
+    else if (indexNew < 1)
     {
         printf("Before Grade 1\n");
     }
