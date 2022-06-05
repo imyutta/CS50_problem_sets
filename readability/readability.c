@@ -25,7 +25,7 @@ int main(void)
     float index = 0.0588 * l - 0.296 * s - 15.8;
 
     int indexNew = round(index);
-    printf ("INDEX %i\n", indexNew);
+    //printf ("INDEX %i\n", indexNew);
 
 
     if (indexNew >= 1 && indexNew < 16)
