@@ -13,14 +13,14 @@ int main(void)
     string text = get_string("Text: ");
 
     //count the number of letters, words, sentences
-    int letters_amount = count_letters(text);
-    int words_amount = count_words(text);
-    int sentences_amount = count_sentences(text);
-    printf("%i letters\n%i words\n%i sentences\n", letters_amount, words_amount, sentences_amount);
+    float letters_amount = count_letters(text);
+    float words_amount = count_words(text);
+    float sentences_amount = count_sentences(text);
+    //printf("%f letters\n%f words\n%f sentences\n", letters_amount, words_amount, sentences_amount);
 
     float l = (letters_amount / words_amount) * 100;
-    printf ("l= %f\n", l);
-    int s = (sentences_amount / words_amount) * 100;
+    //printf ("l= %f\n", l);
+    float s = (sentences_amount / words_amount) * 100;
 
     float index = 0.0588 * l - 0.296 * s - 15.8;
 
