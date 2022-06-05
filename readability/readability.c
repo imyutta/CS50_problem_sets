@@ -22,6 +22,7 @@ int main(void)
     int s = (sentences_amount / words_amount) * 100;
 
     float index = 0.0588 * l - 0.296 * s - 15.8;
+    printf ("INDEX %f\n", index);
     int indexNew = round(index);
     printf ("INDEX %i\n", indexNew);
 
