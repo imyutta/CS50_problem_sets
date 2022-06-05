@@ -18,10 +18,13 @@ int main(void)
     float sentences_amount = count_sentences(text);
     //printf("%f letters\n%f words\n%f sentences\n", letters_amount, words_amount, sentences_amount);
 
+    //average number of letters per 100 words in the text
     float l = (letters_amount / words_amount) * 100;
+    //average number of sentences per 100 words in the text
     float s = (sentences_amount / words_amount) * 100;
-    float index = 0.0588 * l - 0.296 * s - 15.8;
 
+    //Coleman-Liau index
+    float index = 0.0588 * l - 0.296 * s - 15.8;
     int indexNew = round(index);
     //printf ("INDEX %i\n", indexNew);
 
@@ -38,12 +41,9 @@ int main(void)
     {
         printf("Grade 16+\n");
     }
-
-
-
 }
 
-
+//counting letters in text
 int count_letters(string text)
 {
     int count_letters = 0;
@@ -59,6 +59,7 @@ int count_letters(string text)
     return count_letters;
 }
 
+//counting words in text
 int count_words(string text)
 {
     int count_words = 0;
@@ -82,6 +83,7 @@ int count_words(string text)
 
 }
 
+counting sentences in text
 int count_sentences(string text)
 {
     int count_sentences = 0;
@@ -90,7 +92,7 @@ int count_sentences(string text)
         int letterNumASCII = text[i];
         if (letterNumASCII == 33 || letterNumASCII == 46 || letterNumASCII == 63)
         {
-            count_sentences +=1;
+            count_sentences += 1;
         }
     }
     return count_sentences;
