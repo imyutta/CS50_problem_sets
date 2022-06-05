@@ -34,11 +34,11 @@ int main(void)
     }
     else if (indexNew < 1)
     {
-        printf("Before grade 1");
+        printf("Before grade 1\n");
     }
     else
     {
-        printf("Grade 16+");
+        printf("Grade 16+\n");
     }
 
 
