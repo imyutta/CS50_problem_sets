@@ -65,6 +65,9 @@ char rotate (char character, int key)
             return char characterASCIINew;
         }
         else
+        {
+            int characterASCIINew = characterASCIINew - 
+        }
     }
 
 }
