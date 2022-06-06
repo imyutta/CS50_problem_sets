@@ -51,3 +51,6 @@ bool only_digits(string k)
 }
 
 int rotate (char , int )
+{
+    
+}
