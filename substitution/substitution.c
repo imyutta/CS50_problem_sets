@@ -34,9 +34,10 @@ bool isKeyAlpha(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        if (isalpha(key[i]) == true)
+        if (isalpha(key[i]) == false)
         {
-            
+            return false;
         }
     }
+    return true;
 }
