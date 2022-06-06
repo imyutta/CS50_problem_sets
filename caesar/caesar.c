@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 
 bool only_digits(string k);
 
@@ -39,8 +40,19 @@ int main(int argc, string argv[])
 
 bool only_digits(string k)
 {
+    int 
     for (int i = 0, n = strlen(k); i < k; i++)
     {
-        
+        if (isdigit(k[i]) == 0)
+        {
+            return false;
+        }
+        else
+        {
+
+        }
+
+
+
     }
 }
