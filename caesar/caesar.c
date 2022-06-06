@@ -50,7 +50,12 @@ bool only_digits(string k)
     return true;
 }
 
-char rotate (char , int )
+char rotate (char character, int key)
 {
+    if (int character >= 65 && int character <= 90)
+    {
+        int character += key;
+    }
+
 
 }
