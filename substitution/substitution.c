@@ -20,8 +20,11 @@ int main(int argc, string argv[])
     //check if the key contains only letters
     else if
     {
-        
+        printf("Key must contain alphabetic characters.\n");
+        return 1;
     }
 
 
 }
+
+bool isKeyAlpha
