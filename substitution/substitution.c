@@ -51,5 +51,12 @@ bool isKeyAlpha(string key)
 
 bool isKeyUnrepeated(string key)
 {
-    
+    for (int i = 0, n = strlen(key); i < n; i++)
+    {
+        if (key[i] == key[i + 1])
+        {
+            return false;
+        }
+    }
+
 }
