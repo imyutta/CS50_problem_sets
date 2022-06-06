@@ -87,7 +87,11 @@ string encrypt(string plaintext, string key)
     {
         if (int plaintext[i] >= 65 && int plaintext[i] <= 90)
         {
-            ciphertext[i] = key[i];
+            ciphertext[i] = toupper(key[i]);
+        }
+        else if (int plaintext[i] >= 97 && int plaintext[i] <= 122)
+        {
+            ciphertext[i] = tolower(key[i]);
         }
     }
     return ciphertext;
