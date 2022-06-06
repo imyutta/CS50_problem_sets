@@ -4,7 +4,7 @@
 int main(int argc, string argv[])
 {
     //get a non-negative integer k
-    if (argc != 2 || argv = //text)
+    if (argc != 2 || isdigit(string argv) = )
     {
         printf ("key: ");
         return 1;
