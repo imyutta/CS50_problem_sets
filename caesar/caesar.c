@@ -22,8 +22,10 @@ int main(int argc, string argv[])
     }
 
     //make int argv[1]
+    int k = argv[1];
 
     //ask user for text
+    string text = get_string("plaintext: ");
 
     // for each character in the user's text:
 
