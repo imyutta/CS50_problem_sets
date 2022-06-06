@@ -65,9 +65,10 @@ bool only_digits(string k)
 char rotate (char character, int key)
 {
     int characterASCII = character;
-    int characterASCIINew = characterASCII + key;
+
     if (characterASCII >= 65 && characterASCII <= 90)
     {
+        int characterASCIINew = characterASCII + key;
         if (characterASCIINew <= 90)
         {
             char characterNew = characterASCIINew;
