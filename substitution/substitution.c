@@ -82,12 +82,13 @@ bool isKeyUnrepeated(string key)
 //the function encrypts plaintext to ciphertext
 string encrypt(string plaintext, string key)
 {
+    string ciphertext = plaintext;
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        if (plaintext[i])
+        if (int plaintext[i] >= 65 && int plaintext[i] <= 90)
         {
-            plaintext[i] = key[i]
+            ciphertext[i] = key[i];
         }
     }
-    return 
+    return ciphertext;
 }
