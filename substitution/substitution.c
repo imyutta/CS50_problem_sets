@@ -36,13 +36,18 @@ int main(int argc, string argv[])
     }
 
     //prompt user for plaintext
-    
+    string plaintext = get_string("plaintext: ");
+    string ciphertext;
+
+    //print ciphertext
+    printf("ciphertext: %s\n", ciphertext);
     return 0;
 
 
 
 }
 
+//the function checks if the key characters are all letters
 bool isKeyAlpha(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
@@ -55,6 +60,7 @@ bool isKeyAlpha(string key)
     return true;
 }
 
+//the function checks if the key characters are unrepeated
 bool isKeyUnrepeated(string key)
 {
     int jShift = 1;
