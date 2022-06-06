@@ -70,17 +70,19 @@ char rotate (char character, int key)
     {
         if (characterASCIINew <= 90)
         {
-            return char characterASCIINew;
+            char characterNew = characterASCIINew;
+            return characterNew;
         }
         else
         {
             int characterASCIINew = characterASCIINew - 26;
-            return char characterASCIINew;
+            char characterNew = characterASCIINew
+            return characterNew;
         }
     }
     else
     {
-        return char character;
+        return character;
     }
 
 }
