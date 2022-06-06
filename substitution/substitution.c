@@ -10,12 +10,13 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY");
         return 1;
     }
-    else if
+    //check if there are 26 letters
+    else if (strlen(argv[1]) != 26)
     {
-
+        printf("Key must contain 26 characters.\n");
+        return 1;
     }
-
     //check if the key contains only letters
 
-    //check if there 26 letters
+
 }
