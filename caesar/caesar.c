@@ -18,7 +18,7 @@ int main(int argc, string argv[])
     }
 
     //check whether argv[1] is a non-negative digit
-    if (only_digits(argv[1]) == false || )
+    if (only_digits(argv[1]) == false)
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -33,10 +33,11 @@ int main(int argc, string argv[])
 
     // for each character in the user's text
     //rotate each letter(but only if it is a letter)
-    for (i = 0, n = strlen(text); i < n; i++)
+    for (int i = 0, n = strlen(text); i < n; i++)
     {
-        textNew[i] = rotate(text[i]);
+        textNew[i] = rotate(text[i], k);
     }
+    printf("ciphertext: %s\n", textNew);
 
 
 return 0;
