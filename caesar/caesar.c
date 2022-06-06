@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 bool only_digits(string k);
 
@@ -17,7 +18,7 @@ int main(int argc, string argv[])
     }
 
     //check whether argv[1] is a digit
-
+    if
     //make int argv[1]
 
     //ask user for text
@@ -38,5 +39,8 @@ int main(int argc, string argv[])
 
 bool only_digits(string k)
 {
-    
+    for (int i = 0, n = strlen(k); i < k; i++)
+    {
+        
+    }
 }
