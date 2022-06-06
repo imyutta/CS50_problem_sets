@@ -46,9 +46,9 @@ bool only_digits(string k)
         {
             return false;
         }
-        else if
+        else if (k[i] < 0)
         {
-            
+            return false;
         }
     }
     return true;
