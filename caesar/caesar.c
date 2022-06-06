@@ -6,7 +6,7 @@ int main(int argc, string argv[])
     //get a non-negative integer k
     if (argc != 2)
     {
-        printf ("key: ");
+        printf ("Usage: ./caesar key\n");
         return 1;
     }
     else if (isdigit(string argv) = )
