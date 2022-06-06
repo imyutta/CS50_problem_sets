@@ -62,7 +62,7 @@ int count_letters(string text)
 //counting words in text
 int count_words(string text)
 {
-    int count_words = 0;
+    int count_words = 1;
     int space_ASCII = 32;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
@@ -72,15 +72,7 @@ int count_words(string text)
         }
     }
 
-    if (count_words > 0)
-    {
-        return count_words += 1;
-    }
-    else
-    {
-        return count_words;
-    }
-
+    return count_words;
 }
 
 //counting sentences in text
@@ -90,6 +82,7 @@ int count_sentences(string text)
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         int letterNumASCII = text[i];
+        // . || ? || !
         if (letterNumASCII == 33 || letterNumASCII == 46 || letterNumASCII == 63)
         {
             count_sentences += 1;
