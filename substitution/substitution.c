@@ -34,10 +34,9 @@ int main(int argc, string argv[])
         printf("Key must not contain repeated characters.\n");
         return 1;
     }
-    else
-    {
-        printf("GOOD\n");
-    }
+
+    //prompt user for plaintext
+    
     return 0;
 
 
