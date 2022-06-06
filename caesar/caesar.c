@@ -16,10 +16,10 @@ int main(int argc, string argv[])
 
 
 
-    if (isdigit(string argv) = )
-    {
-        int k = argv;
-        int k = argv[];
-    }
+    // if (isdigit(string argv) = )
+    // {
+    //     int k = argv;
+    //     int k = argv[];
+    // }
 
 }
