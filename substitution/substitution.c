@@ -83,15 +83,18 @@ bool isKeyUnrepeated(string key)
 string encrypt(string plaintext, string key)
 {
     string ciphertext = plaintext;
+    int padding;
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
         int plaintextASCII = plaintext[i];
         if (plaintextASCII >= 65 && plaintextASCII <= 90)
         {
+            padding = 65;
             ciphertext[i] = toupper(key[i]);
         }
         else if (plaintextASCII >= 97 && plaintextASCII <= 122)
         {
+            padding = 97;
             ciphertext[i] = tolower(key[i]);
         }
     }
