@@ -69,6 +69,7 @@ char rotate (char character, int key)
     if (characterASCII >= 65 && characterASCII <= 90)
     {
         int characterASCIINew = characterASCII + key;
+
         if (characterASCIINew <= 90)
         {
             char characterNew = characterASCIINew;
@@ -76,8 +77,8 @@ char rotate (char character, int key)
         }
         else
         {
-            int characterASCIINew = characterASCIINew - 26;
-            char characterNew = characterASCIINew
+            characterASCIINew -= 26;
+            char characterNew = characterASCIINew;
             return characterNew;
         }
     }
