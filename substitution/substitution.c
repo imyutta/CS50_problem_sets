@@ -90,6 +90,7 @@ string encrypt(string plaintext, string key)
         if (plaintextASCII >= 65 && plaintextASCII <= 90)
         {
             padding = 65;
+            int plaintextASCIInew = plaintextASCII - padding;
             ciphertext[i] = toupper(key[i]);
         }
         else if (plaintextASCII >= 97 && plaintextASCII <= 122)
