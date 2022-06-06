@@ -29,7 +29,7 @@ int main(int argc, string argv[])
 
     //ask user for text
     string text = get_string("plaintext: ");
-    string textNew = text;
+    string textNew;
 
     // for each character in the user's text
     //rotate each letter(but only if it is a letter)
