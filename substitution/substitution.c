@@ -82,25 +82,28 @@ bool isKeyUnrepeated(string key)
 //the function encrypts plaintext to ciphertext
 string encrypt(string text, string key)
 {
+    //ASCII padding
     int padding = 0;
+    //for the key[j] array
     int j = 0;
+    
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         int letterASCII = text[i];
         if (letterASCII >= 65 && letterASCII <= 90)
         {
             padding = 65;
+            j = letterASCII - padding;
+            text[i] = toupper(key[j]);
         }
         else if (letterASCII >= 97 && letterASCII <= 122)
         {
             padding = 97;
+            j = letterASCII - padding;
+            text[i] = tolower(key[j]);
         }
-        j = letterASCII - padding;
-        text[i] = k[j];
+
     }
     return ciphertext;
 }
 
-int plaintextASCIInew = plaintextASCII - padding;
-ciphertext[i] = toupper(key[i]);
-ciphertext[i] = tolower(key[i]);
