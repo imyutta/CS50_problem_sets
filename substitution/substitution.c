@@ -51,15 +51,17 @@ bool isKeyAlpha(string key)
 
 bool isKeyUnrepeated(string key)
 {
+    int jShift = 1;
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        for (j = 1; j < (n - 1); j++)
+        for (int j = jShift; j < (n - jShift); j++)
         {
             if (key[i] == key[j])
             {
                 return false;
             }
         }
+        jShift += 1;
     }
     return true;
 }
