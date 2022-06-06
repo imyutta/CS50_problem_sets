@@ -21,11 +21,12 @@ int main(int argc, string argv[])
         return 1;
     }
     //check if the key contains only letters
-    else if
+    else if (isKeyAlpha(key) == false)
     {
         printf("Key must contain alphabetic characters.\n");
         return 1;
     }
+    
 
 
 }
