@@ -70,31 +70,21 @@ char rotate (char character, int key)
 
     if (characterASCII >= 65 && characterASCII <= 90)
     {
-        if (characterASCIINew <= 90)
-        {
-            characterNew = characterASCIINew;
-            return characterNew;
-        }
-        else
+        while (characterASCIINew > 90)
         {
             characterASCIINew -= 26;
-            characterNew = characterASCIINew;
-            return characterNew;
         }
+        characterNew = characterASCIINew;
+        return characterNew;
     }
     else if (characterASCII >= 97 && characterASCII <= 122)
     {
-        if (characterASCIINew <= 122)
-        {
-            characterNew = characterASCIINew;
-            return characterNew;
-        }
-        else
+        while (characterASCIINew > 122)
         {
             characterASCIINew -= 26;
-            characterNew = characterASCIINew;
-            return characterNew;
         }
+        characterNew = characterASCIINew;
+        return characterNew;
     }
     else
     {
