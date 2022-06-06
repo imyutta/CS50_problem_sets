@@ -4,15 +4,14 @@
 int main(int argc, string argv[])
 {
     //get a non-negative integer k
-    int k = argv;
-    
-    if (argc != 2 || isdigit(string argv) = )
+    if (argc != 2)
     {
         printf ("key: ");
         return 1;
     }
-    else
+    else if (isdigit(string argv) = )
     {
+        int k = argv;
         int k = argv[];
     }
 
