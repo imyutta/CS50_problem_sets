@@ -1,6 +1,8 @@
 #include <cs50.h>
 #include <stdio.h>
 
+bool only_digits(string k);
+
 int main(int argc, string argv[])
 {
     //check if there is only one command-line argument
@@ -20,9 +22,9 @@ int main(int argc, string argv[])
 
     //ask user for text
 
-    // for each caracter in the user's text:
+    // for each character in the user's text:
 
-    //rotate each letter
+    //rotate each letter(but only if it is a letter)
 
 
 
@@ -32,4 +34,9 @@ int main(int argc, string argv[])
     //     int k = argv[];
     // }
 
+}
+
+bool only_digits(string k)
+{
+    
 }
