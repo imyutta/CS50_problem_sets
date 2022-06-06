@@ -16,7 +16,7 @@ int main(void)
     float letters_amount = count_letters(text);
     float words_amount = count_words(text);
     float sentences_amount = count_sentences(text);
-    printf("%f letters\n%f words\n%f sentences\n", letters_amount, words_amount, sentences_amount);
+    printf("%f letters_F.\n%f words\n%f sentences\n", letters_amount, words_amount, sentences_amount);
 
     //average number of letters per 100 words in text
     float l = (letters_amount / words_amount) * 100;
@@ -56,7 +56,7 @@ int count_letters(string text)
             count_letters += 1;
         }
     }
-    printf("LETTERS_F %i",count_letters);
+    printf("LETTERS_F %i.",count_letters);
     return count_letters;
 }
 
