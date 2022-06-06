@@ -80,4 +80,14 @@ bool isKeyUnrepeated(string key)
 }
 
 //the function encrypts plaintext to ciphertext
-string encrypt(string plaintext, string key);
+string encrypt(string plaintext, string key)
+{
+    for (int i = 0, n = strlen(plaintext); i < n; i++)
+    {
+        if (plaintext[i])
+        {
+            plaintext[i] = key[i]
+        }
+    }
+    return 
+}
