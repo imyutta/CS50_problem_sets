@@ -43,7 +43,8 @@ int main(int argc, string argv[])
 
 }
 
-//a function checks if argv[] contains only digits
+//the function checks if argv[] contains only digits
+//the function checks if argv[] is a non-negative
 bool only_digits(string k)
 {
     if (atoi(k) < 0)
