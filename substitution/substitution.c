@@ -94,10 +94,6 @@ string encrypt(string plaintext, string key)
         {
             ciphertext[i] = tolower(key[i]);
         }
-        else
-        {
-            return 
-        }
     }
     return ciphertext;
 }
