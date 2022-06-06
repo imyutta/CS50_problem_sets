@@ -85,11 +85,12 @@ string encrypt(string plaintext, string key)
     string ciphertext = plaintext;
     for (int i = 0, n = strlen(plaintext); i < n; i++)
     {
-        if (int plaintext[i] >= 65 && int plaintext[i] <= 90)
+        int plaintextASCII = plaintext[i];
+        if (plaintextASCII >= 65 && plaintextASCII <= 90)
         {
             ciphertext[i] = toupper(key[i]);
         }
-        else if (int plaintext[i] >= 97 && int plaintext[i] <= 122)
+        else if (plaintextASCII >= 97 && plaintextASCII <= 122)
         {
             ciphertext[i] = tolower(key[i]);
         }
