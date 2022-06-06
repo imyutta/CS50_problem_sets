@@ -9,7 +9,14 @@ int main(int argc, string argv[])
         printf ("Usage: ./caesar key\n");
         return 1;
     }
-    else if (isdigit(string argv) = )
+    else
+    {
+        return 0;
+    }
+
+
+
+    if (isdigit(string argv) = )
     {
         int k = argv;
         int k = argv[];
