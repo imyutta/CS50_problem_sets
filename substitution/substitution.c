@@ -6,6 +6,7 @@
 
 bool isKeyAlpha(string key);
 bool isKeyUnrepeated(string key);
+string encrypt(string plaintext, string key);
 
 int main(int argc, string argv[])
 {
@@ -37,7 +38,7 @@ int main(int argc, string argv[])
 
     //prompt user for plaintext
     string plaintext = get_string("plaintext: ");
-    string ciphertext = ;
+    string ciphertext = enctypt(plaintext);
 
     //print ciphertext
     printf("ciphertext: %s\n", ciphertext);
@@ -77,3 +78,6 @@ bool isKeyUnrepeated(string key)
     }
     return true;
 }
+
+//the function encrypts plaintext to ciphertext
+string encrypt(string plaintext, string key);
