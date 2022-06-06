@@ -37,7 +37,7 @@ int main(int argc, string argv[])
 
     //prompt user for plaintext
     string plaintext = get_string("plaintext: ");
-    string ciphertext;
+    string ciphertext = ;
 
     //print ciphertext
     printf("ciphertext: %s\n", ciphertext);
