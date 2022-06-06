@@ -1,6 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
+include <>
 
 
 bool isKeyAlpha(string key);
@@ -9,6 +10,7 @@ bool isKeyUnrepeated(string key);
 int main(int argc, string argv[])
 {
 //check if the key is valid
+    string key = argv[1];
     //check if argc = 2
     if (argc != 2)
     {
