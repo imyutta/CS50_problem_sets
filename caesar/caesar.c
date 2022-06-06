@@ -5,5 +5,13 @@ int main(int argc, string argv[])
 {
     //get a non-negative integer k
     if (argc != 2 || argv = //text)
+    {
+        printf ("key: ");
+        return 1;
+    }
+    else
+    {
+        int k = argv[];
+    }
 
 }
