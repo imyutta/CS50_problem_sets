@@ -50,6 +50,6 @@ bool only_digits(string k)
         {
             return false;
         }
-    return true;
     }
+    return true;
 }
