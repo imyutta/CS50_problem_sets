@@ -53,9 +53,12 @@ bool isKeyUnrepeated(string key)
 {
     for (int i = 0, n = strlen(key); i < n; i++)
     {
-        if (key[i] == key[i + 1])
+        for (j = 0; j < n; j++)
         {
-            return false;
+            if (key[i] == key[i + 1])
+            {
+                return false;
+            }
         }
     }
     return true;
