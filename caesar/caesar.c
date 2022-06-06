@@ -50,7 +50,7 @@ bool only_digits(string k)
     return true;
 }
 
-int rotate (char , int )
+char rotate (char , int )
 {
-    
+
 }
