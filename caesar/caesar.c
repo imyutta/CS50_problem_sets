@@ -5,7 +5,7 @@
 #include <stdlib.h>
 
 bool only_digits(string k);
-char rotate (char character, int key);
+char rotate(char character, int key);
 
 
 int main(int argc, string argv[])
@@ -13,7 +13,7 @@ int main(int argc, string argv[])
     //check if there is only one command-line argument
     if (argc != 2)
     {
-        printf ("Usage: ./caesar key\n");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
 
@@ -39,8 +39,7 @@ int main(int argc, string argv[])
     }
     printf("ciphertext: %s\n", textNew);
 
-
-return 0;
+    return 0;
 
 }
 
@@ -62,7 +61,8 @@ bool only_digits(string k)
     return true;
 }
 
-char rotate (char character, int key)
+//a function convers a char letter with a 
+char rotate(char character, int key)
 {
     int characterASCII = character;
     int characterASCIINew = characterASCII + key;
