@@ -5,6 +5,8 @@
 #include <stdlib.h>
 
 bool only_digits(string k);
+char rotate (char character, int key);
+
 
 int main(int argc, string argv[])
 {
@@ -27,13 +29,17 @@ int main(int argc, string argv[])
 
     //ask user for text
     string text = get_string("plaintext: ");
+    string textNew = text;
 
-    // for each character in the user's text:
-
+    // for each character in the user's text
     //rotate each letter(but only if it is a letter)
+    for (i = 0, n = strlen(text); i < n; i++)
+    {
+        textNew[i] = rotate(text[i]);
+    }
 
 
-
+return 0;
 
 }
 
@@ -66,8 +72,13 @@ char rotate (char character, int key)
         }
         else
         {
-            int characterASCIINew = characterASCIINew - 
+            int characterASCIINew = characterASCIINew - 26;
+            return char characterASCIINew;
         }
+    }
+    else
+    {
+        return char character;
     }
 
 }
