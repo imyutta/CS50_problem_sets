@@ -16,7 +16,7 @@ int main(int argc, string argv[])
     }
 
     //check whether argv[1] is a digit
-    if (only_digits(argv[1]) == false)
+    if (only_digits(argv[1]) == false || )
     {
         printf("Usage: ./caesar key\n");
         return 1;
@@ -60,7 +60,7 @@ char rotate (char character, int key)
         {
             return char characterASCIINew;
         }
-        else 
+        else
     }
 
 }
