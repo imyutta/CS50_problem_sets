@@ -4,6 +4,7 @@
 
 
 bool isKeyAlpha(string key);
+bool isKeyUnrepeated(string key);
 
 int main(int argc, string argv[])
 {
@@ -26,7 +27,12 @@ int main(int argc, string argv[])
         printf("Key must contain alphabetic characters.\n");
         return 1;
     }
-    
+    else if (isKeyUnrepeated(key) == false)
+    {
+        printf("Key must not contain repeated characters.\n");
+        return 1;
+    }
+
 
 
 }
