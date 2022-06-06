@@ -86,7 +86,7 @@ string encrypt(string text, string key)
     int padding = 0;
     //for the key[j] array
     int j = 0;
-    
+
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         int letterASCII = text[i];
@@ -104,6 +104,6 @@ string encrypt(string text, string key)
         }
 
     }
-    return ciphertext;
+    return text;
 }
 
