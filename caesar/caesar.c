@@ -13,10 +13,6 @@ int main(int argc, string argv[])
         printf ("Usage: ./caesar key\n");
         return 1;
     }
-    else
-    {
-        return 0;
-    }
 
     //check whether argv[1] is a digit
     if (only_digits(argv[1]) == false)
@@ -24,10 +20,7 @@ int main(int argc, string argv[])
         printf("Usage: ./caesar key\n");
         return 1;
     }
-    else
-    {
-        return 0;
-    }
+
     //make int argv[1]
 
     //ask user for text
