@@ -2,6 +2,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdlib.h>
 
 bool only_digits(string k);
 
@@ -22,7 +23,7 @@ int main(int argc, string argv[])
     }
 
     //make int argv[1]
-    int k = argv[1];
+    int k = atoi(argv[1]);
 
     //ask user for text
     string text = get_string("plaintext: ");
