@@ -47,13 +47,14 @@ return 0;
 //a function checks if argv[] contains only digits
 bool only_digits(string k)
 {
+    if (atoi(k) < 0)
+    {
+        return false;
+    }
+
     for (int i = 0, n = strlen(k); i < n; i++)
     {
         if (isdigit(k[i]) == 0)
-        {
-            return false;
-        }
-        else if (atoi(k[i]) < 0)
         {
             return false;
         }
