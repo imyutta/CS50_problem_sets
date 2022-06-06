@@ -65,8 +65,8 @@ bool only_digits(string k)
 char rotate(char character, int key)
 {
     int characterASCII = character;
-    int characterASCIINew = characterASCII + key;
-    char characterNew;
+    // int characterASCIINew = characterASCII + key;
+    // char characterNew;
     int padding = 0;
 
     // [65, 90] [97, 122]
@@ -82,27 +82,27 @@ char rotate(char character, int key)
 
     return (characterASCII - padding + key) % 26 + padding;
 
-    if (characterASCII >= 65 && characterASCII <= 90)
-    {
-        while (characterASCIINew > 90)
-        {
-            characterASCIINew -= 26;
-        }
-        characterNew = characterASCIINew;
-        return characterNew;
-    }
-    else if (characterASCII >= 97 && characterASCII <= 122)
-    {
-        while (characterASCIINew > 122)
-        {
-            characterASCIINew -= 26;
-        }
-        characterNew = characterASCIINew;
-        return characterNew;
-    }
-    else
-    {
-        return character;
-    }
+    // if (characterASCII >= 65 && characterASCII <= 90)
+    // {
+    //     while (characterASCIINew > 90)
+    //     {
+    //         characterASCIINew -= 26;
+    //     }
+    //     characterNew = characterASCIINew;
+    //     return characterNew;
+    // }
+    // else if (characterASCII >= 97 && characterASCII <= 122)
+    // {
+    //     while (characterASCIINew > 122)
+    //     {
+    //         characterASCIINew -= 26;
+    //     }
+    //     characterNew = characterASCIINew;
+    //     return characterNew;
+    // }
+    // else
+    // {
+    //     return character;
+    // }
 
 }
