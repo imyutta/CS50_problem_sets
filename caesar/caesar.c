@@ -15,7 +15,7 @@ int main(int argc, string argv[])
         return 1;
     }
 
-    //check whether argv[1] is a digit
+    //check whether argv[1] is a non-negative digit
     if (only_digits(argv[1]) == false || )
     {
         printf("Usage: ./caesar key\n");
@@ -46,7 +46,7 @@ bool only_digits(string k)
         {
             return false;
         }
-        else if (k[i] < 0)
+        else if (atoi(k[i]) < 0)
         {
             return false;
         }
