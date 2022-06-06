@@ -4,7 +4,7 @@
 
 int main(int argc, string argv[])
 {
-
+//check if the key is valid
     //check if argc = 2
     if (argc != 2)
     {
@@ -19,6 +19,9 @@ int main(int argc, string argv[])
     }
     //check if the key contains only letters
     else if
+    {
+        
+    }
 
 
 }
