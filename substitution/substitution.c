@@ -94,7 +94,7 @@ string encrypt(string text, string key)
         {
             padding = 97;
         }
-        
+        letterASCII -= padding;
     }
     return ciphertext;
 }
