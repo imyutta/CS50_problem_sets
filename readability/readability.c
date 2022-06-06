@@ -63,10 +63,10 @@ int count_letters(string text)
 int count_words(string text)
 {
     int count_words = 0;
+    int space_ASCII = 32;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        int letterNumASCII = text[i];
-        if (letterNumASCII == 32)
+        if (text[i] == space_ASCII)
         {
             count_words += 1;
         }
