@@ -1,7 +1,7 @@
 #include <cs50.h>
 #include <stdio.h>
 #include <string.h>
-include <>
+#include <ctype.h>
 
 
 bool isKeyAlpha(string key);
@@ -14,7 +14,7 @@ int main(int argc, string argv[])
     //check if argc = 2
     if (argc != 2)
     {
-        printf("Usage: ./substitution KEY");
+        printf("Usage: ./substitution KEY\n");
         return 1;
     }
     //check if there are 26 letters
