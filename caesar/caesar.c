@@ -61,7 +61,7 @@ bool only_digits(string k)
     return true;
 }
 
-//a function convers a char letter with a 
+//a function convers a char letter with a key
 char rotate(char character, int key)
 {
     int characterASCII = character;
