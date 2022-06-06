@@ -19,7 +19,7 @@ int main(int argc, string argv[])
     }
 
     //check whether argv[1] is a digit
-    if
+    
     //make int argv[1]
 
     //ask user for text
@@ -30,29 +30,18 @@ int main(int argc, string argv[])
 
 
 
-    // if (isdigit(string argv) = )
-    // {
-    //     int k = argv;
-    //     int k = argv[];
-    // }
 
 }
 
+//a function checks if argv[] contains only digits
 bool only_digits(string k)
 {
-    int 
     for (int i = 0, n = strlen(k); i < k; i++)
     {
         if (isdigit(k[i]) == 0)
         {
             return false;
         }
-        else
-        {
-
-        }
-
-
-
+    return true;
     }
 }
