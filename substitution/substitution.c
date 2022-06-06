@@ -83,6 +83,7 @@ bool isKeyUnrepeated(string key)
 string encrypt(string text, string key)
 {
     int padding = 0;
+    int j = 0;
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         int letterASCII = text[i];
@@ -94,7 +95,8 @@ string encrypt(string text, string key)
         {
             padding = 97;
         }
-        letterASCII -= padding;
+        j = letterASCII - padding;
+        text[i] = k[j];
     }
     return ciphertext;
 }
