@@ -2,6 +2,9 @@
 #include <stdio.h>
 #include <string.h>
 
+
+bool isKeyAlpha(string key);
+
 int main(int argc, string argv[])
 {
 //check if the key is valid
@@ -27,4 +30,7 @@ int main(int argc, string argv[])
 
 }
 
-bool isKeyAlpha
+bool isKeyAlpha(string key)
+{
+
+}
