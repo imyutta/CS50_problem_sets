@@ -44,7 +44,7 @@ int main(int argc, string argv[])
 //a function checks if argv[] contains only digits
 bool only_digits(string k)
 {
-    for (int i = 0, n = strlen(k); i < k; i++)
+    for (int i = 0, n = strlen(k); i < n; i++)
     {
         if (isdigit(k[i]) == 0)
         {
