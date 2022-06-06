@@ -1,5 +1,6 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <string.h>
 
 int main(int argc, string argv[])
 {
@@ -9,7 +10,10 @@ int main(int argc, string argv[])
         printf("Usage: ./substitution KEY");
         return 1;
     }
-    else
+    else if
+    {
+
+    }
 
     //check if the key contains only letters
 
