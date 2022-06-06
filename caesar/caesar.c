@@ -67,6 +67,20 @@ char rotate(char character, int key)
     int characterASCII = character;
     int characterASCIINew = characterASCII + key;
     char characterNew;
+    int padding = 0;
+
+    // [65, 90] [97, 122]
+    if (characterASCII >= 65 && characterASCII <= 90)
+    {
+        padding = 65;
+    } else if (characterASCII >= 97 && characterASCII <= 122)
+    {
+        padding = 97;
+    } else {
+        return character;
+    }
+
+    return (characterASCII - padding + key) % 26 + padding;
 
     if (characterASCII >= 65 && characterASCII <= 90)
     {
