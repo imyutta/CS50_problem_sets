@@ -48,3 +48,8 @@ bool isKeyAlpha(string key)
     }
     return true;
 }
+
+bool isKeyUnrepeated(string key)
+{
+    
+}
