@@ -4,9 +4,9 @@
 int main(void)
 {
     string array[3];
-    printf("%i", array[0]);
-    printf("%i", array[1]);
-    printf("%i", array[2]);
-    printf("%i", array[3]);
+    printf("%s", array[0]);
+    printf("%s", array[1]);
+    printf("%s", array[2]);
+
 
 }
