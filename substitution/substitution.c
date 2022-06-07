@@ -90,14 +90,14 @@ string encrypt(string text, string key)
     for (int i = 0, n = strlen(text); i < n; i++)
     {
         //int letterASCII = text[i];
-        if (text[i] >= A && text[i] <= Z)
+        if (text[i] >= 'A' && text[i] <= 'Z')
         {
             padding = 65;
             j = text[i] - padding;
             printf("j = %i", j);
             text[i] = toupper(key[j]);
         }
-        else if (text[i] >= a && text[i] <= z)
+        else if (text[i] >= 'a' && text[i] <= 'z')
         {
             padding = 97;
             j = text[i] - padding;
