@@ -20,8 +20,8 @@
 
 int main(void)
 {
-    string s = "HI!";
-    printf("%c %c %c\n", s[0], s[1], s[2]);
-    s = "B";
+    char s[] = "HI!";
+    printf("%s \n", s);
+    s[0] = 'B';
     printf("%c %i %i\n", s[0], s[1], s[2]);
 }
