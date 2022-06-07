@@ -5,11 +5,13 @@
 int main(void)
 {
     string s = "bgn";
-    s[0] = 'v';
-    s[1] = 'f';
-    s[2] = 'b';
-    printf("%s\n", s);
 
+    printf("%c\n", s[0]);
+
+    s[0] = 'B';
+
+
+    printf("%c\n", s[0]);
 
 }
 
