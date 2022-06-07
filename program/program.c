@@ -8,9 +8,9 @@ int main(void)
     s[0] = 'v';
     s[1] = 'f';
     s[2] = 'b';
-    printf("%c\n", s[0]);
-    printf("%c\n", s[1]);
-    printf("%c\n", s[2]);
+    printf("%s\n", s);
+    printf("%s\n", s);
+    printf("%s\n", s);
 
 }
 
