@@ -94,12 +94,13 @@ string encrypt(string text, string key)
         {
             padding = 65;
             j = text[i] - padding;
+            printf("j = %i", j);
             text[i] = toupper(key[j]);
         }
-        else if (letterASCII >= 97 && letterASCII <= 122)
+        else if (text[i] >= a && text[i] <= z)
         {
             padding = 97;
-            j = letterASCII - padding;
+            j = text[i] - padding;
             text[i] = tolower(key[j]);
         }
 
