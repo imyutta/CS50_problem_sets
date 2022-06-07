@@ -70,7 +70,7 @@ char rotate(char character, int key)
     int padding = 0;
 
     // [65, 90] [97, 122]
-    if (characterASCII >= 65 && characterASCII <= 90)
+    if (isupper(character))
     {
         padding = 65;
     } else if (characterASCII >= 97 && characterASCII <= 122)
