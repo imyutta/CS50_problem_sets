@@ -65,7 +65,7 @@ bool only_digits(string k)
 //a function convers a char letter with a key
 char rotate(char character, int key)
 {
-    int characterASCII = character;
+
 
     int padding = 0;
 
@@ -73,14 +73,14 @@ char rotate(char character, int key)
     if (isupper(character))
     {
         padding = 65;
-    } else if (characterASCII >= 97 && characterASCII <= 122)
+    } else if (islower(character))
     {
         padding = 97;
     } else {
         return character;
     }
 
-    return (characterASCII - padding + key) % 26 + padding;
+    return (int (character) - padding + key) % 26 + padding;
 
 
 
