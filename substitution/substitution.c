@@ -89,8 +89,8 @@ string encrypt(string text, string key)
 
     for (int i = 0, n = strlen(text); i < n; i++)
     {
-        int letterASCII = text[i];
-        if (letterASCII >= 65 && letterASCII <= 90)
+        //int letterASCII = text[i];
+        if (text[i] >= A && text[i] <= Z)
         {
             padding = 65;
             j = letterASCII - padding;
