@@ -94,7 +94,6 @@ string encrypt(string text, string key)
         {
             padding = 65;
             j = text[i] - padding;
-            printf("j = %i\n", j);
             text[i] = toupper(key[j]);
         }
         else if (text[i] >= 'a' && text[i] <= 'z')
