@@ -13,9 +13,9 @@ int main(void)
     string text = get_string("Text: ");
 
     //count the number of letters, words, sentences
-    float letters_amount = count_letters(text);
-    float words_amount = count_words(text);
-    float sentences_amount = count_sentences(text);
+    int letters_amount = count_letters(text);
+    int words_amount = count_words(text);
+    int sentences_amount = count_sentences(text);
     printf("%f - letters_F.\n", letters_amount);
 
     //%f words\n%f sentences\n
