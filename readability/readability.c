@@ -16,15 +16,15 @@ int main(void)
     int letters_amount = count_letters(text);
     int words_amount = count_words(text);
     int sentences_amount = count_sentences(text);
-    printf("%f - letters_F.\n", letters_amount);
+    printf("%i - letters_F.\n", letters_amount);
 
     //%f words\n%f sentences\n
     //words_amount, sentences_amount
 
     //average number of letters per 100 words in text
-    float l = (letters_amount / words_amount) * 100;
+    float l = (letters_amount / words_amount) * 100.0;
     //average number of sentences per 100 words in text
-    float s = (sentences_amount / words_amount) * 100;
+    float s = (sentences_amount / words_amount) * 100.0;
 
     //Coleman-Liau index
     float index = 0.0588 * l - 0.296 * s - 15.8;
