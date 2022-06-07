@@ -21,8 +21,8 @@ int main(void)
 
 
     //average number of letters per 100 words in text
-    float l = (letters_amount / words_amount) * 100.0;
-    printf("%f - letters devided by words multiplied by 100.0\n", l);
+    int l = (letters_amount / words_amount) * 100.0;
+    printf("%i - letters devided by words multiplied by 100.0\n", l);
     //average number of sentences per 100 words in text
     float s = (sentences_amount / words_amount) * 100.0;
 
