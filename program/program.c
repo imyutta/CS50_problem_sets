@@ -8,7 +8,7 @@ int main(void)
 
     printf("%c\n", s[0]);
 
-    s[0] = 'B';
+    s[0] = "B";
 
 
     printf("%c\n", s[0]);
