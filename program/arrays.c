@@ -4,6 +4,6 @@
 
 int main(void)
 {
-    
+    int array[100];
 
 }
