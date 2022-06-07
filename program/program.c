@@ -4,10 +4,10 @@
 
 int main(void)
 {
-    string array;
-    array[0] = '0';
-    array[1] = '1';
-    array[2] = '2';
+    string array = "bgn";
+    array[0] = 'v';
+    array[1] = 'f';
+    array[2] = 'b';
     printf("%c\n", array[0]);
     printf("%c\n", array[1]);
     printf("%c\n", array[2]);
