@@ -9,8 +9,7 @@ int main(void)
     s[1] = 'f';
     s[2] = 'b';
     printf("%s\n", s);
-    printf("%s\n", s);
-    printf("%s\n", s);
+
 
 }
 
