@@ -80,7 +80,7 @@ char rotate(char character, int key)
         return character;
     }
 
-    return ((int character) - padding + key) % 26 + padding;
+    return (character - padding + key) % 26 + padding;
 
 
 
