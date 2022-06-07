@@ -11,7 +11,7 @@ int main(void)
     printf("%s\n", array[0]);
     printf("%s\n", array[1]);
     printf("%s\n", array[2]);
-    printf("%i\n", strlen(array));
+    printf("%lu\n", strlen(array[]));
 
 
 }
