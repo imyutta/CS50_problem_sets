@@ -93,7 +93,7 @@ string encrypt(string text, string key)
         if (text[i] >= A && text[i] <= Z)
         {
             padding = 65;
-            j = letterASCII - padding;
+            j = text[i] - padding;
             text[i] = toupper(key[j]);
         }
         else if (letterASCII >= 97 && letterASCII <= 122)
