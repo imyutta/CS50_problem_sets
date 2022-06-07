@@ -22,6 +22,6 @@ int main(void)
 {
     char s[] = "HI!";
     printf("%s \n", s);
-    s[0] = 'B';
-    printf("%c %i %i\n", s[0], s[1], s[2]);
+
+    printf("%lu\n", sizeof(s));
 }
