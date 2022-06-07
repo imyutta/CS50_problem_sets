@@ -9,9 +9,9 @@ int main(void)
     printf("%c\n", s[0]);
 
     s[0] = 'B';
+    printf("%s\n", s);
 
-
-    printf("%c\n", s[0]);
+    //printf("%c\n", s[0]);
 
 }
 
