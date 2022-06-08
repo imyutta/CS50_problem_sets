@@ -1,6 +1,6 @@
 sort1 uses: Merge sort
 
-How do you know?: TODO
+How do you know?: The time 
 
 sort2 uses: TODO
 
