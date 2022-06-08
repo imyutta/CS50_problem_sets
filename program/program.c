@@ -7,6 +7,6 @@ int main(void)
     string names[] = {"Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"};
     names[0] = "BILL";
 
-            printf("%s\n", names);
+            printf("%s\n", names[0]);
 
 }
