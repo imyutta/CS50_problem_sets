@@ -4,13 +4,14 @@
 
 int main(void)
 {
-    string names[] = {"Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"};
+    string names[] = {"Carter", "David"};
+    string numbers[] = {"+1-617-495-1000", "+1-949-468-2750"};
 
-    for (int i = 0; i < 7; i++)
+    for (int i = 0; i < 2; i++)
     {
-        if (!strcmp(names[i], "Ron"))
+        if (strcmp(names[i], "David") == 0)
         {
-            printf("Found %i\n", i);
+            printf("Found %s\n", numbers[i]);
             return 0;
         }
     }
