@@ -1,4 +1,4 @@
-sort1 uses: TODO
+sort1 uses: Merge sort
 
 How do you know?: TODO
 
