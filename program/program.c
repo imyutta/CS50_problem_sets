@@ -8,9 +8,9 @@ int main(void)
 
     for (int i = 0; i < 7; i++)
     {
-        if (strcmp(names[i], "Ron") == 0)
+        if (strcmp(names[i], "Ron"))
         {
-            printf("Found\n");
+            printf("Found %i\n", i);
             return 0;
         }
     }
