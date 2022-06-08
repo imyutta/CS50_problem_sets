@@ -4,11 +4,9 @@
 
 int main(void)
 {
-    int array[100];
-    for (int i = 0; i < 100; i++)
-    {
-        array[i] = i;
-        printf("%i = %i\n", i, array[i]);
-    }
+    string names[] = {"Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"};
+    names[0] = "BILL";
+
+            printf("%s\n", names);
 
 }
