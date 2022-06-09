@@ -77,12 +77,6 @@ bool isKeyUnrepeated(string key)
     return true;
 }
 
-abcdd
-n = 5
-
-i = 0
-j = 1
-
 //the function encrypts plaintext to ciphertext
 string encrypt(string text, string key)
 {
