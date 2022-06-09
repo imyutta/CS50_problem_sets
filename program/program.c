@@ -10,7 +10,18 @@ int main(void)
 
 int collatz(int n)
 {
-    for (int i = 1; i < )
+    int steps = 0;
     if (n == 1)
-    return
+    {
+        return steps;
+    }
+    else if (n % 2 == 0)
+    {
+        n /= 2;
+    }
+    else
+    {
+        
+    }
+
 }
