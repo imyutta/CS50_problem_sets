@@ -68,6 +68,7 @@ bool vote(string name)
 {
     // TODO
     //check if the voted name exists
+    candidates[i].votes += 1;
     return false;
 }
 
