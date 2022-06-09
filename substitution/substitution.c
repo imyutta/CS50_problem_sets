@@ -64,17 +64,15 @@ bool isKeyAlpha(string key)
 //the function checks if the key characters are unrepeated
 bool isKeyUnrepeated(string key)
 {
-    int jShift = 1;
     for (int i = 0, n = strlen(key); i < n - 1; i++)
     {
-        for (int j = i + 1; j < (n - jShift); j++)
+        for (int j = i + 1; j < n - 1; j++)
         {
             if (key[i] == key[j])
             {
                 return false;
             }
         }
-        jShift += 1;
     }
     return true;
 }
