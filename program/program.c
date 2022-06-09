@@ -1,19 +1,19 @@
 #include <cs50.h>
 #include <stdio.h>
 
-int collatz(int n, int steps);
+int collatz(int n, );
 
 int main(void)
 {
     int n = get_int("n= ");
     int steps = 0;
-    int allSteps = collatz(n, steps);
+    int allSteps = collatz(n);
     printf("Steps = %i\n", allSteps);
 }
 
-int collatz(int n, int steps)
+int collatz(int n)
 {
-
+    int steps;
     if (n == 1)
     {
         return steps = 0;
