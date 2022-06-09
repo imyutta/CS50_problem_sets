@@ -16,18 +16,18 @@ int collatz(int n)
     int steps;
     if (n == 1)
     {
-        return steps = 0;
+        return steps;
     }
     else if (n % 2 == 0)
     {
-        n/2
-        steps++
-        return steps + collatz(n / 2);
+
+        steps++;
+        return collatz(n / 2);
     }
     else
     {
-
-        return steps + collatz(3 * n + 1);
+        steps++;
+        return collatz(3 * n + 1);
     }
 
 }
