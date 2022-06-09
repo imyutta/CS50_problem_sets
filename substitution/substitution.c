@@ -66,7 +66,7 @@ bool isKeyUnrepeated(string key)
 {
     for (int i = 0, n = strlen(key); i < n - 1; i++)
     {
-        for (int j = i + 1; j < n - 1; j++)
+        for (int j = i + 1; j < n; j++)
         {
             if (key[i] == key[j])
             {
@@ -76,6 +76,13 @@ bool isKeyUnrepeated(string key)
     }
     return true;
 }
+i = 0, n = 5, i: 0, 1, 2, 3
+
+0 1
+0 2
+0 3
+0 4
+
 
 //the function encrypts plaintext to ciphertext
 string encrypt(string text, string key)
