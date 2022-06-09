@@ -1,6 +1,6 @@
 sort1 uses: Merge sort
 
-How do you know?: The running time in the best cases (sorted5000, sorted10000, sorted50000) (Omega) is nlog(n). To check this
+How do you know?: The running time in the best cases (sorted5000, sorted10000, sorted50000) Omega is growing with the graph nlog(n).
 
 sort2 uses: TODO
 
