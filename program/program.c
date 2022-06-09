@@ -20,13 +20,13 @@ int collatz(int n, int steps)
     }
     else if (n % 2 == 0)
     {
-        collatz(n / 2);
-        return steps + ;
+
+        return steps + collatz(n / 2);
     }
     else
     {
-        collatz(3 * n + 1);
-        return steps++
+
+        return steps + collatz(3 * n + 1);
     }
 
 }
