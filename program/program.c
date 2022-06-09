@@ -20,7 +20,8 @@ int collatz(int n, int steps)
     }
     else if (n % 2 == 0)
     {
-
+        n/2
+        steps++
         return steps + collatz(n / 2);
     }
     else
