@@ -12,10 +12,10 @@ int main(void)
 
 int collatz(int n)
 {
-    int steps;
+
     if (n == 1)
     {
-        return 0;
+        return;
     }
     else if (n % 2 == 0)
     {
