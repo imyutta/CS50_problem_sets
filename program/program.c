@@ -10,20 +10,21 @@ int main(void)
 
 int collatz(int n)
 {
+
     int steps = 0;
-    if (n == 1)
+    while (n != 1)
     {
-        return steps;
+        if (n % 2 == 0)
+        {
+            n = n / 2;
+            steps++;
+        }
+        else
+        {
+            n = 3 * n + 1;
+            step++;
+        }
     }
-    else if (n % 2 == 0)
-    {
-        n = n / 2;
-        steps++;
-    }
-    else
-    {
-        n = 3 * n + 1;
-        step++;
-    }
+    return steps;
 
 }
