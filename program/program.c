@@ -19,7 +19,7 @@ int collatz(int n)
     }
     else if (n % 2 == 0)
     {
-        return collatz
+        return collatz(n)
     }
 
     while (n != 1)
