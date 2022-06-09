@@ -15,7 +15,7 @@ int collatz(int n)
 
     if (n == 1)
     {
-        return;
+        return 0;
     }
     else if (n % 2 == 0)
     {
@@ -23,10 +23,7 @@ int collatz(int n)
     }
     else
     {
-
         return collatz(3 * n + 1);
-
     }
-
 
 }
