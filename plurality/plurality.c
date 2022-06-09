@@ -67,10 +67,15 @@ int main(int argc, string argv[])
 bool vote(string name)
 {
     // TODO
-    //check if the voted name exists
-    candidates[i].name has this name?
-    candidates[i].votes += 1;
-    return true;
+    //if the name is valid, update the vote
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].name == name)
+        {
+            candidates[i].votes += 1;
+            return 0;
+        }
+    }
 
     return false;
 }
