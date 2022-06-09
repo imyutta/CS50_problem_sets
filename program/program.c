@@ -22,12 +22,12 @@ int collatz(int n, int steps)
     {
 
         steps++;
-        return collatz(n / 2, steps++);
+        return collatz(n / 2, steps);
     }
     else
     {
         steps++;
-        return collatz((3 * n + 1), steps++);
+        return collatz((3 * n + 1), steps);
     }
 
 }
