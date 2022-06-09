@@ -1,6 +1,6 @@
 sort1 uses: Merge sort
 
-How do you know?: The running time in the best case
+How do you know?: The running time in the best case (Omega) is nlog(n)
 
 sort2 uses: TODO
 
