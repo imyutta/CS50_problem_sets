@@ -7,7 +7,7 @@ int main(void)
 {
     int n = get_int("n= ");
     int steps = collatz(n);
-    printf("Steps = %i", steps);
+    printf("Steps = %i\n", steps);
 }
 
 int collatz(int n)
@@ -20,7 +20,6 @@ int collatz(int n)
     else if (n % 2 == 0)
     {
         return collatz(n / 2);
-
     }
     else
     {
