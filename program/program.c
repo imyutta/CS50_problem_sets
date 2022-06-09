@@ -16,7 +16,7 @@ int collatz(int n)
     int steps;
     if (n == 1)
     {
-        return steps;
+        return 0;
     }
     else if (n % 2 == 0)
     {
