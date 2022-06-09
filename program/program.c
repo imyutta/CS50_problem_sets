@@ -29,5 +29,6 @@ int collatz(int n, int steps)
         steps++;
         return collatz((3 * n + 1), steps);
     }
+    return steps;
 
 }
