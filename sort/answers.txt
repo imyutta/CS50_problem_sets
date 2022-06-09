@@ -1,17 +1,14 @@
-sort1 uses: Merge sort
+sort1 uses: Bubble sort
 
-How do you know?:
-The running time in the best case (sorted5000, sorted10000, sorted50000) Omega is growing with the graph nlog(n).
-The running time in the worst case (random5000, random10000, random50000) Omega is growing with the graph nlog(n) as well.
+How do you know?: In the best case (sorted5000, sorted10000, sorted50000) Omega = n.
+In the worst case (reversed5000, reversed10000, reversed50000) Big O = n^2.
 
-sort2 uses: TODO
+sort2 uses: Merge sort
 
-How do you know?:
-The running time in the best case (sorted5000, sorted10000, sorted50000) Omega is  n^2.
-The running time in the worst case (random5000, random10000, random50000) Omega is growing with the graph nlog(n) as well.
+How do you know?: In the best case (sorted5000, sorted10000, sorted50000) Omega = n*log(n).
+In the worst case (reversed5000, reversed10000, reversed50000) Big O = n*log(n).
 
-sort3 uses: TODO
+sort3 uses: Selection sort
 
-How do you know?:
-The running time in the best case (sorted5000, sorted10000, sorted50000) Omega is n^2.
-The running time in the worst case (random5000, random10000, random50000) Omega is growing with the graph nlog(n) as well.
+How do you know?: In the best case (sorted5000, sorted10000, sorted50000) Omega = n^2.
+In the worst case (reversed5000, reversed10000, reversed50000) Big O = n^2.
