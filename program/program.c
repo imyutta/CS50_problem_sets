@@ -17,11 +17,13 @@ int collatz(int n)
     }
     else if (n % 2 == 0)
     {
-        n /= 2;
+        n = n / 2;
+        steps++;
     }
     else
     {
-        
+        n = 3 * n + 1;
+        step++;
     }
 
 }
