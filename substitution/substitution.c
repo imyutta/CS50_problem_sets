@@ -76,13 +76,12 @@ bool isKeyUnrepeated(string key)
     }
     return true;
 }
-i = 0, n = 5, i: 0, 1, 2, 3
 
-0 1
-0 2
-0 3
-0 4
+abcdd
+n = 5
 
+i = 0
+j = 1
 
 //the function encrypts plaintext to ciphertext
 string encrypt(string text, string key)
