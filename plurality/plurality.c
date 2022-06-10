@@ -98,7 +98,7 @@ void print_winner(void)
         }
     }
 
-    printf(result);
+    printf("%s", result);
     // for (int i = 0; i < candidate_count; i++)
     // {
     //     if (candidates[i].votes == biggest_score)
