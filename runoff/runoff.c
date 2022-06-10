@@ -127,13 +127,15 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    //check if name is valid
+    //if name is valid
+    //update global preferences of the voter
     for (int i = 0; i < candidate_count; i++)
     {
-        if strcmp(candidate_count[i]name)
+        if (strcmp(candidates.[i]name, name) == 0)
+        {
+            
+        }
     }
-
-    //update global preferences of the voter
     return false;
 }
 
