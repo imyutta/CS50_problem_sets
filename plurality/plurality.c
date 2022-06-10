@@ -94,7 +94,6 @@ void print_winner(void)
                 winners_names[i] = i;
             }
 
-
     }
     printf("%s\n", winner);
     return;
