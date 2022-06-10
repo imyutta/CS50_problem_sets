@@ -128,7 +128,10 @@ int main(int argc, string argv[])
 bool vote(int voter, int rank, string name)
 {
     //check if name is valid
-    if strcmp()
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if strcmp(candidate_count[i]name)
+    }
 
     //update global preferences of the voter
     return false;
