@@ -91,10 +91,10 @@ void print_winner(void)
         {
             biggest_score = candidates[i].votes;
             result = candidates[i].name;
-        } else if (candidates[i].votes == biggerst_score)
+        } else if (candidates[i].votes == biggest_score)
         {
             result = strcat(result, "\n");
-            result = strcat(result, candidates[i].name)
+            result = strcat(result, candidates[i].name);
         }
     }
 
