@@ -145,10 +145,14 @@ bool vote(int voter, int rank, string name)
 void tabulate(void)
 {
     // update vote counts for all non-eliminated candidates
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < voter_count; i++)
     {
-        if (candidates[i].eliminated == true)
-        
+        for (int j = 0; j < candidate_count; j++)
+        {
+            if (candidates[i].eliminated == true)
+        }
+
+
     }
 
     return;
