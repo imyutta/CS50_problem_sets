@@ -131,9 +131,10 @@ bool vote(int voter, int rank, string name)
     //update global preferences of the voter
     for (int i = 0; i < candidate_count; i++)
     {
-        if (strcmp(candidates.[i]name, name) == 0)
+        if (strcmp(candidates[i].name, name) == 0)
         {
             preferences[voter][rank] +=1;
+            return true;
         }
     }
     return false;
