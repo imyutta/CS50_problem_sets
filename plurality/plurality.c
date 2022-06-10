@@ -91,7 +91,7 @@ void print_winner(void)
                 biggest_score = candidates[i].votes;
             }
     }
-    for (int i = 1; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
         if (candidates[i].votes == biggest_score)
         {
