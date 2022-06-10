@@ -127,10 +127,10 @@ int main(int argc, string argv[])
 // Record preference if vote is valid
 bool vote(int voter, int rank, string name)
 {
-    // TODO
     //check if name is valid
+    
 
-    //
+    //update global preferences of the voter
     return false;
 }
 
