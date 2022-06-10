@@ -70,7 +70,7 @@ bool vote(string name)
     //if the name is valid, update the vote
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].name == name)
+        if (strcmp(candidates[i].name, name))
         {
             candidates[i].votes += 1;
             return 0;
