@@ -86,10 +86,10 @@ void print_winner(void)
     int biggest_score = candidates[0].votes;
     for (int i = 1; i < candidate_count; i++)
     {
-            if (candidates[i].votes > biggest_score)
-            {
-                biggest_score = candidates[i].votes;
-            }
+        if (candidates[i].votes > biggest_score)
+        {
+            biggest_score = candidates[i].votes;
+        }
     }
     for (int i = 0; i < candidate_count; i++)
     {
