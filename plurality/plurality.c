@@ -84,19 +84,26 @@ void print_winner(void)
 {
     // TODO
     int biggest_score = candidates[0].votes;
-    string result = "";
+    string result = candidates[0].name;
     for (int i = 1; i < candidate_count; i++)
     {
         if (candidates[i].votes > biggest_score)
         {
             biggest_score = candidates[i].votes;
-        }
-    }
-    for (int i = 0; i < candidate_count; i++)
-    {
-        if (candidates[i].votes == biggest_score)
+            result = candidates[i].name;
+        } else if (candidates[i].votes == biggerst_score)
         {
-            printf("%s\n", candidates[i].name);
+            result = strcat(result, "\n");
+            result = strcat(result, candidates[i].name)
         }
     }
+
+    printf(result);
+    // for (int i = 0; i < candidate_count; i++)
+    // {
+    //     if (candidates[i].votes == biggest_score)
+    //     {
+    //         printf("%s\n", candidates[i].name);
+    //     }
+    // }
 }
