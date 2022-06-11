@@ -188,13 +188,13 @@ int find_min(void)
     // return minimum vote total
     for (int i = 0; i < candidate_count; i++)
     {
-        if (candidates[i].eliminated == true)
+        if (candidates[i].eliminated == false)
         {
             i++;
         }
         else
         {
-            
+
         }
     }
     return 0;
