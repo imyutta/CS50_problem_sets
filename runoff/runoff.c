@@ -192,10 +192,6 @@ int find_min(void)
         {
             i++;
         }
-        else
-        {
-
-        }
     }
     return 0;
 }
