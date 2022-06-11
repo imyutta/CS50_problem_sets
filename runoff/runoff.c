@@ -190,7 +190,7 @@ int find_min(void)
     {
         if (candidates[i].eliminated == false)
         {
-            i++;
+            
         }
     }
     return 0;
