@@ -156,7 +156,6 @@ void tabulate(void)
             }
         }
     }
-
     return;
 }
 
