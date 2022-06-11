@@ -210,7 +210,6 @@ bool is_tie(int min)
         {
             i++;
         }
-        else
     }
     return true;
 }
