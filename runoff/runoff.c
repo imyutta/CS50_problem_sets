@@ -185,7 +185,18 @@ int find_min(void)
 {
     // for uneliminated candidates
     // find the one with minimum votes
-    // eliminate him
+    // return minimum vote total
+    for (int i = 0; i < candidate_count; i++)
+    {
+        if (candidates[i].eliminated == true)
+        {
+            i++;
+        }
+        else
+        {
+            
+        }
+    }
     return 0;
 }
 
