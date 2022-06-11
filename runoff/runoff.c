@@ -167,7 +167,8 @@ void tabulate(void)
 // Print the winner of the election, if there is one
 bool print_winner(void)
 {
-    // TODO
+    // check if any candidate has more than half the vote
+    //print out winner name and return true
     return false;
 }
 
