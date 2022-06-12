@@ -20,6 +20,7 @@ void mario(int n)
         else if (n == 1)
         {
            printf("#");
+           printf("\n");
            return mario(n + 1);
         }
 
