@@ -12,12 +12,14 @@ int main(void)
 
 void mario(int n)
 {
-    if (n == 0)
-    {
-        return 0;
-    }
-    else if (n == 1)
-    {
-        printf("");
-    }
+
+        if (n == 0)
+        {
+            return 0;
+        }
+        else if (n == 1)
+        {
+           return mario(n + 1);
+        }
+
 }
