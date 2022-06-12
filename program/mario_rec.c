@@ -18,6 +18,6 @@ void mario(int n)
     }
     else if (n == 1)
     {
-
+        printf("");
     }
 }
