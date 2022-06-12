@@ -13,12 +13,18 @@ int main(void)
 void mario(int n)
 {
 
-    mario(n - 1);
-    for (int i = 0; i < n; i++)
+    if (n == 0)
     {
-        printf("#");
+        return 0;
     }
-    printf("\n");
-
+    else
+    {
+        mario(n - 1);
+        for (int i = 0; i < n; i++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
 
 }
