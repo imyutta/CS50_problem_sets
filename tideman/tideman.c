@@ -101,6 +101,7 @@ bool vote(int rank, string name, int ranks[])
 {
     // look for a candidate called NAME
     // if found, update ranks and return true.
+    // if not found, return false
     return false;
 }
 
