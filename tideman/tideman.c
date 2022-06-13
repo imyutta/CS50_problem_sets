@@ -100,6 +100,10 @@ int main(int argc, string argv[])
 bool vote(int rank, string name, int ranks[])
 {
     // look for a candidate called NAME
+    for (int i = 0; i < candidate_count; i++)
+    {
+        
+    }
     // if found, update ranks and return true.
     // if not found, return false
     return false;
