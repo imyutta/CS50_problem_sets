@@ -102,7 +102,10 @@ bool vote(int rank, string name, int ranks[])
     // look for a candidate called NAME
     for (int i = 0; i < candidate_count; i++)
     {
-        
+        if (strcmp(candidates[i], name) == 0)
+        {
+            
+        }
     }
     // if found, update ranks and return true.
     // if not found, return false
