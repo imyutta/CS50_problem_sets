@@ -185,11 +185,11 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // update loched to create graph by adding all adges
-    for (int i = 0; i < candidate_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         for (int j = 0; j < candidate_count; j++)
         {
-            
+
         }
     }
     return;
