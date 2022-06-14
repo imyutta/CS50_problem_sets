@@ -130,6 +130,7 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // add each pair
+    
     // update global variable pair_count to be the total number of pairs
     return;
 }
