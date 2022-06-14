@@ -185,13 +185,19 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // update locked to create graph by adding all adges
-    bool beaten[pair_count];
+    int beaten[pair_count];
     for (int i = 0; i < candidate_count; i++)
     {
-        beaten[i] = false;
+        beaten[i] = 0;
     }
     for (int i = 0; i < pair_count; i++)
     {
+        beaten[pairs[i].loser] = 1;
+        if multipliyng = 0
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
+
         if there is only one unbeaten column?
         is the current cullumn unbeaten?
         skip
