@@ -6,12 +6,12 @@ int main(void)
 {
   // Declare an array of four integers:
   int myNumbers[4];
-
+myNumbers[0] = 98;
   // Add elements to it
 
 
 
-  printf(%i %i %i %i\n", myNumbers[]);
+  printf("%i \n", myNumbers[0]);
 
 
 
