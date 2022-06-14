@@ -135,7 +135,7 @@ void add_pairs(void)
         for (int j = i + 1; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
-            pairs.winner[i] = 
+            pairs.winner[i] = i
         }
     }
     // update global variable pair_count to be the total number of pairs
