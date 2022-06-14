@@ -197,15 +197,6 @@ void lock_pairs(void)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
-
-        if there is only one unbeaten column?
-        is the current cullumn unbeaten?
-        skip
-        else
-        {
-            locked[pairs[i].winner][pairs[i].loser] = true;
-            beaten[pairs[i].loser] = true;
-        }
     }
     return;
 }
