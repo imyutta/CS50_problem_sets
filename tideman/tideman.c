@@ -173,8 +173,8 @@ void sort_pairs(void)
                 index_for_replacement = j;
             }
         }
-        pair= pair[i].winner;
-        = pair[i].loser;
+        pair[index_for_replacement].winner = pair[i].winner;
+        pair[index_for_replacement].loser = pair[i].loser;
         pair[i].winner = current_winner;
         pair[i].loser = current_loser;
     }
