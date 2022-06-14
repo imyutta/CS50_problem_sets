@@ -164,19 +164,19 @@ void sort_pairs(void)
     {
         for (int j = i + 1; j < pair_count; j++)
         {
-            max_score = preferences[pair[i].winner][pair[i].loser];
-            if (max_score < preferences[pair[j].winner][pair[j].loser])
+            max_score = preferences[pairs[i].winner][pairs[i].loser];
+            if (max_score < preferences[pairs[j].winner][pairs[j].loser])
             {
-                max_score = preferences[pair[j].winner][pair[j].loser];
-                current_winner = pair[j].winner;
-                current_loser = pair[j].loser;
+                max_score = preferences[pairs[j].winner][pairs[j].loser];
+                current_winner = pairs[j].winner;
+                current_loser = pairs[j].loser;
                 index_for_replacement = j;
             }
         }
-        pair[index_for_replacement].winner = pair[i].winner;
-        pair[index_for_replacement].loser = pair[i].loser;
-        pair[i].winner = current_winner;
-        pair[i].loser = current_loser;
+        pairs[index_for_replacement].winner = pairs[i].winner;
+        pairs[index_for_replacement].loser = pairs[i].loser;
+        pairs[i].winner = current_winner;
+        pairs[i].loser = current_loser;
     }
     return;
 }
