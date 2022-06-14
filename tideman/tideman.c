@@ -184,7 +184,7 @@ void sort_pairs(void)
 // Lock pairs into the candidate graph in order, without creating cycles
 void lock_pairs(void)
 {
-    // update loched to create graph by adding all adges
+    // update locked to create graph by adding all adges
     for (int i = 0; i < pair_count; i++)
     {
         if there are any unbeated columns?
