@@ -161,9 +161,12 @@ void sort_pairs(void)
         for (int j = i + 1; j < pair_count; j++)
         {
             int max = preferences[pair[i].winner][pair[i].loser];
+            int current_winner;
+            int current_loser;
             if (max < preferences[pair[j].winner][pair[j].loser])
             {
                 max = preferences[pair[j].winner][pair[j].loser];
+                current_winner = j;
                 pair[i].winner = pair[j].winner;
                 pair[i].loser = pair[j].loser;
             }
