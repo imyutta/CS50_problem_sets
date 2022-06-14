@@ -134,7 +134,8 @@ void add_pairs(void)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
-            if (preferences[i][j])
+            if (preferences[i][j] > preferences[j][i])
+            pair
         }
     }
     // update global variable pair_count to be the total number of pairs
