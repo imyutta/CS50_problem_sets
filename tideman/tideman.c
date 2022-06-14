@@ -191,7 +191,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // update locked to create graph by adding all adges
-    int beaten[pair_count];
+    int beaten[candidate_count];
     for (int i = 0; i < candidate_count; i++)
     {
         beaten[i] = 0;
