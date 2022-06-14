@@ -63,7 +63,6 @@ int main(int argc, string argv[])
             locked[i][j] = false;
         }
     }
-printf ("%i\n", preferences[1][1]);
     pair_count = 0;
     int voter_count = get_int("Number of voters: ");
 
