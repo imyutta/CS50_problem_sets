@@ -127,7 +127,7 @@ void record_preferences(int ranks[])
             }
             else if (i == rank[candidate_count - 1] && j != i)
             {
-                
+                                preferences[i][j] += 1;
             }
         }
     }
