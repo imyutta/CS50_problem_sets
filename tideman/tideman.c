@@ -158,6 +158,10 @@ void sort_pairs(void)
     // TODO
     for (int i = 0; i < pair_count; i++)
     {
+        for (int j = i + 1; j < pair_count; j++)
+        {
+            int min
+        }
         preferences[pair[i].winner][pair[i].loser]
     }
     return;
