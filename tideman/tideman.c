@@ -129,7 +129,8 @@ void record_preferences(int ranks[])
 // Record pairs of candidates where one is preferred over the other
 void add_pairs(void)
 {
-    // TODO
+    // add each pair
+    // update global variable pair_count to be the total number of pairs
     return;
 }
 
