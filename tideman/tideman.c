@@ -187,10 +187,10 @@ void lock_pairs(void)
     // update loched to create graph by adding all adges
     for (int i = 0; i < pair_count; i++)
     {
-        if 
+        if there are any unbeated columns?
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
-            locked
+            collumn pairs[i].loser goes away
         }
     }
     return;
