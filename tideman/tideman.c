@@ -198,7 +198,7 @@ void lock_pairs(void)
         else
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
-            beaten[i] is beaten
+            beaten[pairs[i].loser] = true;
         }
     }
     return;
