@@ -217,10 +217,9 @@ void print_winner(void)
             {
                 break;
             }
+            printf("%s\n", candidates[j]);
+            return;
         }
-
-        printf("%s\n", candidates[i]);
-        return;
     }
 
 }
