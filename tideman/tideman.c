@@ -166,7 +166,8 @@ void sort_pairs(void)
                 min = preferences[pair[j].winner][pair[j].loser]
             }
         }
-        pair[i].
+        pair[i].winner = 
+        pair[i].loser
     }
     return;
 }
