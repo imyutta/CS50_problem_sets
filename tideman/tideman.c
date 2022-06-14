@@ -187,7 +187,7 @@ void lock_pairs(void)
     // update loched to create graph by adding all adges
     for (int i = 0; i < pair_count; i++)
     {
-
+        if 
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
             locked
