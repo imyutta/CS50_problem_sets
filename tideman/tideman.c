@@ -166,9 +166,8 @@ void sort_pairs(void)
             if (max < preferences[pair[j].winner][pair[j].loser])
             {
                 max = preferences[pair[j].winner][pair[j].loser];
-                current_winner = j;
-                pair[i].winner = pair[j].winner;
-                pair[i].loser = pair[j].loser;
+                current_winner = pair[j].winner;
+                current_loser = pair[j].loser;
             }
         }
         pair[i].winner =
