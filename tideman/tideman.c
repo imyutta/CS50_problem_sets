@@ -171,8 +171,10 @@ void sort_pairs(void)
                 current_loser = pair[j].loser;
             }
         }
-        pair[i].winner =
-        pair[i].loser
+        = pair[i].winner;
+        = pair[i].loser;
+        pair[i].winner = current_winner;
+        pair[i].loser = current_loser;
     }
     return;
 }
