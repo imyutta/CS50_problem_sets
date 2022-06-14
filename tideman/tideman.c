@@ -160,9 +160,13 @@ void sort_pairs(void)
     {
         for (int j = i + 1; j < pair_count; j++)
         {
-            int min
+            int min = preferences[pair[i].winner][pair[i].loser];
+            if (min > preferences[pair[j].winner][pair[j].loser])
+            {
+                min = preferences[pair[j].winner][pair[j].loser]
+            }
         }
-        preferences[pair[i].winner][pair[i].loser]
+        pair[i].
     }
     return;
 }
