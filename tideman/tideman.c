@@ -130,7 +130,13 @@ void record_preferences(int ranks[])
 void add_pairs(void)
 {
     // add each pair
-    if 
+    for (int i = 0; i < candidate_count; i++)
+    {
+        for (int j = i + 1; j < candidate_count; j++)
+        {
+            if (preferences[i][j])
+        }
+    }
     // update global variable pair_count to be the total number of pairs
     return;
 }
