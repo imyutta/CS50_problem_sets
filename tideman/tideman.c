@@ -187,7 +187,10 @@ void lock_pairs(void)
     // update locked to create graph by adding all adges
     for (int i = 0; i < pair_count; i++)
     {
-        if there are any unbeated columns?
+        if there is only one unbeated column?
+        is the current cullumn unbeaten?
+        skip
+        else 
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
             collumn pairs[i].loser goes away
