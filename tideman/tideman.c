@@ -200,10 +200,12 @@ void lock_pairs(void)
     {
         beaten[pairs[i].loser] = 1;
         for (int j = 0; j < candidate_count; j++)
-        if (beaten[j] == 0)
         {
-            locked[pairs[i].winner][pairs[i].loser] = true;
-            break;
+            if (beaten[j] == 0)
+            {
+                locked[pairs[i].winner][pairs[i].loser] = true;
+                break;
+            }
         }
     }
     return;
