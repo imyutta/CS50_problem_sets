@@ -190,10 +190,10 @@ void lock_pairs(void)
         if there is only one unbeated column?
         is the current cullumn unbeaten?
         skip
-        else 
+        else
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
-            collumn pairs[i].loser goes away
+            collumn pairs[i].loser is beated
         }
     }
     return;
