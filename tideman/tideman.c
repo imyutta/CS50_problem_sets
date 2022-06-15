@@ -202,9 +202,10 @@ void print_winner(void)
     // TODO
     int winner;
     int winner_sum = 0;
-    int current_sum = 0;
+
     for (int j = 0; j < candidate_count; j++)
     {
+        int current_sum = 0;
         for ( int i = 0; i < candidate_count; i++)
         {
             if ( locked[i][j] == true)
@@ -216,7 +217,7 @@ void print_winner(void)
             {
                 current_sum += preferences[j][pref];
             }
-            if ()
+            if (current_sum > )
 
             winner = j;
 
