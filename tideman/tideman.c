@@ -205,9 +205,9 @@ void print_winner(void)
     for (int j = 0; j < candidate_count; j++)
     {
         winner = j;
-        for (int pref_index = 0; pref_index < candidate_count; pref_index++)
+        for (int pref = 0; pref < candidate_count; pref++)
         {
-            sum += preferences[j][pref_index]
+            sum += preferences[j][pref]
         }
 
         for ( int i = 0; i < candidate_count; i++)
