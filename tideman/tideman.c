@@ -227,8 +227,6 @@ bool isItCycle (int from_candidate, int to_candidate)
         return true;
     }
     
-
-
     // then, who already beated the 'from_candidate'?
     for (int i= 0; i < candidate_count; i++)
     {
