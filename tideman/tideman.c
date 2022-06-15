@@ -200,14 +200,14 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    int current_winner;
+    int winner;
+    int winner_sum = 0;
     for (int j = 0; j < candidate_count; j++)
     {
-        current_winner = j;
-        for (int pref_first_index = 0; pref_first_index < candidate_count; pref_first_index++)
+        winner = j;
+        for (int pref_index = 0; pref_index < candidate_count; pref_index++)
         {
-            for (int pref_second_index = pref_first_index + 1; pref_second_index < )
-            preferences[j][pref]
+            sum += preferences[j][pref_index]
         }
 
         for ( int i = 0; i < candidate_count; i++)
