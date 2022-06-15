@@ -4,9 +4,9 @@
 
 int main(void)
 {
-    int n = 65;
-    int *m = &n;
-    printf("%p\n", m);
-    printf("%c\n", *m);
+    string s = "HI!";
+    int array[] = {0, 1, 2};
+    printf("%s\n", s);
+    printf("%i\n", *array);
 
 }
