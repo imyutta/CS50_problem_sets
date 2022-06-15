@@ -212,9 +212,9 @@ void print_winner(void)
         bool flag = false;
         for (int i = 0; i < candidate_count; i++)
         {
-            current_sum += preferences[j][i];
+            current_sum += preferences[i][j];
 
-            if ( locked[i][j] == true)
+            if ( locked[j][i] == true)
             {
                 flag = true;
                 break;
