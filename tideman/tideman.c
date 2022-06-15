@@ -235,7 +235,9 @@ bool isItCycle (int from_candidate, int to_candidate)
             isItCycle
         }
     }
+    return false;
 
+    
     // if yes
     return true;
 
