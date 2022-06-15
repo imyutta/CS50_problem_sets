@@ -191,8 +191,14 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // update locked to create graph by adding all adges
+    for (int i = 0; i < pait_count; i++)
+    {
+        if unbeaten
+        {
+            locked[pairs[i].winner][pairs[i].loser] = true;
+        }
+    }
 
-    
     // int beaten[candidate_count];
     // for (int i = 0; i < candidate_count; i++)
     // {
