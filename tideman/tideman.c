@@ -201,7 +201,7 @@ void print_winner(void)
 {
     // TODO
     int winner;
-    int winner_sum = 0;
+    int winner_sum = -1;
     int current_sum;
 
 
@@ -222,7 +222,7 @@ void print_winner(void)
         }
 
         //&& current_sum > winner_sum
-        if (flag == false && current_sum >= winner_sum)
+        if (flag == false && current_sum > winner_sum)
         {
             winner = j;
             winner_sum = current_sum;
