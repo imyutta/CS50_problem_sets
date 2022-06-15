@@ -200,55 +200,36 @@ void lock_pairs(void)
 void print_winner(void)
 {
     // TODO
-    int current_winner;
+    int winner;
+    int winner_sum = 0;
+    int current_sum;
+
+
     for (int j = 0; j < candidate_count; j++)
     {
-        current_winner = j;
-        for ( int i = 0; i < candidate_count; i++)
+        //find score of preferences for the candidate
+        current_sum = 0;
+        bool flag = false;
+        for (int i = 0; i < candidate_count; i++)
         {
+            current_sum += preferences[j][i];
+
             if ( locked[i][j] == true)
             {
+                flag = true;
                 break;
             }
-            printf("%s\n", candidates[current_winner]);
-            return;
+        }
+
+        if (flag == false && current_sum > winner_sum)
+        {
+            winner = j;
+            winner_sum = current_sum;
         }
     }
+    printf("%s\n", candidates[winner]);
+    return;
 }
-
-// void print_winner(void)
-// {
-//     // TODO
-//     int winner;
-//     int winner_sum = 0;
-//     int current_sum;
-
-
-//     for (int j = 0; j < candidate_count; j++)
-//     {
-//         //find score of preferences for the candidate
-//         current_sum = 0;
-//         bool flag = false;
-//         for (int i = 0; i < candidate_count; i++)
-//         {
-//             current_sum += preferences[j][i];
-
-//             if ( locked[i][j] == true)
-//             {
-//                 flag = true;
-//                 break;
-//             }
-//         }
-
-//         if (flag == false && current_sum > winner_sum)
-//         {
-//             winner = j;
-//             winner_sum = current_sum;
-//         }
-//     }
-//     printf("%s\n", candidates[winner]);
-//     return;
-// }
 
 //check if a cycle appears
 bool isItCycle (int from_candidate, int to_candidate)
