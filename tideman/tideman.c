@@ -186,7 +186,7 @@ void sort_pairs(void)
 void lock_pairs(void)
 {
     // update locked to create graph by adding all adges
-    for (int i = 0; i < pait_count; i++)
+    for (int i = 0; i < pair_count; i++)
     {
         if (isItCycle(pairs[i].winner, pairs[i].loser) == false)
         {
