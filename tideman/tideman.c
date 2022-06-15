@@ -134,24 +134,21 @@ void add_pairs(void)
 {
     // add each pair
     // update global variable pair_count to be the total number of pairs
-    int pair_array_index = 0;
     for (int i = 0; i < candidate_count - 1; i++)
     {
         for (int j = i + 1; j < candidate_count; j++)
         {
             if (preferences[i][j] > preferences[j][i])
             {
-                pairs[pair_array_index].winner = i;
-                pairs[pair_array_index].loser = j;
+                pairs[pair_count].winner = i;
+                pairs[pair_count].loser = j;
                 pair_count++;
-                pair_array_index++;
             }
             else if (preferences[i][j] < preferences[j][i])
             {
-                pairs[pair_array_index].winner = j;
-                pairs[pair_array_index].loser = i;
+                pairs[pair_count].winner = j;
+                pairs[pair_count].loser = i;
                 pair_count++;
-                pair_array_index++;
             }
         }
     }
