@@ -167,8 +167,7 @@ void sort_pairs(void)
     for (int i = 0; i < pair_count - 1; i++)
     {
         max_score = preferences[pairs[i].winner][pairs[i].loser];
-        current_winner = pairs[i].winner;
-        current_loser = pairs[i].loser;
+        current = pairs[i];
         index_for_replacement = i;
         for (int j = i + 1; j < pair_count; j++)
         {
