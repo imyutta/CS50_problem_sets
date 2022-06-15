@@ -246,6 +246,10 @@ void print_winner(void)
 //check if a cycle appears
 bool isItCycle (int from_candidate, int to_candidate)
 {
+    // who beats 'from_candidate'?
+    // is there 'to_candidate'?
+    return true;
 
+    
     return false;
 }
