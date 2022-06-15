@@ -204,7 +204,12 @@ void print_winner(void)
     for (int j = 0; j < candidate_count; j++)
     {
         current_winner = j;
-        preferences
+        for (int pref_first_index = 0; pref_first_index < candidate_count; pref_first_index++)
+        {
+            for (int pref_second_index = pref_first_index + 1; pref_second_index < )
+            preferences[j][pref]
+        }
+
         for ( int i = 0; i < candidate_count; i++)
         {
             if ( locked[i][j] == true)
