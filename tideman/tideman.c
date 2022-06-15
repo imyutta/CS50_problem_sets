@@ -203,7 +203,7 @@ void print_winner(void)
     int winner;
     int winner_sum = -1;
     int current_sum;
-    printf("%i %i %i %i \n %i %i %i %i \n", preferences[0][0], preferences[0][1], preferences[0][2], preferences[0][3], preferences[0][4], preferences[1][0], preferences[1][1], preferences[1][2], preferences[1][3], preferences[1][4]);
+    printf("%d %d %d %d \n %d %d %d %d \n", preferences[0][0], preferences[0][1], preferences[0][2], preferences[0][3], preferences[0][4], preferences[1][0], preferences[1][1], preferences[1][2], preferences[1][3], preferences[1][4]);
 
     for (int j = 0; j < candidate_count; j++)
     {
