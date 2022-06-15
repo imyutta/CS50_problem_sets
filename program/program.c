@@ -7,6 +7,6 @@ int main(void)
 
     char *p = "HI!";
 
-    printf("%s", p);
+    printf("%c\n", *p);
 
 }
