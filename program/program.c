@@ -8,7 +8,7 @@ int main(void)
     printf("%s\n", s);
 
 
-                                        char *s = "HI!";
-                                        printf("%s\n", s);
+    char *s = "HI!";
+    printf("%s\n", s);
 
 }
