@@ -231,7 +231,7 @@ bool isItCycle (int from_candidate, int to_candidate)
     for (int i= 0; i < candidate_count; i++)
     {
 
-        if (locked[i][from_candidate] == true && isItCycle(locked[i][i]) == true)
+        if (locked[i][from_candidate] == true && isItCycle(locked[i][to_candidate]) == true)
         {
             return true;
         }
