@@ -243,7 +243,7 @@ void print_winner(void)
 }
 
 //check if a cycle appears
-bool isItCycle (int )
+bool isItCycle (int from_candidate, int to_candidate)
 {
 
     return false;
