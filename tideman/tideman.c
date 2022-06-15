@@ -204,9 +204,11 @@ void print_winner(void)
     int winner_sum = 0;
     int current_sum;
 
+
     for (int j = 0; j < candidate_count; j++)
     {
         //find score of preferences for the candidate
+        current_sum = 0;
         for (int pref = 0; pref < candidate_count; pref++)
         {
             current_sum += preferences[j][pref];
