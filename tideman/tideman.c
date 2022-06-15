@@ -161,6 +161,7 @@ void sort_pairs(void)
     // TODO
     int current_winner;
     int current_loser;
+    pair current;
     int index_for_replacement;
     int max_score;
     for (int i = 0; i < pair_count - 1; i++)
