@@ -246,10 +246,12 @@ void print_winner(void)
 //check if a cycle appears
 bool isItCycle (int from_candidate, int to_candidate)
 {
-    // who beats 'from_candidate'?
+    // who already beated the 'from_candidate'?
     // is there 'to_candidate'?
+    //if yes
     return true;
 
-    // if no 
+    // if no
+    // check the first one who beated
     return false;
 }
