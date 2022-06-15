@@ -230,32 +230,11 @@ bool isItCycle (int from_candidate, int to_candidate)
     // then, who already beated the 'from_candidate'?
     for (int i= 0; i < candidate_count; i++)
     {
-        
-        if (locked[i][from_candidate] == true && isItCycle(locked[i][from_candidate]))
+
+        if (locked[i][from_candidate] == true && isItCycle(locked[i][from_candidate]) == true)
         {
-            isItCycle
+            return true;
         }
     }
-    return false;
-
-
-    // if yes
-    return true;
-
-    // if no
-    // find the first one who beated the 'from_candidate'
-    //was he beated by the 'to_candidate'?
-    //if yes
-    return true;
-
-    //if no
-    // find the first one who beated the previous..
-    //was he beated by the 'to_candidate'?
-    //if yes
-    return true;
-
-    //if no ...
-
-
     return false;
 }
