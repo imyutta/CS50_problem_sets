@@ -4,8 +4,8 @@
 
 int main(void)
 {
-    string s = "HI!";
-    printf("%s\n", s);
+    string sw = "HI!";
+    printf("%s\n", sw);
 
 
     char *s = "HI!";
