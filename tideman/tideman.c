@@ -213,16 +213,19 @@ void print_winner(void)
             {
                 break;
             }
+            else
+            {
+                for (int pref = 0; pref < candidate_count; pref++)
+                {
+                    current_sum += preferences[j][pref];
+                }
+                if (current_sum > winner_sum)
+                {
+                    winner = j;
+                    winner_sum = current_sum;
+                }
+            }
         }
-         for (int pref = 0; pref < candidate_count; pref++)
-            {
-                current_sum += preferences[j][pref];
-            }
-            if (current_sum > winner_sum)
-            {
-                winner = j;
-                winner_sum = current_sum;
-            }
     }
     printf("%s\n", candidates[winner]);
     return;
