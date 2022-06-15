@@ -209,6 +209,7 @@ void print_winner(void)
     {
         //find score of preferences for the candidate
         current_sum = 0;
+        bool flag = false;
         for (int pref = 0; pref < candidate_count; pref++)
         {
             current_sum += preferences[j][pref];
@@ -220,14 +221,15 @@ void print_winner(void)
         {
             if ( locked[i][j] == true)
             {
-                break;
+                flag = true;
             }
-            else if (current_sum > winner_sum)
-            {
-                winner = j;
-                winner_sum = current_sum;
-            }
+        }
 
+
+        if (flag == false && current_sum > winner_sum)
+        {
+            winner = j;
+            winner_sum = current_sum;
         }
     }
     printf("%s\n", candidates[winner]);
