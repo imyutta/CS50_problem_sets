@@ -5,11 +5,10 @@
 int main(void)
 {
     string s = "HI!";
-
-    int array[] = {0, 1, 2};
-
     printf("%s\n", s);
-    
-    printf("%d\n", *array);
+
+
+                                        char *s = "HI!";
+                                        printf("%s\n", s);
 
 }
