@@ -193,7 +193,7 @@ void lock_pairs(void)
     // update locked to create graph by adding all adges
     for (int i = 0; i < pait_count; i++)
     {
-        if unbeaten
+        if (isItCycle() == false)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
