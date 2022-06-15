@@ -33,6 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
+bool isItCycle (int from_candidate, int to_candidate);
 
 int main(int argc, string argv[])
 {
@@ -193,7 +194,7 @@ void lock_pairs(void)
     // update locked to create graph by adding all adges
     for (int i = 0; i < pait_count; i++)
     {
-        if (isItCycle() == false)
+        if (isItCycle(pairs[i].winner, pairs[i].loser) == false)
         {
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
