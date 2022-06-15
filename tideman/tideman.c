@@ -33,7 +33,7 @@ void add_pairs(void);
 void sort_pairs(void);
 void lock_pairs(void);
 void print_winner(void);
-bool isItCycle (int from_candidate, int to_candidate);
+bool isItCycle(int from_candidate, int to_candidate);
 
 int main(int argc, string argv[])
 {
@@ -214,7 +214,7 @@ void print_winner(void)
         {
             current_sum += preferences[j][i];
 
-            if ( locked[i][j] == true)
+            if (locked[i][j] == true)
             {
                 flag = true;
                 break;
@@ -233,7 +233,7 @@ void print_winner(void)
 }
 
 //check if a cycle appears
-bool isItCycle (int from_candidate, int to_candidate)
+bool isItCycle(int from_candidate, int to_candidate)
 {
 
     // find those who already beated the 'from_candidate'
@@ -244,7 +244,7 @@ bool isItCycle (int from_candidate, int to_candidate)
     }
 
     // then, who already beated the 'from_candidate'?
-    for (int i= 0; i < candidate_count; i++)
+    for (int i = 0; i < candidate_count; i++)
     {
 
         if (locked[i][from_candidate] == true && isItCycle(i, to_candidate) == true)
