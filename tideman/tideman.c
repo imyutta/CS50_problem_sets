@@ -211,10 +211,10 @@ void print_winner(void)
                 break;
             }
             winner = j;
-            
+
             for (int pref = 0; pref < candidate_count; pref++)
             {
-                sum += preferences[j][pref]
+                winner_sum += preferences[j][pref];
             }
 
 
