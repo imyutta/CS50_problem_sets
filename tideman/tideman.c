@@ -230,14 +230,15 @@ bool isItCycle (int from_candidate, int to_candidate)
     // then, who already beated the 'from_candidate'?
     for (int i= 0; i < candidate_count; i++)
     {
-        if (locked[i][from_candidate] == true)
+        
+        if (locked[i][from_candidate] == true && isItCycle(locked[i][from_candidate]))
         {
             isItCycle
         }
     }
     return false;
 
-    
+
     // if yes
     return true;
 
