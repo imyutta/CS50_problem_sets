@@ -202,6 +202,7 @@ void print_winner(void)
     // TODO
     int winner;
     int winner_sum = 0;
+    int current_sum = 0;
     for (int j = 0; j < candidate_count; j++)
     {
         for ( int i = 0; i < candidate_count; i++)
@@ -213,7 +214,7 @@ void print_winner(void)
 
             for (int pref = 0; pref < candidate_count; pref++)
             {
-                winner_sum += preferences[j][pref];
+                current_sum += preferences[j][pref];
             }
             if ()
 
