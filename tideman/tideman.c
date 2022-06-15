@@ -246,4 +246,5 @@ void print_winner(void)
 bool isItCycle ()
 {
     
+    return false;
 }
