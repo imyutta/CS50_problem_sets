@@ -220,6 +220,10 @@ void print_winner(void)
 bool isItCycle (int from_candidate, int to_candidate)
 {
     // who already beated the 'from_candidate'?
+    for (int j = 0; j < candidate_count; j++)
+    {
+        
+    }
     // is there 'to_candidate'?
     // if yes
     return true;
