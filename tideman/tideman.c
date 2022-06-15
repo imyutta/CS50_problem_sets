@@ -194,26 +194,6 @@ void lock_pairs(void)
         }
     }
     return;
-
-    // int beaten[candidate_count];
-    // for (int i = 0; i < candidate_count; i++)
-    // {
-    //     beaten[i] = 0;
-    // }
-    // for (int i = 0; i < pair_count; i++)
-    // {
-    //     beaten[pairs[i].loser] = 1;
-    //     for (int j = 0; j < candidate_count; j++)
-    //     {
-    //         if (beaten[j] == 0)
-    //         {
-    //             locked[pairs[i].winner][pairs[i].loser] = true;
-    //             break;
-    //         }
-    //         beaten[pairs[i].loser] = 0;
-    //     }
-    // }
-    // return;
 }
 
 // Print the winner of the election
@@ -234,7 +214,6 @@ void print_winner(void)
             return;
         }
     }
-
 }
 
 //check if a cycle appears
