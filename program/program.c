@@ -5,13 +5,9 @@
 int main(void)
 {
     string s = "HI!";
-    char c = s[0];
-    char *p = &c;
-    int address = *p;
+    char *p = &s[0];
 
-    printf("%s\n", s);
-    printf("%p\n", s);
     printf("%p\n", p);
-       printf("%d\n", address);
+    printf("%p\n", s);
 
 }
