@@ -210,10 +210,11 @@ void print_winner(void)
             {
                 break;
             }
-            printf("%s\n", candidates[j]);
-            return;
+
         }
     }
+    printf("%s\n", candidates[current_winner]);
+    return;
 }
 
 //check if a cycle appears
