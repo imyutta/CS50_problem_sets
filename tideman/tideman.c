@@ -252,6 +252,12 @@ bool isItCycle (int from_candidate, int to_candidate)
     return true;
 
     // if no
-    // check the first one who beated
+    // find the first one who beated the 'from_candidate'
+    //was he beated by the 'to_candidate'?
+    //if yes
+    return true;
+
+    //if no
+    // 
     return false;
 }
