@@ -204,19 +204,19 @@ void print_winner(void)
     int winner_sum = 0;
     for (int j = 0; j < candidate_count; j++)
     {
-        winner = j;
-        for (int pref = 0; pref < candidate_count; pref++)
-        {
-            sum += preferences[j][pref]
-        }
-
         for ( int i = 0; i < candidate_count; i++)
         {
             if ( locked[i][j] == true)
             {
                 break;
             }
-            else if ()
+            winner = j;
+            
+            for (int pref = 0; pref < candidate_count; pref++)
+            {
+                sum += preferences[j][pref]
+            }
+
 
         }
     }
