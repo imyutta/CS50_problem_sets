@@ -250,6 +250,6 @@ bool isItCycle (int from_candidate, int to_candidate)
     // is there 'to_candidate'?
     return true;
 
-    
+    // if no 
     return false;
 }
