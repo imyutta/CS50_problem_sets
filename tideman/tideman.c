@@ -222,7 +222,7 @@ bool isItCycle (int from_candidate, int to_candidate)
     // who already beated the 'from_candidate'?
     for (int i= 0; i < candidate_count; i++)
     {
-        locked[i][from_candidate]
+        if (locked[i][from_candidate] == true)
     }
     // is there 'to_candidate'?
     // if yes
