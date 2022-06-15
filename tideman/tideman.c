@@ -218,7 +218,7 @@ void print_winner(void)
         //check if he has the biggest score
         for ( int i = 0; i < candidate_count; i++)
         {
-            if ( locked[i][j] == true)
+            if ( locked[j][i] == true)
             {
                 break;
             }
