@@ -4,11 +4,11 @@
 
 int main(void)
 {
-    string sw = "HI!";
-    printf("%s\n", sw);
+    string s = "HI!";
+    char c = s[0];
+    char *p = &c;
 
-
-    char *s = "HI!";
-    printf("%s\n", s);
+    printf("%p\n", s);
+    printf("%p\n", p);
 
 }
