@@ -8,6 +8,7 @@ int main(void)
     char c = s[0];
     char *p = &c;
 
+    printf("%c\n", c);
     printf("%p\n", s);
     printf("%p\n", p);
 
