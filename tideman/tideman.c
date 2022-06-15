@@ -241,3 +241,9 @@ void print_winner(void)
     }
 
 }
+
+//check if a cycle appears
+bool isItCycle ()
+{
+    
+}
