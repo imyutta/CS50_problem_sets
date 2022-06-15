@@ -206,25 +206,26 @@ void print_winner(void)
 
     for (int j = 0; j < candidate_count; j++)
     {
-        current_sum = 0;
+        //find score of preferences for the candidate
+        for (int pref = 0; pref < candidate_count; pref++)
+        {
+            current_sum += preferences[j][pref];
+        }
+
+        //check if itis a winner
+        //check if he has the biggest score
         for ( int i = 0; i < candidate_count; i++)
         {
             if ( locked[i][j] == true)
             {
                 break;
             }
-            else
+            else if (current_sum > winner_sum)
             {
-                for (int pref = 0; pref < candidate_count; pref++)
-                {
-                    current_sum += preferences[j][pref];
-                }
-                if (current_sum > winner_sum)
-                {
-                    winner = j;
-                    winner_sum = current_sum;
-                }
+                winner = j;
+                winner_sum = current_sum;
             }
+
         }
     }
     printf("%s\n", candidates[winner]);
