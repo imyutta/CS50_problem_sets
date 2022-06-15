@@ -4,6 +4,9 @@
 
 int main(void)
 {
-
+    int n = 65;
+    int *m = &n;
+    printf("%p\n", m);
+    printf("%c\n", *m);
 
 }
