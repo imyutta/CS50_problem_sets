@@ -198,6 +198,7 @@ void lock_pairs(void)
             locked[pairs[i].winner][pairs[i].loser] = true;
         }
     }
+    return;
 
     // int beaten[candidate_count];
     // for (int i = 0; i < candidate_count; i++)
