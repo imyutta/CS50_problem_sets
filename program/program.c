@@ -5,7 +5,7 @@
 int main(void)
 {
     string s = "HI!";
-    char *p = &s[0];
+    char *p = &s[3];
 
     printf("%p\n", p);
     printf("%p\n", s);
