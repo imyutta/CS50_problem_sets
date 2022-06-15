@@ -4,10 +4,9 @@
 
 int main(void)
 {
-    string s = "HI!";
-    char *p = &s[3];
 
-    printf("%p\n", p);
-    printf("%p\n", s);
+    char *p = "HI!";
+    char *n = &
+    printf("%p", )
 
 }
