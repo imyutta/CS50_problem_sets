@@ -248,7 +248,7 @@ bool isItCycle (int from_candidate, int to_candidate)
 {
     // who already beated the 'from_candidate'?
     // is there 'to_candidate'?
-    //if yes
+    // if yes
     return true;
 
     // if no
