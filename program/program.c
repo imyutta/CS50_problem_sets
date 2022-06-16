@@ -2,9 +2,11 @@
 
 int main(void)
 {
-    char *s = "HI!";
-    printf("%c\n", *s);
-    printf("%c\n", *(s + 1));
+//     char *pk = "HI!";
+//     printf("%c\n", *pk);
+//     printf("%s\n", pk);
+//     printf("%p\n", pk);
+// 
 
 
 }
