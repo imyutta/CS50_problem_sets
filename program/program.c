@@ -3,11 +3,9 @@
 
 int main(void)
 {
-    string s = "HI!";
-
-    char *c = "pie!";
-    char *p = &s[0];
-
-    printf("%p\n", p);
-    printf("%s\n", c);
+ int k;
+ k = 5;
+ int* pk;
+ int *pk = 7;
+ printf("%i", *pk);
 }
