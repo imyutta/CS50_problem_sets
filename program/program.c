@@ -8,15 +8,13 @@ int main(void)
 //     printf("%s\n", pk);
 //     printf("%p\n", pk);
 //
-    char *s = get_string("s: ");
-    char *t = get_string("t: ");
+string s = get_string("s: ", s);
+string t = s;
 
-    if (*s == *t)
-    {
-        printf("Same\n");
-    }
-    else
-    {
-        printf("Different\n");
-    }
+char *n = s;
+
+t[0] = toupper(t[0]);
+
+printf("s: %s\n",s);
+printf("t: %s\n", t);
 }
