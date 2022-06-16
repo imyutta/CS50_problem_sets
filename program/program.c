@@ -3,7 +3,6 @@
 
 int main(void)
 {
-char *c = "HI!";
-*c = 'c';
-printf("%c\n", *c);
+char *c = 0;
+printf("%p", c);
 }
