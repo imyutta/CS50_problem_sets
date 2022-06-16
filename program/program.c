@@ -5,6 +5,6 @@ int main(void)
 {
 int k = 5;
 int *pk = &k;
-int *pk = 0;
+int *k = 0;
 printf("%i\n", k);
 }
