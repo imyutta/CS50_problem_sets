@@ -8,4 +8,7 @@ int main(void)
     printf("%c\n", s[2]);
     printf("%c\n", s[3]);
     printf("%c\n", s[4]);
+    printf("%c\n", s[5]);
+    printf("%c\n", s[7]);
+    printf("%c\n", s[9]);
 }
