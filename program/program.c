@@ -3,6 +3,8 @@
 
 int main(void)
 {
-char *c = 0;
-printf("%p", c);
+int k = 5;
+int *pk = &k;
+int *pk = 0;
+printf("%i\n", k);
 }
