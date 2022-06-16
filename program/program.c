@@ -1,12 +1,12 @@
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(void)
-{
-    char *pk = "HI!";
-    printf("%c\n", *pk);
-    printf("%s\n", pk);
-    printf("%p\n", pk);
-}
+// int main(void)
+// {
+//     char *pk = "HI!";
+//     printf("%c\n", *pk);
+//     printf("%s\n", pk);
+//     printf("%p\n", pk);
+// }
 
 #include <stdio.h>
 
