@@ -4,11 +4,12 @@
 int main(void)
 {
 int k = 5;
-printf("%d\n", k);
-
 int *pk = &k;
-*pk = 35;
-printf("%d\n", *pk);
+printf("%p\n", pk);
+
+int m = 4;
+ pk = &m;
+printf("%p\n", pk);
 
 
 
