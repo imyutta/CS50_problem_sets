@@ -10,13 +10,12 @@ int main(void)
 //     printf("%s\n", pk);
 //     printf("%p\n", pk);
 //
-string s = get_string("s: ");
-string t = s;
 
-//char *n = s;
 
-t[0] = toupper(t[0]);
 
-printf("s: %s\n", s);
-printf("t: %s\n", t);
+    string s = "HI!";
+    char c = s[0];
+    char *p = &c;
+    printf("%p\n", s);
+    printf("%c\n", *p);
 }
