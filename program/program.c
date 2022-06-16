@@ -4,6 +4,6 @@
 int main(void)
 {
 
-int *k = ;
+int *k = d;
 printf("%d\n", *k);
 }
