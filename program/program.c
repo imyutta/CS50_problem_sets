@@ -2,11 +2,10 @@
 
 int main(void)
 {
-    char *pk = "HI!";
-    printf("%c\n", *pk);
-    printf("%s\n", pk);
-    printf("%p\n", pk);
-}
-
-
+    char *s = "HI!";
+    printf("%c\n", s[0]);
+    printf("%c\n", s[1]);
+    printf("%c\n", s[2]);
+    printf("%c\n", s[3]);
+    printf("%c\n", s[4]);
 }
