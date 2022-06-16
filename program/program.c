@@ -3,9 +3,7 @@
 
 int main(void)
 {
- int k;
- k = 5;
- int* pk;
- int *pk = 7;
- printf("%i", *pk);
+char *c = "HI!";
+*c = 'c';
+printf("%c\n", *c);
 }
