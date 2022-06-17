@@ -7,9 +7,9 @@
 
 int main(void)
 {
-    int x;
-    printf("x: ");
-    scanf("%i", &x);
+    char *s;
+    printf("s: ");
+    scanf("%s", s)
 }
 
     // char *pk = "HI!";
