@@ -12,6 +12,8 @@ int main(void)
     // printf("%p\n", pk);
 
     char *s = get_string("s: ");
+    printf("%lu\n", strlen(s));
+
     char *t = malloc(strlen(s) + 1);
 
     for (int i = 0, n = strlen(s) + 1; i < n; i++)
