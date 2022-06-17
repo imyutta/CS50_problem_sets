@@ -12,21 +12,22 @@ int main(void)
     // printf("%p\n", pk);
 
     char *s = get_string("s: ");
-    printf("%lu\n", strlen(s));
 
     char *t = malloc(strlen(s) + 1);
-
-    for (int i = 0, n = strlen(s) + 1; i < n; i++)
+    if (t == NULL)
     {
-        t[i] = s[i];
+        return 1;
     }
 
-    t[0] = toupper(t[0]);
+    strcpy(t, s);
+
+    if (strlen(t) > 0)
+    {
+        t[0] = toupper(t[0]);
+    }
+
     printf("s: %s\n", s);
     printf("t: %s\n", t);
 
-
-
-
-
+    free(t);
 }
