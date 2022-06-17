@@ -7,7 +7,7 @@
 
 int main(void)
 {
-    char s[4];
+    char *s = malloc(4);
     printf("s: ");
     scanf("%s", s);
     printf("s: %s\n", s);
