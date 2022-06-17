@@ -5,15 +5,12 @@
 
 int main(void)
 {
-//     char *pk = "HI!";
-//     printf("%c\n", *pk);
-//     printf("%s\n", pk);
-//     printf("%p\n", pk);
-//
+    char *pk = "HI!";
+    printf("%c\n", *pk);
+    printf("%s\n", pk);
+    printf("%p\n", pk);
 
 
-    char *s = "HI!";
-    char *p = &*(s+1);
-    printf("%p\n", p);
-    printf("%p\n", s);
+
+
 }
