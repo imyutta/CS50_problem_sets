@@ -12,8 +12,8 @@ int main(void)
 //
 
 
-    string s = "HI!";
-    char *p = &s[0];
-    printf("%c\n", *(p+1));
+    char *s = "HI!";
+    char *p = &*(s+1);
+    printf("%p\n", p);
     printf("%p\n", s);
 }
