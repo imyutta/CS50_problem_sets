@@ -14,6 +14,7 @@ int main(void)
     char *s = get_string("s: ");
 
     char *t = malloc(strlen(s) + 1);
+    printf("my1: %p\n", t);
     if (t == NULL)
     {
         return 1;
@@ -29,5 +30,7 @@ int main(void)
     printf("s: %s\n", s);
     printf("t: %s\n", t);
 
-    free(t);
+    free(*t);
+
+    printf("my2: %p\n", t);
 }
