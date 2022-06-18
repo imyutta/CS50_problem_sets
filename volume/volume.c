@@ -35,12 +35,12 @@ int main(int argc, char *argv[])
 
 
     // create an array of n bytes for the header
-    uint8_t header = malloc(sizeof(uint8_t)* HEADER_SIZE);
+    uint8_t header = malloc(sizeof(uint8_t) * HEADER_SIZE);
     if (header == nil)
     {
         return 1;
     }
-    
+
     if (strlen(header) > 0)
     {
     // Copy header from input file to output file
