@@ -42,14 +42,14 @@ int main(int argc, char *argv[])
 
     // TODO: Read samples from input file and write updated data to output file
     //read
+    //update the volume
+    //write
     int16_t buffer;
     while((buffer = fgetc(input)) != EOF)
     {
-        printf("%int16_t", buffer);
+        fread(&buffer, sizeof(int16_t), 1, input);
     }
-    //update the volume
 
-    //write
 
     // Close files
     fclose(input);
