@@ -42,9 +42,9 @@ int main(int argc, char *argv[])
     // }
     // if (strlen(header) > 0)
     // {
-        // Copy header from input file to output file
-        fread(header, HEADER_SIZE, 1, input);
-        fwrite(header, HEADER_SIZE, 1, output);
+    // Copy header from input file to output file
+    fread(header, HEADER_SIZE, 1, input);
+    fwrite(header, HEADER_SIZE, 1, output);
 
     // }
 
@@ -59,7 +59,7 @@ int main(int argc, char *argv[])
     //     return 1;
     // }
 
-    while(fread(&buffer, sizeof(int16_t), 1, input))
+    while (fread(&buffer, sizeof(int16_t), 1, input))
     {
         buffer = buffer * factor;
         fwrite(&buffer, sizeof(int16_t), 1, output);
