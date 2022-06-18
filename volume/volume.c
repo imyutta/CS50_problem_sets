@@ -56,7 +56,6 @@ int main(int argc, char *argv[])
     //read
     //update the volume
     //write
-
     int16_t* buffer = malloc(sizeof(int16_t));
     if (buffer == NULL)
     {
