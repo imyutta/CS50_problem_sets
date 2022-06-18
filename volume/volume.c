@@ -40,7 +40,7 @@ int main(int argc, char *argv[])
     fread(header, sizeof(uint8_t), HEADER_SIZE, input);
 
     // TODO: Read samples from input file and write updated data to output file
-    
+    int16_t buffer;
 
     // Close files
     fclose(input);
