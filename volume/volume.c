@@ -53,18 +53,18 @@ int main(int argc, char *argv[])
     //update the volume
     //write
 
-    int16_t *buffer = malloc(sizeof(int16_t));
-    if (buffer == NULL)
+    int16_t buffer;
+    // if (buffer == NULL)
+    // {
+    //     return 1;
+    // }
+
+    while(fread(&buffer, sizeof(int16_t), 1, input))
     {
-        return 1;
+        buffer = buffer * factor;
+        fwrite(&buffer, sizeof(int16_t), 1, output);
     }
 
-    while(fread(buffer, sizeof(int16_t), 1, input))
-    {
-        *buffer = (*buffer) * factor;
-        fwrite(buffer, sizeof(int16_t), 1, output);
-    }
-    free(buffer);
 
     // Close files
     fclose(input);
