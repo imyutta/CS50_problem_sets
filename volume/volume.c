@@ -3,6 +3,7 @@
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 // Number of bytes in .wav header
 const int HEADER_SIZE = 44;
@@ -35,8 +36,8 @@ int main(int argc, char *argv[])
 
 
     // create an array of n bytes for the header
-    uint8_t header = malloc(sizeof(uint8_t) * HEADER_SIZE);
-    if (header == nil)
+    uint8_t* header = malloc(sizeof(uint8_t) * HEADER_SIZE);
+    if (header == NULL)
     {
         return 1;
     }
