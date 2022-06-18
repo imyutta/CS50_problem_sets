@@ -42,10 +42,10 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    if (strlen(header) <= 0)
-    {
-        return 2;
-    }
+    // if (strlen(header) <= 0)
+    // {
+    //     return 2;
+    // }
     // Copy header from input file to output file
     fread(header, HEADER_SIZE, 1, input);
     fwrite(header, HEADER_SIZE, 1, output);
@@ -57,17 +57,18 @@ int main(int argc, char *argv[])
     //update the volume
     //write
 
-    int16_t buffer;
-    // if (buffer == NULL)
-    // {
-    //     return 1;
-    // }
-
-    while (fread(&buffer, sizeof(int16_t), 1, input))
+    int16_t* buffer = malloc(sizeof(int16_t));
+    if (buffer == NULL)
     {
-        buffer = buffer * factor;
-        fwrite(&buffer, sizeof(int16_t), 1, output);
+        return 1;
     }
+
+    while (fread(buffer, sizeof(int16_t), 1, input))
+    {
+        *buffer = *buffer * factor;
+        fwrite(buffer, sizeof(int16_t), 1, output);
+    }
+    free(buffer);
 
 
     // Close files
