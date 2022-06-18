@@ -35,7 +35,7 @@ int main(int argc, char *argv[])
 
 
     // create an array of n bytes for the header
-    uint8_t header[HEADER_SIZE];
+    uint8_t header = malloc(sizeof(uint8_t)* HEADER_SIZE);
     // if (header == NULL)
     // {
     //     return 1;
