@@ -42,19 +42,16 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    // if (strlen(header) > 0)
-    // {
+    if (strlen(header) <= 0)
+    {
+        return 2;
+    }
     // Copy header from input file to output file
     fread(header, HEADER_SIZE, 1, input);
     fwrite(header, HEADER_SIZE, 1, output);
-    // }
-    // else
-    // {
-    //     return 2;
-    // }
     free(header);
 
-    
+
     // TODO: Read samples from input file and write updated data to output file
     //read
     //update the volume
