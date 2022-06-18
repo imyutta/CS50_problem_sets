@@ -36,18 +36,24 @@ int main(int argc, char *argv[])
 
     // create an array of n bytes for the header
     uint8_t header = malloc(sizeof(uint8_t)* HEADER_SIZE);
-    // if (header == NULL)
-    // {
-    //     return 1;
-    // }
-    // if (strlen(header) > 0)
-    // {
+    if (header == nil)
+    {
+        return 1;
+    }
+    
+    if (strlen(header) > 0)
+    {
     // Copy header from input file to output file
     fread(header, HEADER_SIZE, 1, input);
     fwrite(header, HEADER_SIZE, 1, output);
+    }
+    else
+    {
+        return 2;
+    }
 
-    // }
-    free(header)
+
+    free(header);
     // TODO: Read samples from input file and write updated data to output file
     //read
     //update the volume
