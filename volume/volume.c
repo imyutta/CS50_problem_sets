@@ -45,6 +45,7 @@ int main(int argc, char *argv[])
     //update the volume
     //write
     int16_t buffer;
+    for 
     while((buffer = fgetc(input)) != EOF)
     {
         fread(&buffer, sizeof(int16_t), 1, input);
