@@ -79,17 +79,10 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
-            image[i][j] = pixel_blur
+            image[i][j] = pixel_blur(image[i][j]);
         }
     }
-    // int blurRed, blurGreen, blurBlue;
-    // for (int i = 0; i < height; i++)
-    // {
-    //     for (int j = 0; j < width; j++)
-    //     {
-    //         blurRed = image
-    //     }
-    // }
+
     return;
 }
 
@@ -104,3 +97,5 @@ int boundary_check(int a)
         return a;
     }
 }
+
+pixel_blur(image[i][j])
