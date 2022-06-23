@@ -102,11 +102,11 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                 {
                     for (int column = j - 1, last_column = j + 1; column <= last_column; column++)
                     {
-                        if (z >= 0 && z < width)
+                        if (column >= 0 && column < width)
                         {
-                            blurRed += copy[p][z].rgbtRed;
-                            blurGreen += copy[p][z].rgbtGreen;
-                            blurBlue += copy[p][z].rgbtBlue;
+                            blurRed += copy[row][column].rgbtRed;
+                            blurGreen += copy[row][column].rgbtGreen;
+                            blurBlue += copy[row][column].rgbtBlue;
                             counter++;
 
                         }
