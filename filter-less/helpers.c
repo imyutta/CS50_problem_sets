@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdio.h>
 int boundary_check(int a);
-void pixel_blur(int i, int j, *image, *copy);
+void pixel_blur(int i, int j, RGBTRIPLE image, RGBTRIPLE copy);
 
 
 // Convert image to grayscale
@@ -81,7 +81,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
-            pixel_blur(i, j, image, copy);
+            pixel_blur(i, j, RGBTRIPLE image, RGBTRIPLE copy);
         }
     }
 
@@ -100,7 +100,7 @@ int boundary_check(int a)
     }
 }
 
-void pixel_blur(int i, int j, *image, *copy)
+void pixel_blur(int i, int j, RGBTRIPLE image, RGBTRIPLE copy)
 {
     int blurRed = 0;
     int blurGreen = 0;

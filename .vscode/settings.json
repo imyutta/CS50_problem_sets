@@ -4,6 +4,8 @@
         "string_view": "c",
         "type_traits": "c",
         "cs50.h": "c",
-        "stdio.h": "c"
+        "stdio.h": "c",
+        "*.tcc": "c",
+        "string": "c"
     }
 }
