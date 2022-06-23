@@ -133,30 +133,30 @@ int boundary_check(int a)
     }
 }
 
-// void pixel_blur(int i, int j, RGBTRIPLE image, RGBTRIPLE copy)
-// {
-//     int blurRed = 0;
-//     int blurGreen = 0;
-//     int blurBlue = 0;
-//     int counter = 0;
-//     for (int p = i - 1; p < i + 2; p++)
-//     {
-//         if (p >= 0 && p < height)
-//         {
-//             for (int z = j - 1; z < j + 2; z++)
-//             {
-//                 if (z >= 0 && z < width)
-//                 {
-//                     blurRed += copy[p][z].rgbtRed;
-//                     blurGreen += copy[p][z].rgbtGreen;
-//                     blurBlue += copy[p][z].rgbtBlue;
-//                     counter++;
+void pixel_blur(int i, int j, RGBTRIPLE image, RGBTRIPLE copy)
+{
+    blurRed = 0;
+    blurGreen = 0;
+    blurBlue = 0;
+    counter = 0;
+    for (int row = i - 1, last_row = i + 1; row <= last_row; row++)
+    {
+        if (row >= 0 && row < height)
+        {
+            for (int column = j - 1, last_column = j + 1; column <= last_column; column++)
+            {
+                if (column >= 0 && column < width)
+                {
+                    blurRed += copy[row][column].rgbtRed;
+                    blurGreen += copy[row][column].rgbtGreen;
+                    blurBlue += copy[row][column].rgbtBlue;
+                    counter++;
 
-//                 }
-//             }
-//         }
-//     }
-//     image[i][j].rgbtRed = round(blurRed / counter);
-//     image[i][j].rgbtGreen = round(blurGreen / counter);
-//     image[i][j].rgbtBlue = round(blurBlue / counter);
-// }
+                }
+            }
+        }
+    }
+    image[i][j].rgbtRed = round(blurRed / counter);
+    image[i][j].rgbtGreen = round(blurGreen / counter);
+    image[i][j].rgbtBlue = round(blurBlue / counter);
+}
