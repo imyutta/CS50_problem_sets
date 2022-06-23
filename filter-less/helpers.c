@@ -103,11 +103,11 @@ int boundary_check(int a)
 void pixel_blur(RGBTRIPLE image[i][j])
 {
     RGBTRIPLE blur_rgb_sum;
-    for (int p = i - 1; p < i + 1; p++)
+    for (int p = i - 1; p < i + 2; p++)
     {
-        for (int z = 0; z < 2; z++)
+        for (int z = j - 1; z < j + 2; z++)
         {
-
+            
         }
     }
 }
