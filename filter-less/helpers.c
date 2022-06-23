@@ -124,5 +124,7 @@ void pixel_blur(RGBTRIPLE image[i][j])
             }
         }
     }
-    image[i][j] = round((blurRed + blurGreen + blurBlue) / counter);
+    image[i][j].rgbtRed = round(blurRed / counter);
+    image[i][j].rgbtGreen = round(blurGreen / counter);
+    image[i][j].rgbtBlue = round(blurBlue / counter);
 }
