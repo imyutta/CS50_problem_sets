@@ -1,7 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 #include <stdio.h>
-#include <stdlib.h>
+#include <algorithm>
 int boundary_check(int a);
 //void pixel_blur(i, j, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width]);
 
