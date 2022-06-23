@@ -7,10 +7,10 @@
 
 int main(void)
 {
-    char *s = malloc(4);
-    printf("s: ");
-    scanf("%s", s);
-    printf("s: %s\n", s);
+    int n = 10;
+    int m = &n;
+    printf("m: %i\n", m);
+
 }
 
     // char *pk = "HI!";
