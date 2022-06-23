@@ -1,7 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 #include <stdio.h>
-void sepia_change(RGBTRIPLE sepia);
+int boundary_check(int a);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -34,7 +34,6 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             sepia.rgbtBlue = boundary_check(round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue));
 
             image[i][j] = sepia;
-
 
         }
     }
@@ -84,20 +83,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-void sepia_change(RGBTRIPLE sepia)
+int boundary_check(int a)
 {
-    if (sepia.rgbtRed > 255)
+    if (a > 255)
     {
-        sepia.rgbtRed = 255;
+        return 255;
     }
-
-    if (sepia.rgbtBlue > 255)
+    else
     {
-        sepia.rgbtBlue = 255;
-    }
-
-    if (sepia.rgbtGreen > 255)
-    {
-        sepia.rgbtGreen = 255;
+        return a;
     }
 }
