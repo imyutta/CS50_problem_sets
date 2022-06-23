@@ -37,7 +37,7 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             sepia.rgbtGreen = boundary_check(round(0.349 * pixel.rgbtRed + 0.686 * pixel.rgbtGreen + 0.168 * pixel.rgbtBlue));
             sepia.rgbtBlue = boundary_check(round(0.272 * pixel.rgbtRed + 0.534 * pixel.rgbtGreen + 0.131 * pixel.rgbtBlue));
 
-            image[i][j] = sepia;
+            pixel = sepia;
 
         }
     }
