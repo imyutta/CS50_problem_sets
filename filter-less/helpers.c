@@ -124,4 +124,5 @@ void pixel_blur(RGBTRIPLE image[i][j])
             }
         }
     }
+    
 }
