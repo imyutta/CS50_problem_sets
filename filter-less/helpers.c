@@ -100,7 +100,7 @@ int boundary_check(int a)
     }
 }
 
-void pixel_blur(int i, int j, int height, int width)
+void pixel_blur(int i, int j, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width])
 {
     int blurRed = 0;
     int blurGreen = 0;
