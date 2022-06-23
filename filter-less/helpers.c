@@ -81,7 +81,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
-            image[i][j] = pixel_blur(image[i][j]);
+            image[i][j] = pixel_blur(copy[i][j]);
         }
     }
 
@@ -100,7 +100,7 @@ int boundary_check(int a)
     }
 }
 
-void pixel_blur(RGBTRIPLE image[i][j])
+void pixel_blur(RGBTRIPLE copy[i][j])
 {
     int blurRed = 0;
     int blurGreen = 0;
@@ -114,9 +114,9 @@ void pixel_blur(RGBTRIPLE image[i][j])
             {
                 if (z >= 0; && z < width)
                 {
-                    blurRed += image[p][z].rgbtRed;
-                    blurGreen += image[p][z].rgbtGreen;
-                    blurBlue += image[p][z].rgbtBlue;
+                    blurRed += copy[p][z].rgbtRed;
+                    blurGreen += copy[p][z].rgbtGreen;
+                    blurBlue += copy[p][z].rgbtBlue;
                     counter++;
 
                 }
