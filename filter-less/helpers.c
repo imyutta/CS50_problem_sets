@@ -105,12 +105,11 @@ void pixel_blur(RGBTRIPLE image[i][j])
     int blurRed = 0;
     int blurGreen = 0;
     int blurBlue = 0;
-    int counter;
+    int counter = 0;
     for (int p = i - 1; p < i + 2; p++)
     {
         if (p >= 0 && p < height)
         {
-            counter = 0;
             for (int z = j - 1; z < j + 2; z++)
             {
                 if (z >= 0; && z < width)
