@@ -58,7 +58,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // }
     // else
     // {
-    //     last_j = (width - 1) / 2;
+    //     last_j = width / 2 - 1;
     // }
 
     for (int i = 0; i < height; i++)
