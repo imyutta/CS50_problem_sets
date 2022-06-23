@@ -50,7 +50,7 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
     // int last_j;
     int lastElement = width - 1;
 
-    int last_j = floor(width / 2) - 1
+    int last_j = floor(width / 2) - 1;
 
     // if (width % 2 != 0)
     // {
