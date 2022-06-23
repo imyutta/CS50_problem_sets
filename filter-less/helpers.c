@@ -29,11 +29,12 @@ void grayscale(int height, int width, RGBTRIPLE image[height][width])
 void sepia(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE sepia;
-    RGBTRIPLE pixel = image[i][j];
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
         {
+            RGBTRIPLE pixel = image[i][j];
             sepia.rgbtRed = boundary_check(round(0.393 * pixel.rgbtRed + 0.769 * pixel.rgbtGreen + 0.189 * pixel.rgbtBlue));
             sepia.rgbtGreen = boundary_check(round(0.349 * pixel.rgbtRed + 0.686 * pixel.rgbtGreen + 0.168 * pixel.rgbtBlue));
             sepia.rgbtBlue = boundary_check(round(0.272 * pixel.rgbtRed + 0.534 * pixel.rgbtGreen + 0.131 * pixel.rgbtBlue));
