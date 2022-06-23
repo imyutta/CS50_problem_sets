@@ -85,7 +85,14 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         {
             copy[i][j] = image[i][j];
             //pixel_blur(i, j, RGBTRIPLE image[height][width], copy);
-            blurRed = 0;
+        }
+    }
+
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+                blurRed = 0;
             blurGreen = 0;
             blurBlue = 0;
             counter = 0;
@@ -111,6 +118,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
             image[i][j].rgbtBlue = round(blurBlue / counter);
         }
     }
+
 
     return;
 }
