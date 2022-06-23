@@ -107,7 +107,7 @@ void pixel_blur(RGBTRIPLE image[i][j])
     {
         for (int z = j - 1; z < j + 2; z++)
         {
-            
+            blur_rgb_sum.rgbtRed = image 
         }
     }
 }
