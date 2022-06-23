@@ -128,15 +128,6 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 int boundary_check(int a)
 {
     return min(a, 255);
-    
-    if (a > 255)
-    {
-        return 255;
-    }
-    else
-    {
-        return a;
-    }
 }
 
 // void pixel_blur(int i, int j, RGBTRIPLE image, RGBTRIPLE copy)
