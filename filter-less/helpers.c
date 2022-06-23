@@ -81,7 +81,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
             copy[i][j] = image[i][j];
-            pixel_blur(i, j, RGBTRIPLE image, RGBTRIPLE copy);
+            pixel_blur(i, j, *image, *copy);
         }
     }
 
