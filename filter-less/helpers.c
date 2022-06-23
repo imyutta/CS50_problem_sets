@@ -102,5 +102,5 @@ int boundary_check(int a)
 
 void pixel_blur(RGBTRIPLE image[i][j])
 {
-    for (int i = 0; i < height; )
+    for (int i = i - 1; i < height; )
 }
