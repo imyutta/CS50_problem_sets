@@ -1,6 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 #include <stdio.h>
+void sepia_change(RGBTRIPLE sepia);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -32,36 +33,38 @@ void sepia(int height, int width, RGBTRIPLE image[height][width])
             sepia.rgbtGreen = round(0.349 * image[i][j].rgbtRed + 0.686 * image[i][j].rgbtGreen + 0.168 * image[i][j].rgbtBlue);
             sepia.rgbtBlue = round(0.272 * image[i][j].rgbtRed + 0.534 * image[i][j].rgbtGreen + 0.131 * image[i][j].rgbtBlue);
 
-            biggest(sepia.rgbtRed)
+            sepia_change(RGBTRIPLE sepia);
+            image[i][j] = sepia;
+
             //sepiaRed
-            if (sepia.rgbtRed <= 255)
-            {
-                image[i][j].rgbtRed = sepia.rgbtRed;
-            }
-            else
-            {
-                image[i][j].rgbtRed = 255;
-            }
+            // if (sepia.rgbtRed <= 255)
+            // {
+            //     image[i][j].rgbtRed = sepia.rgbtRed;
+            // }
+            // else
+            // {
+            //     image[i][j].rgbtRed = 255;
+            // }
 
-            //sepiaGreen
-            if (sepia.rgbtGreen <= 255)
-            {
-                image[i][j].rgbtGreen = sepia.rgbtGreen;
-            }
-            else
-            {
-                image[i][j].rgbtGreen = 255;
-            }
+            // //sepiaGreen
+            // if (sepia.rgbtGreen <= 255)
+            // {
+            //     image[i][j].rgbtGreen = sepia.rgbtGreen;
+            // }
+            // else
+            // {
+            //     image[i][j].rgbtGreen = 255;
+            // }
 
-            //sepiaBlue;
-            if (sepia.rgbtBlue <= 255)
-            {
-                image[i][j].rgbtBlue = sepia.rgbtBlue;
-            }
-            else
-            {
-                image[i][j].rgbtBlue = 255;
-            }
+            // //sepiaBlue;
+            // if (sepia.rgbtBlue <= 255)
+            // {
+            //     image[i][j].rgbtBlue = sepia.rgbtBlue;
+            // }
+            // else
+            // {
+            //     image[i][j].rgbtBlue = 255;
+            // }
         }
     }
     return;
@@ -110,7 +113,20 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-int biggest(int a, int b)
+void sepia_change(RGBTRIPLE sepia)
 {
-    sepia.rgbtRed
+    if (sepia.rgbtRed > 255)
+    {
+        sepia.rgbtRed = 255;
+    }
+
+    if (sepia.rgbtBlue > 255)
+    {
+        sepia.rgbtBlue = 255;
+    }
+
+    if (sepia.rgbtGreen > 255)
+    {
+        sepia.rgbtGreen = 255;
+    }
 }
