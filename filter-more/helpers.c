@@ -112,7 +112,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            pixel[1] = copy[i - 1][j - 1];
+            pixel[1].rgbtRed = copy[i - 1][j - 1].rgbtRed;
             pixel[2] = copy[i - 1][j];
             pixel[3] = copy[i - 1][j + 1];
 
@@ -131,7 +131,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-            image[i][j] = g_SUM;
+            image[i][j].rgbtRed = round(blurRed / counter);
+            image[i][j].rgbtGreen = round(blurGreen / counter);
+            image[i][j].rgbtBlue = round(blurBlue / counter);
+
+
+
+
+
 
 
         }
