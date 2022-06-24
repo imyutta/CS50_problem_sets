@@ -135,43 +135,43 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             if (is_fits((i - 1), (j - 1), height, width))
             {
-            pixel[0] = copy[i - 1][j - 1];
+                pixel[0] = copy[i - 1][j - 1];
             }
 
             if (is_fits((i - 1), j, height, width))
             {
-            pixel[1] = copy[i - 1][j];
+                pixel[1] = copy[i - 1][j];
 
             }
             if (is_fits((i - 1), (j + 1), height, width))
             {
-            pixel[2] = copy[i - 1][j + 1];
+                pixel[2] = copy[i - 1][j + 1];
             }
 
 
             if (is_fits(i, (j - 1), height, width))
             {
-            pixel[3] = copy[i][j - 1];
+                pixel[3] = copy[i][j - 1];
             }
 
             if (is_fits(i, (j + 1), height, width))
             {
-            pixel[5] = copy[i][j + 1];
+                pixel[5] = copy[i][j + 1];
             }
 
 
 
             if (is_fits((i + 1), (j - 1), height, width))
             {
-            pixel[6] = copy[i + 1][j - 1];
+                pixel[6] = copy[i + 1][j - 1];
             }
             if (is_fits((i + 1), j, height, width))
             {
-            pixel[7] = copy[i + 1][j];
+                pixel[7] = copy[i + 1][j];
             }
             if (is_fits((i + 1), (j + 1), height, width))
             {
-            pixel[8] = copy[i + 1][j + 1];
+                pixel[8] = copy[i + 1][j + 1];
             }
 
 
