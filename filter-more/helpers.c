@@ -202,9 +202,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-            image[i][j].rgbtRed = round(g_SUM_RED);
-            image[i][j].rgbtBlue = round(g_SUM_BLUE);
-            image[i][j].rgbtGreen = round(g_SUM_GREEN);
+            image[i][j].rgbtRed = boundary_check(round(g_SUM_RED));
+            image[i][j].rgbtBlue = boundary_check(round(g_SUM_BLUE));
+            image[i][j].rgbtGreen = boundary_check(round(g_SUM_GREEN));
 
         }
     }
