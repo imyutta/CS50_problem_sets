@@ -135,56 +135,43 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             if (is_fits((i - 1), (j - 1), height, width))
             {
-            pixel[0].rgbtRed = copy[i - 1][j - 1].rgbtRed;
-            pixel[0].rgbtBlue = copy[i - 1][j - 1].rgbtBlue;
-            pixel[0].rgbtGreen = copy[i - 1][j - 1].rgbtGreen;
+            pixel[0] = copy[i - 1][j - 1];
             }
+
             if (is_fits((i - 1), j, height, width))
             {
-            pixel[1].rgbtRed = copy[i - 1][j].rgbtRed;
-            pixel[1].rgbtBlue = copy[i - 1][j].rgbtBlue;
-            pixel[1].rgbtGreen = copy[i - 1][j].rgbtGreen;
+            pixel[1] = copy[i - 1][j];
+
             }
             if (is_fits((i - 1), (j + 1), height, width))
             {
-            pixel[2].rgbtRed = copy[i - 1][j + 1].rgbtRed;
-            pixel[2].rgbtBlue = copy[i - 1][j + 1].rgbtBlue;
-            pixel[2].rgbtGreen = copy[i - 1][j + 1].rgbtGreen;
+            pixel[2] = copy[i - 1][j + 1];
             }
 
 
             if (is_fits(i, (j - 1), height, width))
             {
-            pixel[3].rgbtRed = copy[i][j - 1].rgbtRed;
-            pixel[3].rgbtBlue = copy[i][j - 1].rgbtBlue;
-            pixel[3].rgbtGreen = copy[i][j - 1].rgbtGreen;
+            pixel[3] = copy[i][j - 1];
             }
+
             if (is_fits(i, (j + 1), height, width))
             {
-            pixel[5].rgbtRed = copy[i][j + 1].rgbtRed;
-            pixel[5].rgbtBlue = copy[i][j + 1].rgbtBlue;
-            pixel[5].rgbtGreen = copy[i][j + 1].rgbtGreen;
+            pixel[5] = copy[i][j + 1];
             }
 
 
 
             if (is_fits((i + 1), (j - 1), height, width))
             {
-            pixel[6].rgbtRed = copy[i + 1][j - 1].rgbtRed;
-            pixel[6].rgbtBlue = copy[i + 1][j - 1].rgbtBlue;
-            pixel[6].rgbtGreen = copy[i + 1][j - 1].rgbtGreen;
+            pixel[6] = copy[i + 1][j - 1];
             }
             if (is_fits((i + 1), j, height, width))
             {
-            pixel[7].rgbtRed = copy[i + 1][j].rgbtRed;
-            pixel[7].rgbtBlue = copy[i + 1][j].rgbtBlue;
-            pixel[7].rgbtGreen = copy[i + 1][j].rgbtGreen;
+            pixel[7] = copy[i + 1][j];
             }
             if (is_fits((i + 1), (j + 1), height, width))
             {
-            pixel[8].rgbtRed = copy[i + 1][j + 1].rgbtRed;
-            pixel[8].rgbtBlue = copy[i + 1][j + 1].rgbtBlue;
-            pixel[8].rgbtGreen = copy[i + 1][j + 1].rgbtGreen;
+            pixel[8] = copy[i + 1][j + 1];
             }
 
 
