@@ -131,14 +131,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
 
-            image[i][j].rgbtRed = round(blurRed / counter);
-            image[i][j].rgbtGreen = round(blurGreen / counter);
-            image[i][j].rgbtBlue = round(blurBlue / counter);
-
-
-
-
-
+            image[i][j] = g_SUM;
 
 
         }
