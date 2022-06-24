@@ -161,6 +161,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
 
+            if (isInside(i-1, j-1, width, heigh) == true)
+
+            
             if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
             {
             pixel[6].rgbtRed = copy[i + 1][j - 1].rgbtRed;
