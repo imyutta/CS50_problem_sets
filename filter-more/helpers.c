@@ -98,6 +98,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
     RGBTRIPLE pixel[9];
+    RGBTRIPLE g_X, g_Y, g_SUM;
 
     for (int i = 0; i < height; i++)
     {
@@ -107,7 +108,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
-    int g_X, g_Y, g_SUM;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
