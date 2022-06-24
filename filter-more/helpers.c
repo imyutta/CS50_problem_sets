@@ -102,9 +102,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
     RGBTRIPLE pixel[9];
-    int g_X_RED, g_Y_RED, g_SUM_RED;
-    int g_X_BLUE, g_Y_BLUE, g_SUM_BLUE;
-    int g_X_GREEN, g_Y_GREEN, g_SUM_GREEN;
+    int g_X_RED, g_Y_RED;
+    int g_X_BLUE, g_Y_BLUE;
+    int g_X_GREEN, g_Y_GREEN;
+    float g_SUM_RED, g_SUM_BLUE, g_SUM_GREEN;
 
     RGBTRIPLE zeroPixel;
 
