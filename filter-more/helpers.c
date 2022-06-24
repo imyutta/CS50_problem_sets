@@ -144,49 +144,64 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             pixel[7].rgbtRed = 0;
             pixel[7].rgbtBlue = 0;
-            pixel[7].rgbtGreen = copy[i + 1][j].rgbtGreen;
+            pixel[7].rgbtGreen = 0;
 
-            pixel[8].rgbtRed = copy[i + 1][j + 1].rgbtRed;
-            pixel[8].rgbtBlue = copy[i + 1][j + 1].rgbtBlue;
-            pixel[8].rgbtGreen = copy[i + 1][j + 1].rgbtGreen;
-            if ((i - 1) < 0 || (j - 1) < 0 || (i + 1) >= height || (j + 1) >= width)
+            pixel[8].rgbtRed = 0;
+            pixel[8].rgbtBlue = 0;
+            pixel[8].rgbtGreen = 0;
+
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
             {
-
-            }
-
             pixel[0].rgbtRed = copy[i - 1][j - 1].rgbtRed;
             pixel[0].rgbtBlue = copy[i - 1][j - 1].rgbtBlue;
             pixel[0].rgbtGreen = copy[i - 1][j - 1].rgbtGreen;
-
+            }
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[1].rgbtRed = copy[i - 1][j].rgbtRed;
             pixel[1].rgbtBlue = copy[i - 1][j].rgbtBlue;
             pixel[1].rgbtGreen = copy[i - 1][j].rgbtGreen;
-
+            }
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[2].rgbtRed = copy[i - 1][j + 1].rgbtRed;
             pixel[2].rgbtBlue = copy[i - 1][j + 1].rgbtBlue;
             pixel[2].rgbtGreen = copy[i - 1][j + 1].rgbtGreen;
+            }
 
 
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[3].rgbtRed = copy[i][j - 1].rgbtRed;
             pixel[3].rgbtBlue = copy[i][j - 1].rgbtBlue;
             pixel[3].rgbtGreen = copy[i][j - 1].rgbtGreen;
-
+            }
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[5].rgbtRed = copy[i][j + 1].rgbtRed;
             pixel[5].rgbtBlue = copy[i][j + 1].rgbtBlue;
             pixel[5].rgbtGreen = copy[i][j + 1].rgbtGreen;
+            }
 
 
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[6].rgbtRed = copy[i + 1][j - 1].rgbtRed;
             pixel[6].rgbtBlue = copy[i + 1][j - 1].rgbtBlue;
             pixel[6].rgbtGreen = copy[i + 1][j - 1].rgbtGreen;
-
+            }
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[7].rgbtRed = copy[i + 1][j].rgbtRed;
             pixel[7].rgbtBlue = copy[i + 1][j].rgbtBlue;
             pixel[7].rgbtGreen = copy[i + 1][j].rgbtGreen;
-
+            }
+            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            {
             pixel[8].rgbtRed = copy[i + 1][j + 1].rgbtRed;
             pixel[8].rgbtBlue = copy[i + 1][j + 1].rgbtBlue;
             pixel[8].rgbtGreen = copy[i + 1][j + 1].rgbtGreen;
+            }
 
 
             g_X_RED = pixel[0].rgbtRed * (-1) + pixel[2].rgbtRed * 1 + pixel[3].rgbtRed * (-2) + pixel[5].rgbtRed * 2 + pixel[6].rgbtRed * (-1) + pixel[8].rgbtRed * 1;
