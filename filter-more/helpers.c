@@ -130,12 +130,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //all of the 9 pixels are temporarely equaled to 0
+            //all of the 9 pixels are temporarily equaled to 0
             for (int k = 0; k < 9; k++)
             {
                 pixel[k] = zeroPixel;
             }
 
+            //check if the surrounding pixels fit the image boarders
+            //if fits, rewrite their values by applying Sobel operator
             if (is_fits((i - 1), (j - 1), height, width))
             {
                 pixel[0] = copy[i - 1][j - 1];
@@ -156,7 +158,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             {
                 pixel[3] = copy[i][j - 1];
             }
-
+            //skip the middle pixel
             if (is_fits(i, (j + 1), height, width))
             {
                 pixel[5] = copy[i][j + 1];
@@ -177,7 +179,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 pixel[8] = copy[i + 1][j + 1];
             }
 
-
+            
             g_X_RED = pixel[0].rgbtRed * (-1) + pixel[2].rgbtRed * 1 + pixel[3].rgbtRed * (-2) + pixel[5].rgbtRed * 2 + pixel[6].rgbtRed *
                       (-1) + pixel[8].rgbtRed * 1;
             g_Y_RED = pixel[0].rgbtRed * (-1) + pixel[1].rgbtRed * (-2) + pixel[2].rgbtRed * (-1) + pixel[6].rgbtRed * 1 + pixel[7].rgbtRed *
