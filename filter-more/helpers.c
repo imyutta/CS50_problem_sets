@@ -114,39 +114,39 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            pixel[1].rgbtRed = copy[i - 1][j - 1].rgbtRed;
-            pixel[1].rgbtBlue = copy[i - 1][j - 1].rgbtBlue;
-            pixel[1].rgbtGreen = copy[i - 1][j - 1].rgbtGreen;
+            pixel[0].rgbtRed = copy[i - 1][j - 1].rgbtRed;
+            pixel[0].rgbtBlue = copy[i - 1][j - 1].rgbtBlue;
+            pixel[0].rgbtGreen = copy[i - 1][j - 1].rgbtGreen;
 
-            pixel[2].rgbtRed = copy[i - 1][j].rgbtRed;
-            pixel[2].rgbtBlue = copy[i - 1][j].rgbtBlue;
-            pixel[2].rgbtGreen = copy[i - 1][j].rgbtGreen;
+            pixel[1].rgbtRed = copy[i - 1][j].rgbtRed;
+            pixel[1].rgbtBlue = copy[i - 1][j].rgbtBlue;
+            pixel[1].rgbtGreen = copy[i - 1][j].rgbtGreen;
 
-            pixel[3].rgbtRed = copy[i - 1][j + 1].rgbtRed;
-            pixel[3].rgbtBlue = copy[i - 1][j + 1].rgbtBlue;
-            pixel[3].rgbtGreen = copy[i - 1][j + 1].rgbtGreen;
-
-
-            pixel[4].rgbtRed = copy[i][j - 1].rgbtRed;
-            pixel[4].rgbtBlue = copy[i][j - 1].rgbtBlue;
-            pixel[4].rgbtGreen = copy[i][j - 1].rgbtGreen;
-
-            pixel[6].rgbtRed = copy[i][j + 1].rgbtRed;
-            pixel[6].rgbtBlue = copy[i][j + 1].rgbtBlue;
-            pixel[6].rgbtGreen = copy[i][j + 1].rgbtGreen;
+            pixel[2].rgbtRed = copy[i - 1][j + 1].rgbtRed;
+            pixel[2].rgbtBlue = copy[i - 1][j + 1].rgbtBlue;
+            pixel[2].rgbtGreen = copy[i - 1][j + 1].rgbtGreen;
 
 
-            pixel[7].rgbtRed = copy[i + 1][j - 1].rgbtRed;
-            pixel[7].rgbtBlue = copy[i + 1][j - 1].rgbtBlue;
-            pixel[7].rgbtGreen = copy[i + 1][j - 1].rgbtGreen;
+            pixel[3].rgbtRed = copy[i][j - 1].rgbtRed;
+            pixel[3].rgbtBlue = copy[i][j - 1].rgbtBlue;
+            pixel[3].rgbtGreen = copy[i][j - 1].rgbtGreen;
 
-            pixel[8].rgbtRed = copy[i + 1][j].rgbtRed;
-            pixel[8].rgbtBlue = copy[i + 1][j].rgbtBlue;
-            pixel[8].rgbtGreen = copy[i + 1][j].rgbtGreen;
+            pixel[5].rgbtRed = copy[i][j + 1].rgbtRed;
+            pixel[5].rgbtBlue = copy[i][j + 1].rgbtBlue;
+            pixel[5].rgbtGreen = copy[i][j + 1].rgbtGreen;
 
-            pixel[9].rgbtRed = copy[i + 1][j + 1].rgbtRed;
-            pixel[9].rgbtBlue = copy[i + 1][j + 1].rgbtBlue;
-            pixel[9].rgbtGreen = copy[i + 1][j + 1].rgbtGreen;
+
+            pixel[6].rgbtRed = copy[i + 1][j - 1].rgbtRed;
+            pixel[6].rgbtBlue = copy[i + 1][j - 1].rgbtBlue;
+            pixel[6].rgbtGreen = copy[i + 1][j - 1].rgbtGreen;
+
+            pixel[7].rgbtRed = copy[i + 1][j].rgbtRed;
+            pixel[7].rgbtBlue = copy[i + 1][j].rgbtBlue;
+            pixel[7].rgbtGreen = copy[i + 1][j].rgbtGreen;
+
+            pixel[8].rgbtRed = copy[i + 1][j + 1].rgbtRed;
+            pixel[8].rgbtBlue = copy[i + 1][j + 1].rgbtBlue;
+            pixel[8].rgbtGreen = copy[i + 1][j + 1].rgbtGreen;
 
 
             g_X_RED = pixel[1].rgbtRed * (-1) + pixel[3].rgbtRed * 1 + pixel[4].rgbtRed * (-2) + pixel[6].rgbtRed * 2 + pixel[7].rgbtRed * (-1) + pixel[9].rgbtRed * 1;
