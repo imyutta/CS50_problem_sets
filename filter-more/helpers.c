@@ -128,19 +128,19 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 pixel[k] = zeroPixel;
             }
 
-            if (is_fits((i - 1), (j - 1)))
+            if (is_fits((i - 1), (j - 1), height, width))
             {
             pixel[0].rgbtRed = copy[i - 1][j - 1].rgbtRed;
             pixel[0].rgbtBlue = copy[i - 1][j - 1].rgbtBlue;
             pixel[0].rgbtGreen = copy[i - 1][j - 1].rgbtGreen;
             }
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits((i - 1), j, height, width))
             {
             pixel[1].rgbtRed = copy[i - 1][j].rgbtRed;
             pixel[1].rgbtBlue = copy[i - 1][j].rgbtBlue;
             pixel[1].rgbtGreen = copy[i - 1][j].rgbtGreen;
             }
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits((i - 1), (j + 1), height, width))
             {
             pixel[2].rgbtRed = copy[i - 1][j + 1].rgbtRed;
             pixel[2].rgbtBlue = copy[i - 1][j + 1].rgbtBlue;
@@ -148,13 +148,13 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
 
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits(i, (j - 1), height, width))
             {
             pixel[3].rgbtRed = copy[i][j - 1].rgbtRed;
             pixel[3].rgbtBlue = copy[i][j - 1].rgbtBlue;
             pixel[3].rgbtGreen = copy[i][j - 1].rgbtGreen;
             }
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits(i, (j + 1), height, width))
             {
             pixel[5].rgbtRed = copy[i][j + 1].rgbtRed;
             pixel[5].rgbtBlue = copy[i][j + 1].rgbtBlue;
@@ -162,22 +162,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
 
-            if (isInside(i-1, j-1, width, heigh) == true)
 
-
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits((i + 1), (j - 1), height, width))
             {
             pixel[6].rgbtRed = copy[i + 1][j - 1].rgbtRed;
             pixel[6].rgbtBlue = copy[i + 1][j - 1].rgbtBlue;
             pixel[6].rgbtGreen = copy[i + 1][j - 1].rgbtGreen;
             }
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits((i + 1), j, height, width))
             {
             pixel[7].rgbtRed = copy[i + 1][j].rgbtRed;
             pixel[7].rgbtBlue = copy[i + 1][j].rgbtBlue;
             pixel[7].rgbtGreen = copy[i + 1][j].rgbtGreen;
             }
-            if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+            if (is_fits((i + 1), (j + 1), height, width))
             {
             pixel[8].rgbtRed = copy[i + 1][j + 1].rgbtRed;
             pixel[8].rgbtBlue = copy[i + 1][j + 1].rgbtBlue;
@@ -208,8 +206,15 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-//int is_fits(int x, int y, copy[i - 1][j - 1].rgbtRed)
+bool is_fits(int x, int y, height, width)
 {
-    if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
+    if (x >= 0 && y >= 0 && x < height && y < width)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
 
