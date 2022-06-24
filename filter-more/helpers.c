@@ -1,7 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 
-int rgb_number(int i, int j, BYTE copy[i - 1][j - 1].rgbtRed);
+int rgb_number(int i, int j, BYTE copy[i - 1][j - 1]);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
