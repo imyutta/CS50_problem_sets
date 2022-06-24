@@ -129,7 +129,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             pixel = image[i][j];
 
-            
+            image[i - 1][j] 
             for (int row = i - 1, last_row = i + 1; row <= last_row; row++)
             {
                 if (row >= 0 && row < height)
