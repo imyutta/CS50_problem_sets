@@ -114,6 +114,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
+            if ((i - 1) < 0 || (j - 1) < 0 || (i + 1) > )
             pixel[0].rgbtRed = copy[i - 1][j - 1].rgbtRed;
             pixel[0].rgbtBlue = copy[i - 1][j - 1].rgbtBlue;
             pixel[0].rgbtGreen = copy[i - 1][j - 1].rgbtGreen;
