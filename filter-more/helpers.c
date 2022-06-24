@@ -121,7 +121,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             int j_1 = j;
             int j_2 = j + 1;
 
-            g_X_RED = copy[i_0][j_0] * (-1) + copy[i + 1][j - 1] * 1 + copy[i][j - 1] * (-2) + copy[i][j + 1] * 2 + copy[i + 1][j - 1] * (-1) + copy[i + 1][j + 1] * 1;
+            g_X_RED = copy[i_0][j_0] * (-1) + copy[i_2][j_0] * 1 + copy[i_1][j_0] * (-2) + copy[i_1][j + 1] * 2 + copy[i + 1][j - 1] * (-1) + copy[i + 1][j + 1] * 1;
             g_Y_RED =
             g_SUM_RED =
 
