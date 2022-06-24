@@ -51,11 +51,15 @@ void reflect(int height, int width, RGBTRIPLE image[height][width])
 // Blur image
 void blur(int height, int width, RGBTRIPLE image[height][width])
 {
+    //make a copy of the image
     RGBTRIPLE copy[height][width];
+
     int blurRed;
     int blurGreen;
     int blurBlue;
     float counter;
+
+   //make a copy of the image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -69,7 +73,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //pixel_blur(i, j, RGBTRIPLE image[height][width], RGBTRIPLE copy[height][width]);
+
             blurRed = 0;
             blurGreen = 0;
             blurBlue = 0;
@@ -137,7 +141,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             }
 
             //check if the surrounding pixels fit the image boarders
-            //if fits, rewrite their values by applying Sobel operator
+            //if fit, rewrite their values by applying Sobel operator
             if (is_fits((i - 1), (j - 1), height, width))
             {
                 pixel[0] = copy[i - 1][j - 1];
