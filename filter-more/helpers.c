@@ -117,30 +117,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 
             g_X_RED = copy[i - 1][j - 1] * (-1) + copy[i + 1][j - 1]
-            for (int row = i - 1, last_row = i + 1; row <= last_row; row++)
-            {
-                if (row >= 0 && row < height)
-                {
-                    for (int column = j - 1, last_column = j + 1; column <= last_column; column++)
-                    {
-                        if (column >= 0 && column < width)
-                        {
-                            g_X_RED += (-1) * pixel.rgbtRed;
-                            g_Y_RED += (-1) * pixel.rgbtRed;
+            g_Y_RED =
+            g_SUM_RED =
 
-                            g_X_BLUE += (-1) * pixel.rgbtRed;
-                            g_Y_BLUE += (-1) * pixel.rgbtRed;
 
-                            g_X_GREEN += (-1) * pixel.rgbtRed;
-                            g_Y_GREEN += (-1) * pixel.rgbtRed;
-
-                        }
-                    }
-                }
-            }
-            g_SUM_RED += (-1) * pixel.rgbtRed;
-            g_SUM_BLUE += (-1) * pixel.rgbtRed;
-            g_SUM_GREEN += (-1) * pixel.rgbtRed;
 
             image[i][j].rgbtRed = round(blurRed / counter);
             image[i][j].rgbtGreen = round(blurGreen / counter);
