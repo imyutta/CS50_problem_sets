@@ -110,6 +110,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     int g_X_BLUE, g_Y_BLUE, g_SUM_BLUE;
     int g_X_GREEN, g_Y_GREEN, g_SUM_GREEN;
 
+    RGBTRIPLE pixel;
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -126,6 +127,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             g_Y_GREEN = 0;
             g_SUM_GREEN = 0;
 
+            pixel = image[i][j];
+
             for (int row = i - 1, last_row = i + 1; row <= last_row; row++)
             {
                 if (row >= 0 && row < height)
@@ -134,22 +137,22 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                     {
                         if (column >= 0 && column < width)
                         {
-                            g_X_RED = 0;
-                            g_Y_RED = 0;
-                            g_SUM_RED = 0;
+                            g_X_RED += (-1) * pixel.rgbtRed;
+                            g_Y_RED += (-1) * pixel.rgbtRed;
 
-                            g_X_BLUE = 0;
-                            g_Y_BLUE = 0;
-                            g_SUM_BLUE = 0;
+                            g_X_BLUE += (-1) * pixel.rgbtRed;
+                            g_Y_BLUE += (-1) * pixel.rgbtRed;
 
-                            g_X_GREEN = 0;
-                            g_Y_GREEN = 0;
-                            g_SUM_GREEN = 0;
+                            g_X_GREEN += (-1) * pixel.rgbtRed;
+                            g_Y_GREEN += (-1) * pixel.rgbtRed;
 
                         }
                     }
                 }
             }
+            g_SUM_RED += (-1) * pixel.rgbtRed;
+            g_SUM_BLUE += (-1) * pixel.rgbtRed;
+            g_SUM_GREEN += (-1) * pixel.rgbtRed;
 
             image[i][j].rgbtRed = round(blurRed / counter);
             image[i][j].rgbtGreen = round(blurGreen / counter);
