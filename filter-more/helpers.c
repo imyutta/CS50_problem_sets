@@ -97,6 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
 void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
+    RGBTRIPLE pixel[9];
 
     for (int i = 0; i < height; i++)
     {
@@ -113,16 +114,20 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            pixel_1 = copy[i - 1][j - 1];
-            int i_0 = i - 1;
-            int i_1 = i;
-            int i_2 = i + 1;
+            pixel[1] = copy[i - 1][j - 1];
+            pixel[2] = copy[i - 1][j];
+            pixel[3] = copy[i - 1][j + 1];
 
-            int j_0 = j - 1;
-            int j_1 = j;
-            int j_2 = j + 1;
+            pixel[4] = copy[i][j - 1];
+            pixel[5] = copy[i][j]; /// lishnee
+            pixel[6] = copy[i][j + 1];
 
-            g_X_RED = copy[i - 1][j - 1] * (-1) + copy[i + 1][j - 1] * 1 + copy[i][j - 1] * (-2) + copy[i][j + 1] * 2 + copy[i + 1][j - 1] * (-1) + copy[i + 1][j + 1] * 1;
+            pixel[7] = copy[i + 1][j - 1];
+            pixel[8] = copy[i + 1][j];
+            pixel[9] = copy[i + 1][j + 1];
+
+
+            g_X_RED = pixel[1] * (-1) + pixel[3] * 1 + pixel[4] * (-2) + pixel[6] * 2 + pixel[7] * (-1) + pixel[9] * 1;
             g_Y_RED =
             g_SUM_RED =
 
