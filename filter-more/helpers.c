@@ -162,6 +162,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             g_SUM_GREEN = sqrt(pow(g_X_GREEN, 2) + pow(g_Y_GREEN, 2));
 
 
+
             image[i][j].rgbtRed = round(g_SUM_RED);
             image[i][j].rgbtBlue = round(g_SUM_BLUE);
             image[i][j].rgbtGreen = round(g_SUM_GREEN);
