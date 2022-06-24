@@ -4,6 +4,8 @@
 #include <cs50.h>
 
 bool is_fits(int x, int y, int height, int width);
+int boundary_check(int a);
+
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -221,3 +223,7 @@ bool is_fits(int x, int y, int height, int width)
     }
 }
 
+int boundary_check(int a)
+{
+    return (a > 255) ? 255 : a;
+}
