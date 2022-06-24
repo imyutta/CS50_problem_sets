@@ -123,7 +123,8 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
 
-            for (int k = 0; k < 9; k++) {
+            for (int k = 0; k < 9; k++)
+            {
                 pixel[k] = zeroPixel;
             }
 
