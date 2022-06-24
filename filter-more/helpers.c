@@ -1,7 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 
-//int rgb_number(int i, int j, BYTE copy[i - 1][j - 1]);
+bool is_fits(int x, int y, int height, int width);
 
 // Convert image to grayscale
 void grayscale(int height, int width, RGBTRIPLE image[height][width])
@@ -206,7 +206,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
-bool is_fits(int x, int y, height, width)
+bool is_fits(int x, int y, int height, int width)
 {
     if (x >= 0 && y >= 0 && x < height && y < width)
     {
