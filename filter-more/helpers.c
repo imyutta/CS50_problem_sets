@@ -106,18 +106,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     RGBTRIPLE copy[height][width];
     //array of pixels surrounding the current pixel
     RGBTRIPLE pixel[9];
+
     int g_X_RED, g_Y_RED;
     int g_X_BLUE, g_Y_BLUE;
     int g_X_GREEN, g_Y_GREEN;
     float g_SUM_RED, g_SUM_BLUE, g_SUM_GREEN;
 
     RGBTRIPLE zeroPixel;
-
     zeroPixel.rgbtRed = 0;
     zeroPixel.rgbtBlue = 0;
     zeroPixel.rgbtGreen = 0;
 
-
+    
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
