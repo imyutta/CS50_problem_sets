@@ -1,6 +1,7 @@
 #include "helpers.h"
 #include <math.h>
 #include <stdio.h>
+#include <cs50.h>
 
 bool is_fits(int x, int y, int height, int width);
 
