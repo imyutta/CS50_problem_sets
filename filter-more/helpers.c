@@ -117,7 +117,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     zeroPixel.rgbtBlue = 0;
     zeroPixel.rgbtGreen = 0;
 
-    
+    //copy of the image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -130,7 +130,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            //all the
+            //all of the 9 pixels are temporarely equaled to 0
             for (int k = 0; k < 9; k++)
             {
                 pixel[k] = zeroPixel;
