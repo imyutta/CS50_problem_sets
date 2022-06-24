@@ -69,6 +69,8 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
 
+    // take each pixel and, for each color value
+    // give it a new value by averaging the color values of neighboring pixels.
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -95,6 +97,7 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
                     }
                 }
             }
+            //average the color values of neighboring pixels and rewrite the image
             image[i][j].rgbtRed = round(blurRed / counter);
             image[i][j].rgbtGreen = round(blurGreen / counter);
             image[i][j].rgbtBlue = round(blurBlue / counter);
