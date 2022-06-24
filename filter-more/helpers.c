@@ -104,6 +104,12 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     int g_X_BLUE, g_Y_BLUE, g_SUM_BLUE;
     int g_X_GREEN, g_Y_GREEN, g_SUM_GREEN;
 
+    RGBTRIPLE zeroPixel;
+
+    zeroPixel.rgbtRed = 0;
+    zeroPixel.rgbtBlue = 0;
+    zeroPixel.rgbtGreen = 0;
+
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -116,39 +122,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-            pixel[0].rgbtRed = 0;
-            pixel[0].rgbtBlue = 0;
-            pixel[0].rgbtGreen = 0;
 
-            pixel[1].rgbtRed = 0;
-            pixel[1].rgbtBlue = 0;
-            pixel[1].rgbtGreen = 0;
-
-            pixel[2].rgbtRed = 0;
-            pixel[2].rgbtBlue = 0;
-            pixel[2].rgbtGreen = 0;
-
-
-            pixel[3].rgbtRed = 0;
-            pixel[3].rgbtBlue = 0;
-            pixel[3].rgbtGreen = 0;
-
-            pixel[5].rgbtRed = 0;
-            pixel[5].rgbtBlue = 0;
-            pixel[5].rgbtGreen = 0;
-
-
-            pixel[6].rgbtRed = 0;
-            pixel[6].rgbtBlue = 0;
-            pixel[6].rgbtGreen = 0;
-
-            pixel[7].rgbtRed = 0;
-            pixel[7].rgbtBlue = 0;
-            pixel[7].rgbtGreen = 0;
-
-            pixel[8].rgbtRed = 0;
-            pixel[8].rgbtBlue = 0;
-            pixel[8].rgbtGreen = 0;
+            for (int K = 0; K < 9; K++) {
+                pixel[K] = zeroPixel;
+            }
 
             if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
             {
