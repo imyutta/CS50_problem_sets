@@ -129,7 +129,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             g_X = pixel[1] * (-1) + pixel[3] * 1 + pixel[4] * (-2) + pixel[6] * 2 + pixel[7] * (-1) + pixel[9] * 1;
             g_Y = pixel[1] * (-1) + pixel[2] * (-2) + pixel[3] * (-1) + pixel[7] * 1 + pixel[8] * (2) + pixel[9] * 1;
-            g_SUM = 
+            g_SUM = sqrt((g_X))
 
 
 
