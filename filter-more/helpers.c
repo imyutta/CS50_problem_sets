@@ -115,6 +115,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     zeroPixel.rgbtBlue = 0;
     zeroPixel.rgbtGreen = 0;
 
+    //copy of the sourse image
     for (int i = 0; i < height; i++)
     {
         for (int j = 0; j < width; j++)
@@ -127,7 +128,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     {
         for (int j = 0; j < width; j++)
         {
-
+            //all the 
             for (int k = 0; k < 9; k++)
             {
                 pixel[k] = zeroPixel;
@@ -183,14 +184,14 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
             g_X_BLUE = pixel[0].rgbtBlue * (-1) + pixel[2].rgbtBlue * 1 + pixel[3].rgbtBlue * (-2) + pixel[5].rgbtBlue * 2 + pixel[6].rgbtBlue *
                       (-1) + pixel[8].rgbtBlue * 1;
-            g_Y_BLUE = pixel[0].rgbtBlue * (-1) + pixel[1].rgbtBlue * (-2) + pixel[2].rgbtBlue * (-1) + pixel[6].rgbtBlue * 1 + pixel[7].rgbtBlue *
-                      (2) + pixel[8].rgbtBlue * 1;
+            g_Y_BLUE = pixel[0].rgbtBlue * (-1) + pixel[1].rgbtBlue * (-2) + pixel[2].rgbtBlue * (-1) + pixel[6].rgbtBlue * 1 +
+                      pixel[7].rgbtBlue * (2) + pixel[8].rgbtBlue * 1;
             g_SUM_BLUE = sqrt(pow(g_X_BLUE, 2) + pow(g_Y_BLUE, 2));
 
-            g_X_GREEN = pixel[0].rgbtGreen * (-1) + pixel[2].rgbtGreen * 1 + pixel[3].rgbtGreen * (-2) + pixel[5].rgbtGreen * 2 + pixel[6].rgbtGreen *
-                      (-1) + pixel[8].rgbtGreen * 1;
-            g_Y_GREEN = pixel[0].rgbtGreen * (-1) + pixel[1].rgbtGreen * (-2) + pixel[2].rgbtGreen * (-1) + pixel[6].rgbtGreen * 1 + pixel[7].rgbtGreen *
-                      (2) + pixel[8].rgbtGreen * 1;
+            g_X_GREEN = pixel[0].rgbtGreen * (-1) + pixel[2].rgbtGreen * 1 + pixel[3].rgbtGreen * (-2) + pixel[5].rgbtGreen * 2 +
+                      pixel[6].rgbtGreen * (-1) + pixel[8].rgbtGreen * 1;
+            g_Y_GREEN = pixel[0].rgbtGreen * (-1) + pixel[1].rgbtGreen * (-2) + pixel[2].rgbtGreen * (-1) + pixel[6].rgbtGreen * 1 +
+                     pixel[7].rgbtGreen * (2) + pixel[8].rgbtGreen * 1;
             g_SUM_GREEN = sqrt(pow(g_X_GREEN, 2) + pow(g_Y_GREEN, 2));
 
 
