@@ -179,19 +179,21 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
                 pixel[8] = copy[i + 1][j + 1];
             }
 
-            
+            //find and combine Gx and Gy for red
             g_X_RED = pixel[0].rgbtRed * (-1) + pixel[2].rgbtRed * 1 + pixel[3].rgbtRed * (-2) + pixel[5].rgbtRed * 2 + pixel[6].rgbtRed *
                       (-1) + pixel[8].rgbtRed * 1;
             g_Y_RED = pixel[0].rgbtRed * (-1) + pixel[1].rgbtRed * (-2) + pixel[2].rgbtRed * (-1) + pixel[6].rgbtRed * 1 + pixel[7].rgbtRed *
                       (2) + pixel[8].rgbtRed * 1;
             g_SUM_RED = sqrt(pow(g_X_RED, 2) + pow(g_Y_RED, 2));
 
+            //find and combine Gx and Gy for blue
             g_X_BLUE = pixel[0].rgbtBlue * (-1) + pixel[2].rgbtBlue * 1 + pixel[3].rgbtBlue * (-2) + pixel[5].rgbtBlue * 2 + pixel[6].rgbtBlue *
                       (-1) + pixel[8].rgbtBlue * 1;
             g_Y_BLUE = pixel[0].rgbtBlue * (-1) + pixel[1].rgbtBlue * (-2) + pixel[2].rgbtBlue * (-1) + pixel[6].rgbtBlue * 1 +
                       pixel[7].rgbtBlue * (2) + pixel[8].rgbtBlue * 1;
             g_SUM_BLUE = sqrt(pow(g_X_BLUE, 2) + pow(g_Y_BLUE, 2));
 
+            //find and combine Gx and Gy for green
             g_X_GREEN = pixel[0].rgbtGreen * (-1) + pixel[2].rgbtGreen * 1 + pixel[3].rgbtGreen * (-2) + pixel[5].rgbtGreen * 2 +
                       pixel[6].rgbtGreen * (-1) + pixel[8].rgbtGreen * 1;
             g_Y_GREEN = pixel[0].rgbtGreen * (-1) + pixel[1].rgbtGreen * (-2) + pixel[2].rgbtGreen * (-1) + pixel[6].rgbtGreen * 1 +
@@ -199,7 +201,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             g_SUM_GREEN = sqrt(pow(g_X_GREEN, 2) + pow(g_Y_GREEN, 2));
 
 
-
+            //rewrite the image pixels
             image[i][j].rgbtRed = boundary_check(round(g_SUM_RED));
             image[i][j].rgbtBlue = boundary_check(round(g_SUM_BLUE));
             image[i][j].rgbtGreen = boundary_check(round(g_SUM_GREEN));
@@ -209,6 +211,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
     return;
 }
 
+//check if the pixel fits the boarders
 bool is_fits(int x, int y, int height, int width)
 {
     if (x >= 0 && y >= 0 && x < height && y < width)
@@ -221,6 +224,7 @@ bool is_fits(int x, int y, int height, int width)
     }
 }
 
+//check if the value is under or equal to 255
 int boundary_check(int a)
 {
     return (a > 255) ? 255 : a;
