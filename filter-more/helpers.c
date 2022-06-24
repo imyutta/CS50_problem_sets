@@ -98,7 +98,7 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 {
     RGBTRIPLE copy[height][width];
     RGBTRIPLE pixel[9];
-    RGBTRIPLE g_X, g_Y, g_SUM;
+    int g_X_RED, g_Y_RED, g_SUM_RED;
 
     for (int i = 0; i < height; i++)
     {
@@ -147,9 +147,9 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             pixel[9].rgbtGreen = copy[i + 1][j + 1].rgbtGreen;
 
 
-            g_X = pixel[1] * (-1) + pixel[3] * 1 + pixel[4] * (-2) + pixel[6] * 2 + pixel[7] * (-1) + pixel[9] * 1;
-            g_Y = pixel[1] * (-1) + pixel[2] * (-2) + pixel[3] * (-1) + pixel[7] * 1 + pixel[8] * (2) + pixel[9] * 1;
-            g_SUM = sqrt(pow(g_X, 2) + pow(g_Y, 2));
+            g_X_RED = pixel[1].rgbtRed * (-1) + pixel[3].rgbtRed * 1 + pixel[4].rgbtRed * (-2) + pixel[6].rgbtRed * 2 + pixel[7].rgbtRed * (-1) + pixel[9].rgbtRed * 1;
+            g_Y_RED = pixel[1].rgbtRed * (-1) + pixel[2].rgbtRed * (-2) + pixel[3].rgbtRed * (-1) + pixel[7].rgbtRed * 1 + pixel[8].rgbtRed * (2) + pixel[9].rgbtRed * 1;
+            g_SUM_RED = sqrt(pow(g_X_RED, 2) + pow(g_Y_RED, 2));
 
 
 
