@@ -153,24 +153,18 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
             g_Y_RED = pixel[1].rgbtRed * (-1) + pixel[2].rgbtRed * (-2) + pixel[3].rgbtRed * (-1) + pixel[7].rgbtRed * 1 + pixel[8].rgbtRed * (2) + pixel[9].rgbtRed * 1;
             g_SUM_RED = sqrt(pow(g_X_RED, 2) + pow(g_Y_RED, 2));
 
-            g_X_RED = pixel[1].rgbtRed * (-1) + pixel[3].rgbtRed * 1 + pixel[4].rgbtRed * (-2) + pixel[6].rgbtRed * 2 + pixel[7].rgbtRed * (-1) + pixel[9].rgbtRed * 1;
-            g_Y_RED = pixel[1].rgbtRed * (-1) + pixel[2].rgbtRed * (-2) + pixel[3].rgbtRed * (-1) + pixel[7].rgbtRed * 1 + pixel[8].rgbtRed * (2) + pixel[9].rgbtRed * 1;
-            g_SUM_RED = sqrt(pow(g_X_RED, 2) + pow(g_Y_RED, 2));
+            g_X_BLUE = pixel[1].rgbtBlue * (-1) + pixel[3].rgbtBlue * 1 + pixel[4].rgbtBlue * (-2) + pixel[6].rgbtBlue * 2 + pixel[7].rgbtBlue * (-1) + pixel[9].rgbtBlue * 1;
+            g_Y_BLUE = pixel[1].rgbtBlue * (-1) + pixel[2].rgbtBlue * (-2) + pixel[3].rgbtBlue * (-1) + pixel[7].rgbtBlue * 1 + pixel[8].rgbtBlue * (2) + pixel[9].rgbtBlue * 1;
+            g_SUM_BLUE = sqrt(pow(g_X_BLUE, 2) + pow(g_Y_BLUE, 2));
 
-            g_X_RED = pixel[1].rgbtRed * (-1) + pixel[3].rgbtRed * 1 + pixel[4].rgbtRed * (-2) + pixel[6].rgbtRed * 2 + pixel[7].rgbtRed * (-1) + pixel[9].rgbtRed * 1;
-            g_Y_RED = pixel[1].rgbtRed * (-1) + pixel[2].rgbtRed * (-2) + pixel[3].rgbtRed * (-1) + pixel[7].rgbtRed * 1 + pixel[8].rgbtRed * (2) + pixel[9].rgbtRed * 1;
-            g_SUM_RED = sqrt(pow(g_X_RED, 2) + pow(g_Y_RED, 2));
+            g_X_GREEN = pixel[1].rgbtGreen * (-1) + pixel[3].rgbtGreen * 1 + pixel[4].rgbtGreen * (-2) + pixel[6].rgbtGreen * 2 + pixel[7].rgbtGreen * (-1) + pixel[9].rgbtGreen * 1;
+            g_Y_GREEN = pixel[1].rgbtGreen * (-1) + pixel[2].rgbtGreen * (-2) + pixel[3].rgbtGreen * (-1) + pixel[7].rgbtGreen * 1 + pixel[8].rgbtGreen * (2) + pixel[9].rgbtGreen * 1;
+            g_SUM_GREEN = sqrt(pow(g_X_GREEN, 2) + pow(g_Y_GREEN, 2));
 
 
             image[i][j].rgbtRed = round(g_SUM_RED);
             image[i][j].rgbtBlue = round(g_SUM_BLUE);
             image[i][j].rgbtGreen = round(g_SUM_GREEN);
-
-
-
-
-
-
 
         }
     }
