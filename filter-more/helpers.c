@@ -210,14 +210,6 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
 
 //int is_fits(int x, int y, copy[i - 1][j - 1].rgbtRed)
 {
-
-    if ((i - 1) >= 0 && (j - 1) >= 0)
-    if ((i - 1) >= 0)
-    if ((i - 1) >= 0 && (j + 1) < width)
-    if ((j - 1) >= 0)
-    if ((j + 1) < width)
-    if ((j - 1) >= 0 && (i + 1))
-    if ((i + 1) < height)
-    if ((i + 1) < height && (j + 1) < width)
+    if ((i - 1) >= 0 && (j - 1) >= 0 && (i + 1) < height && (j + 1) < width)
 }
 
