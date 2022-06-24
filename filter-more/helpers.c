@@ -113,10 +113,10 @@ void edges(int height, int width, RGBTRIPLE image[height][width])
         for (int j = 0; j < width; j++)
         {
 
+            
 
 
-
-            g_X_RED = copy[i - 1][j - 1] * (-1) + copy[i + 1][j - 1] * 1 + copy[i][j - 1] * (-2) + copy[i][j + 1] * 2 + copy[i + 1][j - 1] * (-1) + copy[i + 1][j - 1] * 1 +
+            g_X_RED = copy[i - 1][j - 1] * (-1) + copy[i + 1][j - 1] * 1 + copy[i][j - 1] * (-2) + copy[i][j + 1] * 2 + copy[i + 1][j - 1] * (-1) + copy[i + 1][j + 1] * 1;
             g_Y_RED =
             g_SUM_RED =
 
