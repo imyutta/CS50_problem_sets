@@ -30,7 +30,7 @@ int main(int argc, char *argv[])
     // read 512 at a time
     for (int i = 0; i < 50; i++)
     {
-        
+        FILE *0
     }
 
 
