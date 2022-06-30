@@ -24,8 +24,8 @@ int main(int argc, char *argv[])
 
 //copy of the file
     //allocate memory for the file
-    typedef uin
-    uint8_t* buffer = malloc(sizeof(uint8_t));
+    typedef uint8_t BYTE;
+    BYTE* buffer = malloc(sizeof(BYTE));
     if (buffer == 0)
     {
         printf("Could not open the file");
