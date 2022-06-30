@@ -12,6 +12,7 @@ int main(int argc, char *argv[])
 
     //check that the command-line argument is the name of the forensic image
     //from which to recover JPEGs
+    if 
 
 
 
