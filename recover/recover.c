@@ -39,14 +39,16 @@ int main(int argc, char *argv[])
     }
 
 //look for the beginning of a JPEG file
-    //if (file[0] == 0xff && file[1] == 0xd8 && file[0] == 0xff)
-
-
 // each time you find a signature
     //open a new file
     //fill this file with bytes from the memory card
     //till you meet another signature
     // read 512 at a time
+    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+    {
+
+    }
+
     for (int i = 0; i < 50; i++)
     {
         FILE *000 =
