@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdint.h>
+#include <cs50.h>
+
 
 int main(int argc, char *argv[])
 {
@@ -46,7 +48,8 @@ int main(int argc, char *argv[])
     // read 512 at a time
     if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
     {
-        sprintf
+        string jpeg_name;
+        sprintf(jpeg_name, "%03i.jpg", )
     }
 
 
