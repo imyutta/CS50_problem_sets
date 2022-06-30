@@ -39,6 +39,7 @@ int main(int argc, char *argv[])
 //create jpeg-file name
     char* jpeg_name = malloc(4 * sizeof(char));
     int jpen_number = 0;
+    bool is_jpeg_open = 0;
     if (jpeg_name == NULL)
     {
         fclose(file);
