@@ -36,10 +36,10 @@ int main(int argc, char *argv[])
         return 1;
     }
 // while creating a copy of the memory card
-//look for the beginning of a JPEG file
-// each time you find a signature
-    //open a new file
-    //fill this file with bytes from the memory card
+// look for the beginning of a JPEG file
+// and each time you find a signature
+    //open a new jpeg file
+    //fill this jpeg file with bytes from the memory card
     //till you meet another signature
     // read 512 at a time
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
