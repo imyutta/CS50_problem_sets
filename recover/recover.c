@@ -62,9 +62,6 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-    }
-
-
 
     for (int i = 0; i < 50; i++)
     {
@@ -78,6 +75,8 @@ int main(int argc, char *argv[])
             }
             while (buffer[n] != 0xff)
         }
+    }
+
     }
 
 
