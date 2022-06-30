@@ -46,7 +46,7 @@ int main(int argc, char *argv[])
     //fill this file with bytes from the memory card
     //till you meet another signature
     // read 512 at a time
-    char* jpeg_name = malloc(strlen(s) + 1);
+    char* jpeg_name = malloc(4 * sizeof(char));
     if (jpeg_name == NULL)
     {
         fclose(file);
