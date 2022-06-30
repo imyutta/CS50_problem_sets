@@ -46,12 +46,14 @@ int main(int argc, char *argv[])
     //fill this file with bytes from the memory card
     //till you meet another signature
     // read 512 at a time
-    if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+    for (int i = 0; i < 50; i++)
     {
-        string jpeg_name;
-        sprintf(jpeg_name, "%03i.jpg", i)
+        if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
+        {
+            string jpeg_name;
+            sprintf(jpeg_name, "%03i.jpg", i)
+        }
     }
-
 
 
 
