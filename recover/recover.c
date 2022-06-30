@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
         return 1;
     }
     // create a copy of the memory card
-    while (fread(buffer, 512, 1, file))
+    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
 
     }
