@@ -68,11 +68,8 @@ int main(int argc, char *argv[])
         {
             sprintf(jpeg_name, "%03i.jpg", jpeg_number);
             FILE* img = fopen(jpeg_name, "w");
-            do
-            {
-                fwrite(buffer, 1, BLOCK_SIZE, img);
-            }
-            while (buffer[n] != 0xff)
+            fwrite(buffer, 1, BLOCK_SIZE, img);
+
         }
 
 
