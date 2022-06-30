@@ -6,7 +6,11 @@ int main(int argc, char *argv[])
 
 //except exactly 1 command-line argument
 //the name of the forensic image from which to recover JPEGs
-
+    if (argc != 2)
+    {
+        return 1;
+    }
+    
 
 
 
