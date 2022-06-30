@@ -23,6 +23,9 @@ int main(int argc, char *argv[])
         return 1;
     }
 
+//look for the beginning of a JPEG file
+
+
 // each time you find a signature
     //open a new file
     //fill this file with bytes from the memory card
@@ -30,7 +33,7 @@ int main(int argc, char *argv[])
     // read 512 at a time
     for (int i = 0; i < 50; i++)
     {
-        FILE *000 = 
+        FILE *000 =
     }
 
 
