@@ -35,18 +35,8 @@ int main(int argc, char *argv[])
         fclose(file);
         return 1;
     }
-// while creating a copy of the memory card
-// look for the beginning of a JPEG file
-// and each time you find a signature
-    //open a new jpeg file
-    //fill this jpeg file with bytes from the memory card
-    //till you meet another signature
-    // read 512 at a time
-    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
-    {
-    }
 
-
+//create jpeg-file name
     char* jpeg_name = malloc(4 * sizeof(char));
     if (jpeg_name == NULL)
     {
@@ -61,6 +51,21 @@ int main(int argc, char *argv[])
         free(jpeg_name);
         return 1;
     }
+
+// while creating a copy of the memory card
+    // read 512 at a time
+    // look for the beginning of a JPEG file
+    // and each time you find a signature
+        //open a new jpeg file
+        //fill this jpeg file with bytes from the memory card
+        //close when you meet another signature
+
+    while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
+    {
+    }
+
+
+
     for (int i = 0; i < 50; i++)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
