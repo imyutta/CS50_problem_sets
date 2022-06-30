@@ -7,7 +7,7 @@ int main(int argc, char *argv[])
     //check that there is only 1 command-line argument
     if (argc != 2)
     {
-        printf("there must be only one argument")
+        printf("there must be only one argument");
         return 1;
     }
 
@@ -15,11 +15,11 @@ int main(int argc, char *argv[])
     //from which to recover JPEGs
 
     //open the file
-    FILE *file = fopen(argv[1], "r")
+    FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
         printf("Could not open the file");
-        return 2;
+        return 1;
     }
 
 
