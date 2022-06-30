@@ -66,6 +66,7 @@ int main(int argc, char *argv[])
         {
             sprintf(jpeg_name, "%03i.jpg", i);
             FILE* img = fopen(jpeg_name, "w");
+            fwrite(buffer, )
         }
     }
 
