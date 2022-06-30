@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
     //allocate memory for the file
     typedef uint8_t BYTE;
     int BLOCK_SIZE = 512;
-    BYTE* buffer = malloc(sizeof(BYTE) * BLOCK_SIZE);
+    BYTE *buffer = malloc(sizeof(BYTE) * BLOCK_SIZE);
     if (buffer == 0)
     {
         printf("Could not create a buffer to copy the file\n");
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     }
 
 //create jpeg-file name
-    char* jpeg_name = malloc(4 * sizeof(char));
+    char *jpeg_name = malloc(4 * sizeof(char));
     int jpeg_number = 0;
     bool is_jpeg_open = 0;
     if (jpeg_name == NULL)
@@ -60,10 +60,10 @@ int main(int argc, char *argv[])
     // read 512 at a time
     // look for the beginning of a JPEG file
     // and each time you find a signature
-        //open a new jpeg file
-        //fill this jpeg file with bytes from the memory card
-        //close when you meet another signature
-    FILE* img = malloc(sizeof(BYTE) * BLOCK_SIZE);
+    //open a new jpeg file
+    //fill this jpeg file with bytes from the memory card
+    //close when you meet another signature
+    FILE *img = malloc(sizeof(BYTE) * BLOCK_SIZE);
     if (img == NULL)
     {
         fclose(file);
