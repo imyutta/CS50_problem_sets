@@ -25,7 +25,11 @@ int main(int argc, char *argv[])
 
 
     // create a copy of the memory card
-    int* buffer = malloc(sizeof(int));
+    uint8_t* buffer = malloc(sizeof(uint8_t));
+    if (buffer == 0)
+    {
+        return 1;
+    }
     fread(buffer, 512, 1, file)
 
 //look for the beginning of a JPEG file
