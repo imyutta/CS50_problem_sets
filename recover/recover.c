@@ -7,7 +7,10 @@ int main(int argc, char *argv[])
 
 // each time you find a signature
     //open a new file
-    //write 
+    //fill this file with bytes from the memory card
+    //till you meet another signature
+    
+
 
 
 
