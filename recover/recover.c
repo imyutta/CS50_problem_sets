@@ -13,8 +13,6 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
-
     //open the file
     FILE *file = fopen(argv[1], "r");
     if (file == NULL)
@@ -23,16 +21,19 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-
-    // create a copy of the memory card
+//copy of the file
+    //allocate memory for the file
     uint8_t* buffer = malloc(sizeof(uint8_t));
     if (buffer == 0)
     {
+        printf("Could not open the file");
+        fclose(file);
         return 1;
     }
+    // create a copy of the memory card
     while (fread(buffer, 512, 1, file))
     {
-        
+
     }
 
 //look for the beginning of a JPEG file
