@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_number += 1;
             }
-            else
+            else (is_jpeg_open == 1)
             {
                 fclose(img);
                 sprintf(jpeg_name, "%03i.jpg", jpeg_number);
