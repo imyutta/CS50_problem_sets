@@ -30,7 +30,10 @@ int main(int argc, char *argv[])
     {
         return 1;
     }
-    fread(buffer, 512, 1, file)
+    while (fread(buffer, 512, 1, file))
+    {
+        
+    }
 
 //look for the beginning of a JPEG file
     //if (file[0] == 0xff && file[1] == 0xd8 && file[0] == 0xff)
