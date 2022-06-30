@@ -79,12 +79,13 @@ int main(int argc, char *argv[])
                 fclose(img);
                 sprintf(jpeg_name, "%03i.jpg", jpeg_number);
                 FILE* img = fopen(jpeg_name, "w");
-                is_jpeg_open = 1;
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_number += 1;
-
             }
-
+        }
+        else if (is_jpeg_open == 1)
+        {
+            fwrite(buffer, 1, BLOCK_SIZE, img);
         }
 
 
@@ -92,6 +93,7 @@ int main(int argc, char *argv[])
 
 
     fclose(file);
+    fclose(img);
     free(buffer);
     free(jpeg_name);
     return 0;
