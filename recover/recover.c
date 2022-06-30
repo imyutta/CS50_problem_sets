@@ -36,7 +36,6 @@ int main(int argc, char *argv[])
     // create a copy of the memory card
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-
     }
 
 //look for the beginning of a JPEG file
