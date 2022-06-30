@@ -9,7 +9,8 @@ int main(int argc, char *argv[])
     //open a new file
     //fill this file with bytes from the memory card
     //till you meet another signature
-    
+    // read 512 at a time
+
 
 
 
