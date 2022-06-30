@@ -53,7 +53,13 @@ int main(int argc, char *argv[])
         free(buffer);
         return 1;
     }
-    if (sizeof(jpeg_name == NUL))
+    if (sizeof(jpeg_name <= 0))
+    {
+        fclose(file);
+        free(buffer);
+        free(jpeg_name);
+        return 1;
+    }
     for (int i = 0; i < 50; i++)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
