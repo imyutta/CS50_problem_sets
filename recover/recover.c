@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h>
 
 int main(int argc, char *argv[])
 {
@@ -23,6 +24,7 @@ int main(int argc, char *argv[])
 
 //copy of the file
     //allocate memory for the file
+    typedef uin
     uint8_t* buffer = malloc(sizeof(uint8_t));
     if (buffer == 0)
     {
