@@ -4,6 +4,8 @@
 int main(int argc, char *argv[])
 {
 
+//command-line argument is the name of the forensic image
+//from which to recover JPEGs
     //check that there is only 1 command-line argument
     if (argc != 2)
     {
@@ -11,8 +13,7 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-    //command-line argument is the name of the forensic image
-    //from which to recover JPEGs
+
 
     // create a copy of the memory card
     FILE *file = fopen(argv[1], "r");
@@ -27,7 +28,10 @@ int main(int argc, char *argv[])
     //fill this file with bytes from the memory card
     //till you meet another signature
     // read 512 at a time
-    for (int i = 0; )
+    for (int i = 0; i < 50; i++)
+    {
+        
+    }
 
 
 
