@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
 
 
 
-    // create a copy of the memory card
+    //open the file
     FILE *file = fopen(argv[1], "r");
     if (file == NULL)
     {
@@ -23,9 +23,11 @@ int main(int argc, char *argv[])
         return 1;
     }
 
-//look for the beginning of a JPEG file
-    fread(file, 512, 1, file)
 
+    // create a copy of the memory card
+    fread(read_data, 512, 1, file)
+
+//look for the beginning of a JPEG file
     //if (file[0] == 0xff && file[1] == 0xd8 && file[0] == 0xff)
 
 
