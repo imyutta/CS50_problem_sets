@@ -61,7 +61,14 @@ int main(int argc, char *argv[])
         //open a new jpeg file
         //fill this jpeg file with bytes from the memory card
         //close when you meet another signature
-    FILE* img = ma
+    FILE* img = malloc(sizeof(BYTE) * BLOCK_SIZE);
+    if (img == NULL)
+    {
+        fclose(file);
+        free(buffer);
+        free(jpeg_name);
+        return 1;
+    }
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
@@ -69,7 +76,7 @@ int main(int argc, char *argv[])
             if (is_jpeg_open == 0)
             {
                 sprintf(jpeg_name, "%03i.jpg", jpeg_number);
-                FILE* img = fopen(jpeg_name, "w");
+                img = fopen(jpeg_name, "w");
                 is_jpeg_open = 1;
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_number += 1;
@@ -78,7 +85,7 @@ int main(int argc, char *argv[])
             {
                 fclose(img);
                 sprintf(jpeg_name, "%03i.jpg", jpeg_number);
-                FILE* img = fopen(jpeg_name, "w");
+                img = fopen(jpeg_name, "w");
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_number += 1;
             }
