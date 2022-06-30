@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     }
 
 //look for the beginning of a JPEG file
-    fread(file, 512, )
+    fread(file, 512, 1, file)
 
     //if (file[0] == 0xff && file[1] == 0xd8 && file[0] == 0xff)
 
