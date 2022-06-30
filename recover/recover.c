@@ -38,6 +38,7 @@ int main(int argc, char *argv[])
 
 //create jpeg-file name
     char* jpeg_name = malloc(4 * sizeof(char));
+    int jpen_number = 0;
     if (jpeg_name == NULL)
     {
         fclose(file);
@@ -62,12 +63,9 @@ int main(int argc, char *argv[])
 
     while (fread(buffer, 1, BLOCK_SIZE, file) == BLOCK_SIZE)
     {
-
-    for (int i = 0; i < 50; i++)
-    {
         if (buffer[0] == 0xff && buffer[1] == 0xd8 && buffer[2] == 0xff && (buffer[3] & 0xf0) == 0xe0)
         {
-            sprintf(jpeg_name, "%03i.jpg", i);
+            sprintf(jpeg_name, "%03i.jpg", jpeg_number);
             FILE* img = fopen(jpeg_name, "w");
             do
             {
@@ -75,7 +73,7 @@ int main(int argc, char *argv[])
             }
             while (buffer[n] != 0xff)
         }
-    }
+
 
     }
 
