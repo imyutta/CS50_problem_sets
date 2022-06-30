@@ -4,13 +4,15 @@
 int main(int argc, char *argv[])
 {
 
-//except exactly 1 command-line argument
-//the name of the forensic image from which to recover JPEGs
+    //check that there is only 1 command-line argument
     if (argc != 2)
     {
         return 1;
     }
-    
+
+    //check that the command-line argument is the name of the forensic image
+    //from which to recover JPEGs
+
 
 
 
