@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
     }
 
 
-    //allocate memory for the file
+    //allocate memory for a copy of the file
     typedef uint8_t BYTE;
     int BLOCK_SIZE = 512;
     BYTE *buffer = malloc(sizeof(BYTE) * BLOCK_SIZE);
