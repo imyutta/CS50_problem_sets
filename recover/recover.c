@@ -71,7 +71,7 @@ int main(int argc, char *argv[])
             if (is_jpeg_open == 0)
             {
                 sprintf(jpeg_name, "%03i.jpg", jpeg_number);
-                img = fopen(jpeg_name, "w");
+                img = fopen(jpeg_name, "a");
                 is_jpeg_open = 1;
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_number += 1;
@@ -80,7 +80,7 @@ int main(int argc, char *argv[])
             {
                 fclose(img);
                 sprintf(jpeg_name, "%03i.jpg", jpeg_number);
-                img = fopen(jpeg_name, "w");
+                img = fopen(jpeg_name, "a");
                 fwrite(buffer, 1, BLOCK_SIZE, img);
                 jpeg_number += 1;
             }
