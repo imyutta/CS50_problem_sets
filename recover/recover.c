@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
     typedef uint8_t BYTE;
     int BLOCK_SIZE = 512;
     BYTE *buffer = malloc(sizeof(BYTE) * BLOCK_SIZE);
-    if (buffer == 0)
+    if (buffer == NULL)
     {
         printf("Could not create a buffer to copy the file\n");
         fclose(file);
