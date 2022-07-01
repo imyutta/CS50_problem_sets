@@ -47,7 +47,7 @@ int main(int argc, char *argv[])
         printf("Could not create a new jpeg name\n");
         return 1;
     }
-    // if (sizeof(jpeg_name <= 0))
+    // if (sizeof(jpeg_name) <= 0)
     // {
     //     fclose(file);
     //     free(buffer);
