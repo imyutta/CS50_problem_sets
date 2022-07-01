@@ -47,14 +47,6 @@ int main(int argc, char *argv[])
         printf("Could not create a new jpeg name\n");
         return 1;
     }
-    // if (sizeof(jpeg_name) <= 0)
-    // {
-    //     fclose(file);
-    //     free(buffer);
-    //     free(jpeg_name);
-    //     printf("size of the jpeg_name is equal to 0\n");
-    //     return 1;
-    // }
 
 // while creating a copy of the memory card
     // read 512 at a time
