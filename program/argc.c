@@ -31,11 +31,17 @@ int main(void)
         printf("%i\n", list[i]);
     }
 
-    list = malloc(4 * sizeof(int));
-    list[3] = 4;
-    for (int i = 0; i < 4; i++)
+    free(list);
+    for (int i = 0; i < 3; i++)
     {
         printf("%i\n", list[i]);
     }
+
+    // list = malloc(4 * sizeof(int));
+    // list[3] = 4;
+    // for (int i = 0; i < 4; i++)
+    // {
+    //     printf("%i\n", list[i]);
+    // }
 }
 
