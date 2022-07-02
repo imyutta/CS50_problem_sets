@@ -17,22 +17,22 @@
 int main(void)
 {
     int p = 50;
-    int *list = malloc(5 * sizeof(int));
+    int *ptr = &p;
+    int *list = malloc(3 * sizeof(int));
     if (list == NULL)
     {
         return 1;
     }
 
-    list[0] = 1;
+    list[0] = p;
     list[1] = 2;
     list[2] = 3;
-    list[3] = 4;
-    list[4] = 5;
 
-    // for (int i = 0; i < 5; i++)
-    // {
-    //     printf("%i\n", list[i]);
-    // }
+
+    for (int i = 0; i < 3; i++)
+    {
+        printf("%i\n", list[i]);
+    }
 
     free(list);
     for (int i = 0; i < 3; i++)
