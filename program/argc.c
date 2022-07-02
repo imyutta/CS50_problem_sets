@@ -23,7 +23,7 @@ int main(void)
     {
         return 1;
     }
-
+    ptr = list;
     list[0] = p;
     list[1] = 2;
     list[2] = 3;
