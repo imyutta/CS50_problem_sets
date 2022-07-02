@@ -16,6 +16,7 @@
 
 int main(void)
 {
+    int p = 50;
     int *list = malloc(5 * sizeof(int));
     if (list == NULL)
     {
