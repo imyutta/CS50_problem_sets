@@ -37,4 +37,6 @@ if (n != NULL)
     n->number = 3;
     n->next = NULL;
 }
+
+list->next->next = n;
 }
