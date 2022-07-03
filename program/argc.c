@@ -30,4 +30,11 @@ if ( n != NULL)
 }
 
 list->next = n;
+
+node *n = malloc(sizeof(node));
+if (n != NULL)
+{
+    n->number = 3;
+    n->next = NULL;
+}
 }
