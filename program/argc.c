@@ -21,7 +21,7 @@ if (n != NULL)
     n->next = NULL;
 }
 list = n;
-free(n);
+free(list);
 }
 
 
