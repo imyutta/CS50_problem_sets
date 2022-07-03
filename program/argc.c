@@ -29,4 +29,5 @@ if ( n != NULL)
     n->next = NULL;
 }
 
+list->next = n;
 }
