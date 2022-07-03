@@ -14,6 +14,10 @@ typedef struct node
 node;
 
 node *n = malloc(sizeof(node));
+if (n != NULL)
+{
+    (*n).number = 1;
+}
 node *list = NULL;
 free(n);
 }
