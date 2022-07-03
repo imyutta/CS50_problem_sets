@@ -40,8 +40,8 @@ list->next = n;
 node *n = malloc(sizeof(node));
 if (n == NULL)
 {
-    free(list);
     free(list->next);
+    free(list);
     return 1;
 }
 n->number = 3;
