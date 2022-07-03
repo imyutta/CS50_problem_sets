@@ -16,13 +16,18 @@
 
 int main(void)
 {
-    int *list = malloc(3 * sizeof(int));
-    if (list == NULL)
+    // List of size 0
+    node *list = NULL;
+
+    // Add number to list
+    node *n = malloc(sizeof(node));
+    if (n == NULL)
     {
         return 1;
     }
+    n->number = 1;
+    n->next = NULL;
 
-    list[0] = 1;
-    list[1] = 2;
-    list[2] = 3;
+    // Update list to point to new node
+    list = n;
 }
