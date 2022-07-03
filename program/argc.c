@@ -12,6 +12,10 @@ typedef struct node
     struct node *next;
 }
 node;
+
+node *n = malloc(sizeof(node));
+node *list = NULL;
+free(n);
 }
 
 
