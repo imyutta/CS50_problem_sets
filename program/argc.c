@@ -37,7 +37,7 @@ list->next = n;
 
 
 
-node *n = malloc(sizeof(node));
+n = malloc(sizeof(node));
 if (n == NULL)
 {
     free(list->next);
