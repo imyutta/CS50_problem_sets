@@ -13,15 +13,15 @@ typedef struct node
 }
 node;
 
-// node *list = NULL;
+node *list = NULL;
 node *n = malloc(sizeof(node));
 if (n != NULL)
 {
     (*n).number = 1;
     n->next = NULL;
 }
-// list = n;
-free(n);
+list = n;
+free(list);
 }
 
 
