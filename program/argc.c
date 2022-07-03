@@ -3,15 +3,15 @@
 #include <stdlib.h>
 
 
-int main()
-{
-
 typedef struct node
 {
     int number;
     struct node *next;
 }
 node;
+
+int main()
+{
 
 node *list = NULL;
 node *n = malloc(sizeof(node));
