@@ -52,6 +52,12 @@ for (node *tmp = list; tmp != NULL; tmp->next)
 {
     printf("%i\n", tmp->number);
 }
-(*tmp).next
-(*tmp).number
+
+while (list != NULL)
+{
+    node *tmp = list->next;
+    free(list);
+    list = tmp;
+}
+return 0;
 }
