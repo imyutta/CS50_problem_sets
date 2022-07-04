@@ -89,4 +89,12 @@ bool search(node *tree, int number)
     {
         return search(tree->left, number);
     }
+    else if (number > tree->number)
+    {
+        return search(tree->right, number);
+    }
+    else
+    {
+        return true;
+    }
 }
