@@ -61,11 +61,20 @@ int main()
 void print_tree(node *root)
 {
     if (root == NULL)
-    (
+    {
         return;
-    )
-    print_tree(root->left);
-    printf("%i\n", root->number);
+    }
     print_tree(root->right);
+    printf("%i\n", root->number);
+    print_tree(root->left);
 }
-void free_tree(node *root);
+void free_tree(node *root)
+{
+    if (root == NULL)
+    {
+        return;
+    }
+    free_tree(root->left);
+    free_tree(root->right);
+    free(root);
+}
