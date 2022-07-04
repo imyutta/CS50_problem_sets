@@ -8,7 +8,7 @@ typedef struct node
 {
     bool is_word;
     struct node *children[5]
-
+}
 int main()
 {
 
