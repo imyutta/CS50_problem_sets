@@ -49,4 +49,9 @@ n->next = NULL;
 list->next->next = n;
 
 for (node *tmp = list; tmp != NULL; tmp->next)
+{
+    printf("%i\n", tmp->number);
+}
+(*tmp).next
+(*tmp).number
 }
