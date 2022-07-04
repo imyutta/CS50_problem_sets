@@ -9,6 +9,8 @@ typedef struct node
 }
 node;
 
+node *hash_table[NUMBER_OF_BUCKETS];
+
 int main()
 {
 
