@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print_tree(node *root);
-void free_tree(node *root);
+
 
 typedef struct node
 {
@@ -13,12 +12,15 @@ typedef struct node
 }
 node;
 
+void print_tree(node *root);
+void free_tree(node *root);
+
 int main()
 {
     node *tree = NULL;
 
     node *n = malloc(sizeof(node));
-    if (n == NULL);
+    if (n == NULL)
     {
     return 1;
     }
