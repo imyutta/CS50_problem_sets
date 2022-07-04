@@ -2,6 +2,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+void print_tree(node *root);
+void free_tree(node *root);
 
 typedef struct node
 {
@@ -28,7 +30,7 @@ int main()
     n = malloc(sizeof(node));
     if (n == NULL)
     {
-        free(tree);
+        free_tree(tree);
         return 1;
     }
     n->number = 1;
@@ -39,8 +41,26 @@ int main()
     n = malloc(sizeof(node));
     if (n == NULL)
     {
-        free(tree->left);
-        
+        free_tree(tree);
+        return 1;
     }
+    n->number = 3;
+    n->left = NULL;
+    n->right = NULL;
+    tree->right = n;
+
+    print_tree(tree);
+
+    free_tree(tree);
+    return 0;
 
 }
+
+void print_tree(node *root)
+{
+    if (root == NULL)
+    (
+        return;
+    )
+}
+void free_tree(node *root);
