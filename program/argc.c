@@ -62,5 +62,8 @@ void print_tree(node *root)
     (
         return;
     )
+    print_tree(root->left);
+    printf("%i\n", root->number);
+    print_tree(root->right);
 }
 void free_tree(node *root);
