@@ -78,3 +78,12 @@ void free_tree(node *root)
     free_tree(root->right);
     free(root);
 }
+
+bool search(node *tree, int number)
+{
+    if (tree == NULL)
+    {
+        return false;
+    }
+    else if (number < tree->number)
+}
