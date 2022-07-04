@@ -14,6 +14,8 @@ node;
 
 void print_tree(node *root);
 void free_tree(node *root);
+bool search(node *tree, int number);
+
 
 int main()
 {

@@ -6,6 +6,7 @@
         "cs50.h": "c",
         "stdio.h": "c",
         "*.tcc": "c",
-        "string": "c"
+        "string": "c",
+        "stdlib.h": "c"
     }
 }
