@@ -25,4 +25,22 @@ int main()
     n->right = NULL;
     tree = n;
 
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free(tree);
+        return 1;
+    }
+    n->number = 1;
+    n->left = NULL;
+    n->right = NULL;
+    tree->left = n;
+
+    n = malloc(sizeof(node));
+    if (n == NULL)
+    {
+        free(tree->left);
+        
+    }
+
 }
