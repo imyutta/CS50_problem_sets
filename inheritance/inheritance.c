@@ -148,5 +148,12 @@ char random_allele()
 
 bool is_true_allele(n->alleles[i])
 {
-    n->alleles[i] == parent0->alleles[0] 
+    if (n->alleles[i] == parent0->alleles[0] || n->alleles[i] == parent0->alleles[1] || n->alleles[i] == parent1->alleles[0] || n->alleles[i] == parent1->alleles[1])
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
 }
