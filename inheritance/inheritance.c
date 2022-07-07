@@ -63,7 +63,7 @@ person *create_family(int generations)
             {
                 tmp_allele = random_allele();
             }
-            while (is_true_allele(tmp_allele, parent0, parent1) == false);
+            while (is_true_allele(tmp_allele, parent"i") == false);
             n->alleles[i] = tmp_allele;
         }
 
