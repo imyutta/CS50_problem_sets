@@ -66,7 +66,6 @@ person *create_family(int generations)
             while (is_true_allele(tmp_allele, parent0, parent1, i) == false);
             n->alleles[i] = tmp_allele;
         }
-
     }
 
     // If there are no generations left to create
@@ -81,12 +80,10 @@ person *create_family(int generations)
         {
             n->alleles[i] = random_allele();
         }
-
     }
 
     // TODO: Return newly created person
-    return n
-    return NULL;
+    return n;
 }
 
 // Free `p` and all ancestors of `p`.
