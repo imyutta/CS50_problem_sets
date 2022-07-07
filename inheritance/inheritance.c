@@ -59,7 +59,7 @@ person *create_family(int generations)
         for (int i = 0; i < 2; i++)
         {
             char tmp_allele;
-            char parent0_allele[2] = *parent0;
+            char parent0_allele[2] = parent0->alleles;
             char parent1_allele = *parent1;
             do
             {
