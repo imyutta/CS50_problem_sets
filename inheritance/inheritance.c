@@ -85,7 +85,7 @@ person *create_family(int generations)
     }
 
     // TODO: Return newly created person
-    
+    return n
     return NULL;
 }
 
