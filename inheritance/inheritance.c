@@ -56,6 +56,7 @@ person *create_family(int generations)
         person *parent1 = create_family(generations - 1);
 
         // TODO: Set parent pointers for current person
+        if (parent0 == NULL)
         n->parents[0] = parent0;
         n->parents[1] = parent1;
 
