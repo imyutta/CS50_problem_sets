@@ -20,6 +20,8 @@ person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
+bool is_true_allele(char tmp_allele);
+
 
 int main(void)
 {
@@ -56,11 +58,13 @@ person *create_family(int generations)
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
         for (int i = 0; i < 2; i++)
         {
-            while (is_true_allele(n->alleles[i]) == false)
-            {
-                n->alleles[i] = random_allele();
-            }
+            char tmp_allele = nul;
             do
+            {
+                tmp_allele = random_allele();
+            }
+            while (is_true_allele(tmp_allele) == false)
+            n->alleles[i] = tmp_allele;
         }
 
     }
@@ -146,9 +150,9 @@ char random_allele()
     }
 }
 
-bool is_true_allele(n->alleles[i])
+bool is_true_allele(char tmp_allele)
 {
-    if (n->alleles[i] == parent0->alleles[0] || n->alleles[i] == parent0->alleles[1] || n->alleles[i] == parent1->alleles[0] || n->alleles[i] == parent1->alleles[1])
+    if (tmp_allele == parent0->alleles[0] || tmp_allele == parent0->alleles[1] || tmp_allele == parent1->alleles[0] || tmp_allele == parent1->alleles[1])
     {
         return true;
     }
