@@ -59,11 +59,12 @@ person *create_family(int generations)
         for (int i = 0; i < 2; i++)
         {
             char tmp_allele;
+            
             do
             {
                 tmp_allele = random_allele();
             }
-            while (is_true_allele(tmp_allele, parent"i") == false);
+            while (is_true_allele(tmp_allele, one_parent) == false);
             n->alleles[i] = tmp_allele;
         }
 
