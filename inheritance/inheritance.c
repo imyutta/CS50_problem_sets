@@ -45,7 +45,7 @@ person *create_family(int generations)
     person *n = malloc(sizeof(person));
     if (n == NULL)
     {
-        free_family(p);
+        free_family(n);
         return 1;
     }
     // If there are still generations left to create
