@@ -20,7 +20,7 @@ person *create_family(int generations);
 void print_family(person *p, int generation);
 void free_family(person *p);
 char random_allele();
-bool is_true_allele(char tmp_allele, person *parent0, person *parent1);
+bool is_true_allele(char tmp_allele, person *parent0, person *parent1, int i);
 
 
 int main(void)
@@ -59,12 +59,11 @@ person *create_family(int generations)
         for (int i = 0; i < 2; i++)
         {
             char tmp_allele;
-            
             do
             {
                 tmp_allele = random_allele();
             }
-            while (is_true_allele(tmp_allele, one_parent) == false);
+            while (is_true_allele(tmp_allele, parent0, parent1, i) == false);
             n->alleles[i] = tmp_allele;
         }
 
@@ -151,14 +150,30 @@ char random_allele()
     }
 }
 
-bool is_true_allele(char tmp_allele, person *parent0, person *parent1)
+bool is_true_allele(char tmp_allele, person *parent0, person *parent1, int i)
 {
-    if (tmp_allele == parent0->alleles[0] || tmp_allele == parent0->alleles[1] || tmp_allele == parent1->alleles[0] || tmp_allele == parent1->alleles[1])
+    //from the first parent
+    if (i == 0)
     {
-        return true;
+        if (tmp_allele == parent0->alleles[0] || tmp_allele == parent0->alleles[1])
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
-    else
+    if (i == 1)
     {
-        return false;
+        if (tmp_allele == parent1->alleles[0] || tmp_allele == parent1->alleles[1])
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
+    return false;
 }
