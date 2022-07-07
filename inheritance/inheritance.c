@@ -148,5 +148,5 @@ char random_allele()
 
 bool is_true_allele(n->alleles[i])
 {
-    n->alleles[i] == 
+    n->alleles[i] == parent0->alleles[0] 
 }
