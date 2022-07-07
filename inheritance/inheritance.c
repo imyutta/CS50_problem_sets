@@ -42,8 +42,7 @@ person *create_family(int generations)
     // TODO: Allocate memory for new person
     person *n = malloc(sizeof(person));
 
-    n->parents = create_family()
-    n->alleles = 
+
     free(n);
 
     // If there are still generations left to create
