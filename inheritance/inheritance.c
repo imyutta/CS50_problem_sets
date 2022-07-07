@@ -58,12 +58,12 @@ person *create_family(int generations)
         // TODO: Randomly assign current person's alleles based on the alleles of their parents
         for (int i = 0; i < 2; i++)
         {
-            char tmp_allele = nul;
+            char tmp_allele;
             do
             {
                 tmp_allele = random_allele();
             }
-            while (is_true_allele(tmp_allele) == false)
+            while (is_true_allele(tmp_allele) == false);
             n->alleles[i] = tmp_allele;
         }
 
