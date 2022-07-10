@@ -1,102 +1,50 @@
 #include <cs50.h>
 #include <stdio.h>
-#include <stdlib.h>
 
-
-
-typedef struct node
+int main(void)
 {
-    int number;
-    struct node *left;
-    struct node *right;
-}
-node;
+    int height, line, p, space;
+    int m, n, k;
 
-void print_tree(node *root);
-void free_tree(node *root);
-bool search(node *tree, int number);
-
-
-int main()
-{
-    node *tree = NULL;
-
-    node *n = malloc(sizeof(node));
-    if (n == NULL)
+// Ask user for a positive number from 1 to 8
+    do
     {
-    return 1;
+        height = get_int("Height: \n");
     }
-    n->number = 2;
-    n->left = NULL;
-    n->right = NULL;
-    tree = n;
+    while (height < 1 || height > 8);
 
-    n = malloc(sizeof(node));
-    if (n == NULL)
+//the amount of lines will be
+    for (line = 0; line < height; line++)
     {
-        free_tree(tree);
-        return 1;
-    }
-    n->number = 1;
-    n->left = NULL;
-    n->right = NULL;
-    tree->left = n;
 
-    n = malloc(sizeof(node));
-    if (n == NULL)
-    {
-        free_tree(tree);
-        return 1;
-    }
-    n->number = 3;
-    n->left = NULL;
-    n->right = NULL;
-    tree->right = n;
+//printing first dots "     "
+        for (space = 0; space < (height - line - 1); space++)
+        {
+            printf(" ");
+        }
+//printing first #'s
+        // while (p > 0)
+        // {
+        //     printf("#");
+        //     p--;
+        // }
+        for (p = line + 1; p > 0; p--)
+        {
+            printf("#");
+        }
+//printing second dots ".."
+        printf("  ");
 
-    print_tree(tree);
-
-    free_tree(tree);
-    return 0;
-
-}
-
-void print_tree(node *root)
-{
-    if (root == NULL)
-    {
-        return;
-    }
-    print_tree(root->right);
-    printf("%i\n", root->number);
-    print_tree(root->left);
-}
-void free_tree(node *root)
-{
-    if (root == NULL)
-    {
-        return;
-    }
-    free_tree(root->left);
-    free_tree(root->right);
-    free(root);
-}
-
-bool search(node *tree, int number)
-{
-    if (tree == NULL)
-    {
-        return false;
-    }
-    else if (number < tree->number)
-    {
-        return search(tree->left, number);
-    }
-    else if (number > tree->number)
-    {
-        return search(tree->right, number);
-    }
-    else
-    {
-        return true;
+//printing second #'s
+        // while (z > 0)
+        // {
+        //     printf("#");
+        //     z--;
+        // }
+        for (p = line + 1; p > 0; p--)
+        {
+            printf("#");
+        }
+        printf("\n");
     }
 }
