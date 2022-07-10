@@ -1,13 +1,16 @@
 #include <cs50.h>
+#include <ctype.h>
 #include <stdio.h>
 
 int main(void)
 {
-    int scores[3];
-
-    scores[0] = 72;
-    scores[1] = 73;
-    scores[2] = 33;
-
-    printf("Average: %f\n", (scores[0] + scores[1] + scores[2]) / 3.0);
+    char c = get_char("Input: ");
+    if (isalnum(c))
+    {
+        printf("Your input is alphanumeric.\n");
+    }
+    else
+    {
+        printf("Your input is not alphanumeric.\n");
+    }
 }
