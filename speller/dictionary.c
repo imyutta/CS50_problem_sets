@@ -34,12 +34,19 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     // number of letters in alphabet
     int letters = 26;
+    int i = 0;
 
-    // find a number for the first letter
-    
-    int alphabet_number = toupper(word[0]) - 'A';
-    int hash_number = pow(letters, alphabet_number);
-    isalpha(word[i])
+    // find an alphabet number for the first letter
+    // find a hash-number for the first letter
+    // then if there are other letters left, adjust the hash-number
+    do
+    {
+        int alphabet_number = toupper(word[i]) - 'A';
+        unsigned int hash_number = pow(letters, alphabet_number);
+        i++;
+    }
+    while (isalpha(word[i]));
+    return hash_number;
 }
 
 // Loads dictionary into memory, returning true if successful, else false
