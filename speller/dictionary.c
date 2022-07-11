@@ -76,6 +76,8 @@ bool load(const char *dictionary)
 //    while (fread(&buffer), sizeof(LENGTH + 1), 1, dictionary_file)
     node *n = malloc(sizeof(node));
     strcopy(n-word, "...");
+    n->next = NULL;
+    
     return true;
 
 }
