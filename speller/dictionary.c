@@ -61,7 +61,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // prepare to
-    char *buffer;
+    char buffer[LENGTH + 1];
 
     //open a dictionary
     //check if opened correctly
@@ -73,7 +73,7 @@ bool load(const char *dictionary)
     }
 
     //copy from a dictionary into buffer by one word
-    while (fread())
+    while (fread(&buffer))
     node *n = malloc(sizeof(node));
     return true;
 
