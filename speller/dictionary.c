@@ -34,7 +34,6 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     // number of letters in alphabet
     int letters = 26;
-
     unsigned int hash_number = 0;
     int alphabet_number = 0;
     int power = 0;
@@ -44,7 +43,6 @@ unsigned int hash(const char *word)
     // then if there are other letters left, adjust the hash-number
     for (int i = 0; i < 4; i++)
     {
-        i
         power = 3 - i;
         alphabet_number = toupper(word[i]) - 'A';
         hash_number += pow(letters, power) * alphabet_number;
