@@ -37,9 +37,10 @@ bool check(const char *word)
 
     //compare the word and the word in the node of our hash table
     bool is_same;
-     = strcasecmp(tmp->word, word);
-    while (tmp->next != NULL)
-    if (is_same == true)
+    do
+    {
+        is_same = strcasecmp(tmp->word, word);
+        if (is_same == true)
     {
         return true;
     }
@@ -47,13 +48,8 @@ bool check(const char *word)
     {
         tmp = tmp->next;
     }
-    //check if the word is in the current node
-    // and check if the next pointer is NOT NULL
-    while (is_same == false && tmp->next != NULL)
-    {
-        tmp = tmp->next;
     }
-
+    while (tmp->next != NULL)
 
     return true;
     return false;
