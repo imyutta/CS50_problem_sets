@@ -106,6 +106,7 @@ bool load(const char *dictionary)
             n->next = table[hash_number];
             table[hash_number] = n;
         }
+        DICTIONARY_SIZE ++;
     }
     return true;
 }
@@ -114,7 +115,7 @@ bool load(const char *dictionary)
 unsigned int size(void)
 {
     // TODO
-    return 0;
+    return DICTIONARY_SIZE;
 }
 
 // Unloads dictionary from memory, returning true if successful, else false
