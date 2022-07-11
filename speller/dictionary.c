@@ -19,7 +19,7 @@ node;
 
 // TODO: Choose number of buckets in hash table
 const unsigned int N = 456976;
-const int DICTIONARY_SIZE = 0;
+const unsigned int DICTIONARY_SIZE = 0;
 
 // Hash table
 node *table[N];
