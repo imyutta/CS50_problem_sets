@@ -32,7 +32,7 @@ bool check(const char *word)
     int *n = NULL;
     while (table[hash_number]->next != NULL)
     {
-        n = table[hash_number]->next
+        n = table[hash_number]->word
     }
 
     return true;
