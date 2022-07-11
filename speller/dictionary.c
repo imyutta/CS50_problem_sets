@@ -34,7 +34,8 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     // number of letters in alphabet
     int letters = 26;
-    
+
+    // prepare to serch for a hash-number
     unsigned int hash_number = 0;
     int alphabet_number = 0;
     int power = 0;
@@ -59,7 +60,8 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    //
+    // prepare to
+    string dictionary
     FILE *dictionary_file = fopen(dictionary, "r");
     if (dictionary_file == NULL)
     {
