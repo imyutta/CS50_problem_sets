@@ -29,7 +29,12 @@ bool check(const char *word)
 {
     // TODO
     int hash_number = hash(word);
-    int *n = table[hash_number]->next
+    int *n = NULL;
+    while (table[hash_number]->next != NULL)
+    {
+        n = table[hash_number]->next
+    }
+
     return true;
     return false;
 }
