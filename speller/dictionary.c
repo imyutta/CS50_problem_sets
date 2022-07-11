@@ -47,7 +47,7 @@ unsigned int hash(const char *word)
         hash_number += pow(letters, alphabet_number);
 
         alphabet_number = toupper(word[1]) - 'A';
-        hash_number =
+        hash_number = pow(letters, alphabet_number);
 
 
 
