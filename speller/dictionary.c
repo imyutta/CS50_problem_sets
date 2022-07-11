@@ -61,13 +61,18 @@ bool load(const char *dictionary)
 {
     // TODO
     // prepare to
-    string dictionary
+    char *buffer;
+
+    //open a dictionary
+    //check if opened correctly
     FILE *dictionary_file = fopen(dictionary, "r");
     if (dictionary_file == NULL)
     {
         printf("Could not open %s.\n", dictionary);
         return false;
     }
+
+    //copy from a dictionary into buffer by one word
     while (fread())
     node *n = malloc(sizeof(node));
     return true;
