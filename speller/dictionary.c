@@ -36,8 +36,8 @@ unsigned int hash(const char *word)
     int letters = 26;
 
     // find a number for the first letter
-    int hash_number = pow(letters, 2);
-    return toupper(word[0]) - 'A';
+    int alphabet_number = toupper(word[0]) - 'A';
+    int hash_number = pow(letters, alphabet_number);
 }
 
 // Loads dictionary into memory, returning true if successful, else false
