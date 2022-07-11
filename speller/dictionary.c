@@ -47,7 +47,13 @@ unsigned int hash(const char *word)
         hash_number += pow(letters, 3) * alphabet_number;
 
         alphabet_number = toupper(word[1]) - 'A';
-        hash_number = pow(letters, 2) * alphabet_number;
+        hash_number += pow(letters, 2) * alphabet_number;
+
+        alphabet_number = toupper(word[2]) - 'A';
+        hash_number += pow(letters, 1) * alphabet_number;
+
+        alphabet_number = toupper(word[3]) - 'A';
+        hash_number += pow(letters, 0) * alphabet_number;
 
 
 
