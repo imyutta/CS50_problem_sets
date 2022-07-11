@@ -41,8 +41,15 @@ unsigned int hash(const char *word)
     // then if there are other letters left, adjust the hash-number
     do
     {
-        int alphabet_number = toupper(word[i]) - 'A';
+        int alphabet_number = toupper(word[0]) - 'A';
         unsigned int hash_number = pow(letters, alphabet_number);
+
+        int alphabet_number = toupper(word[1]) - 'A';
+        unsigned int hash_number =
+
+
+
+
         i++;
     }
     while (isalpha(word[i]));
