@@ -34,33 +34,25 @@ unsigned int hash(const char *word)
     // TODO: Improve this hash function
     // number of letters in alphabet
     int letters = 26;
-    int i = 0;
+
     unsigned int hash_number = 0;
     int alphabet_number = 0;
+    int power = 0;
 
     // find an alphabet number for the first letter
     // find a hash-number for the first letter
     // then if there are other letters left, adjust the hash-number
-    do
+    for (int i = 0; i < 4; i++)
     {
-        alphabet_number = toupper(word[0]) - 'A';
-        hash_number += pow(letters, 3) * alphabet_number;
-
-        alphabet_number = toupper(word[1]) - 'A';
-        hash_number += pow(letters, 2) * alphabet_number;
-
-        alphabet_number = toupper(word[2]) - 'A';
-        hash_number += pow(letters, 1) * alphabet_number;
-
-        alphabet_number = toupper(word[3]) - 'A';
-        hash_number += pow(letters, 0) * alphabet_number;
-
-
-
-
-        i++;
+        i
+        power = 3 - i;
+        alphabet_number = toupper(word[i]) - 'A';
+        hash_number += pow(letters, power) * alphabet_number;
+        if (isalpha(word[i]) == false)
+        {
+            break;
+        }
     }
-    while (isalpha(word[i]));
     return hash_number;
 }
 
