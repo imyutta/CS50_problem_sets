@@ -44,10 +44,10 @@ unsigned int hash(const char *word)
     do
     {
         alphabet_number = toupper(word[0]) - 'A';
-        hash_number += pow(letters, alphabet_number);
+        hash_number += pow(letters, 3) * alphabet_number;
 
         alphabet_number = toupper(word[1]) - 'A';
-        hash_number = pow(letters, alphabet_number);
+        hash_number = pow(letters, 2) * alphabet_number;
 
 
 
