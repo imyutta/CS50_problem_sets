@@ -47,14 +47,17 @@ unsigned int hash(const char *word)
     // then if there are other letters left, adjust the hash-number
     for (int i = 0; i < 4; i++)
     {
-        power = 3 - i;
-        alphabet_number = toupper(word[i]) - 'A';
-        hash_number += pow(letters, power) * alphabet_number;
+        if (isalpha(word[i]) || (word[i] == '\'' && index > 0))
+            power = 3 - i;
+            alphabet_number = toupper(word[i]) - 'A';
+            hash_number += pow(letters, power) * alphabet_number;
         if (isalpha(word[i]) == false)
         {
             break;
         }
     }
+
+    (isalpha(c) || (c == '\'' && index > 0))
     return hash_number;
 }
 
