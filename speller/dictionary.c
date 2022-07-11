@@ -73,8 +73,9 @@ bool load(const char *dictionary)
     }
 
     //copy from a dictionary into buffer by one word
-    while (fread(&buffer))
+//    while (fread(&buffer), sizeof(LENGTH + 1), 1, dictionary_file)
     node *n = malloc(sizeof(node));
+    strcopy(n-word, "...");
     return true;
 
 }
