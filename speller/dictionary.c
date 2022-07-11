@@ -31,19 +31,20 @@ bool check(const char *word)
     //find hash number
     int hash_number = hash(word);
 
-    //tmp node variable
-    int *n = NULL;
-    n = table[hash_number];
+    //make temporary node variable
+    int *tmp = NULL;
+    tmp = table[hash_number];
+
+    //compare the word and the word in the node of our hash table
+    bool is_same = strcasecmp(tmp->word, word);
+
     //check if the word is in the current node
     // and check if the next pointer is NOT NULL
-    if (strcasecmp(n->word, word) == false && )
+    while (is_same == false && tmp->next != NULL)
     {
-        n = n-next;
+        tmp = tmp->next;
     }
-    while (table[hash_number]->next != NULL)
-    {
 
-    }
 
     return true;
     return false;
