@@ -32,6 +32,11 @@ bool check(const char *word)
 unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
+    // number of letters in alphabet
+    int letters = 26;
+
+    // find a number for the first letter
+    
     return toupper(word[0]) - 'A';
 }
 
