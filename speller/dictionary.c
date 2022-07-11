@@ -28,10 +28,18 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    //find hash number
     int hash_number = hash(word);
+
+    //tmp node variable
     int *n = NULL;
     n = table[hash_number];
-    strcasecmp(n->word, word);
+    //check if the word is in the current node
+    // and check if the next pointer is NOT NULL
+    if (strcasecmp(n->word, word) == false && )
+    {
+        n = n-next;
+    }
     while (table[hash_number]->next != NULL)
     {
 
