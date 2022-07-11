@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
-//#include <math.h>
+#include <math.h>
 
 #include "dictionary.h"
 
@@ -36,7 +36,7 @@ unsigned int hash(const char *word)
     int letters = 26;
 
     // find a number for the first letter
-    
+    int hash_number = pow(letters, 2);
     return toupper(word[0]) - 'A';
 }
 
