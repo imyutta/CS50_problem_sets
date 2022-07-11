@@ -48,7 +48,7 @@ unsigned int hash(const char *word)
     for (int i = 0; i < 4; i++)
     {
         power = 3 - i;
-        if (isalpha(word[i]))
+        if (isalpha(word[i]) || (word[i] == '\''))
         {
             alphabet_number = toupper(word[i]) - 'A';
             hash_number += pow(letters, power) * alphabet_number;
@@ -60,7 +60,7 @@ unsigned int hash(const char *word)
 
 
 
-        else if (word[i] == '\'')
+        else if
 
     }
     return hash_number;
