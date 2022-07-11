@@ -50,7 +50,7 @@ unsigned int hash(const char *word)
         power = 3 - i;
         if (isalpha(word[i]) || (word[i] == '\''))
         {
-            alphabet_number = toupper(word[i]) - 'A';
+            alphabet_number = abs(toupper(word[i]) - 'A');
             hash_number += pow(letters, power) * alphabet_number;
         }
         else
