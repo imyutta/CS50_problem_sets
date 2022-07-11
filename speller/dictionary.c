@@ -57,11 +57,6 @@ unsigned int hash(const char *word)
         {
             break;
         }
-
-
-
-        else if
-
     }
     return hash_number;
 }
