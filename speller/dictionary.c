@@ -64,6 +64,7 @@ bool load(const char *dictionary)
         printf("Could not open %s.\n", dictionary);
         return false;
     }
+    node *n = malloc(sizeof(node));
     return true;
 
 }
