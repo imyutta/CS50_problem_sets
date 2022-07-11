@@ -62,6 +62,7 @@ bool load(const char *dictionary)
     // TODO
     // prepare to
     char buffer[LENGTH + 1];
+    int hash_number = 0;
 
     //open a dictionary
     //check if opened correctly
@@ -84,18 +85,23 @@ bool load(const char *dictionary)
 
         //create a node
         //copy the word from buffer to node
-        //place into the hash table
         strcpy(n->word, buffer);
         n->next = NULL;
 
-        table[hash(buffer)] = n;
+        //find hash-number
+        //insert the word into the hash table
+        hash_number = hash(buffer);
+        if (table[hash_number] == NULL)
+        {
+            table[hash_number] = n;
+        }
+        else
+        {
+            n->next = table[hash_number];
+            table[hash_number] = n;
+        }
     }
-
-
-
-
     return true;
-
 }
 
 // Returns number of words in dictionary if loaded, else 0 if not yet loaded
