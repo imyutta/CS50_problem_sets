@@ -28,6 +28,8 @@ node *table[N];
 bool check(const char *word)
 {
     // TODO
+    int hash_number = hash(word);
+    int *n = table[hash_number]->next
     return true;
     return false;
 }
