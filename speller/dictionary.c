@@ -75,7 +75,7 @@ bool load(const char *dictionary)
     //copy from a dictionary into buffer by one word
     while (fscanf(dictionary_file, "%s", buffer) != EOF)
     {
-
+        
     }
     node *n = malloc(sizeof(node));
     strcopy(n-word, "...");
