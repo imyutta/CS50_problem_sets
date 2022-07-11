@@ -58,8 +58,6 @@ unsigned int hash(const char *word)
             break;
         }
     }
-
-    (isalpha(c) || (c == '\'' && index > 0))
     return hash_number;
 }
 
