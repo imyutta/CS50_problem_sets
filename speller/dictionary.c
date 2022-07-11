@@ -37,8 +37,8 @@ bool check(const char *word)
 
     //compare the word and the word in the node of our hash table
     bool is_same;
-    
-    while (tmp->next != NULL)
+
+    while (true)
     {
         is_same = strcasecmp(tmp->word, word);
         if (is_same == true)
