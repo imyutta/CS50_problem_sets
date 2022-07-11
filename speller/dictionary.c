@@ -36,7 +36,8 @@ bool check(const char *word)
     tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
-    bool is_same = strcasecmp(tmp->word, word);
+    bool is_same;
+    is_same = strcasecmp(tmp->word, word);
 
     //check if the word is in the current node
     // and check if the next pointer is NOT NULL
