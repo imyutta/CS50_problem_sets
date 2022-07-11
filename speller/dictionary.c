@@ -88,7 +88,7 @@ bool load(const char *dictionary)
         strcpy(n->word, buffer);
         n->next = NULL;
 
-        table[hash(buffer)] = 
+        table[hash(buffer)] = n;
     }
 
 
