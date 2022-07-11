@@ -3,6 +3,7 @@
 #include <ctype.h>
 #include <stdbool.h>
 #include <stdio.h>
+#include <math.h>
 
 #include "dictionary.h"
 
@@ -15,7 +16,7 @@ typedef struct node
 node;
 
 // TODO: Choose number of buckets in hash table
-const unsigned int N = 26;
+const unsigned int N = pow(26, 4);
 
 // Hash table
 node *table[N];
