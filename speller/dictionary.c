@@ -30,9 +30,11 @@ bool check(const char *word)
     // TODO
     int hash_number = hash(word);
     int *n = NULL;
+    n = table[hash_number];
+    strcasecmp(n->word, word);
     while (table[hash_number]->next != NULL)
     {
-        n = table[hash_number]->word
+
     }
 
     return true;
