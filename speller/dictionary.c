@@ -81,8 +81,14 @@ bool load(const char *dictionary)
             printf("Could not scan %s for words\n", dictionary);
             return false;
         }
+
+        //create a node
+        //copy the word from buffer to node
+        //place into the hash table
         strcpy(n->word, buffer);
         n->next = NULL;
+
+        table[hash(buffer)] = 
     }
 
 
