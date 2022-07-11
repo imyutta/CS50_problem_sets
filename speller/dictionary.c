@@ -40,7 +40,7 @@ bool check(const char *word)
     do
     {
         is_same = strcasecmp(tmp->word, word);
-        if (is_same)
+        if (is_same == true)
     {
         return true;
     }
