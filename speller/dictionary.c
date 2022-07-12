@@ -49,11 +49,11 @@ bool check(const char *word)
         {
         tmp = tmp->next;
         }
-        else if
+        else
+        {
+            return false;
+        }
     }
-
-
-    return true;
     return false;
 }
 
