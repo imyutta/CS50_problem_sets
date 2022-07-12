@@ -32,7 +32,7 @@ bool check(const char *word)
     int hash_number = hash(word);
 
     //make temporary node variable
-    int *tmp = NULL;
+    node *tmp = NULL;
     tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
