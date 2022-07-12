@@ -34,6 +34,12 @@ bool check(const char *word)
 
     //make temporary node variable
     node *tmp = NULL;
+    if (tmp == NULL)
+    {
+        printf("Could not scan %s for words\n", dictionary);
+        return false;
+    }
+
     tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
