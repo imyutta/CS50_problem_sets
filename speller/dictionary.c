@@ -112,7 +112,6 @@ bool load(const char *dictionary)
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
-            printf("Could not scan %s for words\n", dictionary);
             return false;
         }
 
