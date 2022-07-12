@@ -149,9 +149,14 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-
     node *tmp = NULL;
-    
+    for (int i = 0; i < N)
+    {
+        tmp = table[i];
+        if (tmp == NULL)
+    }
+
+
 
     return false;
 }
