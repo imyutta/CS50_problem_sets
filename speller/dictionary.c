@@ -157,8 +157,12 @@ bool unload(void)
 
         tmp = cursor;
         cursor = cursor->next;
+        free(tmp);
 
-        cursor = tmp->next;
+        tmp = cursor;
+        cursor = cursor->next;
+        free(tmp);
+
         if (cursor == NULL)
         {
             free(tmp);
