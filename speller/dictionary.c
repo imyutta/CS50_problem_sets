@@ -154,7 +154,8 @@ bool unload(void)
     for (int i = 0; i < N)
     {
         tmp = table[i];
-        if (tmp->next == NULL)
+        cursor = tmp->next;
+        if (cursor == NULL)
         {
             free(tmp);
         }
