@@ -156,7 +156,7 @@ bool unload(void)
         cursor = table[i];
 
         tmp = cursor;
-        cursor = tmp->next;
+        cursor = cursor->next;
 
         cursor = tmp->next;
         if (cursor == NULL)
