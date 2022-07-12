@@ -154,20 +154,16 @@ bool unload(void)
     for (int i = 0; i < N)
     {
         cursor = table[i];
-
-        tmp = cursor;
-        cursor = cursor->next;
-        free(tmp);
-
-        tmp = cursor;
-        cursor = cursor->next;
-        free(tmp);
-
-        if (cursor == NULL)
+        while (cursor != NULL)
         {
+            tmp = cursor;
+            cursor = cursor->next;
+            free(tmp);
+
+            tmp = cursor;
+            cursor = cursor->next;
             free(tmp);
         }
     }
-
     return false;
 }
