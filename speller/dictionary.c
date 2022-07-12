@@ -42,13 +42,14 @@ bool check(const char *word)
     {
         is_same = strcasecmp(tmp->word, word);
         if (is_same == true)
-    {
-        return true;
-    }
-    else if (tmp->next != NULL)
-    {
+        {
+            return true;
+        }
+        else if (tmp->next != NULL)
+        {
         tmp = tmp->next;
-    }
+        }
+        else if
     }
 
 
