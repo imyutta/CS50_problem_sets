@@ -167,14 +167,7 @@ bool unload(void)
         {
             free(tmp);
         }
-        else
-        {
-            cursor = tmp->next;
-            free(tmp);
-        }
     }
-
-
 
     return false;
 }
