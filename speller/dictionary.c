@@ -105,7 +105,7 @@ bool load(const char *dictionary)
         printf("Could not open %s.\n", dictionary);
         return false;
     }
-
+    printf("dictionary has started to get loaded\n");
     //copy from a dictionary into buffer by one word
     while (fscanf(dictionary_file, "%s", buffer) != EOF)
     {
@@ -135,6 +135,9 @@ bool load(const char *dictionary)
         }
         dictionary_size ++;
     }
+    printf("dictionary has been loaded\n");
+    printf("dictionary_size: %i\n", dictionary_size);
+
     return true;
 }
 
