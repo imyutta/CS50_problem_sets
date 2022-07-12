@@ -150,10 +150,19 @@ bool unload(void)
 {
     // TODO
     node *tmp = NULL;
+    node *cursor = NULL;
     for (int i = 0; i < N)
     {
         tmp = table[i];
-        if (tmp == NULL)
+        if (tmp->next == NULL)
+        {
+            free(tmp);
+        }
+        else
+        {
+            cursor = tmp->next;
+            free(tmp);
+        }
     }
 
 
