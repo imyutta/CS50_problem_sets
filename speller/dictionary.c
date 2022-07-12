@@ -33,12 +33,7 @@ bool check(const char *word)
     int hash_number = hash(word);
 
     //make temporary node variable
-    node *tmp = malloc(sizeof(node));
-    if (tmp == NULL)
-    {
-        printf("Could not scan create tmp by the CHECK function.\n");
-        return false;
-    }
+    node *tmp = NULL;
     tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
