@@ -47,12 +47,19 @@ bool check(const char *word)
         else
         {
             is_same = strcasecmp(tmp->word, word);
+            if (is_same == true)
+            {
+                return true;
+            }
+            else
+            {
+                tmp = tmp->next;
+            }
+
+
         }
         is_same = strcasecmp(tmp->word, word);
-        if (is_same == true)
-        {
-            return true;
-        }
+
         else if (tmp->next != NULL)
         {
         tmp = tmp->next;
