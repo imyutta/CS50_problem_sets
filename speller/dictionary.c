@@ -93,7 +93,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    // prepare to
+    // prepare to scanning
     char buffer[LENGTH + 1];
     int hash_number = 0;
 
