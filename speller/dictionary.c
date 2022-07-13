@@ -93,7 +93,7 @@ unsigned int hash(const char *word)
 bool load(const char *dictionary)
 {
     // TODO
-    // prepare to scan
+    // prepare to
     char buffer[LENGTH + 1];
     int hash_number = 0;
 
@@ -105,13 +105,13 @@ bool load(const char *dictionary)
         printf("Could not open %s.\n", dictionary);
         return false;
     }
-    printf("dictionary has started to get loaded\n");
     //copy from a dictionary into buffer by one word
     while (fscanf(dictionary_file, "%s", buffer) != EOF)
     {
         node *n = malloc(sizeof(node));
         if (n == NULL)
         {
+            printf("Could not scan %s for words\n", dictionary);
             return false;
         }
 
@@ -135,9 +135,7 @@ bool load(const char *dictionary)
         dictionary_size ++;
     }
 
-    printf("dictionary_size: %i\n", dictionary_size);
-    printf("table[2]: %s\n", table[1]->word);
-
+    printf("table[i]: %s\n", table[0]->word);
 
     return true;
 }
