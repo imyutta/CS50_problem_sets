@@ -141,6 +141,7 @@ bool load(const char *dictionary)
     }
 
     free(buffer);
+    fclose(dictionary_file);
     return true;
 }
 
@@ -168,5 +169,6 @@ bool unload(void)
         }
     }
     return true;
+
 }
 
