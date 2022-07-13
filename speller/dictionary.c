@@ -36,7 +36,7 @@ bool check(const char *word)
     node *tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
-    int is_same;
+    int is_same = 1;
 
     while (true)
     {
@@ -57,7 +57,6 @@ bool check(const char *word)
             }
         }
     }
-
 }
 
 // Hashes word to a number
