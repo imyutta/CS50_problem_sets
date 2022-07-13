@@ -95,11 +95,7 @@ bool load(const char *dictionary)
 {
     // TODO
     // prepare to scanning
-    char *buffer = malloc(sizeof(char * (LENGTH + 1) ) );
-    if (buffer == NULL)
-    {
-        return false;
-    }
+    char buffer[LENGTH + 1];
     unsigned int hash_number = 0;
 
     //open a dictionary
