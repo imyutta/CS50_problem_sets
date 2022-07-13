@@ -152,7 +152,6 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-    //printf("UNLOAD table[i]: %s\n", table[193336]->word);
     node *tmp = NULL;
     node *cursor = NULL;
     for (int i = 0; i < N; i++)
@@ -163,7 +162,9 @@ bool unload(void)
             tmp = cursor;
             cursor = cursor->next;
             free(tmp);
+
         }
     }
+    printf("UNLOAD cursor is free");
     return true;
 }
