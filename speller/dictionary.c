@@ -33,14 +33,21 @@ bool check(const char *word)
     unsigned int hash_number = hash(word);
 
     //make temporary node variable
-    node *tmp = NULL;
-    tmp = table[hash_number];
+    node *tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
     bool is_same;
 
     while (true)
     {
+        if (tmp == NULL)
+        {
+            return false;
+        }
+        else
+        {
+            is_same = strcasecmp(tmp->word, word);
+        }
         is_same = strcasecmp(tmp->word, word);
         if (is_same == true)
         {
