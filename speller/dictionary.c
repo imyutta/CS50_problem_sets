@@ -36,7 +36,7 @@ bool check(const char *word)
     node *tmp = table[hash_number];
 
     //compare the word and the word in the node of our hash table
-    bool is_same;
+    int is_same;
 
     while (true)
     {
@@ -47,7 +47,7 @@ bool check(const char *word)
         else
         {
             is_same = strcasecmp(tmp->word, word);
-            if (is_same == true)
+            if (is_same == 0)
             {
                 return true;
             }
@@ -137,7 +137,6 @@ bool load(const char *dictionary)
         dictionary_size ++;
     }
 
-    //printf("table[i]: %s\n", table[68385]->next->word);
 
     return true;
 }
@@ -153,7 +152,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-        printf("UNLOAD table[i]: %s\n", table[193336]->word);
+    //printf("UNLOAD table[i]: %s\n", table[193336]->word);
     node *tmp = NULL;
     node *cursor = NULL;
     for (int i = 0; i < N; i++)
