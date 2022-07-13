@@ -1,4 +1,5 @@
 
+b = 1
 a = 5
-for i in range(a):
-    print(f"hello {i}")
+for b in range(a):
+    print(f"hello {b}")
