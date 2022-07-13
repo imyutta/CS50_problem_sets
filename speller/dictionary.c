@@ -134,8 +134,10 @@ bool load(const char *dictionary)
         }
         dictionary_size ++;
     }
-    printf("dictionary has been loaded\n");
+
     printf("dictionary_size: %i\n", dictionary_size);
+    printf("table[2]: %s\n", table[1]->word);
+
 
     return true;
 }
