@@ -165,6 +165,6 @@ bool unload(void)
 
         }
     }
-    printf("UNLOAD cursor is free");
+
     return true;
 }
