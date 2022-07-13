@@ -95,7 +95,7 @@ bool load(const char *dictionary)
     // TODO
     // prepare to scanning
     char buffer[LENGTH + 1];
-    int hash_number = 0;
+    unsigned int hash_number = 0;
 
     //open a dictionary
     //check if opened correctly
