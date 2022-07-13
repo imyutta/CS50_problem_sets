@@ -137,7 +137,7 @@ bool load(const char *dictionary)
         dictionary_size ++;
     }
 
-
+    //printf("table[i]: %s\n", table[68385]->next->word);
 
     return true;
 }
@@ -153,7 +153,7 @@ unsigned int size(void)
 bool unload(void)
 {
     // TODO
-        printf("table[i]: %s\n", table[68385]->next->word);
+        printf("UNLOAD table[i]: %s\n", table[68384]->word);
     node *tmp = NULL;
     node *cursor = NULL;
     for (int i = 0; i < N; i++)
