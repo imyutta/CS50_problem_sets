@@ -30,7 +30,7 @@ bool check(const char *word)
 {
     // TODO
     //find hash number
-    int hash_number = hash(word);
+    unsigned int hash_number = hash(word);
 
     //make temporary node variable
     node *tmp = NULL;
@@ -63,12 +63,12 @@ unsigned int hash(const char *word)
 {
     // TODO: Improve this hash function
     // number of letters in alphabet
-    int letters = 26;
+    unsigned int letters = 26;
 
     // prepare to serch for a hash-number
     unsigned int hash_number = 0;
-    int alphabet_number = 0;
-    int power = 0;
+    unsigned int alphabet_number = 0;
+    unsigned int power = 0;
 
     // find an alphabet number for the first letter
     // find a hash-number for the first letter
