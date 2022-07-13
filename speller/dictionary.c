@@ -137,7 +137,7 @@ bool load(const char *dictionary)
         dictionary_size ++;
     }
 
-    //printf("table[i]: %s\n", table[806]->next->word);
+    printf("table[i]: %s\n", table[68385]->next->word);
 
     return true;
 }
