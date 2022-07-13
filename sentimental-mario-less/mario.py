@@ -1,5 +1,7 @@
+height = input("Height: ")
+
 
 b = 1
 a = 5
-for b in range(a):
-    print(f"hello {b}")
+for i in range(height):
+    print("#")
