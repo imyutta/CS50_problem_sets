@@ -1,3 +1,3 @@
-a = """ Hello, World! """
-print(a.strip())
-print(a[14])
+a = "Hello, World!"
+print(a.split(","))
+print(a)
