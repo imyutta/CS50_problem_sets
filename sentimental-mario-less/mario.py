@@ -3,10 +3,10 @@ def main():
     height = get_height()
 
     for i in range(height):
-    for j in range(height - i - 1):
-        print("_")
-    for k in range(i):
-        print("#")
+        for j in range(height - i):
+            print("_")
+        for k in range(i):
+            print("#")
 
 
 def get_height():
@@ -15,9 +15,11 @@ def get_height():
             n = int(input("Height: "))
             if n > 0:
                 break
-
         except ValueError:
             print("it should be an integer from 1 to 8 inclusive")
+    return n
+
+main()
 
 
 #  type(height) == int and height > 0 and height < 8:
