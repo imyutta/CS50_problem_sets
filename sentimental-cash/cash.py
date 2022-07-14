@@ -1,2 +1,2 @@
-txt = "The best things in life are free!"
-print("expensive" not in txt)
+b = "Hello, World!"
+print(b[2:5])
