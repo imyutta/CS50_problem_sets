@@ -5,8 +5,8 @@ def main():
     for i in range(height):
         spaces = height - i - 1
         sharps = i + 1
-        print(" " * spaces, end = "")
-        print("#" * sharps, end = "")
+        print(" " * spaces, end="")
+        print("#" * sharps, end="")
         print()
 
 # second option of code:
@@ -15,6 +15,7 @@ def main():
         # for k in range(i + 1):
         #     print("#", end = "")
         # print()
+
 
 def get_height():
     while True:
@@ -26,6 +27,5 @@ def get_height():
             print("it should be an integer between 1 and 8 inclusive")
     return n
 
+
 main()
-
-
