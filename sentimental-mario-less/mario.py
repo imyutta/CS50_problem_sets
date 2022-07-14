@@ -6,13 +6,6 @@
 #     for k in range(i):
 #         print("#")
 
-x = "awesome"
+x = frozenset({"apple", "banana", "cherry"})
 
-def myfunc():
-    global x
-    x = "good"
-    print("Python is ", x)
-
-myfunc()
-
-print("Python is", x)
+print(x)
