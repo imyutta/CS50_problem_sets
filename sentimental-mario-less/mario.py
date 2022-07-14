@@ -3,11 +3,18 @@ def main():
     height = get_height()
 
     for i in range(height):
-        for j in range(height - i - 1):
-            print("_", end = "")
-        for k in range(i + 1):
-            print("#", end = "")
+        spaces = height - i - 1
+        sharps = i + 1
+        print("_" * spaces, end = "")
+        print("#" * sharps, end = "")
         print()
+
+# second option of code:
+        # for j in range(height - i - 1):
+        #     print("_", end = "")
+        # for k in range(i + 1):
+        #     print("#", end = "")
+        # print()
 
 def get_height():
     while True:
@@ -22,4 +29,3 @@ def get_height():
 main()
 
 
-#  type(height) == int and height > 0 and height < 8:
