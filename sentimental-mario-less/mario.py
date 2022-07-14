@@ -1,7 +1,12 @@
-height = input("Height: ")
+# height = input("Height: ")
 
-for i in [1, 2, 3, 4]:
-    for j in range(height - i):
-    print("_")
-    for k in range(i):
-    print("#")
+# for i in range(height):
+#     for j in range(height - i - 1):
+#         print("_")
+#     for k in range(i):
+#         print("#")
+
+x = str(3)
+y = int(3)
+z = x + y
+print(x + y)
