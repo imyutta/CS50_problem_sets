@@ -12,7 +12,7 @@ y = 2.8
 z = 1j
 
 a = float(x)
-b = int(y)
+b = int(z)
 c = complex(x)
 
 print(a)
