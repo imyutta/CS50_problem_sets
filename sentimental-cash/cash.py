@@ -17,7 +17,7 @@ def main():
     nickels = change / 5
     change = change % 5
 
-    pennies = change % 5
+    pennies = change 
 
     # calculate minimum number of coins
     # print it out
