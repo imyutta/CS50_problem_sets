@@ -1,8 +1,10 @@
 # TODO
 
 def main():
+    # prompt user for the height
     height = get_height()
 
+    # print the piramida
     for i in range(height):
         spaces = height - i - 1
         sharps = i + 1
@@ -13,6 +15,7 @@ def main():
         print()
 
 
+# check if the height is valid
 
 def get_height():
     while True:
