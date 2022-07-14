@@ -1,9 +1,7 @@
 
 while True:
     height = int(input("Height: "))
-    print(type(height))
-    if type(height) == int:
-    # and height > 0 and height < 8:
+    if type(height) == int and height > 0 and height < 8:
         break
 
 for i in range(height):
