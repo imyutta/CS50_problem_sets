@@ -4,8 +4,12 @@ from cs50 import get_float
 # ask user how much change he needs
 # output the minimum number of coins possible
 def main():
+    # change in cents will be
     change = get_change() * 100
     print(change)
+
+    # calculate quarters
+    quarters = change % 25
 
 
 
