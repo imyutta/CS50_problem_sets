@@ -6,5 +6,8 @@
 #     for k in range(i):
 #         print("#")
 
-for x in range(2, 30, 3):
+for x in range(6):
+  if x == 3: break
   print(x)
+else:
+  print("Finally finished!")
