@@ -9,7 +9,6 @@ def main():
             print("#", end = "")
         print()
 
-
 def get_height():
     while True:
         try:
