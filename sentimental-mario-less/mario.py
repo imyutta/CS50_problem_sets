@@ -7,18 +7,9 @@
 #         print("#")
 
 
-x = 1
-y = 2.8
-z = 1j
-
-a = float(x)
-b = int(z)
-c = complex(x)
-
-print(a)
-print(b)
-print(c)
-
-print(type(x))
-print(type(y))
-print(type(z))
+i = 0
+while i < 6:
+  i += 1
+  if i == 3:
+    continue
+  print(i)
