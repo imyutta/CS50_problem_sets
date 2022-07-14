@@ -8,6 +8,8 @@ def main():
         sharps = i + 1
         print(" " * spaces, end="")
         print("#" * sharps, end="")
+        print(" ", end="")
+        print("#" * sharps, end="")
         print()
 
 
