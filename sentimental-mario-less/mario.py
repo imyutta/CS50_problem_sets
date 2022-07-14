@@ -17,7 +17,7 @@ def get_height():
             if n > 0 and n < 9:
                 break
         except ValueError:
-            print("it should be an integer from 1 to 8 inclusive")
+            print("it should be an integer between 1 and 8 inclusive")
     return n
 
 main()
