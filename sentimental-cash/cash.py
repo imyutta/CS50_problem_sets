@@ -1,3 +1,3 @@
-a = """ Hello, World!
-lkj """
+a = """ Hello, World! """
 print(a.strip())
+print(a[14])
