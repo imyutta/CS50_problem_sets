@@ -4,9 +4,9 @@ from cs50 import get_float
 # ask user how much change he needs
 # output the minimum number of coins possible
 def main():
-    change = get_change()
+    change = get_change() * 100
     print(change)
-    
+
 
 
 
