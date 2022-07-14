@@ -1,6 +1,7 @@
 
 while True:
-    height = input("Height: ")
+    height = input(int("Height: "))
+    print(type(height))
     if type(height) == int:
     # and height > 0 and height < 8:
         break
