@@ -5,7 +5,7 @@ def main():
     for i in range(height):
         spaces = height - i - 1
         sharps = i + 1
-        print("_" * spaces, end = "")
+        print(" " * spaces, end = "")
         print("#" * sharps, end = "")
         print()
 
