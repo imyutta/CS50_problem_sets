@@ -6,7 +6,6 @@
 #     for k in range(i):
 #         print("#")
 
-x = str(3)
-y = int(3)
-z = x + y
+x = 4
+y = 3
 print(x + y)
