@@ -6,6 +6,7 @@
 #     for k in range(i):
 #         print("#")
 
-x = 4
-y = 3
-print(x + y)
+x = 5
+y = "John"
+print(type(x))
+print(type(y))
