@@ -1,3 +1,4 @@
-a = "Hello, World!"
-print(a.split(","))
-print(a)
+a = "Hello"
+b = "World"
+c = a + b
+print(a, b)
