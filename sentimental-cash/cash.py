@@ -6,13 +6,17 @@ from cs50 import get_float
 def main():
     # change in cents will be
     change = get_change() * 100
-    print(change)
 
     # calculate quarters
     quarters = change / 25
-    dimes = quarters % 25
-    
-    print(quarters)
+    dimes = (quarters % 25) / 10
+    nickels = (dimes % 10) / 5
+    pennies = (nickels % 5)
+
+    # calculate minimum number of coins
+    # print it out
+    coins = quarters + dimes + nickels + pennies
+    print(coins)
 
 
 
