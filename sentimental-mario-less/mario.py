@@ -6,9 +6,18 @@
 #     for k in range(i):
 #         print("#")
 
-x = 35e3
-y = 12E4
-z = -87.7e100
+
+x = 1
+y = 2.8
+z = 1j
+
+a = float(x)
+b = int(y)
+c = complex(x)
+
+print(a)
+print(b)
+print(c)
 
 print(type(x))
 print(type(y))
