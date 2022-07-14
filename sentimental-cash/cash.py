@@ -9,7 +9,7 @@ def main():
 
     # calculate quarters
     quarters = change / 25
-    dimes = (quarters % 25) / 10
+    dimes = (change % 25) / 10
     nickels = (dimes % 10) / 5
     pennies = (nickels % 5)
 
