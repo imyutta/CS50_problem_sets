@@ -8,5 +8,5 @@
 
 x = 5
 y = "John"
-print(f({x}, {y}))
+print(f"{x}{y}")
 
