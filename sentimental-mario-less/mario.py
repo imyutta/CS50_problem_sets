@@ -6,9 +6,5 @@
 #     for k in range(i):
 #         print("#")
 
-
-fruits = ["apple", "banana", "cherry"]
-for x in fruits:
+for x in range(2, 30, 3):
   print(x)
-  if x == "banana":
-    break
