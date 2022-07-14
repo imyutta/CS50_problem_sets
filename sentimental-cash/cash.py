@@ -7,5 +7,6 @@ def main():
 
 
 def get_change():
-    
+    n = get_float
+
 main()
