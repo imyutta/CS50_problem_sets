@@ -3,9 +3,9 @@ def main():
     height = get_height()
 
     for i in range(height):
-        for j in range(height - i):
-            print("_")
-        for k in range(i):
+        for j in range(height - i - 1):
+            print(f(_))
+        for k in range(i + 1):
             print("#")
 
 
