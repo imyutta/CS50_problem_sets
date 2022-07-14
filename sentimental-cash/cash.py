@@ -1,2 +1,5 @@
-# TODO
-z = int("3.4") # z will be 3
+a = """Lorem ipsum dolor sit amet,
+consectetur adipiscing elit,
+sed do eiusmod tempor incididunt
+ut labore et dolore magna aliqua."""
+print(a)
