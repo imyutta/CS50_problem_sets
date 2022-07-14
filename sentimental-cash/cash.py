@@ -9,7 +9,11 @@ def main():
     print(change)
 
     # calculate quarters
-    quarters = change % 25
+    quarters = change / 25
+    dimes = quarters % 25
+    
+    print(quarters)
+
 
 
 
