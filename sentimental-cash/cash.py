@@ -9,9 +9,15 @@ def main():
 
     # calculate quarters
     quarters = change / 25
-    dimes = (change % 25) / 10
-    nickels = (dimes % 10) / 5
-    pennies = (nickels % 5)
+    change = change % 25
+
+    dimes = change / 10
+    change = change % 10
+
+    nickels = change / 5
+    change = change % 5
+
+    pennies = change % 5
 
     # calculate minimum number of coins
     # print it out
