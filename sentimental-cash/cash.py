@@ -17,9 +17,6 @@ def main():
     print(int(coins))
 
 
-
-
-
 # prompt user for a non-negative float number
 def get_change():
     while True:
@@ -32,14 +29,3 @@ def get_change():
     return n
 
 main()
-
-    # dimes = int(change / 10)
-    # change = change % 10
-
-    # nickels = int(change / 5)
-    # change = change % 5
-
-    # pennies = change
-
-    # calculate minimum number of coins
-    # print it out
