@@ -3,6 +3,8 @@ from cs50 import get_float
 
 # ask user how much change he needs
 # output the minimum number of coins possible
+
+
 def main():
     # change in cents will be
     change = get_change() * 100
@@ -27,5 +29,6 @@ def get_change():
         except ValueError:
             print("Please provide a non-negative float number")
     return n
+
 
 main()
