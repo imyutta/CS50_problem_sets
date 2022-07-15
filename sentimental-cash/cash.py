@@ -7,8 +7,10 @@ def main():
     # change in cents will be
     change = get_change() * 100
 
+
     # calculate quarters
     quarters = change / 25
+    print(quarters)
     change = change % 25
 
     dimes = change / 10
@@ -17,7 +19,7 @@ def main():
     nickels = change / 5
     change = change % 5
 
-    pennies = change 
+    pennies = change
 
     # calculate minimum number of coins
     # print it out
