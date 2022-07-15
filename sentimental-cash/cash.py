@@ -9,14 +9,14 @@ def main():
 
 
     # calculate quarters
-    quarters = change / 25
+    quarters = int(change / 25)
     print(quarters)
     change = change % 25
 
-    dimes = change / 10
+    dimes = int(change / 10)
     change = change % 10
 
-    nickels = change / 5
+    nickels = int(change / 5)
     change = change % 5
 
     pennies = change
