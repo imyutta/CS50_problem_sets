@@ -1,4 +1,4 @@
 # TODO
 x = "german"
-y = x[0].capitalize()
+y = x.expandtabs()
 print(y)
