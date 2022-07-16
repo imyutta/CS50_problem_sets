@@ -1,4 +1,4 @@
 # TODO
-x = 5
-x = input()
+x = "german"
+y = capitalize(x[0])
 print(x)
