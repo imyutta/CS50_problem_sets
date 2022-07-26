@@ -17,6 +17,7 @@ if card_number % 2 == 0:
     for i in card_number:
         second_digit = int(i) * 2
         second_digits_sum += (seсond_digit % 10) + (seсond_digit / 10)
+        print(second_digits_sum)
 
 
 # add those mult_digits2 together (not the numbers, but their digits)
