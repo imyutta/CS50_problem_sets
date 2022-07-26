@@ -13,7 +13,7 @@ first_digit = 0
 first_digit_sum = 0
 
 # multiply every 2nd digit (counting from the 2nd from the end) by 2
-for i in range (card_number):
+for i in range(card_number):
     print (i)
 
 
