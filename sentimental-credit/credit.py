@@ -16,7 +16,7 @@ if card_number % 2 == 0:
     # multiply every 2nd digit (counting from the 2nd from the end) by 2
     for i in card_number:
         second_digit = int(i) * 2
-        second_digits_sum += seond_digit % 10
+        second_digits_sum += (seсond_digit % 10) + (seсond_digit / 10)
 
 
 # add those mult_digits2 together (not the numbers, but their digits)
