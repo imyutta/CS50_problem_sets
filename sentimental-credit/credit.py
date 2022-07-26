@@ -1,3 +1,3 @@
 # TODO
-import get_int in cs50
+from cs50 import get_int
 card_number = get_int("Number: ")
