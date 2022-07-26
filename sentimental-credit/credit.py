@@ -14,7 +14,7 @@ first_digit_sum = 0
 
 # multiply every 2nd digit (counting from the 2nd from the end) by 2
 for i in range(card_number):
-    print ("i")
+    print (a[i])
 
 
 # add those mult_digits2 together (not the numbers, but their digits)
