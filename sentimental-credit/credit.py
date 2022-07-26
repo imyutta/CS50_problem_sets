@@ -12,7 +12,7 @@ second_digits_sum = 0
 first_digit = 0
 first_digits_sum = 0
 
-if card_number % 2 == 0:
+if len(card_number) % 2 == 0:
     # multiply every 2nd digit (counting from the 2nd from the end) by 2
     for i in card_number:
         second_digit = int(i) * 2
