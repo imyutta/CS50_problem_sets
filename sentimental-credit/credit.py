@@ -1,4 +1,2 @@
 # TODO
-x = "german"
-y = x.expandtabs()
-print(y)
+card_number = get_int("Number: ")
