@@ -27,4 +27,3 @@ int collatz(int n)
     // printf("%s\n", pk);
     // printf("%p\n", pk);
 
-
