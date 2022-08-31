@@ -1,4 +1,8 @@
-from cs50 import get_int
+from cs50 import get_string
 
-n = get_int("n: ")
+s = get_string("agree? ")
 
+if s == "Y" or s == "y":
+    print("Agreed")
+elif s == "N" or s == "n":
+    print("Not agreed")
