@@ -1,5 +1,5 @@
 
 
-x = input("how much? ")
-y = input("how much? ")
+x = int(input("how much? "))
+y = int(input("how much? "))
 print(x + y)
