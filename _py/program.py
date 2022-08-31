@@ -1,3 +1,4 @@
+from cs50 import get_int
 
-answer = input("What is your name? ")
+answer = get_int("how much? ")
 print(f"hello, {answer}")
