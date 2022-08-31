@@ -10,4 +10,6 @@ except ValueError:
     print("Not an int")
     exit()
 
-print(f{x / y})
+z = x / y
+
+print(f"{z:.50f}")
