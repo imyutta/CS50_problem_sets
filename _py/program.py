@@ -1,5 +1,13 @@
 
+try:
+    x = int(input("x: "))
+except ValueError:
+    print("That is not an int!")
+    exit()
+try:
+    y = int(input("y: "))
+except ValueError:
+    print("Not an int")
+    exit()
 
-x = int(input("how much? "))
-y = int(input("how much? "))
 print(x + y)
