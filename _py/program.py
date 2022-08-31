@@ -1,8 +1,9 @@
 from cs50 import get_string
 
 s = get_string("agree? ")
+s = s.lower()
 
-if s == "Y" or s == "y":
+if s in ["y", "yes"]:
     print("Agreed")
-elif s == "N" or s == "n":
+elif s in ["n", "no"]:
     print("Not agreed")
