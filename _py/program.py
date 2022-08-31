@@ -10,4 +10,4 @@ except ValueError:
     print("Not an int")
     exit()
 
-print(x + y)
+print(x / y)
