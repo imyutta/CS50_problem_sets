@@ -1,4 +1,4 @@
- import cs50
+import cs50
 
-answer = get_int("how much? ")
+answer = cs50.get_int("how much? ")
 print(f"hello, {answer}")
