@@ -1,8 +1,9 @@
 def main():
-    for i in range(3):
-        mew()
 
-def mew():
-    print("mew")
+    mew(3)
+
+def mew(n):
+    for i in range(n):
+        print("mew")
 
 main()
