@@ -2,4 +2,4 @@ scores = [72, 73, 74]
 
 average = sum(scores) / len(scores)
 
-print
+print(f"Average: {average}")
