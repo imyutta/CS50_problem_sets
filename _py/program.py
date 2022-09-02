@@ -1,9 +1,6 @@
-def main():
+from cs50 import get_int
 
-    mew(3)
+n = get_int("Height: ")
 
-def mew(n):
-    for i in range(n):
-        print("mew")
-
-main()
+for i in range(n):
+    print("#")
