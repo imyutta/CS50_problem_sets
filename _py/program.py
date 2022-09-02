@@ -1,18 +1,5 @@
+scores = [72, 73, 74]
 
+average = sum(scores) / len(scores)
 
-def main():
-    height = get_height()
-    for i in range(height):
-        print("#" * 5 , end = " ")
-    print()
-
-def get_height():
-    while True:
-        try:
-            n = int(input("Height: "))
-            if n > 0:
-                break
-        except ValueError:
-            print("That is not an integer")
-    return n
-main()
+print
