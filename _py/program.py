@@ -1,7 +1,6 @@
-from cs50 import get_string
+from sys import argv
 
-before = get_string("before: ")
-print("After: ", end = "")
-
-after = before.upper()
-print(after)
+if len(argv) == 2:
+    print(f"hello, {argv[1]}")
+else:
+    print("hello, world")
