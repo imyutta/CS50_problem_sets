@@ -3,7 +3,7 @@
 def main():
     height = get_height()
     for i in range(height):
-        print("#", end = " ")
+        print("#" * 5 , end = " ")
     print()
 
 def get_height():
