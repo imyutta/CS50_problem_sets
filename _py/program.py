@@ -1,10 +1,11 @@
-import sys
+from cs50 import get_string
 
-names = ["Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"]
+people = {
+    "YA": "480",
+    "EA": "650"
+}
 
-if "ron" in names:
-    print("Found")
-    sys.exit(0)
-
-print("Not found")
-sys.exit(1)
+name = get_string("Name: ")
+if name in people:
+    number = people[name]
+    print(f"Number: {number}")
