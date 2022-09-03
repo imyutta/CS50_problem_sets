@@ -1,8 +1,7 @@
 import sys
 
-if len(sys.argv) !=2:
-    print("missing arg")
-    exit(1)
+numbers = [4,6,8,2,7,5,0]
 
-print(f"hello, {sys.argv[1]}")
-exit(0)
+if 0 in numbers:
+    print("found")
+    sys.exit(0)
