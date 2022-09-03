@@ -1,10 +1,10 @@
 import sys
 
-numbers = [4,6,8,2,7,5,0]
+names = ["Bill", "Charlie", "Fred", "George", "Ginny", "Percy", "Ron"]
 
-if 0 in numbers:
-    print("found")
+if "ron" in names:
+    print("Found")
     sys.exit(0)
 
-print("not found")
+print("Not found")
 sys.exit(1)
