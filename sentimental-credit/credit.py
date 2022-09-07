@@ -5,12 +5,12 @@ def main():
 # promt user for a card number
     card_number = get_string("Number: ")
 
-    if validation_check(card_number) == False:
-        print("invalid number")
-        return 1
-    else:
+    if validation_check(card_number):
         print("valid number")
         return 0
+    else:
+        print("invalid number")
+        return 1
 
 
 def validation_check(x):
