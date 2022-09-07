@@ -4,8 +4,14 @@ from cs50 import get_int
 # promt user for a card number
 card_number = get_int("Number: ")
 
-# every other digit, starting with the number’s second-to-last digit:
+# underline every other digit, starting with the number’s second-to-last digit:
 every_other_digit = 0
+
+# multiply each of the underlined digits by 2
+
+# add those products’ digits (i.e., not the products themselves) together:
+
+# add that sum to the sum of the digits that weren’t multiplied by 2 (starting from the end):
 
 # name "second_digit" means that we begun counting from the end
 # name first_digit means that we start counting from the end
