@@ -10,7 +10,7 @@ if validation_check(card_number) == false:
 
 
 def validation_check():
-
+    
 
 
 # underline every other digit, starting with the number’s second-to-last digit:
