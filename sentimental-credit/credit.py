@@ -4,10 +4,13 @@ from cs50 import get_int
 # promt user for a card number
 card_number = get_int("Number: ")
 
+# every other digit, starting with the number’s second-to-last digit:
+every_other_digit = 0
+
 # name "second_digit" means that we begun counting from the end
 # name first_digit means that we start counting from the end
 
-second_digit = 0
+
 second_digits_sum = 0
 first_digit = 0
 first_digits_sum = 0
