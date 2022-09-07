@@ -7,10 +7,10 @@ def main():
 
     if validation_check(card_number):
         print("valid number")
-        return 0
+
     else:
         print("invalid number")
-        return 1
+        
 
 
 def validation_check(x):
