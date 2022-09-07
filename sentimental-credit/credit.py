@@ -45,7 +45,7 @@ main()
 
 
 # underline every other digit, starting with the number’s second-to-last digit:
-every_other_digit = 0
+
 
 # multiply each of the underlined digits by 2
 
