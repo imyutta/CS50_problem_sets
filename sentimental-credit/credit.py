@@ -8,6 +8,9 @@ def main():
     if validation_check(card_number) == False:
         print("invalid number")
         return 1
+    else:
+        print("valid number")
+        return 0
 
 
 def validation_check(x):
