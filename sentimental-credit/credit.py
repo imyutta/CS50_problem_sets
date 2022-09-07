@@ -22,6 +22,18 @@ def validation_check(x):
             return true
         else:
             return false
+    else:
+        for i in range(1, x - 1, 2):
+            multiplied_digit = i * 2
+            sum += multiplied_digit % 10
+            sum += multiplied_digit // 10
+        for i in range(0, x, 2):
+            sum += i
+        if sum % 10 == 0:
+            return true
+        else:
+            return false
+
 
 
 
