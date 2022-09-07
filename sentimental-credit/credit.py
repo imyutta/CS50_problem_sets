@@ -16,12 +16,13 @@ def main():
 
 def validation_check(x):
     sum = 0
-    if len(x) % 2 == 0:
-        for i in range(0, x, 2):
+    length = len(x)
+    if length % 2 == 0:
+        for i in range(0, length, 2):
             multiplied_digit = int(i) * 2
             sum += multiplied_digit % 10
             sum += multiplied_digit // 10
-        for i in range(1, x, 2):
+        for i in range(1, length, 2):
             sum += int(i)
         if sum % 10 == 0:
             print("1")
@@ -30,11 +31,11 @@ def validation_check(x):
             print("2")
             return False
     else:
-        for i in range(1, x, 2):
+        for i in range(1, length, 2):
             multiplied_digit = int(i) * 2
             sum += multiplied_digit % 10
             sum += multiplied_digit // 10
-        for i in range(0, x, 2):
+        for i in range(0, length, 2):
             sum += int(i)
         if sum % 10 == 0:
             print("3")
