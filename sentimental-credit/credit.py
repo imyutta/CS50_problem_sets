@@ -13,6 +13,8 @@ every_other_digit = 0
 
 # add that sum to the sum of the digits that weren’t multiplied by 2 (starting from the end):
 
+# if the last digit is 0 - the number is ligit
+
 # name "second_digit" means that we begun counting from the end
 # name first_digit means that we start counting from the end
 
