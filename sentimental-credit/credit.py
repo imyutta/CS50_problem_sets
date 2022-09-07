@@ -19,11 +19,11 @@ def validation_check(x):
     if len(x) % 2 == 0:
         limit_1 = x - 1
         for i in range(0, limit_1, 2):
-            multiplied_digit = i * 2
+            multiplied_digit = int(i) * 2
             sum += multiplied_digit % 10
             sum += multiplied_digit // 10
         for i in range(1, x, 2):
-            sum += i
+            sum += int(i)
         if sum % 10 == 0:
             print("1")
             return True
@@ -33,11 +33,11 @@ def validation_check(x):
     else:
         limit_1 = x - 1
         for i in range(1, limit_1, 2):
-            multiplied_digit = i * 2
+            multiplied_digit = int(i) * 2
             sum += multiplied_digit % 10
             sum += multiplied_digit // 10
         for i in range(0, x, 2):
-            sum += i
+            sum += int(i)
         if sum % 10 == 0:
             print("3")
             return True
