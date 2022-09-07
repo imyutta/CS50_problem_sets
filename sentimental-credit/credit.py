@@ -1,9 +1,9 @@
 # TODO
-from cs50 import get_int
+from cs50 import get_int, get_string
 
 def main():
 # promt user for a card number
-    card_number = get_int("Number: ")
+    card_number = get_string("Number: ")
 
     if validation_check(card_number) == False:
         print("invalid number")
@@ -13,6 +13,7 @@ def main():
 def validation_check(x):
     sum = 0
     if len(x) % 2 == 0:
+        x = int(x)
         for i in range(0, x - 1, 2):
             multiplied_digit = i * 2
             sum += multiplied_digit % 10
@@ -24,6 +25,7 @@ def validation_check(x):
         else:
             return False
     else:
+        x = int(x)
         for i in range(1, x - 1, 2):
             multiplied_digit = i * 2
             sum += multiplied_digit % 10
