@@ -36,11 +36,11 @@ def validation_check(x):
 # add that sum to the sum of the remaining digits (that weren’t multiplied by 2)
     sum = 0
     for i in range(index_1, length, 2):
-        multiplied_digit = int(i) * 2
+        multiplied_digit = x[i] * 2
         sum += multiplied_digit % 10
         sum += multiplied_digit // 10
     for i in range(index_2, length, 2):
-        sum += int(i)
+        sum += x[i]
 
 
 # check if the last digit is 0
