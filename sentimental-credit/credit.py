@@ -3,7 +3,7 @@ from cs50 import get_int, get_string
 
 def main():
 # promt user for a card number
-    card_number = get_string("Number: ")
+    card_number = get_int("Number: ")
 
     if validation_check(card_number):
         print("valid number")
@@ -15,8 +15,7 @@ def main():
 
 def validation_check(x):
     sum = 0
-    if len(x) % 2 == 0:
-        x = int(x)
+    if len(str(x)) % 2 == 0:
         limit_1 = x - 1
         for i in range(0, limit_1, 2):
             multiplied_digit = i * 2
@@ -31,7 +30,6 @@ def validation_check(x):
             print("2")
             return False
     else:
-        x = int(x)
         limit_1 = x - 1
         for i in range(1, limit_1, 2):
             multiplied_digit = i * 2
