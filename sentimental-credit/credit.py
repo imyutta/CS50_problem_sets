@@ -1,12 +1,13 @@
 # TODO
 from cs50 import get_int
 
+def main():
 # promt user for a card number
-card_number = get_int("Number: ")
+    card_number = get_int("Number: ")
 
-if validation_check(card_number) == false:
-    print(invalid number)
-    return 1
+    if validation_check(card_number) == False:
+        print("invalid number")
+        return 1
 
 
 def validation_check(x):
@@ -19,9 +20,9 @@ def validation_check(x):
         for i in range(1, x, 2):
             sum += i
         if sum % 10 == 0:
-            return true
+            return True
         else:
-            return false
+            return False
     else:
         for i in range(1, x - 1, 2):
             multiplied_digit = i * 2
@@ -30,10 +31,11 @@ def validation_check(x):
         for i in range(0, x, 2):
             sum += i
         if sum % 10 == 0:
-            return true
+            return True
         else:
-            return false
+            return False
 
+main()
 
 
 
