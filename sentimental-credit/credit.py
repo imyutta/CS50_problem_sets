@@ -4,7 +4,7 @@ from cs50 import get_int
 # promt user for a card number
 card_number = get_int("Number: ")
 
-# name second_digit means that we start counting from the end
+# name "second_digit" means that we begun counting from the end
 # name first_digit means that we start counting from the end
 
 second_digit = 0
