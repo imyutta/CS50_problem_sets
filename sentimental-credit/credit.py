@@ -10,7 +10,7 @@ def main():
 
     else:
         print("invalid number")
-        
+
 
 
 def validation_check(x):
@@ -25,8 +25,10 @@ def validation_check(x):
         for i in range(1, x, 2):
             sum += i
         if sum % 10 == 0:
+            print("1")
             return True
         else:
+            print("2")
             return False
     else:
         x = int(x)
@@ -38,8 +40,10 @@ def validation_check(x):
         for i in range(0, x, 2):
             sum += i
         if sum % 10 == 0:
+            print("3")
             return True
         else:
+            print("4")
             return False
 
 main()
