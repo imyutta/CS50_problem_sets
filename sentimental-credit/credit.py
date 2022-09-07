@@ -9,6 +9,9 @@ if validation_check(card_number) == false:
     break
 
 
+def validation_check():
+
+
 
 # underline every other digit, starting with the number’s second-to-last digit:
 every_other_digit = 0
@@ -20,13 +23,13 @@ every_other_digit = 0
 # add that sum to the sum of the digits that weren’t multiplied by 2 (starting from the end):
 
 # if the last digit is 0 - the number is ligit
+    return true
+    return false
 
 
 
 
 
-def validation_check():
-    
 
 
 # name "second_digit" means that we begun counting from the end
