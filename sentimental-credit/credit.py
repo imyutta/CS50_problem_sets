@@ -15,7 +15,7 @@ def validation_check(x):
         for i in range(0, x - 1, 2):
             multiplied_digit = i * 2
             sum += multiplied_digit % 10
-            sum += multiplied_digit 
+            sum += multiplied_digit // 10
 
 
 # underline every other digit, starting with the number’s second-to-last digit:
