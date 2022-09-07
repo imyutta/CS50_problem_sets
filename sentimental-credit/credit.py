@@ -4,12 +4,9 @@ from cs50 import get_int, get_string
 def main():
 # promt user for a card number
     card_number = get_int("Number: ")
+    validation_check(card_number):
 
-    if validation_check(card_number):
-        print("valid number")
-
-    else:
-        print("invalid number")
+/
 
 
 
