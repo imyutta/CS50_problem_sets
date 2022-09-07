@@ -11,7 +11,8 @@ if validation_check(card_number) == false:
 
 def validation_check(x):
     if len(x) % 2 == 0:
-        for i in range(0, x)
+        for i in range(0, x - 1, 2):
+            i * 2
 
 
 # underline every other digit, starting with the number’s second-to-last digit:
