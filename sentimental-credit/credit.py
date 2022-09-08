@@ -7,19 +7,30 @@ def main():
 
 # check if it is a valid number
     if not validation_check(card_number):
-        print("Invalid number")
-        return 1
+        print("INVALID")
+    
 
+
+
+
+    if amex(card_number):
+        print("AMEX")
+    if mastercard():
+        print("MASTERCARD")
+    if visa():
+        print("VISA")
+    else:
+        print("INVALID")
+    return 0
+
+
+def amex(a):
 # find length of the card number
-    length = len(card_number)
-
+    length = len(a)
+    if length
 # find first two digits
     first_digit = card_number[0]
     second_digit = card_number[1]
-
-    if length == 15 and 
-
-
 
 
 def validation_check(x):
