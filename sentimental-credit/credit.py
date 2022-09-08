@@ -7,60 +7,25 @@ def main():
 
 # check if it is a valid number
     if not validation_check(card_number):
-        print("INVALID")
+        print("INVALIDff")
         return 1
 
 # check whether it is an American Express, MasterCard, or Visa card number
     if amex(card_number):
         print("AMEX")
+        return 0
     if mastercard(card_number):
         print("MASTERCARD")
+        return 0
+
     if visa(card_number):
         print("VISA")
+        return 0
     else:
         print("INVALID")
     return 0
 
 
-def amex(a):
-# check length of the card number
-    length = len(a)
-    if length != 15:
-        return False
-
-# check the first two digits
-    if a[0] != 3:
-        return False
-    if a[1] != 4 or a[1] != 7:
-        return False
-    else:
-        return True
-
-def mastercard(a):
-# check length of the card number
-    length = len(a)
-    if length != 16:
-        return False
-
-# check the first two digits
-    if a[0] != 5:
-        return False
-    if a[1] != 1 or a[1] != 5:
-        return False
-    else:
-        return True
-
-def visa(a):
-# check length of the card number
-    length = len(a)
-    if length != 13 or length != 16:
-        return False
-
-# check the first digit
-    if a[0] != 4:
-        return False
-    else:
-        return True
 
 
 def validation_check(x):
