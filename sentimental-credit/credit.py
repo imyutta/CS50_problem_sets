@@ -13,7 +13,11 @@ def main():
 # find length of the card number
     length = len(card_number)
 
-# find first digits
+# find first two digits
+    first_digit = card_number[0]
+    second_digit = card_number[1]
+
+    if length == 15 and 
 
 
 
