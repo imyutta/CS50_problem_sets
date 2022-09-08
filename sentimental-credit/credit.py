@@ -40,14 +40,52 @@ def validation_check(x):
         sum += multiplied_digit // 10
     for i in x[-1::-2]:
         sum += int(i)
-
-
 # check if the last digit is 0
     if sum % 10 == 0:
         return True
     else:
         return False
 
+
+def amex(a):
+# check length of the card number
+    length = len(a)
+    print(length)
+    if length != 15:
+        return False
+# check the first two digits
+    if a[0] != 3:
+        return False
+    if a[1] != 4 or a[1] != 7:
+        return False
+    else:
+        return True
+
+def mastercard(a):
+# check length of the card number
+    length = len(a)
+    if length != 16:
+        return False
+
+# check the first two digits
+    if a[0] != 5:
+        return False
+    if a[1] != 1 or a[1] != 5:
+        return False
+    else:
+        return True
+
+def visa(a):
+# check length of the card number
+    length = len(a)
+    if length != 13 or length != 16:
+        return False
+
+# check the first digit
+    if a[0] != 4:
+        return False
+    else:
+        return True
 main()
 
 
