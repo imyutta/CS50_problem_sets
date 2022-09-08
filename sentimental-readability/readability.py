@@ -31,5 +31,5 @@ from cs50 import get_string
     letters_average = (letters / words) * 100
     print(letters_average)
 
-# find S (sentences_average) the average number of sentences per 100 words in the text.
-
+# find S (sentences_average) the average number of sentences per 100 words in the text
+    sentences_average = (sentences / words) * 100
