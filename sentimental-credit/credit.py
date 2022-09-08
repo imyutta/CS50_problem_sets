@@ -15,7 +15,7 @@ def main():
 
 
 def validation_check(x):
-# we take every other digit
+# we take every other digit, starting with the number’s second-to-last digit:
 # multiply each of the digits by 2
 # add those products’ digits (i.e., not the products themselves) together
 # add that sum to the sum of the remaining digits (that weren’t multiplied by 2)
@@ -28,13 +28,13 @@ def validation_check(x):
         sum += x[i]
 
 
-# # check if the last digit is 0
-#     if sum % 10 == 0:
-#         print("1")
-#         return True
-#     else:
-#         print("2")
-#         return False
+# check if the last digit is 0
+    if sum % 10 == 0:
+        print("zero")
+        return True
+    else:
+        print("not zero")
+        return False
 
 main()
 
