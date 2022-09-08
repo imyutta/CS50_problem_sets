@@ -4,13 +4,13 @@ from cs50 import get_int, get_string
 def main():
 # promt user for a card number
     card_number = get_string("Number: ")
-    validation_check(card_number)
 
-    # if validation_check(card_number):
-    #     print("valid number")
+# check if it is a valid number
+    if validation_check(card_number):
+        print("zero")
 
-    # else:
-    #     print("invalid number")
+    else:
+        print("not zero")
 
 
 
@@ -30,10 +30,8 @@ def validation_check(x):
 
 # check if the last digit is 0
     if sum % 10 == 0:
-        print("zero")
         return True
     else:
-        print("not zero")
         return False
 
 main()
