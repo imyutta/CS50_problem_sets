@@ -23,12 +23,12 @@ def validation_check(x):
 #   index_1 = 0
 # if NO, we start to iterate from the second digit.
 #   index_1 = 1
-    if length % 2 == 0:
-        index_1 = 0
-        index_2 = 1
-    else:
-        index_1 = 1
-        index_2 = 0
+    # if length % 2 == 0:
+    #     index_1 = 0
+    #     index_2 = 1
+    # else:
+    #     index_1 = 1
+    #     index_2 = 0
 
 # we take every other digit
 # multiply each of the digits by 2
