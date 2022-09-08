@@ -1,5 +1,5 @@
 # TODO
-from cs50 import get_int, get_string
+from cs50 import get_string
 
 def main():
 # promt user for a card number
@@ -10,6 +10,10 @@ def main():
         print("Invalid number")
         return 1
 
+# find length of the card number
+    length = len(card_number)
+
+# find first digits
 
 
 
