@@ -40,6 +40,15 @@ def main():
 
 # compute Coleman-Liau index
     index = 0.0588 * letters_average - 0.296 * sentences_average - 15.8
-    #index = round(index)
+    index = round(index)
     print(index, "index")
+
+# print the result
+    if index >= 16:
+        print("Grade 16+")
+    if index < 1:
+        print("Before Grade 1")
+    else:
+        print("Grade ", index)
+
 main()
