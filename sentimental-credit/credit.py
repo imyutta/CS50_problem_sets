@@ -25,7 +25,7 @@ def validation_check(x):
         sum += multiplied_digit % 10
         sum += multiplied_digit // 10
     for i in x[-1::-2]:
-        sum += x[i]
+        sum += int(i)
 
 
 # check if the last digit is 0
