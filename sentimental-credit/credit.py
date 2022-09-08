@@ -7,7 +7,7 @@ def main():
 
 # check if it is a valid number
     if not validation_check(card_number):
-        print("INVALIDff")
+        print("INVALID")
         return 1
 
 # check whether it is an American Express, MasterCard, or Visa card number
