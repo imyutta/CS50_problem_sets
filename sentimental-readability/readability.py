@@ -22,7 +22,7 @@ def main():
     for i in text:
         if i.isalpha():
             letters += 1
-    print(letters + "letters")
+    print(letters, "letters")
 
 # find the amount of sentences
 # any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
@@ -30,7 +30,7 @@ def main():
     for i in text:
         if i == "." or i == "!" or i == "?":
             sentences += 1
-    print(sentences + "sentences")
+    print(sentences, "sentences")
 
 
 #  Coleman-Liau index is computed as 0.0588 * L - 0.296 * S - 15.8
@@ -42,5 +42,5 @@ def main():
 
 # compute Coleman-Liau index
     index = 0.0588 * letters_average - 0.296 * sentences_average - 15.8
-    print(index + "index")
+    print(index, "index")
 main()
