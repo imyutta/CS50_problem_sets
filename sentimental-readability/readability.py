@@ -14,6 +14,7 @@ from cs50 import get_string
     for i in text:
         if i.isspace():
             words += 1
+    print(words)
 
 
 # find the amount of letters
@@ -22,17 +23,21 @@ from cs50 import get_string
     for i in text:
         if i.isalpha():
             letters += 1
+    print(letters)
 
 # find the amount of sentences
 # any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
     sentences = 0
     for i in text:
-        if i
+        if i == "." or i == "!" or i == "?":
+            sentences += 1
+    print(sentences)
+
 
 
 # find L (letters_average) an average amount of letters per 100 words
     letters_average = (letters / words) * 100
-    print(letters_average)
 
 # find S (sentences_average) the average number of sentences per 100 words in the text
     sentences_average = (sentences / words) * 100
+    
