@@ -55,7 +55,7 @@ def amex(a):
 # check the first two digits
     if int(a[0]) != 3:
         return False
-    if int(a[1]) != 4 or int(a[1]) != 7:
+    if int(a[1]) != 4 and int(a[1]) != 7:
         return False
     else:
         return True
@@ -68,14 +68,14 @@ def mastercard(a):
 # check the first two digits
     if int(a[0]) != 5:
         return False
-    if int(a[1]) != 1 or int(a[1]) != 5:
+    if int(a[1]) != 1 and int(a[1]) != 5:
         return False
     else:
         return True
 
 def visa(a):
 # check length of the card number
-    if len(a) != 13 or len(a) != 16:
+    if len(a) != 13 and len(a) != 16:
         return False
 
 # check the first digit
