@@ -25,6 +25,9 @@ from cs50 import get_string
 
 # find the amount of sentences
 # any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
+    sentences = 0
+    for i in text:
+        if i
 
 
 # find L (letters_average) an average amount of letters per 100 words
