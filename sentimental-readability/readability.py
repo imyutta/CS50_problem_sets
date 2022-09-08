@@ -1,7 +1,7 @@
 # TODO
 
 from cs50 import get_string
-# import sys
+import sys
 
 #  Coleman-Liau index is computed as 0.0588 * L - 0.296 * S - 15.8
 
@@ -40,4 +40,3 @@ from cs50 import get_string
 
 # find S (sentences_average) the average number of sentences per 100 words in the text
     sentences_average = (sentences / words) * 100
-    
