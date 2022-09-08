@@ -35,6 +35,8 @@ def validation_check(x):
 # add those products’ digits (i.e., not the products themselves) together
 # add that sum to the sum of the remaining digits (that weren’t multiplied by 2)
     sum = 0
+    for i in range(x[])
+
     for i in range(index_1, length, 2):
         multiplied_digit = x[i] * 2
         sum += multiplied_digit % 10
