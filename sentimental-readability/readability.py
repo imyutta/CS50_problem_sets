@@ -11,7 +11,7 @@ def main():
     for i in text:
         if i.isspace():
             words += 1
-    print(words, "words")
+    #print(words, "words")
 
 
 # find the amount of letters
@@ -20,7 +20,7 @@ def main():
     for i in text:
         if i.isalpha():
             letters += 1
-    print(letters, "letters")
+    #print(letters, "letters")
 
 # find the amount of sentences
 # any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.
@@ -28,7 +28,7 @@ def main():
     for i in text:
         if i == "." or i == "!" or i == "?":
             sentences += 1
-    print(sentences, "sentences")
+    #print(sentences, "sentences")
 
 
 #  Coleman-Liau index is computed as 0.0588 * L - 0.296 * S - 15.8 and rounds to the nearest integer
@@ -41,12 +41,12 @@ def main():
 # compute Coleman-Liau index
     index = 0.0588 * letters_average - 0.296 * sentences_average - 15.8
     index = round(index)
-    print(index, "index")
+    #print(index, "index")
 
 # print the result
     if index >= 16:
         print("Grade 16+")
-    if index < 1:
+    elif index < 1:
         print("Before Grade 1")
     else:
         print("Grade ", index)
