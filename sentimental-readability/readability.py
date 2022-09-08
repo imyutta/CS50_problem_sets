@@ -2,8 +2,6 @@
 from cs50 import get_string
 
 def main():
-
-
 # prompt user for a text
     text = get_string("Text: ")
 
@@ -33,7 +31,7 @@ def main():
     print(sentences, "sentences")
 
 
-#  Coleman-Liau index is computed as 0.0588 * L - 0.296 * S - 15.8
+#  Coleman-Liau index is computed as 0.0588 * L - 0.296 * S - 15.8 and rounds to the nearest integer
 # find L (letters_average) an average amount of letters per 100 words
     letters_average = (letters / words) * 100
 
