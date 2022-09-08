@@ -1,8 +1,9 @@
 # TODO
 from cs50 import get_string
 
+
 def main():
-# prompt user for a text
+    # prompt user for a text
     text = get_string("Text: ")
 
 # find the amount of words
@@ -50,5 +51,6 @@ def main():
         print("Before Grade 1")
     else:
         print("Grade ", index)
+
 
 main()
