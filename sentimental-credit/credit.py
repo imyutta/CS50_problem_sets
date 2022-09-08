@@ -50,7 +50,7 @@ def validation_check(x):
 def amex(a):
 # check length of the card number
     length = len(a)
-    print(length)
+    print(a[0])
     if length != 15:
         return False
 # check the first two digits
