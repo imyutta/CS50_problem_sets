@@ -13,7 +13,7 @@ def main():
     for i in text:
         if i.isspace():
             words += 1
-    print(f{words + "words"})
+    print("words", words)
 
 
 # find the amount of letters
