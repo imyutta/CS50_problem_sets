@@ -49,39 +49,37 @@ def validation_check(x):
 
 def amex(a):
 # check length of the card number
-    length = len(a)
-    if length == 15:
-        return True
-# check the first two digits
-    if a[0] != 3:
+    if len(a) != 15:
         return False
-    if a[1] != 4 or a[1] != 7:
+
+# check the first two digits
+    if int(a[0]) != 3:
+        return False
+    if int(a[1]) != 4 or int(a[1]) != 7:
         return False
     else:
         return True
 
 def mastercard(a):
 # check length of the card number
-    length = len(a)
-    if length != 16:
+    if len(a) != 16:
         return False
 
 # check the first two digits
-    if a[0] != 5:
+    if int(a[0]) != 5:
         return False
-    if a[1] != 1 or a[1] != 5:
+    if int(a[1]) != 1 or int(a[1]) != 5:
         return False
     else:
         return True
 
 def visa(a):
 # check length of the card number
-    length = len(a)
-    if length != 13 or length != 16:
+    if len(a) != 13 or len(a) != 16:
         return False
 
 # check the first digit
-    if a[0] != 4:
+    if int(a[0]) != 4:
         return False
     else:
         return True
