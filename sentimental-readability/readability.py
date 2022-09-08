@@ -40,6 +40,6 @@ def main():
 
 # compute Coleman-Liau index
     index = 0.0588 * letters_average - 0.296 * sentences_average - 15.8
-    index = index.round()
+    #index = round(index)
     print(index, "index")
 main()
