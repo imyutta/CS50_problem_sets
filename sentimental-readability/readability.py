@@ -9,11 +9,11 @@ def main():
 
 # find the amount of words
 # any sequence of characters separated by spaces should count as a word
-    words = 0
+    words = 1
     for i in text:
         if i.isspace():
             words += 1
-    print("words", words)
+    print(words, "words")
 
 
 # find the amount of letters
