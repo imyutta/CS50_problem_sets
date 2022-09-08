@@ -6,11 +6,11 @@ def main():
     card_number = get_string("Number: ")
 
 # check if it is a valid number
-    if validation_check(card_number):
-        print("zero")
+    if not validation_check(card_number):
+        print("Invalid number")
+        return 1
 
-    else:
-        print("not zero")
+
 
 
 
