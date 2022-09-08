@@ -1,7 +1,7 @@
 # TODO
 
 from cs50 import get_string
-import sys
+# import sys
 
 #  Coleman-Liau index is computed as 0.0588 * L - 0.296 * S - 15.8
 
@@ -12,7 +12,8 @@ import sys
 # any sequence of characters separated by spaces should count as a word
     words = 0
     for i in text:
-        
+        if i.isspace():
+            words += 1
 
 
 # find the amount of letters
@@ -27,7 +28,7 @@ import sys
 
 
 # find L (letters_average) an average amount of letters per 100 words
-    letters_average = letters / 100
+    letters_average = (letters / words) * 100
     print(letters_average)
 
 # find S (sentences_average) the average number of sentences per 100 words in the text.
