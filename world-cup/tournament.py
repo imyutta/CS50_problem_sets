@@ -20,7 +20,7 @@ def main():
         reader = csv.reader(file)
         next(reader)
         for row in reader:
-            
+            teams = row
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
