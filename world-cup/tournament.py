@@ -16,7 +16,7 @@ def main():
 
     teams = []
     # Read teams into memory from file
-    with open(sys.argv[1], "r") as file:
+    with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         next(reader)
         for row in reader:
