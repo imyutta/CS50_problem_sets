@@ -17,10 +17,10 @@ def main():
     teams = []
     # Read teams into memory from file
     with open(sys.argv[1]) as file:
+        reader = csv.DictReader(file)
+        next(reader)
         for x in file:
-            print(x[0])
-        # reader = csv.DictReader(file)
-        # next(reader)
+            print(x[0:4])
         # for row in reader:
         #     teams = row
 
