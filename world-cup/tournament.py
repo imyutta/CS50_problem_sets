@@ -20,7 +20,7 @@ def main():
         reader = csv.DictReader(file)
         next(reader)
         for x in reader:
-            print(x)
+            print(x["team"])
         # for row in reader:
         #     teams = row
 
