@@ -29,6 +29,8 @@ def main():
     # and keep track of how many times each team wins in the counts dictionary.
     for i in range(N):
         winner = simulate_tournament(teams)
+        if winner in counts:
+            counts[winner] += 1
         counts.update(teams[i])
 
     print(counts)
