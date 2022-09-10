@@ -23,7 +23,7 @@ def main():
             draft = x
             draft["rating"] = int(draft["rating"])
             teams.append(draft)
-
+    print(len(teams))
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -58,7 +58,7 @@ def simulate_round(teams):
 def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # T
-    
+
     return()
 
 
