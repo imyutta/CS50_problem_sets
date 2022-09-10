@@ -22,7 +22,8 @@ def main():
             draft = x
             draft["rating"] = int(draft["rating"])
             teams.append(draft)
-    print(len(teams))
+    simulate_tournament(teams)
+
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
@@ -58,10 +59,12 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # This function should accept as input a list of teams and
     # should repeatedly simulate rounds until you’re left with one team.
-    while len(teams) > 1:
-        for i in range(0, len(teams), 2):
-            simulate_round
-    return(teams["team"])
+    winners = teams
+    while len(winners) > 1:
+        for i in range(0, len(winners), 2):
+            winners = simulate_round(winners)
+    print(winners)
+    return(winners["team"])
 
 
 if __name__ == "__main__":
