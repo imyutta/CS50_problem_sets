@@ -22,11 +22,11 @@ def main():
             draft = x
             draft["rating"] = int(draft["rating"])
             teams.append(draft)
-    simulate_tournament(teams)
 
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
+        winner = simulate_tournament(teams)
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
