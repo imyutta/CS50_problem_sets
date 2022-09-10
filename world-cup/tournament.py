@@ -24,9 +24,6 @@ def main():
             draft["rating"] = int(draft["rating"])
             teams.append(draft)
 
-    print(teams)
-        # for row in reader:
-        #     teams = row
 
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
