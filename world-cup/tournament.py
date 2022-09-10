@@ -27,7 +27,8 @@ def main():
     counts = {}
     # run N tournament simulations,
     # and keep track of how many times each team wins in the counts dictionary.
-    for i in teams["team"]:
+    for i in range(N):
+        winner = simulate_tournament(teams)
         counts.update(teams[i])
 
     print(counts)
