@@ -25,8 +25,8 @@ def main():
 
 
     counts = {}
-    for i in range(0, len(teams)):
-        counts.update(teams["team"])
+    for i in teams["team"]:
+        counts.update(teams[i])
 
     print(counts)
     # TODO: Simulate N tournaments and keep track of win counts
