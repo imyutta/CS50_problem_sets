@@ -26,6 +26,7 @@ def main():
 
     counts = {}
     for i in teams:
+        counts = teams
         # counts.append(teams["team"])
     print(counts)
     # TODO: Simulate N tournaments and keep track of win counts
