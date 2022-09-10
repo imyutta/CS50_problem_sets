@@ -23,7 +23,6 @@ def main():
             draft["rating"] = int(draft["rating"])
             teams.append(draft)
 
-
     counts = {}
     # run N tournament simulations,
     # and keep track of how many times each team wins in the counts dictionary.
@@ -34,7 +33,6 @@ def main():
         else:
             counts[winner] = 1
     print(counts)
-
 
     # Print each team's chances of winning, according to simulation
     for team in sorted(counts, key=lambda team: counts[team], reverse=True):
