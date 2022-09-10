@@ -68,7 +68,7 @@ def simulate_tournament(teams):
     # This function should accept as input a list of teams and
     # should repeatedly simulate rounds until you’re left with one team.
     while len(teams) > 1:
-        winners = simulate_round(winners)
+        teams = simulate_round(teams)
 
     return teams[0]["team"]
 
