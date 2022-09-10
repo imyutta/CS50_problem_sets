@@ -25,7 +25,6 @@ def main():
     simulate_tournament(teams)
 
 
-
     counts = {}
     # TODO: Simulate N tournaments and keep track of win counts
 
