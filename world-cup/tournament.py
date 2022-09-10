@@ -19,8 +19,8 @@ def main():
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         next(reader)
-        for x in file:
-            print(x[0:4])
+        for x in reader:
+            print(x)
         # for row in reader:
         #     teams = row
 
