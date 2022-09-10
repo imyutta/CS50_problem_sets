@@ -60,7 +60,7 @@ def simulate_tournament(teams):
     # should repeatedly simulate rounds until you’re left with one team.
     while len(teams) > 1:
         for i in range(0, len(teams), 2):
-            simulate
+            simulate_round
     return(teams["team"])
 
 
