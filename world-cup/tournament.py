@@ -21,6 +21,7 @@ def main():
         next(reader)
         for x in reader:
             teams = x
+            teams += 1
     print(teams)
         # for row in reader:
         #     teams = row
