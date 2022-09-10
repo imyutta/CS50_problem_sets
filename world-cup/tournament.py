@@ -63,6 +63,7 @@ def simulate_tournament(teams):
     """Simulate a tournament. Return name of winning team."""
     # This function should accept as input a list of teams and
     # should repeatedly simulate rounds until you’re left with one team.
+    winners = []
     winners = teams
     while len(winners) > 1:
         for i in range(0, len(winners), 2):
