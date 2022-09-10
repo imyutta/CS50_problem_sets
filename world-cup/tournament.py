@@ -22,7 +22,8 @@ def main():
             draft = x
             draft["rating"] = int(draft["rating"])
             teams.append(draft)
-    simulate_tournament(teams)
+    final = simulate_tournament(teams)
+    print(final, "sssssssssssss")
 
 
     counts = {}
@@ -64,8 +65,8 @@ def simulate_tournament(teams):
         for i in range(0, len(winners), 2):
             winners = simulate_round(winners)
             print(winners)
-    print(winners["team"], "sssssssssssss")
-    return(winners["team"])
+
+    return(winners)
 
 
 if __name__ == "__main__":
