@@ -19,6 +19,7 @@ def main():
         # append all the people to a variable called database
         for x in reader:
             database.append(x)
+            
         print (database[0].[1])
     # Read DNA sequence file into a variable called sequence
     sequence = {}
