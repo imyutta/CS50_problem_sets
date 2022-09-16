@@ -21,9 +21,10 @@ def main():
         for x in file2:
             sequence = x
 
+    print(sequence)
+
     # TODO: Find longest match of each STR in DNA sequence
     str1 = database[0][1]
-        print(sequence)
 
 
     # TODO: Check database for matching profiles
