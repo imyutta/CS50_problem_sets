@@ -10,7 +10,7 @@ def main():
 
     # Read database file into a variable
     database = []
-    strs = {}
+    strs = []
 
     with open(sys.argv[1]) as file1:
         reader = csv.DictReader(file1)
@@ -29,7 +29,7 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-    for x in se
+    longest_match(sequence, STRs[0])
     print(database[-1])
 
 
