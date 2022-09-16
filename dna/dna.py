@@ -18,7 +18,8 @@ def main():
     # TODO: Read DNA sequence file into a variable
     sequense = {}
     with open(sys.argv[2]) as file2:
-        sequense = file2
+        for x in file2:
+            sequense = x
     print(sequense)
 
 
