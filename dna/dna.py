@@ -13,13 +13,12 @@ def main():
     strs = {}
     with open(sys.argv[1]) as file1:
         reader = csv.DictReader(file1)
-        strs = reader.fieldnames[2][1:]
-        print(strs)
+        strs = reader.fieldnames[1:]
         for x in reader:
             database.append(x)
 
     # TODO: Read DNA sequence file into a variable
-
+    
     with open(sys.argv[2]) as file2:
         for x in file2:
             sequence = x
