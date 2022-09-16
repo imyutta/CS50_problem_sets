@@ -29,7 +29,7 @@ def main():
 
 
     # TODO: Find longest match of each STR in DNA sequence
-
+    for x in se
     print(database[-1])
 
 
