@@ -20,7 +20,7 @@ def main():
         for x in reader:
             database.append(x)
 
-        # print (database[0].[1])
+        print (database["name"][1])
     # Read DNA sequence file into a variable called sequence
     sequence = {}
     with open(sys.argv[2]) as file2:
@@ -31,7 +31,7 @@ def main():
 
     # TODO: Find longest match of each STR in DNA sequence
     strs_amount = len(strs)
-    # check if 
+    # check if
     for x in strs_amount:
         longest_run = longest_match(sequence, strs[0])
         # if longest_run in database[x]:
