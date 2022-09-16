@@ -4,23 +4,24 @@ import sys
 
 def main():
 
-    # TODO: Check for command-line usage
+    # Check for command-line usage
     if len(sys.argv) != 3:
         sys.exit("Usage: enter two command-line arguments")
 
-    # TODO: Read database file into a variable
+    # Read database file into a variable
     database = []
     strs = {}
+
     with open(sys.argv[1]) as file1:
         reader = csv.DictReader(file1)
-        # read STRs in a variable called strs
+        # read STRs into a variable called strs
         strs = reader.fieldnames[1:]
-        # append all the people to the database
+        # append all the people to a variable called database
         for x in reader:
             database.append(x)
 
-    # TODO: Read DNA sequence file into a variable
-
+    # Read DNA sequence file into a variable called sequence
+    sequence = {}
     with open(sys.argv[2]) as file2:
         for x in file2:
             sequence = x
