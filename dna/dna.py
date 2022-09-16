@@ -8,7 +8,6 @@ def main():
     if len(sys.argv) != 3:
         sys.exit("Usage: enter two command-line arguments")
 
-
     # TODO: Read database file into a variable
 
     # TODO: Read DNA sequence file into a variable
