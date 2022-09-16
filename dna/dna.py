@@ -9,10 +9,13 @@ def main():
         sys.exit("Usage: enter two command-line arguments")
 
     # TODO: Read database file into a variable
+    database = []
     with open(sys.argv[1]) as file:
         reader = csv.DictReader(file)
         for x in reader:
-            
+            database.append(x)
+        print(database)
+
 
     # TODO: Read DNA sequence file into a variable
 
