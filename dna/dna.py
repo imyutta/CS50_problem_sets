@@ -16,14 +16,15 @@ def main():
             database.append(x)
 
     # TODO: Read DNA sequence file into a variable
-    sequense = {}
+    sequence = {}
     with open(sys.argv[2]) as file2:
         for x in file2:
-            sequense = x
-    print(sequense)
-
+            sequence = x
 
     # TODO: Find longest match of each STR in DNA sequence
+    str1 = database[0][1]
+        print(sequence)
+
 
     # TODO: Check database for matching profiles
 
