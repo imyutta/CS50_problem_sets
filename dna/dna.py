@@ -40,7 +40,7 @@ def main():
         matches_amount_needed = len(strs)
 
         for x in strs:
-            print(int(database[x]))
+            print(x)
             if int(database[x]) != strs_dyctionary[x]:
                 continue
             matches_amount += 1
