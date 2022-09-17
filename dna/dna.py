@@ -28,8 +28,11 @@ def main():
             sequence = x
 
 
+    # make a dictionary for STRs in order to count the amounts of matches
+    strs_dictionary 
 
     # TODO: Find longest match of each STR in DNA sequence
+
     strs_amount = len(strs)
     # check if
     for x in strs_amount:
