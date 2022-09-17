@@ -33,7 +33,6 @@ def main():
 
     for x in strs:
         strs_dictionary[x] = longest_match(sequence, x)
-        # if longest_run in database[x]:
 
     # TODO: Check database for matching profiles
     for x in database:
