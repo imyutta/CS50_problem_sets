@@ -10,12 +10,12 @@ def main():
 
     # Read database file into a variable
     database = []
-    # make a list of STRs
+    # Make a list of STRs
     strs = []
 
     with open(sys.argv[1]) as file1:
         reader = csv.DictReader(file1)
-        # read STRs into a variable called strs
+        # Read STRs into a variable called strs
         strs = reader.fieldnames[1:]
         # append all the people to a variable called database
         for x in reader:
@@ -27,7 +27,7 @@ def main():
         for x in file2:
             sequence = x
 
-    # TODO: Find longest match of each STR in DNA sequence
+    # Find longest match of each STR in DNA sequence
     # make a dictionary for STRs in order to count the amounts of matches
     strs_dictionary = dict.fromkeys(strs, 0)
 
