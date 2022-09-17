@@ -34,11 +34,9 @@ def main():
         strs_dictionary[x] = longest_match(sequence, x)
         # if longest_run in database[x]:
 
-    print(strs[1])
-    print(database[-1])
-
-
     # TODO: Check database for matching profiles
+    for x in database:
+        
 
     return
 
