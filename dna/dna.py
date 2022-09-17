@@ -36,9 +36,21 @@ def main():
 
     # TODO: Check database for matching profiles
     for x in database:
-        
+        matches_amount = 0
+        matches_amount_needed = len(strs)
 
-    return
+        for x in strs:
+            print(int(database[x]))
+            if database[x] != strs_dyctionary[x]:
+                continue
+            matches_amount += 1
+
+        if matches_amount == matches_amount_needed:
+            print(database["name"])
+            sys.exit()
+
+    print("No match")
+    exit()
 
 
 def longest_match(sequence, subsequence):
