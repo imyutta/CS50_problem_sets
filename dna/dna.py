@@ -29,7 +29,7 @@ def main():
 
 
     # make a dictionary for STRs in order to count the amounts of matches
-    strs_dictionary 
+    strs_dictionary = dict.fromkeys(strs, 0)
 
     # TODO: Find longest match of each STR in DNA sequence
 
