@@ -31,21 +31,21 @@ def main():
     # make a dictionary for STRs in order to count the amounts of matches
     strs_dictionary = dict.fromkeys(strs, 0)
 
-    for x in strs:
-        strs_dictionary[x] = longest_match(sequence, x)
+    for str in strs:
+        strs_dictionary[str] = longest_match(sequence, str)
 
-    # TODO: Check database for matching profiles
-    for x in database:
+    # Check database for matching profiles
+    for person in database:
         matches_amount = 0
         matches_amount_needed = len(strs)
 
-        for y in strs:
-            if int(x[y]) != strs_dictionary[y]:
+        for str in strs:
+            if int(person[str]) != strs_dictionary[str]:
                 continue
             matches_amount += 1
 
         if matches_amount == matches_amount_needed:
-            print(x["name"])
+            print(person["name"])
             sys.exit()
 
     print("No match")
