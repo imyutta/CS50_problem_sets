@@ -41,7 +41,7 @@ def main():
 
         for x in strs:
             print(int(database[x]))
-            if database[x] != strs_dyctionary[x]:
+            if int(database[x]) != strs_dyctionary[x]:
                 continue
             matches_amount += 1
 
