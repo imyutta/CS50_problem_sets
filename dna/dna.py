@@ -26,7 +26,6 @@ def main():
         for x in file2:
             sequence = x
 
-     print(database[strs])
     # TODO: Find longest match of each STR in DNA sequence
     # make a dictionary for STRs in order to count the amounts of matches
     strs_dictionary = dict.fromkeys(strs, 0)
@@ -39,9 +38,8 @@ def main():
         matches_amount = 0
         matches_amount_needed = len(strs)
 
-        for x in strs:
-            print(x)
-            if int(database[x]) != strs_dyctionary[x]:
+        for y in strs:
+            if int(database[y]) != strs_dictionary[y]:
                 continue
             matches_amount += 1
 
