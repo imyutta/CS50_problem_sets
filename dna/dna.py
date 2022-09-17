@@ -10,6 +10,7 @@ def main():
 
     # Read database file into a variable
     database = []
+    # make a list of STRs
     strs = []
 
     with open(sys.argv[1]) as file1:
@@ -39,12 +40,12 @@ def main():
         matches_amount_needed = len(strs)
 
         for y in strs:
-            if int(database[y]) != strs_dictionary[y]:
+            if int(x[y]) != strs_dictionary[y]:
                 continue
             matches_amount += 1
 
         if matches_amount == matches_amount_needed:
-            print(database["name"])
+            print(x["name"])
             sys.exit()
 
     print("No match")
