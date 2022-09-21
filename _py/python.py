@@ -10,4 +10,4 @@ with open("favorites.csv", "r") as file:
             titles.append(row["title"])
 
 for title in titles:
-    print(row["title"])
+    print(title)
