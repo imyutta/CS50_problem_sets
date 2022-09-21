@@ -1,6 +1,6 @@
 import csv
 
-titles =[]
+titles = set()
 
 with open("favorites.csv", "r") as file:
     reader = csv.DictReader(file)
