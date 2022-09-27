@@ -7,7 +7,7 @@ with open("favorites.csv", "r") as file:
 
     for row in reader:
         title = row["title"].strip().upper()
-        titles.add(title)
+        titles[title] += 1
 
 for title in sorted(titles):
     print(title)
