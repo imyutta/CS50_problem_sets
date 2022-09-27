@@ -13,4 +13,4 @@ with open("favorites.csv", "r") as file:
             titles[title] = 1
 
 for title in sorted(titles):
-    print(title)
+    print(title, titles[title])
