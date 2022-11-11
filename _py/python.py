@@ -7,4 +7,4 @@ with open("favorites.csv", "r") as file:
 
     for row in reader:
         if not row["title"] in titles:
-        print(row["title"])
+            titles.append(row["title"])
