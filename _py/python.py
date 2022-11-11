@@ -13,3 +13,6 @@ with open("favorites.csv", "r") as file:
 
 for title in sorted(titles):
     print(title)
+
+def get_value(title):
+    return titles[title]
