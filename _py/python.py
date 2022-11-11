@@ -16,3 +16,6 @@ for title in sorted(titles):
 
 def get_value(title):
     return titles[title]
+
+for title in sorted(titles, key=get_value, reverse=True):
+    print(title,titles[title])
