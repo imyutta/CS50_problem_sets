@@ -9,5 +9,5 @@ with open("favorites.csv", "r") as file:
         title = row["title"].strip().upper()
         titles.add(title)
 
-for title in titles:
+for title in sorted(titles):
     print(title)
