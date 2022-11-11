@@ -11,8 +11,5 @@ with open("favorites.csv", "r") as file:
             titles[title] = 0
         titles[title] += 1
 
-def get_value(title):
-    return titles[title]
-
 for title in sorted(titles, key=labdma title: title[title], reverse=True):
     print(title,titles[title])
