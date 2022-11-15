@@ -7,9 +7,7 @@ with open("favorites.csv", "r") as file:
 
     for row in reader:
         title = row["title"].strip().upper()
-        if not title in titles:
-            titles[title] = 0
-        titles[title] += 1
+        if title == "THE OFFICE":
+            counter += 1
 
-for title in sorted(titles, key=labdma title: title[title], reverse=True):
-    print(title,titles[title])
+print(f"Number of people who like The Office: {counter}")
