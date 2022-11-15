@@ -1,6 +1,6 @@
 import csv
 
-titles = {}
+counter = 0
 
 with open("favorites.csv", "r") as file:
     reader = csv.DictReader(file)
