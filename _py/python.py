@@ -1,19 +1,19 @@
-import csv
-import re
-titles = {}
-counter = 0
+# import csv
+# import re
+# titles = {}
+# counter = 0
 
-with open("favorites.csv", "r") as file:
-    reader = csv.DictReader(file)
+# with open("favorites.csv", "r") as file:
+#     reader = csv.DictReader(file)
 
-    for row in reader:
-        title = row["title"].strip().upper()
-        #if re.search("^(OFFICE|THE OFFICE)$", title):
-           # counter += 1
-        titles = title
+#     for row in reader:
+#         title = row["title"].strip().upper()
+#         #if re.search("^(OFFICE|THE OFFICE)$", title):
+#            # counter += 1
+#         titles = title
 
-#print(f"Number of people who like The Office: {counter}")
-print(title)
+# #print(f"Number of people who like The Office: {counter}")
+# print(title)
 
 import csv
 
