@@ -1,6 +1,7 @@
 import csv
 import re
 
+title = input("Title: ").strip().upper()
 counter = 0
 
 with open("favorites.csv", "r") as file:
