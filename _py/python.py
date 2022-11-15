@@ -7,7 +7,7 @@ with open("favorites.csv", "r") as file:
 
     for row in reader:
         title = row["title"].strip().upper()
-        if title == "THE OFFICE":
+        if "OFFICE" in title:
             counter += 1
 
 print(f"Number of people who like The Office: {counter}")
