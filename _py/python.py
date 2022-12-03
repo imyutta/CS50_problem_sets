@@ -2,8 +2,8 @@ import cs50
 import csv
 
 # Create database
-open("favorites8.db", "w").close()
-db = cs50.SQL("sqlite:///favorites8.db")
+open("fa1.db", "w").close()
+db = cs50.SQL("sqlite:///fa1.db")
 
 # Create tables
 db.execute("CREATE TABLE shows (id INTEGER, title TEXT NOT NULL, PRIMARY KEY(id))")
