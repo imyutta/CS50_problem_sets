@@ -1,4 +1,3 @@
-
 import cs50
 import csv
 
