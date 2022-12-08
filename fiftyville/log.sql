@@ -109,7 +109,7 @@ SELECT city -- find destination city
 --                            |
 --                            V
 
-SELECT id -- THIEF ID BY PHONE NUMBER
+SELECT name -- THIEF NAME BY PHONE NUMBER
   FROM people
  WHERE phone_number IN
       (SELECT caller
@@ -121,7 +121,7 @@ SELECT id -- THIEF ID BY PHONE NUMBER
 
     INTERSECT
 
-SELECT id -- THIEF ID BY license_plates
+SELECT name -- THIEF name BY license_plates
   FROM people
  WHERE license_plate IN
       (SELECT license_plate
@@ -135,7 +135,7 @@ SELECT id -- THIEF ID BY license_plates
 
 INTERSECT
 
-SELECT id -- THIEF ID BY PASSPORT NUMBER
+SELECT name -- THIEF name BY PASSPORT NUMBER
   FROM people
  WHERE passport_number IN
        (SELECT passport_number
@@ -154,7 +154,7 @@ SELECT id -- THIEF ID BY PASSPORT NUMBER
                              LIMIT 1));
 INTERSECT
 
- SELECT id -- THIEF ID BY BANK ACCOUNT
+ SELECT name -- THIEF name BY BANK ACCOUNT
    FROM people
   WHERE id IN
         (SELECT person_id
