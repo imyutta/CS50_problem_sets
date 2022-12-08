@@ -63,3 +63,5 @@ SELECT * -- Take a look at phone_calls (year, month, day, duration)
        AND month = 7
        AND day = 28
        AND duration < 60;
+
+SELECT *
