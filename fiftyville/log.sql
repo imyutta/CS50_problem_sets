@@ -62,4 +62,4 @@ SELECT * -- Take a look at phone_calls (year, month, day, duration)
  WHERE year = 2021
        AND month = 7
        AND day = 28
-       AND duration < 1;
+       AND duration < 60;
