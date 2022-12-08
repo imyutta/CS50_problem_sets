@@ -23,4 +23,6 @@ SELECT transcript -- Find interview transcripts
        AND month = 7
        AND day = 28;
 
-SELECT 
+SELECT *
+  FROM bakery_security_logs
+ WHERE 
