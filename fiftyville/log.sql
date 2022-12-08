@@ -134,4 +134,6 @@ SELECT name -- second table for intersection: license_plates
 SELECT passport_number
   FROM passengers
  WHERE flight_id IN
-       (SELECT );
+       (SELECT id
+          FROM flights
+         WHERE );
