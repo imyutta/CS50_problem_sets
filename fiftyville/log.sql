@@ -127,8 +127,9 @@ SELECT name -- second table for intersection: license_plates
          AND day = 28
          AND hour = 10
          AND minute >= 15
-         AND minute <= 25);
+         AND minute <= 25)
 
+INTERSECT
 -- FOUND 4 potential names FOR the thief
 
 SELECT passport_number -- FIND passport numbers of passengers
