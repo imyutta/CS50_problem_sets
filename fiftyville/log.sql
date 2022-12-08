@@ -113,7 +113,7 @@ SELECT * -- take a look at people data (parameters: phone number, license plate)
        WHERE year = 2021
          AND month = 7
          AND day = 28
-         AND duration < 60
+         AND duration < 60)
 
     INTERSECT
 
