@@ -82,3 +82,8 @@ SELECT * -- check for flights (year, month, day, origin airport)
              LIMIT 1;
 -- FOUND flight id: 36
 -- FOUND destination id: 4
+
+SELECT city -- find destination city
+  FROM airports
+ WHERE id
+    IN
