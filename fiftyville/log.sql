@@ -180,4 +180,12 @@ INTERSECT
 -- LOOKING FOR THE ACCOMPLICE NAME  |
 --                                  |
 --                                  V
-SELECT 
+
+SELECT receiver
+  FROM phone_calls
+ WHERE caller IN
+      (SELECT phone_number
+         FROM people
+        WHERE name = "Bruce");
+
+
