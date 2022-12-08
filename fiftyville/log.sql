@@ -128,3 +128,5 @@ SELECT name -- second table for intersection: license_plates
          AND hour = 10
          AND minute >= 15
          AND minute <= 25);
+
+-- FOUND 4 potential names FOR the thief
