@@ -133,10 +133,7 @@ INTERSECT
 -- FOUND 4 potential names FOR the thief
 
 SELECT name
-FROM people
-WHERE
-SELECT passport_number -- FIND passport numbers of passengers
-  FROM passengers
+  FROM people
  WHERE flight_id IN
        (SELECT id
           FROM flights
@@ -149,3 +146,7 @@ SELECT passport_number -- FIND passport numbers of passengers
                       WHERE city = "Fiftyville")
                       ORDER BY hour
                       LIMIT 1);
+
+                      SELECT passport_number -- FIND passport numbers of passengers
+  FROM passengers
+ WHERE
