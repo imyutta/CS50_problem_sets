@@ -40,3 +40,5 @@ SELECT * -- take a CLOTHER look at bakery security logs (year, month,day, hour, 
        AND minute <= 25;
 
 -- found some license_plates
+
+SELECT * -- Take a look at ATM transavtions ()
