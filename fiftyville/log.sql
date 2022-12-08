@@ -64,4 +64,8 @@ SELECT * -- Take a look at phone_calls (year, month, day, duration)
        AND day = 28
        AND duration < 60;
 
-SELECT *
+SELECT * -- check for flights (year, month, day)
+  FROM flights
+ WHERE year = 2021
+      AND month = 7
+      AND day = 29
