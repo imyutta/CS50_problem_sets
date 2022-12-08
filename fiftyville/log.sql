@@ -132,6 +132,9 @@ SELECT name -- second table for intersection: license_plates
 INTERSECT
 -- FOUND 4 potential names FOR the thief
 
+SELECT name
+FROM people
+WHERE
 SELECT passport_number -- FIND passport numbers of passengers
   FROM passengers
  WHERE flight_id IN
