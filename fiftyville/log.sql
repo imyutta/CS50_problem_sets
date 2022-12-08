@@ -58,3 +58,5 @@ SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location, tra
        AND transaction_type = "withdraw";
 
 SELECT * -- Take a look at phone_calls (year, month, day, duration)
+  FROM phone_calls
+ WHERE 
