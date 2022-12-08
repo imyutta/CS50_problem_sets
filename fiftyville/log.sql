@@ -131,14 +131,12 @@ SELECT name -- second table for intersection: license_plates
 
 -- FOUND 4 potential names FOR the thief
 
-SELECT passport_number
+SELECT passport_number -- FIND passport numpers of passengers
   FROM passengers
  WHERE flight_id IN
        (SELECT id
           FROM flights
-         WHERE destination_airport_id IN
-           FROM flights
-          WHERE year = 2021
+        WHERE year = 2021
                 AND month = 7
                 AND day = 29
                 AND origin_airport_id IN
