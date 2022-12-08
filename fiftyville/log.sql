@@ -47,6 +47,8 @@ SELECT * -- take a CLOTHER look at bakery security logs (year, month,day, hour, 
        AND hour = 10
        AND minute >= 15
        AND minute <= 25;
+-- FOUND licence plates
+
 
 SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location)
   FROM atm_transactions
