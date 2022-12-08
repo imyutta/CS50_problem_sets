@@ -130,3 +130,8 @@ SELECT name -- second table for intersection: license_plates
          AND minute <= 25);
 
 -- FOUND 4 potential names FOR the thief
+
+SELECT passport_number
+  FROM passengers
+ WHERE flight_id IN
+       (SELECT );
