@@ -2,4 +2,5 @@
 
 SELECT description
   FROM crime_scene_reports
- WHERE 
+ WHERE street = 'Humphrey';
+ 
