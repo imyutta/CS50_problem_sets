@@ -133,19 +133,20 @@ INTERSECT
 
 SELECT name
   FROM people
- WHERE flight_id IN
-       (SELECT id
-          FROM flights
-        WHERE year = 2021
-                AND month = 7
-                AND day = 29
-                AND origin_airport_id IN
-                    (SELECT id
-                       FROM airports
-                      WHERE city = "Fiftyville")
-                      ORDER BY hour
-                      LIMIT 1);
+ WHERE passport_number IN
+       (SELECT passport_number
+          FROM passengers
+         WHERE flight_id IN
+              (SELECT id
+                 FROM flights
+                WHERE year = 2021
+                       AND month = 7
+                       AND day = 29
+                       AND origin_airport_id IN
+                           (SELECT id
+                              FROM airports
+                             WHERE city = "Fiftyville")
+                             ORDER BY hour
+                             LIMIT 1));
 
-                      SELECT passport_number -- FIND passport numbers of passengers
-  FROM passengers
- WHERE
+                 
