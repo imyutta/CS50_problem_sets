@@ -59,4 +59,7 @@ SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location, tra
 
 SELECT * -- Take a look at phone_calls (year, month, day, duration)
   FROM phone_calls
- WHERE 
+ WHERE year = 2021
+       AND month = 7
+       AND day = 28
+       AND duration < 1;
