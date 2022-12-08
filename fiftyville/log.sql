@@ -106,9 +106,9 @@ SELECT city -- find destination city
 -- FOUND destination city: New York City
 
 SELECT * -- take a look at people data (parameters: phone number, license plate)
-  FROM people
+  FROM people -- first table for intersection: phone numbers
  WHERE phone_number IN
-      (SELECT caller -- first table for intersection: phone numbers
+      (SELECT caller
         FROM phone_calls
        WHERE year = 2021
          AND month = 7
@@ -117,7 +117,10 @@ SELECT * -- take a look at people data (parameters: phone number, license plate)
 
     INTERSECT
 
-      SELECT license_plate -- second table for intersection: license_plates
+SELECT * -- second table for intersection: license_plates
+  FROM people
+ WHERE license_plate IN
+      (SELECT license_plate
         FROM bakery_security_logs
        WHERE year = 2021
          AND month = 7
