@@ -47,3 +47,11 @@ SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location)
        AND month = 7
        AND day = 28
        AND atm_location = "Leggett Street";
+       
+
+SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location)
+  FROM atm_transactions
+ WHERE year = 2021
+       AND month = 7
+       AND day = 28
+       AND atm_location = "Leggett Street";
