@@ -105,7 +105,7 @@ SELECT city -- find destination city
                       LIMIT 1);
 -- FOUND destination city: New York City
 
-SELECT * -- take a look at people data (parameters: phone number, license plate)
+SELECT name -- take a look at people data (parameters: phone number, license plate)
   FROM people -- first table for intersection: phone numbers
  WHERE phone_number IN
       (SELECT caller
@@ -117,7 +117,7 @@ SELECT * -- take a look at people data (parameters: phone number, license plate)
 
     INTERSECT
 
-SELECT * -- second table for intersection: license_plates
+SELECT name -- second table for intersection: license_plates
   FROM people
  WHERE license_plate IN
       (SELECT license_plate
