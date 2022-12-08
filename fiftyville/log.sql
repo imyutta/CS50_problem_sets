@@ -23,6 +23,18 @@ SELECT transcript -- Find interview transcripts
        AND month = 7
        AND day = 28;
 
-SELECT *
+SELECT * -- take a look at bakery security logs (year, month,day)
   FROM bakery_security_logs
- WHERE 
+ WHERE year = 2021
+       AND month = 7
+       AND day = 28;
+
+
+SELECT * -- take a CLOTHER look at bakery security logs (year, month,day, hour, minute, activity)
+  FROM bakery_security_logs
+ WHERE year = 2021
+       AND month = 7
+       AND day = 28
+       AND hour = 10
+       AND minute > 15
+       AND minute < 25;
