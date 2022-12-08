@@ -108,7 +108,7 @@ SELECT city -- find destination city
 SELECT * -- take a look at people data (parameters: phone number, license plate)
   FROM people
  WHERE phone_number IN
-      (SELECT phone_number -- first table for intersection: phone numbers
+      (SELECT caller -- first table for intersection: phone numbers
         FROM phone_calls
        WHERE year = 2021
          AND month = 7
