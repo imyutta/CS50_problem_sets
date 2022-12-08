@@ -41,7 +41,7 @@ SELECT * -- take a CLOTHER look at bakery security logs (year, month,day, hour, 
 
 -- found some license_plates
 
-SELECT * -- Take a look at ATM transavtions ()
+SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location)
   FROM atm_transactions
  WHERE year = 2021
        AND month = 7
