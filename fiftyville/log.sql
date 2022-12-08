@@ -2,6 +2,6 @@
 
 SELECT *
   FROM crime_scene_reports
- WHERE street LIKE '%Humphrey%' AND year = 2021 AND month = 7 AND day = 28; -- Find description for the crime scene
+ WHERE street LIKE '%Humphrey%' AND year = 2021 AND month = 7 AND day = 28; -- Look at the crime scene report
 
- 
+
