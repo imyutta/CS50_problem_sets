@@ -69,9 +69,16 @@ SELECT * -- Take a look at phone_calls (year, month, day, duration)
        AND day = 28
        AND duration < 60;
 
-SELECT * -- check for flights (year, month, day)
+SELECT * -- check for flights (year, month, day, origin airport)
   FROM flights
  WHERE year = 2021
       AND month = 7
       AND day = 29
-      AND 
+      AND origin_airport_id IN
+           (SELECT id
+              FROM airports
+             WHERE city = "Fiftyville")
+             ORDER BY hour
+             LIMIT 1;
+-- FOUND flight id: 36
+-- FOUND destination id: 4
