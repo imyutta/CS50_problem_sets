@@ -105,8 +105,12 @@ SELECT city -- find destination city
                       LIMIT 1);
 -- FOUND destination city: New York City
 
-SELECT name -- take a look at people data (parameters: phone number, license plate)
-  FROM people -- first table for intersection: phone numbers
+-- LOOKING FOR THE THIEF NAME |
+--                            |
+--                            V
+
+SELECT id -- THIEF ID BY PHONE NUMBER
+  FROM people
  WHERE phone_number IN
       (SELECT caller
         FROM phone_calls
@@ -117,7 +121,7 @@ SELECT name -- take a look at people data (parameters: phone number, license pla
 
     INTERSECT
 
-SELECT name -- second table for intersection: license_plates
+SELECT id -- THIEF ID BY license_plates
   FROM people
  WHERE license_plate IN
       (SELECT license_plate
@@ -131,7 +135,7 @@ SELECT name -- second table for intersection: license_plates
 
 INTERSECT
 
-SELECT name
+SELECT id -- THIEF ID BY PASSPORT NUMBER
   FROM people
  WHERE passport_number IN
        (SELECT passport_number
@@ -148,5 +152,18 @@ SELECT name
                              WHERE city = "Fiftyville")
                              ORDER BY hour
                              LIMIT 1));
+INTERSECT
 
- -- FOUND THREE potential thief names
+ SELECT id -- THIEF ID BY BANK ACCOUNT
+   FROM people
+  WHERE id IN
+        (SELECT person_id
+           FROM bank_accounts
+          WHERE account_number IN
+                (SELECT account_number
+                   FROM atm_transactions
+                  WHERE year = 2021
+                       AND month = 7
+                       AND day = 28
+                       AND atm_location = "Leggett Street"
+                       AND transaction_type = "withdraw"));
