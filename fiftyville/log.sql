@@ -2,4 +2,4 @@
 
 SELECT *
   FROM crime_scene_reports
- WHERE street = '%Humphrey%' AND year = 2021 AND month = "July";
+ WHERE street = '%Humphrey%' AND year = 2021 AND month = 7;
