@@ -38,3 +38,5 @@ SELECT * -- take a CLOTHER look at bakery security logs (year, month,day, hour, 
        AND hour = 10
        AND minute >= 15
        AND minute <= 25;
+
+-- found some license_plates
