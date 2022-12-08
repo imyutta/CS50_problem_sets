@@ -56,6 +56,8 @@ SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location)
        AND month = 7
        AND day = 28
        AND atm_location = "Leggett Street";
+--FOUND amount of money withdrown from the ATM
+--FOUND account_numberS
 
 SELECT * -- Take a look at ATM transavtions (year, month, day, atm_location, transaction_type)
   FROM atm_transactions
@@ -71,6 +73,7 @@ SELECT * -- Take a look at phone_calls (year, month, day, duration)
        AND month = 7
        AND day = 28
        AND duration < 60;
+-- FOUND telephone numbers
 
 SELECT * -- check for flights (year, month, day, origin airport)
   FROM flights
@@ -101,3 +104,4 @@ SELECT city -- find destination city
                       ORDER BY hour
                       LIMIT 1);
 -- FOUND destination city: New York City
+
