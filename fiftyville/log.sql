@@ -13,4 +13,12 @@ SELECT * -- find the report (parameters: date, street, keyword "duck:)
        AND year = 2021
        AND month = 7
        AND day = 28
-       AND description LIKE "%duck%"; -
+       AND description LIKE "%duck%";
+
+
+SELECT transcript -- Find interview transcripts
+  FROM interviews
+ WHERE transcript LIKE ("%bakery%")
+       AND year = 2021
+       AND month = 7
+       AND day = 28;
