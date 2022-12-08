@@ -14,7 +14,7 @@ SELECT * -- find the report (parameters: date, street, keyword "duck:)
        AND month = 7
        AND day = 28
        AND description LIKE "%duck%";
-
+-- time of the crime 10:15 am
 
 SELECT transcript -- Find interview transcripts
   FROM interviews
