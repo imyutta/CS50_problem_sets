@@ -187,6 +187,9 @@ SELECT receiver
       (SELECT phone_number
          FROM people
         WHERE name = "Bruce")
-   AND ;
+               AND year = 2021
+               AND month = 7
+               AND day = 28
+               AND duration < 60);
 
 
