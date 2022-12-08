@@ -4,6 +4,7 @@
 -- FOUND crime time: 10:15
 -- FOUND flight date: 29 July 2021
 -- FOUND flight origin: fiftyville
+-- FOUND destination city: New York City
 
 
 SELECT * -- find the reports (parameters: date, street)
@@ -88,4 +89,13 @@ SELECT city -- find destination city
  WHERE id IN
         (SELECT destination_airport_id
            FROM flights
-          WHERE );
+          WHERE year = 2021
+                AND month = 7
+                AND day = 29
+                AND origin_airport_id IN
+                    (SELECT id
+                       FROM airports
+                      WHERE city = "Fiftyville")
+                      ORDER BY hour
+                      LIMIT 1);
+-- FOUND destination city: New York City
