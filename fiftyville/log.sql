@@ -186,6 +186,7 @@ SELECT receiver
  WHERE caller IN
       (SELECT phone_number
          FROM people
-        WHERE name = "Bruce");
+        WHERE name = "Bruce")
+   AND ;
 
 
