@@ -36,5 +36,5 @@ SELECT * -- take a CLOTHER look at bakery security logs (year, month,day, hour, 
        AND month = 7
        AND day = 28
        AND hour = 10
-       AND minute > 15
-       AND minute < 25;
+       AND minute >= 15
+       AND minute <= 25;
