@@ -5,6 +5,7 @@
 -- FOUND flight date: 29 July 2021
 -- FOUND flight origin: fiftyville
 -- FOUND destination city: New York City
+-- FOUND THIEF NAME: BRUCE
 
 
 SELECT * -- find the reports (parameters: date, street)
@@ -89,6 +90,11 @@ SELECT * -- check for flights (year, month, day, origin airport)
 -- FOUND flight id: 36
 -- FOUND destination id: 4
 
+
+
+-- LOOKING FOR THE DESTINATION CITY |
+--                                  |
+--                                  V
 SELECT city -- find destination city
   FROM airports
  WHERE id IN
@@ -151,7 +157,7 @@ SELECT name -- THIEF name BY PASSPORT NUMBER
                               FROM airports
                              WHERE city = "Fiftyville")
                              ORDER BY hour
-                             LIMIT 1));
+                             LIMIT 1))
 INTERSECT
 
  SELECT name -- THIEF name BY BANK ACCOUNT
@@ -167,3 +173,10 @@ INTERSECT
                        AND day = 28
                        AND atm_location = "Leggett Street"
                        AND transaction_type = "withdraw"));
+
+-- FOUND THIEF NAME: BRUCE
+
+
+-- LOOKING FOR THE ACCOMPLICE NAME  |
+--                                  |
+--                                  V
