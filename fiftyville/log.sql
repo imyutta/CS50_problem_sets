@@ -181,15 +181,18 @@ INTERSECT
 --                                  |
 --                                  V
 
-SELECT receiver
-  FROM phone_calls
- WHERE caller IN
-      (SELECT phone_number
-         FROM people
-        WHERE name = "Bruce")
-               AND year = 2021
-               AND month = 7
-               AND day = 28
-               AND duration < 60);
+SELECT name
+  FROM people
+ WHERE phone_number IN
+        (SELECT receiver
+           FROM phone_calls
+          WHERE caller IN
+             (SELECT phone_number
+                FROM people
+               WHERE name = "Bruce")
+            AND year = 2021
+            AND month = 7
+            AND day = 28
+            AND duration < 60);
 
 
