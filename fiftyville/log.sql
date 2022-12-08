@@ -87,4 +87,5 @@ SELECT city -- find destination city
   FROM airports
  WHERE id IN
         (SELECT id
-           FROM );
+           FROM flights
+          WHERE );
