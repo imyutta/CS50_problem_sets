@@ -2,4 +2,4 @@
 
 SELECT *
   FROM crime_scene_reports
- WHERE street = '%Humphrey%' AND year = 2021 AND month = 7;
+ WHERE street LIKE '%Humphrey%' AND year = 2021 AND month = 7 AND day = 28;
