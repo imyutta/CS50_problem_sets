@@ -86,6 +86,6 @@ SELECT * -- check for flights (year, month, day, origin airport)
 SELECT city -- find destination city
   FROM airports
  WHERE id IN
-        (SELECT id
+        (SELECT destination_airport_id
            FROM flights
           WHERE );
