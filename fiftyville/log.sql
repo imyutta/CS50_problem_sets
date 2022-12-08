@@ -105,3 +105,23 @@ SELECT city -- find destination city
                       LIMIT 1);
 -- FOUND destination city: New York City
 
+SELECT * -- take a look at people data (parameters: phone number, license plate)
+  FROM people
+ WHERE phone_number IN
+      (SELECT phone_number -- first table for intersection: phone numbers
+        FROM phone_calls
+       WHERE year = 2021
+         AND month = 7
+         AND day = 28
+         AND duration < 60
+
+    INTERSECT
+
+      SELECT license_plate -- second table for intersection: license_plates
+        FROM bakery_security_logs
+       WHERE year = 2021
+         AND month = 7
+         AND day = 28
+         AND hour = 10
+         AND minute >= 15
+         AND minute <= 25);
