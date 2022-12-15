@@ -2,18 +2,20 @@
 
 <html lang="en">
     <head>
-        <link href="home.css" rel="stylesheet">
-        <title>home</title>
+        <script>
+
+            function greet()
+            {
+                alert('hello, there');
+            }
+
+        </script>
+        <title>hello</title>
     </head>
     <body>
-        <header class="centered large">
-            John Harvard
-        </header>
-        <main class="centered medium">
-            Welcome to my home page!
-        </main>
-        <footer class="centered small">
-            Copyright &#169; John Harvard
-        </footer>
+        <form onsubmit="greet(); return false;">
+            <input autocomplete="off" autofocus id="name" placeholder="Name" type="text">
+            <input type="submit">
+        </form>
     </body>
 </html>
