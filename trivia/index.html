@@ -12,7 +12,8 @@
                 // When the correct answer is clicked, change button color to green
                 let correct = document.querySelector(".correct");
                 correct.addEventListener("click", function() {
-                    correct.style.backgroundcolor = "green"
+                    correct.style.backgroundcolor = "green";
+                    document.querySelector("#answer1").innerHTML = "Correct!";
                 })
         });
 
