@@ -14,7 +14,11 @@
                 correct.addEventListener("click", function() {
                     correct.style.backgroundcolor = "green";
                     document.querySelector("#answer1").innerHTML = "Correct!";
-                })
+                });
+
+                // When any incorrect answer is clicked, change button color to red
+                let incorrect = document.querySelectorAll(".incorrect");
+                
         });
 
 
