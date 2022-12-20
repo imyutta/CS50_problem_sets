@@ -26,11 +26,15 @@
 
                 // Check free response question answer
                 document.querySelector("#check").addEventListener("click", function() {
-                    
-
+                    let input = document.querySelector("input");
+                    if (input.value = "World Wide Web") {
+                        input.style.backgroundColor = "green";
+                        document.querySelector("#answer2").innerHTML = "Correct!"
+                    } else {
+                        input.style.backgroundColor = "red";
+                        document.querySelector("#answer2").innerHTML = "Incorrect";
+                    }
                 });
-
-
             });
 
 
