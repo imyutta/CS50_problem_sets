@@ -20,9 +20,10 @@
                 let incorrects = document.querySelectorAll(".incorrect");
                 incorrects.addEventListener("click", function() {
                     for (let i = 0; i < incorrects.length; i++)
-                    incorrects.style.backgroundcolor = "red";
-                    dicument.querySelector("#answer1").innerHTML = "Incorrect";
-
+                        incorrects[i].addEventListener("click", function() {
+                            incorrects[i].style.backgroundcolor = "red";
+                            dicument.querySelector("#answer1").innerHTML = "Incorrect";
+                        });
                 });
         });
 
