@@ -17,16 +17,14 @@
 
                 // When any incorrect answer is clicked, change button color to red
                 let incorrects = document.querySelectorAll(".incorrect");
-                incorrects.addEventListener("click", function() {
-                    for (let i = 0; i < incorrects.length; i++){
-                        incorrects[i].addEventListener("click", function() {
-                            incorrects[i].style.backgroundcolor = "red";
-                            dicument.querySelector("#answer1").innerHTML = "Incorrect";
-                        });
-                    }
+                for (let i = 0; i < incorrects.length; i++){
+                    incorrects[i].addEventListener("click", function() {
+                    incorrects[i].style.backgroundColor = "red";
+                    document.querySelector("#answer1").innerHTML = "Incorrect";
+                    });
+                }
                 });
-                });
-                
+
 
 
         </script>
