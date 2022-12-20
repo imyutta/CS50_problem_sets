@@ -18,8 +18,9 @@
 
                 // When any incorrect answer is clicked, change button color to red
                 let incorrects = document.querySelectorAll(".incorrect");
-                incorrect.addEventListener("click", function() {
-                    incorrect.style.backgroundcolor = "red";
+                incorrects.addEventListener("click", function() {
+                    for (let i = 0; i < incorrects.length; i++)
+                    incorrects.style.backgroundcolor = "red";
                     dicument.querySelector("#answer1").innerHTML = "Incorrect";
 
                 });
