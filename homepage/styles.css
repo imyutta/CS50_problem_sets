@@ -17,6 +17,8 @@ body {
 
 .header {
     background-image: url(CA.jpg);
+    position: relative;
+    background-size: cover;
     color: #fff;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
