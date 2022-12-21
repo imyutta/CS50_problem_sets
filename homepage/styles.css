@@ -31,6 +31,14 @@ body {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
+.indent {
+    padding: 0rem 0rem 0rem 0rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
 .section:hover {
     background-color: #f5f5f5;
     transition: color 2s ease-in-out, background-color 0.15s ease-in-out;
