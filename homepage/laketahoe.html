@@ -4,8 +4,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+            rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
+        </script>
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
     </head>
@@ -14,21 +17,32 @@
             <h1>TOP 3 CALIFORNIA DESTINATIONS</h1>
         </div>
 
+
+        <!-- MAIN BUTTONS: Overview, Lake Tahoe, Yosemite, Half Moon Bay -->
         <div class="container">
             <div>
                 <ul class="m-3 nav">
                     <li class="section"><a href="index.html">Overview</a></li>
-                    <li class="section ms-auto"><b>Lake Tahoe </b></li>
+                    <li class="section ms-auto"><b>Lake Tahoe</b></li>
                     <li class="section ms-auto"><a href="yosemite.html">Yosemite</a></li>
                     <li class="section ms-auto"><a href="halfmoonbay.html">Half Moon Bay</a></li>
                 </ul>
             </div>
         </div>
         <hr>
-        <p class="container" align="center">LAKE TAHOE! &#10052;</p>
-        <p class="container"><img src="stickerlaketahoe.jpg"; alt="sticker with a heart" style="float:right;width:150px;height:145px;">For me Lake Tahoe is best in winter, because I love winter sports! Tahoe is always filled with exciting events, gorgeous weather, and there are enough winter activities to keep the whole crew happy.
-            If you like powder skiing and snowboarding, ice-skating and sledding with the kids, and all things snow, a Lake Tahoe winter trip is your ticket to paradise!
-        </p>
+
+
+        <!-- FIRST PART OF THE LAKE TAHOE PAGE: TEXT -->
+        <p class="container" style="text-align: center;">LAKE TAHOE! &#10052;</p>
+
+        <p class="container"><img src="stickerlaketahoe.jpg" alt="sticker with a heart" style="float:right; width:150px; height:145px;">For me Lake
+            Tahoe is best in winter, because I love winter sports! Tahoe is always filled with exciting events, gorgeous weather, and there are
+            enough winter activities to keep the whole crew happy. If you like powder skiing and snowboarding, ice-skating and sledding with the
+            kids, and all things snow, a Lake Tahoe winter trip is your ticket to paradise!</p>
+
+
+
+        <!-- SECOND PART OF THE YOSEMITE PAGE: PICTURES, CAROUSEL -->
         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -49,37 +63,48 @@
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
-          </div>
+        </div>
 
-          <hr>
-          <h6 class="container" align="center"><b>There is so much to do in Tahoe in other seasons as well!</b></h6>
-          <hr>
 
-          <p class="container">
-            Hang gliding, Kayak tours, cruises, windsong sailing, curling, balloons, golf courses, underwater park, exotic car rental and many more! </p>
-          <p class="container">Click on the link to get more information <a href="https://visitlaketahoe.com/things-to-do/?thing-to-do-type=209&listing-sort=random&page-num=1" style="color:blue;"><ins>www.visitlaketahoe.com/things-to-do/</ins></a>
-          </p>
-          <div class="card-group">
 
+        <!-- THIRD PART OF THE LAKE TAHOE PAGE: TEXT -->
+        <hr>
+        <h6 class="container" style="text-align: center;"><b>There is so much to do in Tahoe in other seasons as well!</b></h6>
+        <hr>
+
+        <p class="container">
+          Hang gliding, Kayak tours, cruises, windsong sailing, curling, balloons, golf courses, underwater park, exotic car rental and many more!</p>
+
+        <p class="container">Click on the link to get more information
+            <a href="https://visitlaketahoe.com/things-to-do/?thing-to-do-type=209&listing-sort=random&page-num=1" style="color:blue;">
+            <ins>www.visitlaketahoe.com/things-to-do/</ins></a></p>
+
+
+
+        <!-- FOURS PART OF THE LAKE TAHOE PAGE: CARDS -->
+        <div class="card-group">
+
+            <!-- CARD #1 -->
             <div class="card" style="width: 20rem;">
-              <img src="laketahoe_hotel.jpeg" class="card-img-top" alt="hotel">
-              <div class="card-body">
-                <h6 class="card-title">Find a place to stay</h6>
-                <p class="card-text">Stay at the top unique properties. From castles and villas to boats and igloos. Booking has it all!</p>
-                <a href="https://www.booking.com/searchresults.html?aid=397594&label=gog235jc-1DCAEoggI46AdIM1gDaIkCiAEBmAExuAEHyAEM2AED6AEB-AECiAIBqAIDuALBoIqdBsACAdICJGYzYTcwYTVmLWEzNzQtNDc3ZS1hNjUyLTBiMmRjYjQ0MjVmM9gCBOACAQ&sid=5f90780bd7517da42ee5d248b25dc501&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.html%3Faid%3D397594%26label%3Dgog235jc-1DCAEoggI46AdIM1gDaIkCiAEBmAExuAEHyAEM2AED6AEB-AECiAIBqAIDuALBoIqdBsACAdICJGYzYTcwYTVmLWEzNzQtNDc3ZS1hNjUyLTBiMmRjYjQ0MjVmM9gCBOACAQ%26sid%3D5f90780bd7517da42ee5d248b25dc501%26sb_price_type%3Dtotal%26%26&ss=South+Lake+Tahoe%2C+California%2C+United+States&is_ski_area=1&checkin_year=&checkin_month=&checkout_year=&checkout_month=&efdco=1&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&ss_raw=tahoe&ac_position=0&ac_langcode=en&ac_click_type=b&ac_meta=GhAxNDFiMjFlMDk5YWUwMGY0IAAoATICZW46BXRhaG9lQABKAFAA&dest_id=20016087&dest_type=city&place_id_lat=38.9333&place_id_lon=-119.983&search_pageview_id=141b21e099ae00f4&search_selected=true&search_pageview_id=141b21e099ae00f4&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0" class="btn btn-primary">Search</a>
-              </div>
-
+                <img src="laketahoe_hotel.jpeg" class="card-img-top" alt="hotel">
+                    <div class="card-body">
+                    <h6 class="card-title">Find a place to stay</h6>
+                    <p class="card-text">Stay at the top unique properties. From castles and villas to boats and igloos. Booking has it all!</p>
+                    <a href="https://www.booking.com/searchresults.html?aid=397594&label=gog235jc-1DCAEoggI46AdIM1gDaIkCiAEBmAExuAEHyAEM2AED6AEB-AECiAIBqAIDuALBoIqdBsACAdICJGYzYTcwYTVmLWEzNzQtNDc3ZS1hNjUyLTBiMmRjYjQ0MjVmM9gCBOACAQ&sid=5f90780bd7517da42ee5d248b25dc501&sb=1&sb_lp=1&src=index&src_elem=sb&error_url=https%3A%2F%2Fwww.booking.com%2Findex.html%3Faid%3D397594%26label%3Dgog235jc-1DCAEoggI46AdIM1gDaIkCiAEBmAExuAEHyAEM2AED6AEB-AECiAIBqAIDuALBoIqdBsACAdICJGYzYTcwYTVmLWEzNzQtNDc3ZS1hNjUyLTBiMmRjYjQ0MjVmM9gCBOACAQ%26sid%3D5f90780bd7517da42ee5d248b25dc501%26sb_price_type%3Dtotal%26%26&ss=South+Lake+Tahoe%2C+California%2C+United+States&is_ski_area=1&checkin_year=&checkin_month=&checkout_year=&checkout_month=&efdco=1&group_adults=2&group_children=0&no_rooms=1&b_h4u_keep_filters=&from_sf=1&ss_raw=tahoe&ac_position=0&ac_langcode=en&ac_click_type=b&ac_meta=GhAxNDFiMjFlMDk5YWUwMGY0IAAoATICZW46BXRhaG9lQABKAFAA&dest_id=20016087&dest_type=city&place_id_lat=38.9333&place_id_lon=-119.983&search_pageview_id=141b21e099ae00f4&search_selected=true&search_pageview_id=141b21e099ae00f4&ac_suggestion_list_length=5&ac_suggestion_theme_list_length=0"
+                        class="btn btn-primary">Search</a>
+                    </div>
             </div>
-
-            <div class="card" style="width: 20rem;">
-              <img src="laketahoe_epic.jpeg" class="card-img-top" alt="ski-pass">
-              <div class="card-body">
+            <!-- CARD #2 -->
+            <div class="card" style="width: 20rem;"><img src="laketahoe_epic.jpeg" class="card-img-top" alt="ski-pass">
+                <div class="card-body">
                 <h6 class="card-title">Buy ski pass</h6>
-                <p class="card-text">Be aware that some resorts are limiting lift tickets. You are strongly encouraged to purchase your lift access in advance. </p>
-                <a href="https://visitlaketahoe.com/ski-and-snowboard/heavenly-mountain-resort/#:~:text=access%20with%20an-,Epic%20Pass,-%2C%20which%20offers%20season" class="btn btn-primary">Search</a>
-              </div>
+                <p class="card-text">Be aware that some resorts are limiting lift tickets. You are strongly encouraged to purchase your
+                  lift access in advance.</p>
+                <a href="https://visitlaketahoe.com/ski-and-snowboard/heavenly-mountain-resort/#:~:text=access%20with%20an-,Epic%20Pass,-%2C%20which%20offers%20season"
+                    class="btn btn-primary">Search</a>
+                </div>
             </div>
-          </div>
+        </div>
 
     </body>
 </html>
