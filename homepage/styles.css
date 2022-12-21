@@ -22,13 +22,13 @@ body {
     background-repeat: no-repeat;
     background-position: center;
     color: #fff;
-    margin-bottom: 2rem;
-    padding: 2rem 1rem;
+    margin-bottom: 1rem;
+    padding: 5rem 1rem;
     text-align: center;
 }
 
 .section {
-    padding: 0.5rem 2rem 1rem 2rem;
+    padding: 0.5rem 2rem 1rem 20rem;
 }
 
 .section:hover {
