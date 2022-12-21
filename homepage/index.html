@@ -11,7 +11,12 @@
 
             // Run script once DOM is loaded
             document.addEventListener("DOMContentLoaded", function() {
-
+                // When the button HI! is clicked, change button color to green
+                let greeting = document.querySelector(".greeting");
+                    greeting.addEventListener("click", function() {
+                        greeting.style.backgroundColor = "green";
+                        document.querySelector("#answer1").innerHTML = "Correct!";
+                    });
 
         </script>
         <link href="styles.css" rel="stylesheet">
