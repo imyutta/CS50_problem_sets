@@ -68,8 +68,6 @@ h1 {
     color: faa
 }
 
-.cards-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.card {
+    background-color: red;
 }
