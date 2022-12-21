@@ -1,5 +1,5 @@
 body {
-    background-color: #fff;
+    background-color: lightblue;
     color: #212529;
     font-size: 1rem;
     font-weight: 400;
@@ -13,7 +13,6 @@ body {
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    
 }
 
 .header {
