@@ -23,12 +23,12 @@ body {
     background-position: center;
     color: #fff;
     margin-bottom: 1rem;
-    padding: 5rem 1rem;
+    padding: 7rem 1rem;
     text-align: center;
 }
 
 .section {
-    padding: 0.5rem 2rem 1rem 20rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
 }
 
 .section:hover {
