@@ -12,7 +12,7 @@
             // Run script once DOM is loaded
             document.addEventListener("DOMContentLoaded", function() {
                 // When the button HI! is clicked, change button color to green
-                let greeting = document.querySelector(".greeting");
+                let greeting = document.querySelector("greeting");
                     greeting.addEventListener("click", function() {
                         greeting.style.backgroundColor = "green";
                         alert(location.hostname);
@@ -51,7 +51,7 @@
              kicking back on sunny shorelines or going skiing in the mounains, California is truly a sight to behold.</p>
 
         <!-- SECONG PART OF THE OVERVIEW PAGE: ALERT, GREETING -->
-        <button class="greeting " style="float:right">Hi!</button>
+        <button id="greeting" style="float:right">Hi!</button>
 
 
         <!-- THIRD PART OF THE OVERVIEW PAGE: TEXT -->
