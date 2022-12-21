@@ -15,6 +15,7 @@ body {
     padding-right: 15px;
 }
 
+
 .header {
     background-image: url(CA.jpg);
     position: relative;
@@ -29,14 +30,6 @@ body {
 
 .section {
     padding: 0.5rem 0.5rem 0.5rem 0.5rem;
-}
-
-.indent {
-    padding: 0rem 0rem 0rem 0rem;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 .section:hover {
