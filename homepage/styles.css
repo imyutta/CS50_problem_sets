@@ -19,19 +19,13 @@ body {
     background-image: url(CA.jpg);
     position: relative;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     color: #fff;
     margin-bottom: 2rem;
     padding: 2rem 1rem;
     text-align: center;
 }
-
-.header-image {
-    background-image: url(CA.jpg);
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    background-size: cover;
-    }
 
 .section {
     padding: 0.5rem 2rem 1rem 2rem;
