@@ -11,6 +11,7 @@
         </script>
 
         <script>
+            <!-- BUTTON: GO UP!-->
             // Run script once DOM is loaded
             document.addEventListener("DOMContentLoaded", function() {
                 // Get the button
@@ -35,6 +36,17 @@
 
             });
         </script>
+
+        <script>
+            <!-- BUTTON: HI!-->
+            // Run script once DOM is loaded
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById("hiBtn").addEventListener('click', function(){
+                    alert("Hi! Nice to meet you!");
+                });
+            });
+        </script>
+
         <link href="styles.css" rel="stylesheet">
         <title>My Webpage</title>
     </head>
@@ -64,16 +76,11 @@
              are truly the gold standard for travelers. Whether you're hiking the trails in one of the state's many scenic parks,
              kicking back on sunny shorelines or going skiing in the mounains, California is truly a sight to behold.</p>
 
-        <!-- SECONG PART OF THE OVERVIEW PAGE: ALERT, GREETING -->
+        <!-- SECONG PART OF THE OVERVIEW PAGE: ALERT, GREETING BUTTON -->
         <div style="float:right">
-            <button onclick="myFunction()" class="btn btn-primary">Hi!</button>
+            <button id="hiBtn" class="btn btn-primary">Hi!</button>
         </div>
 
-        <script>
-            function myFunction() {
-              alert("Hi! Nice to meet you!");
-            }
-        </script>
 
         <!-- THIRD PART OF THE OVERVIEW PAGE: TEXT -->
         <p class="container"><img src="stickeroverview.jpg" alt="sticker with a heart" style="float:right;width:150px;height:150px;">
