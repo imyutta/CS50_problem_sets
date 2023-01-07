@@ -1,13 +1,14 @@
-  # Averages three numbers using a list and a loop with + operator
+  # Logical operators, using lists
 
-  from cs50 import get_int
+  from cs50 import get_string
 
-  # Get scores
-  scores = []
-  for i in range(3):
-      score = get_int("Score: ")
-      scores += [score]
+  # Prompt user to agree
+  s = get_string("Do you agree? ")
 
-  # Print average
-  average = sum(scores) / len(scores)
-  print(f"Average: {average}")
+  s = s.lower()
+
+  # Check whether agreed
+  if s in ["y", "yes"]:
+      print("Agreed.")
+  elif s in ["n", "no"]:
+      print("Not agreed.")
