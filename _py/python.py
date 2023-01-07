@@ -1,13 +1,13 @@
-import csv
+  # Averages three numbers using a list and a loop with + operator
 
-from cs50 import SQL
+  from cs50 import get_int
 
-db = SQL("sqlite:///favo.db")
-title = input("Title: ").strip()
+  # Get scores
+  scores = []
+  for i in range(3):
+      score = get_int("Score: ")
+      scores += [score]
 
-rows = db.execute("SELECT title FROM favo WHERE title LIKE ?", title)
-
-for row in rows:
-    print(row["title"])
-    SELECT name FROM people JOIN stars ON stars.person_id = people.id JOIN movies ON movies.id = stars.movie_id  WHERE title = "Toy Story";
-
+  # Print average
+  average = sum(scores) / len(scores)
+  print(f"Average: {average}")
