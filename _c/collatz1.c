@@ -1,23 +1,21 @@
-#include <cs50.h>
-#include <stdio.h>
+  #include <cs50.h>
+  #include <stdio.h>
 
+  int main(void)
+  {
+      int x = get_int("What's x? ")
+      int y = get_int("What's y? ")
 
-int collatz(int n);
-
-int main(void)
-{
-    int n = get_int("n= ");
-
-    int steps = collatz(n);
-    printf("Steps = %i\n", steps);
-}
-
-int collatz(int n)
-{
-    if (n == 1)
-        return 0;
-    else if ((n % 2) == 0)
-        return 1 + collatz(n/2);
-    else
-        return 1 + collatz(3*n+1);
-}
+      if (x < y)
+      {
+          printf("x is less than y\n");
+      }
+      else if (x > y)
+      {
+          printf("x is greater than y\n");
+      }
+      else
+      {
+          printf("x is equal to y\n");
+      }
+  }
