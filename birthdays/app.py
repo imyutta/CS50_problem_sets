@@ -31,7 +31,8 @@ def index():
             month = request.form.get("month")
             day = request.form.get("day")
 
-            db.execute("UPDATE (name, month, day) FROM birthdays WHERE id = id VALUES (?, ?, ?)", name, month, day)
+            db.execute("INSERT INTO birthdays (name, month, day) VALUES (?, ?, ?)", name, month, day)
+            # db.execute("UPDATE birthdays SET (name, month, day) VALUES (?, ?, ?) WHERE id = id", name, month, day)
             return redirect("/")
 
 
