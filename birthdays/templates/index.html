@@ -30,9 +30,13 @@
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         <tr>
-                            {% for friend in friends %}
+                            <td>{% for friend in friends %}
                                 {{ friend}}
-                            {% endfor %}
+                            {% endfor %}</td>
+                            <td>{% for friend in friends %}
+                                {{ friend}}
+                            {% endfor %}</td>
+
                         </tr>
                     </tbody>
                 </table>
