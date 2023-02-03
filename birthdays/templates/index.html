@@ -29,16 +29,17 @@
                     </thead>
                     <tbody>
                         <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for friend in friends %}
                         <tr>
-                            {% for friend in friends %}
                             <td>
                                 {{ friend.name }}
-                            {% endfor %}</td>
-                            <td>{% for friend in friends %}
-                                {{ friend}}
-                            {% endfor %}</td>
+                            </td>
+                            <td>
+                                {{ friend.day }}
+                            </td>
 
                         </tr>
+                        {% endfor %}
                     </tbody>
                 </table>
             </div>
