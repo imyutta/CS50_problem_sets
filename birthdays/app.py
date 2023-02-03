@@ -56,4 +56,4 @@ def edit():
     # Edit data
     id = request.form.get("id")
     if id:
-        
+      return redirect("/")
