@@ -42,3 +42,4 @@ def index():
         return render_template("index.html", friends=friends)
 
 
+@app.route("/delete", method)
