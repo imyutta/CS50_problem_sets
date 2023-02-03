@@ -1,6 +1,12 @@
-{% extends "layout.html" %}
+<!DOCTYPE html>
 
-{% block body %}
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+    </head>
+    <body>
         <div class="header">
             <h1>Birthdays</h1>
         </div>
@@ -28,32 +34,31 @@
                             <th>Birthday</th>
                         </tr>
                     </thead>
-                <tbody>
-                    <!-- Loop through the database entries to display them in this table -->
-                    {% for friend in friends %}
-                    <tr>
-                        <td>
-                            {{ friend.name }}
-                        </td>
-                        <td>
-                            {{ friend.month }}/{{ friend.day }}
-                        </td>
-                        <td>
-                            <form action = "/delete" method="post">
-                                <input name="id" type="hidden" value="{{ friend.id }}">
-                                <button type="submit">Delete</button>
-                            </form>
-                        </td>
-                        <td>
-                            <form action="/edit" method="post">
-                                <input name="id" type="hidden" value="{{ friend.id }}">
-                                <button type = "submit">Edit</button>
-                            </form>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for friend in friends %}
+                        <tr>
+                            <td>
+                                {{ friend.name }}
+                            </td>
+                            <td>
+                                {{ friend.month }}/{{ friend.day }}
+                            </td>
+                            <td>
+                                <form action = "/delete" method="post">
+                                    <input name="id" type="hidden" value="{{ friend.id }}">
+                                    <button type="submit">Delete</button>
+                                </form>
+                                <form action="/" method="post">
+                                    <input name="id" type="hidden" value="{{ friend.id }}">
+                                    <button type = "submit">Edit</button>
+                                </form>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
         </div>
-    </div>
-{%endblock%}
+    </body>
+</html>
