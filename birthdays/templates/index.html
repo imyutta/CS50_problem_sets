@@ -31,7 +31,7 @@
                         <!-- TODO: Loop through the database entries to display them in this table -->
                         <tr>
                             <td>{% for friend in friends %}
-                                id
+                                name = db.execute("SELECT name FROM birthdays")
                             {% endfor %}</td>
                             <td>{% for friend in friends %}
                                 {{ friend}}
