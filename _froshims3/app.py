@@ -43,3 +43,13 @@ def register():
 @app.route("/registrants")
 def registrants():
     return render_template("registrants.html", registrants=REGISTRANTS)
+
+
+@app.route("/deregister", methods=["POST"])
+def deregister():
+
+    # Forget registrant
+    id = request.form.get("id")
+    if id:
+        db.execute("DELETE FROM registrants WHERE id = ?", id)
+    return redirect("/registrants")
