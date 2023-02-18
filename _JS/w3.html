@@ -3,16 +3,17 @@
 <body>
 
 <h1>JavaScript Operators</h1>
-
-<p>The assignment operator += can concatenate strings.</p>
+<h2>The typeof Operator</h2>
+<p>The typeof operator returns the type of a variable or an expression.</p>
 
 <p id="demo"></p>
 
 <script>
-let text1 = "What a very ";
-text1 += "nice day";
-document.getElementById("demo").innerHTML = text1;
+document.getElementById("demo").innerHTML =
+typeof "" + "<br>" +
+typeof "John" + "<br>" +
+typeof "John Doe";
 </script>
-
 </body>
 </html>
+
