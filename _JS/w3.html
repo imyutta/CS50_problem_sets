@@ -2,18 +2,17 @@
 <html>
 <body>
 
-<h2>JavaScript HTML Events</h2>
-<p>Click the button to display the date.</p>
+<h1>JavaScript Strings</h1>
+<h2>The length Property</h2>
 
-<button onkeydown="displayDate()">The time is?</button>
+<p>The length of the string is:</p>
+<p id="demo"></p>
 
 <script>
-function displayDate() {
-  document.getElementById("demo").innerHTML = Date();
-}
+let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+document.getElementById("demo").innerHTML = text.length;
 </script>
-
-<p id="demo"></p>
 
 </body>
 </html>
+
