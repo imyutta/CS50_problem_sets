@@ -3,16 +3,18 @@
 <body>
 
 <h1>JavaScript Strings</h1>
-<h2>The length Property</h2>
+<h2>The slice() Method</h2>
 
-<p>The length of the string is:</p>
+<p>The sliced (extracted) part of the string is:</p>
 <p id="demo"></p>
 
 <script>
-let text = "We are the so-called \'Viking\s\' from the north.";
-document.getElementById("demo").innerHTML = text;
+let text = "Apple, Banana, Kiwi";
+let part = text.slice(7,13);
+document.getElementById("demo").innerHTML = part;
 </script>
 
 </body>
 </html>
+
 
