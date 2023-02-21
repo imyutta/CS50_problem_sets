@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html>
+
 <body>
 
 <h1>JavaScript String Methods</h1>
-<p>The substr() method extract a part of a string
-and returns the extracted parts in a new string:</p>
+<p>Replace "Microsoft" with "W3Schools" in the paragraph below:</p>
 
-<p id="demo"></p>
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo">Please visit Microsoft!</p>
 
 <script>
-let str = "Apple, Banana, Kiwi";
-document.getElementById("demo").innerHTML = str.substr(-7, 1);
+function myFunction() {
+  let text = document.getElementById("demo").innerHTML;
+  document.getElementById("demo").innerHTML =
+  text.replace("Microsoft","W3Schools");
+}
 </script>
 
 </body>
