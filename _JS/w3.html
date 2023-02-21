@@ -6,12 +6,11 @@
 
 <p>ES2021 intoduced the string method replaceAll().</p>
 
-<p id="demo"></p>
+<p id="demo">I love cats. Cats are very easy to love. Cats are very popular.</p>
 
 <script>
-let text = "I love cats. Cats are very easy to love. Cats are very popular."
+let text = document.getElementById("demo").innerHTML;
 text = text.replaceAll("Cats","Dogs");
-text = text.replaceAll("cats","dogs");
 
 document.getElementById("demo").innerHTML = text;
 </script>
