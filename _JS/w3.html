@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript Strings</h1>
-<h2>The replaceAll() Method</h2>
 
-<p>ES2021 intoduced the string method replaceAll().</p>
+<h2>JavaScript Template Literals</h2>
 
-<p id="demo">I love cats. Cats are very easy to love. Cats are very popular.</p>
+<p>Template literals allows variables in strings:</p>
+
+<p id="demo"></p>
+
+<p>Template literals are not supported in Internet Explorer.</p>
 
 <script>
-let text = document.getElementById("demo").innerHTML;
-text = text.replaceAll("Cats","Dogs");
+let firstName = "John";
+let lastName = "Doe";
+
+let text = "Welcome ${firstName}, ${lastName}!";
 
 document.getElementById("demo").innerHTML = text;
 </script>
