@@ -4,19 +4,17 @@
 
 <h2>JavaScript Template Literals</h2>
 
-<p>Template literals allows multiline strings:</p>
+<p>Template literals allows variables in strings:</p>
 
 <p id="demo"></p>
 
 <p>Template literals are not supported in Internet Explorer.</p>
 
 <script>
-let text =
+let firstName = "John";
+let lastName = "Doe";
 
-`The quick
-brown fox
-jumps over
-the lazy dog`;
+let text = `Welcome ${firstName}, ${lastName}!`;
 
 document.getElementById("demo").innerHTML = text;
 </script>
