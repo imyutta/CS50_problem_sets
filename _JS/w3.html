@@ -11,12 +11,11 @@
 <p>Template literals are not supported in Internet Explorer.</p>
 
 <script>
-let firstName = "John";
-let lastName = "Doe";
+let price = 10;
+let VAT = 0.25;
+let total = `Total: ${(price * (1 + VAT)).toFixed(2)}`;
 
-let text = `Welcome ${lastName, firstName},  ${lastName}!`;
-
-document.getElementById("demo").innerHTML = text;
+document.getElementById("demo").innerHTML = total;
 </script>
 
 </body>
