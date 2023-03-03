@@ -2,19 +2,22 @@
 <html>
 <body>
 
-<h2>The JavaScript typeof Operator</h2>
+<h2>JavaScript Template Literals</h2>
 
-<p>The typeof operator returns the type of a variable or expression:</p>
+<p>Template literals allows variables in strings:</p>
 
 <p id="demo"></p>
 
+<p>Template literals are not supported in Internet Explorer.</p>
+
 <script>
-let y = "5";
-let x = + y;
-document.getElementById("demo").innerHTML = typeof y + "<br>" + typeof x;
+let firstName = "John";
+let lastName = "Doe";
+
+let text = `Welcome ${firstName, lastName},  ${lastName}!`;
+
+document.getElementById("demo").innerHTML = text;
 </script>
 
 </body>
 </html>
-
-
