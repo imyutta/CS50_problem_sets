@@ -9,9 +9,9 @@
 <p id="demo"></p>
 
 <script>
-let x = new Date("300100-01-02");
-let y = Number(x);
-document.getElementById("demo").innerHTML = Number.isSafeInteger(y);
+let x = new Date("2010-01-02");
+
+document.getElementById("demo").innerHTML = Number(Number.isSafeInteger(x));
 </script>
 
 </body>
