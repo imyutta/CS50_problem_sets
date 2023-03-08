@@ -4,14 +4,13 @@
 
 <h2>JavaScript Numbers</h2>
 
-<p>Extra large or extra small numbers can be written with scientific (exponent) notation:</p>
+<p>You can use the global JavaScript function isNaN() to find out if a value is not a number:</p>
 
 <p id="demo"></p>
 
 <script>
-let x = 123e5;
-let y = 123e-5;
-document.getElementById("demo").innerHTML = x + y;
+let x = 100 / "Apple";
+document.getElementById("demo").innerHTML = isNaN(x);
 </script>
 
 </body>
