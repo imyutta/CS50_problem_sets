@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html>
 <body>
+<h1>JavaScript new Date()</h1>
 
-<h2>JavaScript Array Sort</h2>
-<p>The lowest number is <span id="demo"></span>.</p>
+<p>JavaScript counts months from 0 to 11.</p>
+<p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+
+<p id="demo"></p>
 
 <script>
-const points = [40, 100, 1, 5, 25, 10];
-points.sort(function(a, b){return a-b});
-document.getElementById("demo").innerHTML = points[points.length-1];
+const d = new Date(2018, 15, 24, 10, 33, 30, 0);
+document.getElementById("demo").innerHTML = d;
 </script>
 
 </body>
 </html>
-
