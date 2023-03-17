@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html>
 <body>
-<h1>JavaScript new Date()</h1>
 
-<p>JavaScript counts months from 0 to 11.</p>
-<p>Specifying a month higher than 11, will not result in an error but add the overflow to the next year:</p>
+<h1>JavaScript Comparison</h1>
+<h2>The () ? : Ternary Operator</h2>
+
+<p>Input your age and click the button:</p>
+
+<input id="age" value="18" />
+
+<button onclick="myFunction()">Try it</button>
 
 <p id="demo"></p>
 
 <script>
-const d = new Date(2018, 15, 24, 10, 33, 30, 0);
-document.getElementById("demo").innerHTML = d.toString();
+function myFunction() {
+  let age = document.getElementById("age").value;
+  let voteable = (age < 18) ? "Too young":"Old enough";
+  document.getElementById("demo").innerHTML = voteable + " to vote.";
+}
 </script>
 
 </body>
