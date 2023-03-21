@@ -2,23 +2,19 @@
 <html>
 <body>
 
-<h1>JavaScript Comparison</h1>
-<h2>The () ? : Ternary Operator</h2>
-
-<p>Input your age and click the button:</p>
-
-<input id="age" value="18" />
-
-<button onclick="myFunction()">Try it</button>
+<h2>JavaScript For Loop</h2>
 
 <p id="demo"></p>
 
 <script>
-function myFunction() {
-  let age = document.getElementById("age").value;
-  let voteable = (age < 18) ? "Too young":"Old enough";
-  document.getElementById("demo").innerHTML = voteable + " to vote.";
+const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+
+let text = "";
+for (let i = 0; i < cars.length; i++) {
+  text += cars[i] + "<br>";
 }
+
+document.getElementById("demo").innerHTML = text;
 </script>
 
 </body>
