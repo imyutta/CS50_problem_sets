@@ -2,16 +2,18 @@
 <html>
 <body>
 
-<h2>JavaScript For Loop</h2>
+<h2>JavaScript For Of Loop</h2>
+
+<p>The for of statement loops through the values of an iterable object.</p>
 
 <p id="demo"></p>
 
 <script>
-const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+let language = "JavaScript";
 
 let text = "";
-for (let i = 0; i < cars.length; i++) {
-  text += cars[i] + "<br>";
+for (let x of language) {
+  text += x + "<br>";
 }
 
 document.getElementById("demo").innerHTML = text;
