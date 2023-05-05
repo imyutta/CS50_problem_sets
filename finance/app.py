@@ -134,7 +134,7 @@ def register():
 
         # Ensure username does not existin the database
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("username already exist", 403)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
