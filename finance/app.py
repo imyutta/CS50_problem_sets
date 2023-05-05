@@ -132,7 +132,7 @@ def register():
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
-        # Ensure username does not existin the database
+        # Ensure username does not exist in the database
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
             return apology("username already exist", 403)
 
