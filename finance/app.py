@@ -133,7 +133,6 @@ def register():
         elif password == confirmation:
             return apology("passwords do not match", 403)
 
-
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
