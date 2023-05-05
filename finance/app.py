@@ -133,7 +133,7 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username does not exist in the database
-        if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
+        if rows == username:
             return apology("username already exist", 403)
 
     # User reached route via GET (as by clicking a link or via redirect)
