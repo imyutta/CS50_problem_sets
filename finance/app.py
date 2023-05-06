@@ -142,7 +142,7 @@ def register():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("registration.html")
+        return render_template("register.html")
 
     return apology("TODO")
 
