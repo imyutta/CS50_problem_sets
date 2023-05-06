@@ -137,14 +137,20 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username does not exist in the database
-        if rows == username:
+        if rows != username:
+
+        else:
             return apology("username already exist", 403)
+
+        # Remember which user has logged in
+        session["user_id"] = rows[0]["id"]
+
+        # Redirect user to home page
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
-
-    return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
