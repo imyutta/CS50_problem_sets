@@ -143,7 +143,7 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
 
         # Ensure username does not exist in the database
-        if rows != username:
+        if not rows:
             new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
 
         else:
