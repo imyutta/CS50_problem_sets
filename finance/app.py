@@ -138,7 +138,7 @@ def register():
 
         # Ensure username does not exist in the database
         if rows != username:
-
+            new_username = db.execute();
         else:
             return apology("username already exist", 403)
 
