@@ -137,7 +137,7 @@ def register():
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username does not exist in the database
-        if rows != username:
+        if rows != request.form.get("username"):
             new_username = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)" username, hash);
         else:
             return apology("username already exist", 403)
