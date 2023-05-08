@@ -144,7 +144,7 @@ def register():
 
         # Ensure username does not exist in the database
         if rows != username:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+            new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             new_user_id = db.execute("SELECT id FROM users WHERE username = ?", username)
         else:
             return apology("username already exist", 403)
