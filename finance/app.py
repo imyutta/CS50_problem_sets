@@ -130,7 +130,7 @@ def register():
             return apology("must provide password", 403)
 
         # Ensure passwords match
-        elif request.form.get("password") == request.form.get("confirmation"):
+        elif request.form.get("password") != request.form.get("confirmation"):
             return apology("passwords do not match", 403)
 
         # Query database for username
