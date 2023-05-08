@@ -121,12 +121,16 @@ def register():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
+        # Collect the user's data:
+        username = request.form.get("username")
+        password = request.form.get("password")
+
         # Ensure username was submitted
-        if not request.form.get("username"):
+        if len(username) == 0:
             return apology("must provide username", 403)
 
         # Ensure password was submitted
-        elif not request.form.get("password"):
+        elif len(password) == 0:
             return apology("must provide password", 403)
 
         # Ensure passwords match
