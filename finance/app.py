@@ -145,12 +145,13 @@ def register():
         # Ensure username does not exist in the database
         if rows != username:
             new_user = db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
-            new_user_id = db.execute("SELECT id FROM users WHERE username = ?", username)
+
         else:
             return apology("username already exist", 403)
 
+        # new_user_id = db.execute("SELECT id FROM users WHERE username = ?", username)
         # Remember which user has logged in
-        session["user_id"] = new_user_id
+        session["user_id"] = new_user
 
         # Redirect user to home page
         return redirect("/")
