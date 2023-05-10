@@ -113,7 +113,7 @@ def quote():
         # Collect the data:
         symbol = request.form.get("symbol")
         lookup(symbol)
-        return render_template("quote.html", name="symbol")
+        return render_template("quoted.html", name="name", symbol="symbol", price="price")
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
