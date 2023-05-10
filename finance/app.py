@@ -118,9 +118,9 @@ def quote():
         if quotes == None:
             return apology("Invalid symbol", 403)
         else:
+            # If the symbol exists, show user the quote price
+            return render_template("quoted.html", quotes="quates")
 
-
-        return render_template("quoted.html", name="quates["name"]", symbol="dict.symbol", price="dict.price")
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
