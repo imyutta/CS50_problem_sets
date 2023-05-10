@@ -114,6 +114,7 @@ def quote():
         symbol = request.form.get("symbol").upper()
         quotes = lookup(symbol)
 
+        # Make sure the symbol exists
         if quotes == None:
             return apology("Invalid symbol", 403)
         else:
