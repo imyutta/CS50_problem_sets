@@ -112,11 +112,12 @@ def quote():
     if request.method == "POST":
         # Collect the data:
         symbol = request.form.get("symbol").upper()
-
+        quates = lookup(symbol)
+        
         if symbol is null:
             return apology("Invalid symbol", 403)
-        
-        const dict = {lookup(symbol)}
+
+
         return render_template("quoted.html", name="dict.name", symbol="dict.symbol", price="dict.price")
     # User reached route via GET (as by clicking a link or via redirect)
     else:
