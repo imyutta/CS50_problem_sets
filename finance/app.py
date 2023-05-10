@@ -111,11 +111,11 @@ def quote():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         # Collect the data:
-        symbol = request.form.get("symbol").upper()
+        symbol = request.form.get("symbol")
         quotes = lookup(symbol)
 
         # Make sure the symbol exists
-        if quotes == None:
+        if quotes is None:
             return apology("Invalid symbol", 403)
         else:
             # If the symbol exists, show user the quote price
