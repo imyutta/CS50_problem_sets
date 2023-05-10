@@ -111,7 +111,9 @@ def quote():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         # Collect the data:
-        symbol = request.form.get("symbol")
+        symbol = request.form.get("symbol").upper()
+
+        if symbol == null
         const dict = {lookup(symbol)}
         return render_template("quoted.html", name="dict.name", symbol="dict.symbol", price="dict.price")
     # User reached route via GET (as by clicking a link or via redirect)
