@@ -111,15 +111,14 @@ def quote():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         # Collect the data:
-        symbol = request.form.get("symbol")
-        quotes = lookup(symbol)
+        quotes = lookup(request.form.get("symbol"))
 
         # Make sure the symbol exists
-        if quotes is None:
+        if not quotes:
             return apology("Invalid symbol", 403)
-        else:
-            # If the symbol exists, show user the quote price
-            return render_template("quoted.html", quotes="quates")
+
+        # If the symbol exists, show user the quote price
+        return render_template("quoted.html", quotes=quotes)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
