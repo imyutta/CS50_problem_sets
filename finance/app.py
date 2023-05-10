@@ -113,8 +113,8 @@ def quote():
         # Collect the data:
         symbol = request.form.get("symbol").upper()
         quates = lookup(symbol)
-        
-        if symbol is null:
+
+        if quates == None:
             return apology("Invalid symbol", 403)
 
 
