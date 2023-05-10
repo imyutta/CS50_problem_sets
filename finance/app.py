@@ -119,7 +119,7 @@ def quote():
         else:
 
 
-        return render_template("quoted.html", name="dict.name", symbol="dict.symbol", price="dict.price")
+        return render_template("quoted.html", name="quates["name"]", symbol="dict.symbol", price="dict.price")
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("quote.html")
