@@ -112,10 +112,11 @@ def quote():
     if request.method == "POST":
         # Collect the data:
         symbol = request.form.get("symbol").upper()
-        quates = lookup(symbol)
+        quotes = lookup(symbol)
 
-        if quates == None:
+        if quotes == None:
             return apology("Invalid symbol", 403)
+        else:
 
 
         return render_template("quoted.html", name="dict.name", symbol="dict.symbol", price="dict.price")
