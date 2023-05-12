@@ -47,10 +47,13 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
-    
+
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("login.html")
 
 @app.route("/history")
 @login_required
