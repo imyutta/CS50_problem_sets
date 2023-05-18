@@ -50,6 +50,12 @@ def buy():
 
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
+        # Collect the data:
+        quotes = lookup(request.form.get("symbol"))
+
+        # Make sure the symbol exists
+        if not quotes:
+            return apology("Invalid symbol", 403)
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
