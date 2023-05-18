@@ -53,7 +53,7 @@ def buy():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("login.html")
+        return render_template("buy.html")
 
 @app.route("/history")
 @login_required
