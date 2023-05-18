@@ -123,10 +123,12 @@ def quote():
     if request.method == "POST":
         # Collect the data:
         quotes = lookup(request.form.get("symbol"))
+        shares = request.form.get("shares")
 
         # Make sure the symbol exists
         if not quotes:
             return apology("Invalid symbol", 403)
+        elif shares 
 
         # If the symbol exists, show user the quote price
         return render_template("quoted.html", quotes=quotes)
