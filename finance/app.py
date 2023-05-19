@@ -51,11 +51,15 @@ def buy():
     # User reached route via POST (as by submitting a form via POST)
     if request.method == "POST":
         # Collect the data:
+        # Take a symbol from a user
         symbol = request.form.get("symbol")
         if not symbol:
             return apology("must provide a symbol", 403)
-        
+
+        # Take the number of shares user wants to buy
         shares = request.form.get("shares")
+        if not shares:
+            return apology("must provide a number of shares", 403)
 
         # Make sure the symbol exists
         if not quotes:
