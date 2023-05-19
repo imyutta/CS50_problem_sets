@@ -67,7 +67,8 @@ def buy():
             return apology("the symbol does not exist", 403)
 
         # Query the database for users cash
-        
+        cash = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+
         # Redirect user to home page
         return redirect("/")
 
