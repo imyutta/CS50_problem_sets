@@ -76,6 +76,8 @@ def buy():
         if cash < total_price:
             return apology("not enough cash", 403)
         else:
+            cash = cash - total_price
+            db.execute("SET cash FROM users WHERE id = ? TO ?", user_id, cash)
             
 
         # Redirect user to home page
