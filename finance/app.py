@@ -67,7 +67,16 @@ def buy():
             return apology("the symbol does not exist", 403)
 
         # Query the database for users cash
-        cash = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+
+        # Calculate the total price
+        total_price = number_of_shares * quotes
+
+        # Check if there are enough money in user's cash
+        if cash < total_price:
+            return apology("not enough cash", 403)
+        else:
+            
 
         # Redirect user to home page
         return redirect("/")
@@ -102,7 +111,7 @@ def login():
             return apology("must provide password", 403)
 
         # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE id = ?", user_id)
+        rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
