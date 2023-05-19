@@ -63,6 +63,7 @@ def buy():
 
         # Look up a stock's current price
         quotes = lookup(symbol)
+        
         # Redirect user to home page
         return redirect("/")
 
