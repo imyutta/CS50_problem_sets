@@ -65,7 +65,8 @@ def buy():
         quotes = lookup(symbol)
         if not quotes:
             return apology("the symbol does not exist", 403)
-        
+
+        # Query the database for users cash
         # Redirect user to home page
         return redirect("/")
 
