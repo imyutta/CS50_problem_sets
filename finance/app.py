@@ -63,6 +63,8 @@ def buy():
 
         # Look up a stock's current price
         quotes = lookup(symbol)
+        if not quotes:
+            return apology("the symbol does not exist", 403)
         
         # Redirect user to home page
         return redirect("/")
