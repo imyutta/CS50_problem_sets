@@ -57,13 +57,11 @@ def buy():
             return apology("must provide a symbol", 403)
 
         # Take the number of shares user wants to buy
-        shares = request.form.get("shares")
-        if not shares:
-            return apology("must provide a number of shares", 403)
+        number_of_shares = float(request.form.get("shares"))
+        if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
+            return apology("must provide a valid number of shares", 403)
 
-        # Make sure the symbol exists
-        if not quotes:
-            return apology("Invalid symbol", 403)
+
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
