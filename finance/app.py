@@ -78,6 +78,8 @@ def buy():
         else:
             cash = cash - total_price
             db.execute("SET cash FROM users WHERE id = ? TO ?", user_id, cash)
+
+
             
 
         # Redirect user to home page
