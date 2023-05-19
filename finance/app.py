@@ -61,6 +61,8 @@ def buy():
         if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
             return apology("must provide a valid number of shares", 403)
 
+        # Look up a stock's current price
+        
         # Redirect user to home page
         return redirect("/")
 
