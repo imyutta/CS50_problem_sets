@@ -62,7 +62,7 @@ def buy():
             return apology("must provide a valid number of shares", 403)
 
         # Look up a stock's current price
-        
+        quotes = lookup(symbol)
         # Redirect user to home page
         return redirect("/")
 
