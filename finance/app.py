@@ -61,7 +61,8 @@ def buy():
         if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
             return apology("must provide a valid number of shares", 403)
 
-        
+        # Redirect user to home page
+        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
