@@ -70,7 +70,7 @@ def buy():
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
 
         # Calculate the total price
-        total_price = number_of_shares * quotes
+        total_price = number_of_shares * quotes["price"]
 
         # Check if there are enough money in user's cash
         if cash < total_price:
@@ -80,7 +80,7 @@ def buy():
             db.execute("SET cash FROM users WHERE id = ? TO ?", user_id, cash)
 
 
-            
+
 
         # Redirect user to home page
         return redirect("/")
