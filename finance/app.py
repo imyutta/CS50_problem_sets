@@ -95,6 +95,9 @@ def buy():
                 if users_purchases[0]["symbol"] == symbol:
                     number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
                     db.execute("UPDATE purchases SET (price, amount) TO ?, ? WHERE id = ? AND symbol = ?", share_price, number_of_shares, user_id, symbol)
+
+                    # renew users cash data
+                    cash_renewed = cash[0]["cash"] - total_price
                     db.execute("UPDATE users SET cash TO ? WHERE id = ?", )
 
 
