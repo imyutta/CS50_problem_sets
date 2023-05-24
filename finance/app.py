@@ -71,9 +71,10 @@ def buy():
             share_price = float(quotes["price"])
             total_price = share_price * number_of_shares
 
-
+        # Remember session user id
+        user_id = session["user_id"]
         # Query the database for users cash
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
 
         # Check if there are enough money in user's cash
         if cash[0]["cash"] < total_price:
@@ -81,7 +82,9 @@ def buy():
         else:
             # do something in new database
             if no new database
-            db.execute("SET cash FROM users WHERE id = ? TO ?", user_id, cash)
+            # renew users cash data
+            cash = 
+            db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash, user_id)
 
 
 
