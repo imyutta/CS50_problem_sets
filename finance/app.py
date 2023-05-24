@@ -75,9 +75,6 @@ def buy():
         # Query the database for users cash
         cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
-        # Calculate the total price
-        total_price = number_of_shares * quotes["price"]
-
         # Check if there are enough money in user's cash
         if cash < total_price:
             return apology("not enough cash", 403)
