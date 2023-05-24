@@ -92,7 +92,8 @@ def buy():
             # If user is already exist in the purchase database, just updte the purchase database
             else:
                 # If user has already bought this share in the past - update his data in the purchases database
-                if 
+                if users_purchases[0]["symbol"] == symbol:
+                    
 
 
 
