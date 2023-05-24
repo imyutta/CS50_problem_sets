@@ -83,8 +83,8 @@ def buy():
             # do something in new database
             if no new database
             # renew users cash data
-            cash = 
-            db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash, user_id)
+            cash_renewed = cash[0]["cash"] - total_price
+            db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
 
 
 
