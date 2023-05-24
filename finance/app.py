@@ -98,7 +98,11 @@ def buy():
 
                     # renew users cash data
                     cash_renewed = cash[0]["cash"] - total_price
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", )
+                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
+                    return redirect("/")
+                else:
+                    # If user is buying this share for the first time, add the data to the purchases database
+                    
 
 
 
