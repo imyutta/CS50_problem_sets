@@ -80,6 +80,8 @@ def buy():
         if cash[0]["cash"] < total_price:
             return apology("not enough cash", 403)
         else:
+            # Get users id in the purchase database
+            
             # If it is a first buy order from this user, insert him to purchases database
             if no user
                 db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
@@ -89,7 +91,7 @@ def buy():
                 db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
             else:
                 # If user is already exist in the purchase database, just updte the purchase database
-                
+
 
 
 
