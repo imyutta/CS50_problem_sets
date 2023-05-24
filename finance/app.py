@@ -63,10 +63,14 @@ def buy():
 
         # Look up a stock's current price
         quotes = lookup(symbol)
+        # Check if the current stock price has been sucsesfully found
         if not quotes:
             return apology("the symbol does not exist", 403)
         else:
-            quote_price = quotes["price"]
+            # Find the amount of money needed to buy the stocks
+            share_price = quotes["price"]
+            total_price = share_price * number_of_shares
+
 
         # Query the database for users cash
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
