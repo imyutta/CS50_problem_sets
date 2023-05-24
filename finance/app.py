@@ -82,7 +82,8 @@ def buy():
         else:
             # do something in new database
             if no new database
-            db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", symbol, total_price, )
+            db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
+            
             # renew users cash data
             cash_renewed = cash[0]["cash"] - total_price
             db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
