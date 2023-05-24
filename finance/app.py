@@ -68,7 +68,7 @@ def buy():
             return apology("the symbol does not exist", 403)
         else:
             # Find the amount of money needed to buy the stocks
-            share_price = quotes["price"]
+            share_price = float(quotes["price"])
             total_price = share_price * number_of_shares
 
 
