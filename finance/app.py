@@ -93,7 +93,9 @@ def buy():
             else:
                 # If user has already bought this share in the past - update his data in the purchases database
                 if users_purchases[0]["symbol"] == symbol:
-                    
+                    number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
+                    share_price = share_price + 
+                    db.execute("UPDATE purchases SET (price, amount) TO ?, ? WHERE id = ? AND symbol = ?", share_price, number_of_shares, user_id, symbol)
 
 
 
