@@ -80,17 +80,21 @@ def buy():
         if cash[0]["cash"] < total_price:
             return apology("not enough cash", 403)
         else:
-            # Get users id in the purchase database
-            
+            # find users data in the purchase database
+            users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
             # If it is a first buy order from this user, insert him to purchases database
-            if no user
+            if not users_purchases:
                 db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
 
                 # renew users cash data
                 cash_renewed = cash[0]["cash"] - total_price
                 db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
+            # If user is already exist in the purchase database, just updte the purchase database
             else:
-                # If user is already exist in the purchase database, just updte the purchase database
+                # If user has already bought this share in the past - update his data in the purchases database
+                if 
+
+
 
 
 
