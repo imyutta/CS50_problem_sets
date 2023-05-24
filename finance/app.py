@@ -65,6 +65,7 @@ def buy():
         quotes = lookup(symbol)
         if not quotes:
             return apology("the symbol does not exist", 403)
+        else:
 
         # Query the database for users cash
         cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
