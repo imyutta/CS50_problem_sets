@@ -73,7 +73,7 @@ def buy():
 
 
         # Query the database for users cash
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+        cash = db.execute("SELECT cash FROM users WHERE id = ?", session["user_id"])
 
         # Calculate the total price
         total_price = number_of_shares * quotes["price"]
