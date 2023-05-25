@@ -61,57 +61,56 @@ def buy():
         # Check if the number of shares provided by the user is digit
         if not number_of_shares.isdigit() or number_of_shares < 1:
             return apology("must provide a valid number of shares", 403)
-
-        number_of_shares = float(number_of_shares)
-       # if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
-       #     return apology("must provide a valid number of shares", 403)
-
-        # Look up a stock's current price
-        quotes = lookup(symbol)
-        # Check if the current stock price has been sucsesfully found
-        if not quotes:
-            return apology("the symbol does not exist", 403)
         else:
-            # Find the amount of money needed to buy the stocks
-            share_price = float(quotes["price"])
-            total_price = share_price * number_of_shares
+            # Convert the number of shares from string to an integer
+            number_of_shares = float(number_of_shares)
 
-        # Remember session user id
-        user_id = session["user_id"]
-        # Query the database for users cash
-        cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
-
-        # Check if there are enough money in user's cash
-        if cash[0]["cash"] < total_price:
-            return apology("not enough cash", 403)
-        else:
-            # Calculate how much cash will user have after purchase
-            cash_renewed = cash[0]["cash"] - total_price
-
-            # find users data in the purchase database
-            users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
-            # If it is a first buy order from this user, insert him to purchases database
-            if not users_purchases:
-                db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
-
-                db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
-            # If user is already exist in the purchase database, just updte the purchase database
+            # Look up a stock's current price
+            quotes = lookup(symbol)
+            # Check if the current stock price has been sucsesfully found
+            if not quotes:
+                return apology("the symbol does not exist", 403)
             else:
-                # If user has already bought this share in the past - update his data in the purchases database
-                if users_purchases[0]["symbol"] == symbol:
-                    number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
-                    db.execute("UPDATE purchases SET (price, amount) TO ?, ? WHERE id = ? AND symbol = ?", share_price, number_of_shares, user_id, symbol)
+                # Find the amount of money needed to buy the stocks
+                share_price = float(quotes["price"])
+                total_price = share_price * number_of_shares
 
-                    # renew users cash data
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
-                    return redirect("/")
-                else:
-                    # If user is buying this share for the first time, add the data to the purchases database
+            # Remember session user id
+            user_id = session["user_id"]
+            # Query the database for users cash
+            cash = db.execute("SELECT cash FROM users WHERE id = ?", user_id)
+
+            # Check if there are enough money in user's cash
+            if cash[0]["cash"] < total_price:
+                return apology("not enough cash", 403)
+            else:
+                # Calculate how much cash will user have after purchase
+                cash_renewed = cash[0]["cash"] - total_price
+
+                # find users data in the purchase database
+                users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
+                # If it is a first buy order from this user, insert him to purchases database
+                if not users_purchases:
                     db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
 
-                    # Redirect user to home page
-                    return redirect("/")
+                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
+                # If user is already exist in the purchase database, just updte the purchase database
+                else:
+                    # If user has already bought this share in the past - update his data in the purchases database
+                    if users_purchases[0]["symbol"] == symbol:
+                        number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
+                        db.execute("UPDATE purchases SET (price, amount) TO ?, ? WHERE id = ? AND symbol = ?", share_price, number_of_shares, user_id, symbol)
+
+                        # renew users cash data
+                        db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
+                        return redirect("/")
+                    else:
+                        # If user is buying this share for the first time, add the data to the purchases database
+                        db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
+                        db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
+
+                        # Redirect user to home page
+                        return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
