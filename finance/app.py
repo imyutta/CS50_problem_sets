@@ -57,7 +57,8 @@ def buy():
             return apology("must provide a symbol", 403)
 
         # Take the number of shares user wants to buy
-        number_of_shares = float(request.form.get("shares"))
+        number_of_shares = request.form.get("shares")
+        number_of_shares = float(number_of_shares)
         if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
             return apology("must provide a valid number of shares", 403)
 
