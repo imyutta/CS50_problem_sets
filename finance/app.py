@@ -76,7 +76,7 @@ def buy():
             total_price = share_price * number_of_shares
 
         # Remember session user id
-        users_id = session["user_id"]
+        users_id = float(session["user_id"])
 
         # Query the database for users cash
         cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
