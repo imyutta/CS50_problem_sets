@@ -103,6 +103,7 @@ def buy():
                 else:
                     # If user is buying this share for the first time, add the data to the purchases database
                     db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
+                    db.execute("UPDATE users SET cash TO ? WHERE id = ?" )
 
 
 
