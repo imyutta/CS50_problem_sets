@@ -59,12 +59,12 @@ def buy():
         # Take the number of shares user wants to buy
         number_of_shares = request.form.get("shares")
         # Check if the number of shares provided by the user is digit
-        if not number_of_shares.isdigit():
+        if not number_of_shares.isdigit() or number_of_shares < 1:
             return apology("a number of shares must be a digit", 403)
 
         number_of_shares = float(number_of_shares)
-        if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
-            return apology("must provide a valid number of shares", 403)
+       # if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
+       #     return apology("must provide a valid number of shares", 403)
 
         # Look up a stock's current price
         quotes = lookup(symbol)
