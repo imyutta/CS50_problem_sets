@@ -77,6 +77,7 @@ def buy():
 
         # Remember session user id
         users_id = session["user_id"]
+        print("111111111111", users_id)
 
         # Query the database for users cash
         cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
