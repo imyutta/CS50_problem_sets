@@ -60,8 +60,8 @@ def buy():
         number_of_shares = request.form.get("shares")
         # Check if the number of shares provided by the user is digit
         if not number_of_shares.isdigit():
-            return apology("must provide a valid number of shares", 403)
-        
+            return apology("a number of shares must be a digit", 403)
+
         number_of_shares = float(number_of_shares)
         if number_of_shares is None or number_of_shares == '' or number_of_shares < 1:
             return apology("must provide a valid number of shares", 403)
