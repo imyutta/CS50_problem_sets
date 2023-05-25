@@ -59,9 +59,11 @@ def buy():
         # Take the number of shares user wants to buy
         number_of_shares = request.form.get("shares")
         # Check if the number of shares provided by the user is digit
-        if number_of_shares.isdigit():
+        if not number_of_shares.isdigit():
+            return apology("must provide a valid number of shares", 403)
+        elif float(number_of_shares):
             number_of_shares = float(number_of_shares)
-        
+
             return apology("must provide a valid number of shares", 403)
         else:
             # Convert the number of shares from string to an integer
