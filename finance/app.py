@@ -67,7 +67,7 @@ def buy():
 
         # Look up a stock's current price
         quotes = lookup(symbol)
-        # Check if the current stock price has been sucsesfully found
+        # Check if the current stock price has been sucsessfully found
         if not quotes:
             return apology("the symbol does not exist", 403)
         else:
