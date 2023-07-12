@@ -22,10 +22,6 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///finance.db")
 
-# Make sure API key is set
-if not os.environ.get("API_KEY"):
-    raise RuntimeError("API_KEY not set")
-
 
 @app.after_request
 def after_request(response):
@@ -47,76 +43,8 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+    return apology("TODO")
 
-    # User reached route via POST (as by submitting a form via POST)
-    if request.method == "POST":
-        # Collect the data:
-        # Take a symbol from a user
-        symbol = request.form.get("symbol")
-        if not symbol:
-            return apology("must provide a symbol", 403)
-
-        # Take the number of shares user wants to buy
-        number_of_shares = request.form.get("shares")
-        # Check if the number of shares provided by the user is digit
-        if not number_of_shares.isdigit():
-            return apology("a number of shares should be a positive number", 403)
-
-        # Convert the number of shares from string to an integer
-        number_of_shares = float(number_of_shares)
-
-        # Look up a stock's current price
-        quotes = lookup(symbol)
-        # Check if the current stock price has been sucsessfully found
-        if not quotes:
-            return apology("the symbol does not exist", 403)
-        else:
-            # Find the amount of money needed to buy the stocks
-            share_price = float(quotes["price"])
-            total_price = share_price * number_of_shares
-
-        # Remember session user id
-        users_id = session["user_id"]
-        print("иии", users_id)
-
-        # Query the database for users cash
-        cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
-
-        # Check if there are enough money in user's cash
-        if cash[0]["cash"] < total_price:
-            return apology("not enough cash", 403)
-        else:
-            # Calculate how much cash will user have after purchase
-            cash_renewed = cash[0]["cash"] - total_price
-
-            # find users data in the purchase database
-            users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
-            # If it is a first buy order from this user, insert him to purchases database
-            if not users_purchases:
-                db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
-
-                db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
-            # If user is already exist in the purchase database, just updte the purchase database
-            else:
-                # If user has already bought this share in the past - update his data in the purchases database
-                if users_purchases[0]["symbol"] == symbol:
-                    number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
-                    db.execute("UPDATE purchases SET (price, amount) TO ?, ? WHERE id = ? AND symbol = ?", share_price, number_of_shares, user_id, symbol)
-
-                    # renew users cash data
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
-                    return redirect("/")
-                else:
-                    # If user is buying this share for the first time, add the data to the purchases database
-                    db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
-
-                    # Redirect user to home page
-                    return redirect("/")
-
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("buy.html")
 
 @app.route("/history")
 @login_required
@@ -176,70 +104,13 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
-    # User reached route via POST (as by submitting a form via POST)
-    if request.method == "POST":
-        # Collect the data:
-        quotes = lookup(request.form.get("symbol"))
-
-        # Make sure the symbol exists
-        if not quotes:
-            return apology("Invalid symbol", 403)
-
-        # If the symbol exists, show user the quote price
-        return render_template("quoted.html", quotes=quotes)
-
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("quote.html")
+    return apology("TODO")
 
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
-
-    # Forget any user_id
-    session.clear()
-
-    # User reached route via POST (as by submitting a form via POST)
-    if request.method == "POST":
-
-        # Collect the user's data:
-        username = request.form.get("username")
-        password = request.form.get("password")
-        confirmation = request.form.get("confirmation")
-        hash = generate_password_hash(password)
-
-        # Ensure username was submitted
-        if len(username) == 0:
-            return apology("must provide username", 403)
-
-        # Ensure password was submitted
-        elif len(password) == 0:
-            return apology("must provide password", 403)
-
-        # Ensure passwords match
-        elif password != confirmation:
-            return apology("passwords do not match", 403)
-
-        # Query database for username
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-
-        # Ensure username does not exist in the database
-        if not rows:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
-            new_user_id = db.execute("SELECT * FROM users WHERE username = ?", username)
-        else:
-            return apology("username already exist", 403)
-
-        # Remember which user has logged in
-        session["user_id"] = new_user_id[0]["id"]
-
-        # Redirect user to home page
-        return redirect("/")
-
-    # User reached route via GET (as by clicking a link or via redirect)
-    else:
-        return render_template("register.html")
+    return apology("TODO")
 
 
 @app.route("/sell", methods=["GET", "POST"])
