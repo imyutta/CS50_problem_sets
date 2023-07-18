@@ -110,6 +110,15 @@ def quote():
 @app.route("/register", methods=["GET", "POST"])
 def register():
     """Register user"""
+
+    # Forget any user_id
+    session.clear()
+
+    # User reached the route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        # Collect the user's data:
+        
     return apology("TODO")
 
 
