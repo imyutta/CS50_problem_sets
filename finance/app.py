@@ -120,7 +120,7 @@ def register():
         # Collect the user's data:
         username = request.form.get("username")
         password = request.form.get("password")
-        confirmation = request.form get("confirmation")
+        confirmation = request.form.get("confirmation")
         hash = generate_password_hash(password)
 
         # Ensure a username was submitted:
