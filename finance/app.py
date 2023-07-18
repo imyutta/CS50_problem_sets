@@ -124,7 +124,8 @@ def register():
         hash = generate_password_hash(password)
 
         # Ensure a password was submitted:
-        if len(username)
+        if len(username) == 0:
+            return apology("must provide username")
     return apology("TODO")
 
 
