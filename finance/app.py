@@ -104,6 +104,10 @@ def logout():
 @login_required
 def quote():
     """Get stock quote."""
+    # User reached the route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+        # Collect the data:
+        quotes = lookup(request.form.get("symbol"))
     return apology("TODO")
 
 
