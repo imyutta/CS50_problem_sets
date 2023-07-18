@@ -123,9 +123,17 @@ def register():
         confirmation = request.form get("confirmation")
         hash = generate_password_hash(password)
 
-        # Ensure a password was submitted:
+        # Ensure a username was submitted:
         if len(username) == 0:
-            return apology("must provide username")
+            return apology("must provide username", 403)
+
+        # Ensure a password was submitted:
+        elif len(password) == 0:
+            return apology("must provide password", 403)
+
+        # Ensure passwords match:
+        elif password != confirmation:
+            return apology("passwords do not match")
     return apology("TODO")
 
 
