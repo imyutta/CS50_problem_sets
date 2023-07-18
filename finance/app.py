@@ -134,7 +134,26 @@ def register():
         # Ensure passwords match:
         elif password != confirmation:
             return apology("passwords do not match")
-    return apology("TODO")
+
+        # Query database for username:
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        # Ensure that username does not exist in the database:
+        if not rows:
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+            new_user_id = db.execute("SELECT * FROM users WHERE username = ?", username)
+        else:
+            return apology("username already exists", 403)
+
+        # Remember which user has just logged in:
+        session["user_id"] = new_user_id[0]["id"]
+
+        # Redirect user to home page:
+        return redirect("/")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("register.html")
 
 
 @app.route("/sell", methods=["GET", "POST"])
