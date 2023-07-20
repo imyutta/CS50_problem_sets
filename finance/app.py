@@ -54,6 +54,7 @@ def buy():
 
         # Take the number of shares user wants to buy:
         number_of_shares = request.form.get("shares")
+        # Check if the number of shares provided by the user is digit:
 
     return apology("TODO")
 
