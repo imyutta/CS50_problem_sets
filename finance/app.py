@@ -61,6 +61,9 @@ def buy():
         # Convert the number of shares from string to an integer
         number_of_shares = float(number_of_shares)
 
+        # Look up the stock's current price:
+        quotes = lookup(symbol)
+
     return apology("TODO")
 
 
