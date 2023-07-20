@@ -43,11 +43,18 @@ def index():
 @login_required
 def buy():
     """Buy shares of stock"""
+
     # User reached route via post (as by submitting a form via POST)
     if request.method == "POST":
         # Collect the data:
         # Take a symbol from the user
-        
+        symbol = request.form.get("symbol")
+        if not symbol:
+            return apology("must provide a symbol", 403)
+
+        # Take the number of shares user wants to buy:
+        number_of_shares = request.form.get("shares")
+
     return apology("TODO")
 
 
