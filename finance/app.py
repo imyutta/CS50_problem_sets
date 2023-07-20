@@ -115,7 +115,10 @@ def quote():
 
         # If the symbol exists, show user the quote price:
         return render_template("quoted.html", quotes=quotes)
-    return apology("TODO")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("quote.html")
 
 
 @app.route("/register", methods=["GET", "POST"])
