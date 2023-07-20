@@ -58,6 +58,8 @@ def buy():
         if not number_of_shares.isdigit():
             return apology("a number of shares should be a positive number", 403)
 
+        # Convert the number 
+
     return apology("TODO")
 
 
