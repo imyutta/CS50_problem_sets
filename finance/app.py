@@ -58,12 +58,12 @@ def buy():
         if not number_of_shares.isdigit():
             return apology("a number of shares should be a positive number", 403)
 
-        # Convert the number of shares from string to an integer
+        # Convert the number of shares from string to an integer:
         number_of_shares = float(number_of_shares)
 
         # Look up the stock's current price:
         quotes = lookup(symbol)
-        # Check if the current stock price has been sucsessfully found
+        # Check if the current stock price has been sucsessfully found:
         if not quotes:
             return apology("the symbol does not exist", 403)
         else:
@@ -75,19 +75,19 @@ def buy():
         users_id = session["user_id"]
 
 
-        # Query the database for users money
+        # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
         print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", users_cash)
 
-        # Check if there are enough money user has
+        # Check if there are enough money user has:
         if users_cash[0]["cash"] < total_price:
             return apology("not enough cash", 403)
         else:
-            # Calculate how much cash will user have after purchase
-            cash_renewed = cash[0]["cash"] - total_price
+            # Calculate how much cash will user have after purchase:
+            cash_after_purchase = cash[0]["cash"] - total_price
 
-            # find users data in the purchase database
-            users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", user_id)
+            # Find users data in the purchase database:
+            users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", users_id)
             # If it is a first buy order from this user, insert him to purchases database
             if not users_purchases:
                 db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
