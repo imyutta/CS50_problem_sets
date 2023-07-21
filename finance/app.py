@@ -77,7 +77,7 @@ def buy():
 
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
-        print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", users_cash)
+
 
         # Check if there are enough money user has:
         if users_cash[0]["cash"] < total_price:
@@ -88,6 +88,7 @@ def buy():
 
             # Find users data in the purchase database:
             users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", users_id)
+            print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", users_purchases)
             # If it is a first buy order from this user, insert him to purchases database
             if not users_purchases:
                 db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", users_id, symbol, share_price, number_of_shares)
