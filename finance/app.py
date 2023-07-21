@@ -88,7 +88,7 @@ def buy():
 
             # Find users data in the purchase database:
             users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", users_id)
-            print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", users_purchases)
+
             # If it is a first buy order from this user, insert him to purchases database
             if not users_purchases:
                 db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
