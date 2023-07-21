@@ -67,7 +67,8 @@ def buy():
         if not quotes:
             return apology("the symbol does not exist", 403)
         else:
-            # Find the amount of money
+            # Find the amount of money needed to buy the stocks:
+            share_price = float(quites[""])
 
 
     return apology("TODO")
