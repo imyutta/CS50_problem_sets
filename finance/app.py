@@ -36,6 +36,9 @@ def after_request(response):
 @login_required
 def index():
     """Show portfolio of stocks"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+    
     return apology("TODO")
 
 
