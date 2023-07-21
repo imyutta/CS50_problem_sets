@@ -99,15 +99,15 @@ def buy():
                 # If user has already bought this share in the past - update his data in the purchases database
                 if users_purchases[0]["symbol"] == symbol:
                     number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
-                    db.execute("UPDATE purchases SET (price, amount) TO ?, ? WHERE id = ? AND symbol = ?", share_price, number_of_shares, users_id, symbol)
+                    db.execute("UPDATE purchases SET price = ?, amount = ?, WHERE id = ? AND symbol = ?", share_price, number_of_shares, users_id, symbol)
 
                     # renew users cash data
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_after_purchase, users_id)
+                    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
                     return redirect("/")
                 else:
                     # If user is buying this share for the first time, add the data to the purchases database
-                    db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", users_id, symbol, share_price, number_of_shares)
-                    db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_after_purchase, users_id)
+                    db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
+                    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
                     # Redirect user to home page
                     return redirect("/")
