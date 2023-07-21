@@ -68,7 +68,7 @@ def buy():
             return apology("the symbol does not exist", 403)
         else:
             # Find the amount of money needed to buy the stocks:
-            share_price = float(quites["price"])
+            share_price = float(quotes["price"])
             total_price = share_price * number_of_shares
 
         # Remember the session id
@@ -79,7 +79,7 @@ def buy():
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
 
         # Check if there are enough money user has
-        if cash[0]["cash"] < total_price:
+        if users_cash[0]["cash"] < total_price:
             return apology("not enough cash", 403)
         else:
             # Calculate how much cash will user have after purchase
