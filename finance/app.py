@@ -90,10 +90,10 @@ def buy():
             users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", users_id)
             # If it is a first buy order from this user, insert him to purchases database
             if not users_purchases:
-                db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", user_id, symbol, share_price, number_of_shares)
+                db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES ?, ?, ?, ?", users_id, symbol, share_price, number_of_shares)
 
-                db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_renewed, user_id)
-            # If user is already exist in the purchase database, just updte the purchase database
+                db.execute("UPDATE users SET cash TO ? WHERE id = ?", cash_after_purchase, users_id)
+            # If user is already exist in the purchase database, just update the purchase database
             else:
                 # If user has already bought this share in the past - update his data in the purchases database
                 if users_purchases[0]["symbol"] == symbol:
