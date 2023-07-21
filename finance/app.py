@@ -71,6 +71,10 @@ def buy():
             share_price = float(quites["price"])
             total_price = share_price * number_of_shares
 
+        # Remember the session id
+        users_id = session["user_id"]
+        print("vvvvvvvvvvvv", users_id)
+
 
     return apology("TODO")
 
