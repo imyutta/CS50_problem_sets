@@ -64,6 +64,7 @@ def buy():
         # Look up the stock's current price:
         quotes = lookup(symbol)
 
+
     return apology("TODO")
 
 
