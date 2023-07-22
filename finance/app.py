@@ -39,6 +39,7 @@ def index():
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
+    # Get user's stocks
     return apology("TODO")
 
 
