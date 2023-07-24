@@ -42,7 +42,9 @@ def index():
     # Get user's stocks, user's numbers of shares:
     users_stocks = db.execute("SELECT symbol, SUM(amount) as total_amount FROM purchases WHERE id = ? GROUP BY symbol HAVING amount > 0", users_id)
 
-    # Get user's cash
+    # Get user's cash:
+    users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)
+    
     # the current price of each stock, and the total value of each holding
     return apology("TODO")
 
