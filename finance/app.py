@@ -44,6 +44,8 @@ def index():
 
     # Get user's cash:
     users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)
+
+    # Variables
     
     # the current price of each stock, and the total value of each holding
     return apology("TODO")
