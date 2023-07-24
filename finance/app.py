@@ -45,6 +45,7 @@ def index():
     # the current price of each stock, and the total value of each holding
     return apology("TODO")
 
+# symbol, name, shares, price, TOTAL
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
