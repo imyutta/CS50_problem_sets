@@ -40,7 +40,7 @@ def index():
     users_id = session["user_id"]
 
     # Get user's stocks, user's numbers of shares:
-    users_stocks = db.execute("SELECT symbol, ")
+    users_stocks = db.execute("SELECT symbol, amount")
 
     # the current price of each stock, and the total value of each holding
     return apology("TODO")
