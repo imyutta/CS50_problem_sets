@@ -51,10 +51,11 @@ def index():
     for stock in users_stocks:
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
+        print("vvbvbvbvbvbvbvbvbvbvbbv", users_stocks)
         stock["price"] = quote["price"]
         stock["total"] = stock["price"] * stock["total_amount"]
         total_value += stock["total"]
-        print("vvbvbvbvbvbvbvbvbvbvbbv", users_stocks)
+
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value, grand_total=grand_total)
 
 # symbolOK, name, sharesOK, price, TOTAL(stocks)
