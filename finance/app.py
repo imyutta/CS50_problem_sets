@@ -47,7 +47,7 @@ def index():
 
     # Variables
     total_value = users_cash[0]["cash"]
-    print("vvbvbvbvbvbvbvbvbvbvknjdsndjksndjnsjdnsjdsnjdnsjdsjdnsjdnsjdsjd", total_value)
+
     # Create a table by iterating over stocks
     for stock in users_stocks:
         quote = lookup(stock["symbol"])
