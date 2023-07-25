@@ -51,6 +51,7 @@ def index():
     # Create a table by iterating over stocks
     for stock in users_stocks:
         quote = lookup(stock["symbol"])
+        print("vvbvbvbvbvbvbvbvbvbvbbv", quote)
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
         stock["value"] = stock["price"] * stock["total_amount"]
