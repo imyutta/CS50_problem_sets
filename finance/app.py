@@ -46,7 +46,7 @@ def index():
     users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)
 
     # Variables
-    total_value = users_cash
+    total_shares_value = 0
 
     # Create a table by iterating over stocks
     for stock in users_stocks:
@@ -55,7 +55,7 @@ def index():
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
         stock["value"] = stock["price"] * stock["total_amount"]
-        users_cash += stock["value"]
+        total_shares_value += stock["value"]
         total_value += stock["value"]
 
     return render_template("index.html", stocks=stocks, cash=cash, total_value=total_value, grand_total=grand_total)
