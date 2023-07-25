@@ -51,7 +51,9 @@ def index():
     for stock in users_stocks
     return apology("TODO")
 
-# symbolOK, name, sharesOK, price, TOTAL
+# symbolOK, name, sharesOK, price, TOTAL(stocks)
+# Cash
+# Total
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
