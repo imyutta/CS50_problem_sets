@@ -48,7 +48,10 @@ def index():
     # Variables
 
     # Create a table by iterating over stocks
-   # for stock in users_stocks
+    for stock in users_stocks:
+        quote = lookup(stock["symbol"])
+        s
+
     return apology("TODO")
 
 # symbolOK, name, sharesOK, price, TOTAL(stocks)
