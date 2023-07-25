@@ -43,9 +43,10 @@ def index():
     users_stocks = db.execute("SELECT symbol, SUM(amount) as total_amount FROM purchases WHERE id = ? GROUP BY symbol HAVING amount > 0", users_id)
     # Get user's cash:
     users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)
+    print("vvbvbvbvbvbvbvbvbvbvbbv", users_cash)
 
     # Variables
-    total_value = users_cash
+    total_value = users_cash[cash]
 
     # Create a table by iterating over stocks
     for stock in users_stocks:
