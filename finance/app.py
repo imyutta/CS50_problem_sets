@@ -270,3 +270,4 @@ def register():
 def sell():
     """Sell shares of stock"""
     return apology("TODO")
+# CREATE TABLE stock_purchases (id INTEGER PRIMARY KEY AUTOINCREMENT, users_id INTEGER NOT NULL, symbol TEXT NOT NULL, amount INTEGER NOT NULL, price INTEGER NOT NULL, 
