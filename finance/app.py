@@ -110,7 +110,7 @@ def buy():
             # Calculate how much cash will user have after purchase:
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
-            # Find users data in the purchase database:
+            # Find users data in the purchases database:
             users_purchases = db.execute("SELECT * FROM purchases WHERE users_id = ?", users_id)
 
             # If it is a first buy order from this user, insert him to purchases database
