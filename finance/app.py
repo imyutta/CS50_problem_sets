@@ -110,14 +110,12 @@ def buy():
             # Calculate how much cash will user have after purchase:
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
-            # Find users data in the purchases database:
-            # users_purchases = db.execute("SELECT * FROM purchases WHERE users_id = ?", users_id)
 
-            # If it is a first buy order from this user, insert him to purchases database
-            if not users_purchases:
-                db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
-
-                db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
+            # Insert the purchase data into the purchases database
+            db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
+            # Update users database, renew cash amount
+            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
+            
             # If user is already exist in the purchase database, just update the purchase database
             else:
                 # If user has already bought this share in the past - update his data in the purchases database
