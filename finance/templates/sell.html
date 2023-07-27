@@ -7,7 +7,7 @@
 {% block main %}
     <form action="/sell" method="post">
         <label for="symbol">Select a stock symbol:</label>
-        <select class="mb-3" id="symbol">
+        <select id="symbol"  autocomplete="off">
             {% for symbol in symbols %}
                 <option value="{{ symbol }}">{{ symbol }}</option>
             {% endfor %}
