@@ -268,7 +268,7 @@ def sell():
         # Convert the number of shares from string to an integer:
         number_of_shares = float(number_of_shares)
 
-        
+
 
     # Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.
     # Require that a user input a number of shares, implemented as a text field whose name is shares.
