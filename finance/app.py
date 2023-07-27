@@ -111,7 +111,7 @@ def buy():
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
             # Find users data in the purchase database:
-            users_purchases = db.execute("SELECT * FROM purchases WHERE id = ?", users_id)
+            users_purchases = db.execute("SELECT * FROM purchases WHERE users_id = ?", users_id)
 
             # If it is a first buy order from this user, insert him to purchases database
             if not users_purchases:
@@ -270,4 +270,4 @@ def register():
 def sell():
     """Sell shares of stock"""
     return apology("TODO")
-# CREATE TABLE stock_purchases (id INTEGER PRIMARY KEY AUTOINCREMENT, users_id INTEGER NOT NULL, symbol TEXT NOT NULL, amount INTEGER NOT NULL, price INTEGER NOT NULL, 
+# CREATE TABLE stock_purchases (id INTEGER PRIMARY KEY AUTOINCREMENT, users_id INTEGER NOT NULL, symbol TEXT NOT NULL, amount INTEGER NOT NULL, price INTEGER NOT NULL,
