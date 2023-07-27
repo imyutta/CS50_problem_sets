@@ -260,7 +260,15 @@ def sell():
             return apology("must provide a symbol", 403)
 
         # Take the number of shares user wants to sell:
-        number_of_shares = request.form.get
+        number_of_shares = request.form.get("shares")
+        # Check if the number of shares provided by the user is digit:
+        if not number_of_shares.isdigit():
+            return apology ("a number of shares should be a positive number", 403)
+
+        # Convert the number of shares from string to an integer:
+        number_of_shares = float(number_of_shares)
+
+        
 
     # Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.
     # Require that a user input a number of shares, implemented as a text field whose name is shares.
