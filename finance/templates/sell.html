@@ -7,7 +7,7 @@
 {% block main %}
     <form action="/sell" method="post">
         <label for="symbol">Select a stock symbol:</label>
-        <select id="symbol">
+        <select class="mb-3" id="symbol">
             {% for symbol in symbols %}
                 <option value="{{ symbol }}">{{ symbol }}</option>
             {% endfor %}
@@ -15,7 +15,7 @@
         <br>
         <label for="shares">Number of shares:</label>
         <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" required>
-        
+
 
 
         <div class="mb-3">
