@@ -98,10 +98,8 @@ def buy():
         # Remember the session id
         users_id = session["user_id"]
 
-
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
-
 
         # Check if there are enough money user has:
         if users_cash[0]["cash"] < total_price:
@@ -110,29 +108,13 @@ def buy():
             # Calculate how much cash will user have after purchase:
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
-
             # Insert the purchase data into the purchases database
             db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
             # Update users database, renew cash amount
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-            
-            # If user is already exist in the purchase database, just update the purchase database
-            else:
-                # If user has already bought this share in the past - update his data in the purchases database
-                if users_purchases[0]["symbol"] == symbol:
-                    number_of_shares = int(users_purchases[0]["amount"]) + number_of_shares
-                    db.execute("UPDATE purchases SET price = ?, amount = ? WHERE users_id = ? AND symbol = ?", share_price, number_of_shares, users_id, symbol)
 
-                    # renew users cash data
-                    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-                    return redirect("/")
-                else:
-                    # If user is buying this share for the first time, add the data to the purchases database
-                    db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
-                    db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-
-                    # Redirect user to home page
-                    return redirect("/")
+            # Redirect user to home page
+            return redirect("/")
 
     # User reached the route via GET (as by clicking a link or via redirect)
     else:
