@@ -115,7 +115,7 @@ def buy():
 
             # If it is a first buy order from this user, insert him to purchases database
             if not users_purchases:
-                db.execute("INSERT INTO purchases (id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
+                db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
 
                 db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
             # If user is already exist in the purchase database, just update the purchase database
