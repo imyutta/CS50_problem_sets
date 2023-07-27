@@ -59,9 +59,6 @@ def index():
     formatted_total_value=round(total_value, 2)
     return render_template("index.html", users_stocks=users_stocks, users_cash=formatted_users_cash, total_value=formatted_total_value)
 
-# symbolOK, name, sharesOK, price, TOTAL(stocks)
-# Cash
-# Total
 
 @app.route("/buy", methods=["GET", "POST"])
 @login_required
@@ -250,4 +247,3 @@ def register():
 def sell():
     """Sell shares of stock"""
     return apology("TODO")
-# CREATE TABLE stock_purchases (id INTEGER PRIMARY KEY AUTOINCREMENT, users_id INTEGER NOT NULL, symbol TEXT NOT NULL, amount INTEGER NOT NULL, price INTEGER NOT NULL,
