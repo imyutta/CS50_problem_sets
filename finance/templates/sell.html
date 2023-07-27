@@ -9,9 +9,13 @@
         <label for="symbol">Select a stock symbol:</label>
         <select id="symbol">
             {% for symbol in symbols %}
-            <option value="{{ symbol }}">{{ symbol }}</option>
-            
+                <option value="{{ symbol }}">{{ symbol }}</option>
+            {% endfor %}
         </select>
+        <br>
+        <label for="shares">Number of shares:</label>
+        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" required>
+        
 
 
         <div class="mb-3">
