@@ -251,7 +251,14 @@ def sell():
     users_id = session["user_id"]
 
     # Require that a user input a stock’s symbol, implemented as a select menu whose name is symbol.
-    
+    # User reached route via post (as by submitting a form via POST)
+    if request.method == "POST":
+        # Collect the data:
+        # Take a symbol from the user
+        symbol = request.form.get("symbol")
+        if not symbol:
+            return apology("must provide a symbol", 403)
+
     # Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.
     # Require that a user input a number of shares, implemented as a text field whose name is shares.
     # Render an apology if the input is not a positive integer or if the user does not own that many shares of the stock.
