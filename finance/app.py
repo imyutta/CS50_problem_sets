@@ -283,7 +283,7 @@ def sell():
             return apology ("you do not own this many shares of this stock", 403)
 
         # Check the current stock price:
-        share_price = float(lookup(symbol))
+        share_price = lookup(symbol)["price"]
         print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", share_price)
         # Redirect user to home page
         return redirect("/")
