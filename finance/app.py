@@ -287,10 +287,12 @@ def sell():
         share_price = lookup(symbol)["price"]
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)[0]["cash"]
-        # Calculate how much cash will user have after purchase:
+        # Calculate how much cash will user have after the purchase:
         cash_after_purchase = users_cash + (share_price * number_of_shares)
+        # Calculate how much stocks user has now:
+        users_share_after = users_share - number_of_shares
         # Update databases:
-        
+
 
 
         # Redirect user to home page
