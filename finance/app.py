@@ -282,7 +282,9 @@ def sell():
         elif users_share < number_of_shares:
             return apology ("you do not own this many shares of this stock", 403)
 
-        
+        # Check the current stock price:
+        share_price = float(lookup(symbol))
+        print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", share_price)
         # Redirect user to home page
         return redirect("/")
 
