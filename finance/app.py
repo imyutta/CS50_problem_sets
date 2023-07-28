@@ -261,6 +261,7 @@ def sell():
             return apology("must provide a symbol", 403)
 
         # Check if (somehow, once submitted) the user does not own any shares of that stock:
+        # Query the database for users purchases with this symbol:
         
 
         # Take the number of shares user wants to sell:
