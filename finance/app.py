@@ -89,7 +89,7 @@ def buy():
             return apology("the symbol does not exist", 403)
         else:
             # Find the amount of money needed to buy the stocks:
-            share_price = float(quotes["price"])
+            share_price = quotes["price"]
             total_price = share_price * number_of_shares
 
         # Remember the session id
@@ -284,7 +284,7 @@ def sell():
 
         # Check the current stock price:
         share_price = lookup(symbol)["price"]
-        print("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", share_price)
+
         # Redirect user to home page
         return redirect("/")
 
