@@ -266,7 +266,7 @@ def sell():
             return apology ("a number of shares should be a positive number", 403)
 
         # Convert the number of shares from string to an integer:
-        number_of_shares = float(number_of_shares)
+        number_of_shares = int(number_of_shares)
 
 
 
