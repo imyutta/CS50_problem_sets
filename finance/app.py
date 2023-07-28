@@ -292,7 +292,10 @@ def sell():
         # Calculate how much stocks user has now:
         users_share_after = users_share - number_of_shares
         # Update databases:
-
+        # Update the purchase database
+        db.execute("UPDATE purchases SET amount = ? WHERE users_id = ?, symbol = ?", users_share_after, users_id, symbol_lower)
+        # Update users database, renew cash amount
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
 
         # Redirect user to home page
