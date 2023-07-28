@@ -261,7 +261,7 @@ def sell():
             return apology("must provide a symbol", 403)
 
         # Check if (somehow, once submitted) the user does not own any shares of that stock:
-
+        
 
         # Take the number of shares user wants to sell:
         number_of_shares = request.form.get("shares")
