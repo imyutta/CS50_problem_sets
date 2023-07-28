@@ -256,6 +256,7 @@ def sell():
         # Collect the data:
         # Take a symbol from the user
         symbol = request.form.get("symbol")
+        # Render an apology if the user fails to select a stock
         if not symbol:
             return apology("must provide a symbol", 403)
 
@@ -268,11 +269,17 @@ def sell():
         # Convert the number of shares from string to an integer:
         number_of_shares = int(number_of_shares)
 
-        
+        # Render an apology  if (somehow, once submitted) the user does not own any shares of that stock:
+        if number_of_shares < 1:
+            return apology ("you do not own any shares of this stock", 403)
 
 
 
-    # Render an apology if the user fails to select a stock or if (somehow, once submitted) the user does not own any shares of that stock.
+
+
+
+
+
     # Require that a user input a number of shares, implemented as a text field whose name is shares.
     # Render an apology if the input is not a positive integer or if the user does not own that many shares of the stock.
     # Submit the user’s input via POST to /sell.
