@@ -262,7 +262,7 @@ def sell():
 
         # Check if (somehow, once submitted) the user does not own any shares of that stock:
         # Query the database for users purchases with this symbol:
-        users_share = db.execute("SELECT * FROM purchases WHERE users_id = ?", users_id)
+        users_share = db.execute("SELECT * FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["cash"]
 
 
         # Take the number of shares user wants to sell:
