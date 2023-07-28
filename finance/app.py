@@ -277,7 +277,8 @@ def sell():
         number_of_shares = int(number_of_shares)
 
         # Check if the number of shares provided by the user is a positive integer:
-        if not number_of_shares
+        if  number_of_shares < 0:
+            return apology ("a number of shares should be a positive number", 403)
 
         # Render an apology  if (somehow, once submitted) the user does not own any shares of that stock:
         if number_of_shares < 1:
