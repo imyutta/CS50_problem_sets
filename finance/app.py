@@ -282,11 +282,16 @@ def sell():
         elif users_share < number_of_shares:
             return apology ("you do not own this many shares of this stock", 403)
 
+        # SELL THE STOCK
         # Check the current stock price:
         share_price = lookup(symbol)["price"]
-
+        # Query the database for users money:
+        users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)[0]["cash"]
         # Calculate how much cash will user have after purchase:
-        cash_after_purchase = users
+        cash_after_purchase = users_cash + (share_price * number_of_shares)
+        # Update databases:
+        
+
 
         # Redirect user to home page
         return redirect("/")
