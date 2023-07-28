@@ -283,9 +283,6 @@ def sell():
             return apology ("you do not own this many shares of this stock", 403)
 
 
-
-
-    # Render an apology if the input is not a positive integer or if the user does not own that many shares of the stock.
     # Submit the user’s input via POST to /sell.
     # Upon completion, redirect the user to the home page.
     # You don’t need to worry about race conditions (or use transactions).
