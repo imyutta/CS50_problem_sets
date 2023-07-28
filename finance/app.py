@@ -263,8 +263,8 @@ def sell():
         # Check if (somehow, once submitted) the user does not own any shares of that stock:
         # Query the database for users purchases with this symbol:
         symbol_lower = symbol.lower()
-        users_share = db.execute("SELECT SUM(amount) FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["SUM(amount)"]
-        if users_share < 1:
+        users_total_share = db.execute("SELECT SUM(amount) FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["SUM(amount)"]
+        if users__total_share < 1:
             return apology("you do not own any shares of that stock", 403)
 
         # Take the number of shares user wants to sell:
@@ -279,7 +279,7 @@ def sell():
         # Check if the number of shares provided by the user is a positive integer:
         if  number_of_shares < 1:
             return apology ("a number of shares should be a positive number", 403)
-        elif users_share < number_of_shares:
+        elif users_total_share < number_of_shares:
             return apology ("you do not own this many shares of this stock", 403)
 
         # SELL THE STOCK
