@@ -264,7 +264,8 @@ def sell():
         # Query the database for users purchases with this symbol:
         symbol_lower = symbol.lower()
         users_share = db.execute("SELECT SUM(amount) FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["SUM(amount)"]
-
+        if users_share < 1:
+            return apology("you do not own any shares of that stock", 403)
 
         # Take the number of shares user wants to sell:
         number_of_shares = request.form.get("shares")
