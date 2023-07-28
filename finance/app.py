@@ -275,11 +275,6 @@ def sell():
 
 
 
-
-
-
-
-
     # Require that a user input a number of shares, implemented as a text field whose name is shares.
     # Render an apology if the input is not a positive integer or if the user does not own that many shares of the stock.
     # Submit the user’s input via POST to /sell.
