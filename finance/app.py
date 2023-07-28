@@ -282,9 +282,12 @@ def sell():
         elif users_share < number_of_shares:
             return apology ("you do not own this many shares of this stock", 403)
 
+        
+        # Redirect user to home page
+        return redirect("/")
 
-    # Submit the user’s input via POST to /sell.
-    # Upon completion, redirect the user to the home page.
-    # You don’t need to worry about race conditions (or use transactions).
+    # User reached the route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("sell.html")
 
-    return render_template("sell.html")
+
