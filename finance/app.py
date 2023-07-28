@@ -264,7 +264,7 @@ def sell():
         # Query the database for users purchases with this symbol:
         symbol_lower = symbol.lower()
         users_total_share = db.execute("SELECT SUM(amount) FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["SUM(amount)"]
-        if users__total_share < 1:
+        if users_total_share < 1:
             return apology("you do not own any shares of that stock", 403)
 
         # Take the number of shares user wants to sell:
@@ -289,8 +289,10 @@ def sell():
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)[0]["cash"]
         # Calculate how much cash will user have after the purchase:
         cash_after_purchase = users_cash + (share_price * number_of_shares)
+        # Quiry purchases database for a single users_share
+        users_share_before = db.execute("SELECT amount FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["amount"]
         # Calculate how much stocks user has now:
-        users_share_after = users_share - number_of_shares
+        users_share_after = users_share_before - number_of_shares
         # Update databases:
         # Update the purchase database
         db.execute("UPDATE purchases SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol_lower)
