@@ -285,6 +285,9 @@ def sell():
         # Check the current stock price:
         share_price = lookup(symbol)["price"]
 
+        # Calculate how much cash will user have after purchase:
+        cash_after_purchase = users
+
         # Redirect user to home page
         return redirect("/")
 
