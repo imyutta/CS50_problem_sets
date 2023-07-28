@@ -6,29 +6,22 @@
 
 {% block main %}
     <form action="/sell" method="post">
-        <label for="symbol">Select a stock symbol:</label>
-        <select id="symbol"  autocomplete="off" name="Symbol">
-            <option value="" disabled selected>Symbol</option>
-            {% for symbol in symbols %}
-                <option value="{{ symbol }}">{{ symbol }}</option>
-            {% endfor %}
-        </select>
-        <br>
-        <label for="shares">Number of shares:</label>
-        <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" required>
-        
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="shares">
-        </div>
-
-
-
-        <div class="mb-3">
-            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="symbol" name="symbol" placeholder="Symbol" type="text">
+            <select id="symbol"  autocomplete="off" name="Symbol">
+                <option value="" disabled selected>Symbol</option>
+                    {% for symbol in symbols %}
+                        <option value="{{ symbol }}">{{ symbol }}</option>
+                    {% endfor %}
+            </select>
         </div>
         <div class="mb-3">
-            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="shares">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="text" required>
         </div>
         <button class="btn btn-primary" type="submit">Sell</button>
+
+
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="shares" name="shares" placeholder="Shares" type="shares">
+        </div>
     </form>
 {% endblock %}
