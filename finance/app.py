@@ -111,10 +111,16 @@ def buy():
             # Update users database, renew cash amount:
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
+            # Update users_stocks database:
             # Check if the users_stocks database already has data about this stock:
             existing_stock = db.execute("SELECT * FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)
-            # Update users_stocks database:
-            db.execute("INSERT INTO users_stocks (users_id, symbol, amount) VALUES (?, ?, ?)", users_id, symbol, number_of_shares)
+            if existing_stock:
+                # If existing stock already exists, update the amount by adding number_of_shares to the existing amount:
+                updated_amount = existing_stock["amount"] + number_of_shares
+                db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", updated_amount, users_id, symbol)
+            else:
+                # If the stock does not exist, insert a new row into users_stocks database:
+                db.execute("INSERT INTO users_stocks (users_id, symbol, amount) VALUES (?, ?, ?)", users_id, symbol, number_of_shares)
             # Redirect user to home page
             return redirect("/")
 
