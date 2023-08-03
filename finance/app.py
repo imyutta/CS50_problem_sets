@@ -116,7 +116,7 @@ def buy():
             existing_stock = db.execute("SELECT * FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)
             if existing_stock:
                 # If existing stock already exists, update the amount by adding number_of_shares to the existing amount:
-                updated_amount = existing_stock["amount"] + number_of_shares
+                updated_amount = existing_stock[0]["amount"] + number_of_shares
                 db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", updated_amount, users_id, symbol)
             else:
                 # If the stock does not exist, insert a new row into users_stocks database:
