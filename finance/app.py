@@ -53,7 +53,7 @@ def index():
         quote = lookup(stock["symbol"])
         stock["name"] = quote["name"]
         stock["price"] = quote["price"]
-        stock["total"] = stock["price"] * stock["total_amount"]
+        stock["total"] = stock["price"] * stock["amount"]
         total_value += stock["total"]
 
     formatted_users_cash =round(users_cash, 2)
