@@ -106,11 +106,12 @@ def buy():
             # Calculate how much cash will user have after purchase:
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
-            # Insert the purchase data into the purchases database
+            # Insert the purchase data into the purchases database:
             db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
-            # Update users database, renew cash amount
+            # Update users database, renew cash amount:
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-
+            # Update users_stocks database:
+            db.execute("INSERT INTO users_stocks (users_id, symbol, amount) VALUES (?, ?, ?)", users_id, symbol, number_of_shares)
             # Redirect user to home page
             return redirect("/")
 
