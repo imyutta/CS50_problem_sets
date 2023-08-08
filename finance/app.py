@@ -269,14 +269,16 @@ def sell():
         # Collect the data:
         # Take a symbol from the user
         symbol = request.form.get("symbol")
+
         # Render an apology if the user fails to select a stock
         if not symbol:
             return apology("must provide a symbol", 403)
+        # Prepare symbol
+        symbol = symbol.upper()
 
         # Check if (somehow, once submitted) the user does not own any shares of that stock:
         # Query the database for users purchases with this symbol:
-        symbol_lower = symbol.lower()
-        users_total_share = db.execute("SELECT SUM(amount) FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["SUM(amount)"]
+        users_total_share = db.execute("SELECT SUM(amount) FROM purchases WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["SUM(amount)"]
         if users_total_share < 1:
             return apology("you do not own any shares of that stock", 403)
 
@@ -307,14 +309,14 @@ def sell():
         # Calculate how much cash will user have after the purchase:
         cash_after_purchase = users_cash + (share_price * number_of_shares)
         # Quiry purchases database for a single users_share
-        users_share_before = db.execute("SELECT amount FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["amount"]
+        users_share_before = db.execute("SELECT amount FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["amount"]
 
         # Calculate how much stocks user has now:
         users_share_after = users_share_before - number_of_shares
         print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV users_share_after", users_share_after)
         # Update databases:
         # Update the purchase database
-        db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol_lower)
+        db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
         # Update users database, renew cash amount
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
