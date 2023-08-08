@@ -298,13 +298,15 @@ def sell():
         # SELL THE STOCK
         # Check the current stock price:
         share_price = lookup(symbol)["price"]
+        share_price1 = lookup(symbol)
+        print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV. share_price", share_price1)
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)[0]["cash"]
         # Calculate how much cash will user have after the purchase:
         cash_after_purchase = users_cash + (share_price * number_of_shares)
         # Quiry purchases database for a single users_share
         users_share_before = db.execute("SELECT amount FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol_lower)[0]["amount"]
-        print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV. users_share_before", users_share_before)
+
         # Calculate how much stocks user has now:
         users_share_after = users_share_before - number_of_shares
         print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV users_share_after", users_share_after)
