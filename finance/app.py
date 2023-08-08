@@ -318,13 +318,14 @@ def sell():
         # Update users database, renew cash amount
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
-        symbols = db.execute("SELECT DISTINCT symbol FROM users_stocks WHERE users_id = ?", users_id)
 
         # Redirect user to home page
         return redirect("/")
 
     # User reached the route via GET (as by clicking a link or via redirect)
     else:
+        symbols = db.execute("SELECT DISTINCT symbol FROM users_stocks WHERE users_id = ?", users_id)
+        print("symbols symbols symbols symbols symbols symbols symbols symbols", symbols)
         return render_template("sell.html", symbols=symbols)
 
 
