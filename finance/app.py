@@ -278,7 +278,7 @@ def sell():
 
         # Check if (somehow, once submitted) the user does not own any shares of that stock:
         # Query the database for users purchases with this symbol:
-        users_total_share = db.execute("SELECT SUM(amount) FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["SUM(amount)"]
+        users_total_share = db.execute("SELECT SUM(amount) AS total_amount FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["total_amount"]
         if users_total_share < 1:
             return apology("you do not own any shares of that stock", 403)
 
