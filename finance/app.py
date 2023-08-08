@@ -310,7 +310,7 @@ def sell():
         print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV users_share_after", users_share_after)
         # Update databases:
         # Update the purchase database
-        db.execute("UPDATE purchases SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol_lower)
+        db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol_lower)
         # Update users database, renew cash amount
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
