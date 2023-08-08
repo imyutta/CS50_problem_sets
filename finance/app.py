@@ -311,19 +311,20 @@ def sell():
 
         # Calculate how much stocks user has now:
         users_share_after = users_share_before - number_of_shares
-        
+
         # Update databases:
         # Update the purchase database
         db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
         # Update users database, renew cash amount
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
+        symbols = db.execute("SELECT symbol FROM users_stocks WHERE users_id = ?", users_id)
 
         # Redirect user to home page
         return redirect("/")
 
     # User reached the route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("sell.html")
+        return render_template("sell.html", symbols=symbols)
 
 
