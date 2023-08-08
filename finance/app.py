@@ -284,14 +284,13 @@ def sell():
 
         # Take the number of shares user wants to sell:
         number_of_shares = request.form.get("shares")
-        print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV number_of_shares", number_of_shares)
+
         # Check if the number of shares provided by the user is digit:
         if not number_of_shares.isdigit():
             return apology ("a number of shares should be a positive number", 403)
 
         # Convert the number of shares from string to an integer:
         number_of_shares = int(number_of_shares)
-        print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV number_of_shares", number_of_shares)
 
         # Check if the number of shares provided by the user is a positive integer:
         if  number_of_shares < 1:
@@ -302,8 +301,7 @@ def sell():
         # SELL THE STOCK
         # Check the current stock price:
         share_price = lookup(symbol)["price"]
-        share_price1 = lookup(symbol)
-        print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV. share_price", share_price1)
+
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)[0]["cash"]
         # Calculate how much cash will user have after the purchase:
@@ -313,7 +311,7 @@ def sell():
 
         # Calculate how much stocks user has now:
         users_share_after = users_share_before - number_of_shares
-        print("vbvbvbvbvbvbvVBVBVVBBVBVVVBBV users_share_after", users_share_after)
+        
         # Update databases:
         # Update the purchase database
         db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
