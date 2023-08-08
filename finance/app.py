@@ -325,7 +325,8 @@ def sell():
     # User reached the route via GET (as by clicking a link or via redirect)
     else:
         symbols = db.execute("SELECT DISTINCT symbol FROM users_stocks WHERE users_id = ?", users_id)
-        print("symbols symbols symbols symbols symbols symbols symbols symbols", symbols)
-        return render_template("sell.html", symbols=symbols)
+        symbols_list = [row["symbol"] for row in symbols]
+        print("symbols symbols symbols symbols symbols symbols symbols symbols", symbols_list)
+        return render_template("sell.html", symbols=symbols_list)
 
 
