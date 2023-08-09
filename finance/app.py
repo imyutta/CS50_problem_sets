@@ -58,6 +58,7 @@ def index():
 
     formatted_users_cash =round(users_cash, 2)
     formatted_total_value=round(total_value, 2)
+    print()
     return render_template("index.html", users_stocks=users_stocks, users_cash=formatted_users_cash, total_value=formatted_total_value)
 
 
