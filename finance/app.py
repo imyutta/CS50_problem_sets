@@ -314,7 +314,7 @@ def sell():
 
         # Update databases:
         # Check if cash_after_purchase is zero
-        if cash_after_purchase == 0:
+        if users_share_after == 0:
             # Delete the row from users_stocks
             db.execute("DELETE FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)
         else:
