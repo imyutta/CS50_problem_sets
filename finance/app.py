@@ -311,7 +311,7 @@ def sell():
 
         # Calculate how much stocks user has now:
         users_share_after = users_share_before - number_of_shares
-
+        
         # Update databases:
         # Update the purchase database
         db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
