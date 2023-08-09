@@ -41,7 +41,6 @@ def index():
 
     # Get user's stocks, user's numbers of shares:
     users_stocks = db.execute("SELECT symbol, amount FROM users_stocks WHERE users_id = ? GROUP BY symbol HAVING amount > 0", users_id)
-    print("users_stocksusers_stocksusers_stocksusers_stocksusers_stocksusers_stocks", users_stocks)
     # Get user's cash:
     users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)[0]["cash"]
 
@@ -58,7 +57,7 @@ def index():
 
     formatted_users_cash =round(users_cash, 2)
     formatted_total_value=round(total_value, 2)
-    print()
+    print("Type of total_value: Type of total_value:Type of total_value:Type of total_value:T", type(total_value))
     return render_template("index.html", users_stocks=users_stocks, users_cash=formatted_users_cash, total_value=formatted_total_value)
 
 
