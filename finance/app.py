@@ -309,12 +309,15 @@ def sell():
         # Quiry purchases database for a single users_share
         users_share_before = db.execute("SELECT amount FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["amount"]
 
-        # Calculate how much stocks user has now:
-        users_share_after = users_share_before - number_of_shares
-        
-        # Update databases:
-        # Update the purchase database
-        db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
+
+        # Check if cash_after_purchase is zero
+        if cash_after_purchase == 0:
+            # Delete the row from users_stocks
+            db.execute("DELETE FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)
+        else:
+            # Update the purchase database
+            db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
+
         # Update users database, renew cash amount
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
