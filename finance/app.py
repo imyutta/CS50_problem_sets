@@ -61,7 +61,6 @@ def index():
 
     formatted_users_cash =round(users_cash, 2)
     formatted_total_value=round(total_value, 2)
-    print("Type Type Type Type Type Type Type Type Type Type Type Type Type Type Type ", type(total_value))
     return render_template("index.html", users_stocks=users_stocks, users_cash=formatted_users_cash, total_value=formatted_total_value)
 
 
@@ -248,6 +247,7 @@ def register():
 
         # Ensure the password meets complexity requirements:
         elif not re.match()
+            return apology("password must contain at least 1 letter, 1 number and 1 symbol", 403)
 
         # Query database for username:
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
