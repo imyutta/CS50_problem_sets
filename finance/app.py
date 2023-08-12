@@ -328,10 +328,10 @@ def sell():
             transactions_datetime = datetime.now()
             db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
 
-            # Update users database, renew cash amount
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-            # Insert the data into the purchases database:
-            db.execute("INSERT INTO purchases (users_id, symbol, price, amount, transactions_datetime) VALUES (?, ?, ?, ?, ?)", users_id, symbol, share_price, -number_of_shares, transactions_datetime)
+        # Update users database, renew cash amount
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
+        # Insert the data into the purchases database:
+        db.execute("INSERT INTO purchases (users_id, symbol, price, amount, transactions_datetime) VALUES (?, ?, ?, ?, ?)", users_id, symbol, share_price, -number_of_shares, transactions_datetime)
 
         # Redirect user to home page
         return redirect("/")
