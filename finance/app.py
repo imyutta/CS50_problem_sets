@@ -140,6 +140,11 @@ def buy():
 @login_required
 def history():
     """Show history of transactions"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Get user's stocks, user's numbers of shares:
+    users_stocks = db.execute("SELECT symbol, amount FROM users_stocks WHERE users_id = ? GROUP BY symbol HAVING amount > 0", users_id)
     return apology("TODO")
 
 
