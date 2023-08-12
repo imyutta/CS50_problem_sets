@@ -39,6 +39,11 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
+    # User reached route via post (as by submitting a form via POST)
+    if request.method == "POST":
+        
+    # User reached the route via GET (as by clicking a link or via redirect)
+    else:
     """Show portfolio of stocks"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
