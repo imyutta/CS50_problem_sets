@@ -318,14 +318,14 @@ def sell():
         users_share_after = users_share_before - number_of_shares
 
         # Update databases:
+        # Get the current date and time:
+        transactions_datetime = datetime.now()
         # Check if cash_after_purchase is zero
         if users_share_after == 0:
             # Delete the row from users_stocks
             db.execute("DELETE FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)
         else:
             # Update the purchase database
-            # Get the current date and time:
-            transactions_datetime = datetime.now()
             db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", users_share_after, users_id, symbol)
 
         # Update users database, renew cash amount
