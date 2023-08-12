@@ -109,9 +109,9 @@ def buy():
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
             # Get the current date and time:
-            transactions_datetime = datetime
+            transactions_datetime = datetime.now()
             # Insert the purchase data into the purchases database:
-            db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
+            db.execute("INSERT INTO purchases (users_id, symbol, price, amount, transactions_datetime) VALUES (?, ?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares, transactions_datetime)
             # Update users database, renew cash amount:
             db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
 
