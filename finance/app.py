@@ -41,32 +41,32 @@ def after_request(response):
 def index():
     # User reached route via post (as by submitting a form via POST)
     if request.method == "POST":
-        
+
     # User reached the route via GET (as by clicking a link or via redirect)
     else:
-    """Show portfolio of stocks"""
-    # Find what user is currently logged in:
-    users_id = session["user_id"]
+        """Show portfolio of stocks"""
+        # Find what user is currently logged in:
+        users_id = session["user_id"]
 
-    # Get user's stocks, user's numbers of shares:
-    users_stocks = db.execute("SELECT symbol, amount FROM users_stocks WHERE users_id = ? GROUP BY symbol HAVING amount > 0", users_id)
-    # Get user's cash:
-    users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)[0]["cash"]
+        # Get user's stocks, user's numbers of shares:
+        users_stocks = db.execute("SELECT symbol, amount FROM users_stocks WHERE users_id = ? GROUP BY symbol HAVING amount > 0", users_id)
+        # Get user's cash:
+        users_cash = db.execute("SELECT cash FROM users WHERE id = ?", users_id)[0]["cash"]
 
-    # Variables
-    total_value = users_cash
+        # Variables
+        total_value = users_cash
 
-    # Create a table by iterating over stocks
-    for stock in users_stocks:
-        quote = lookup(stock["symbol"])
-        stock["name"] = quote["name"]
-        stock["price"] = quote["price"]
-        stock["total"] = stock["price"] * stock["amount"]
-        total_value += stock["total"]
+        # Create a table by iterating over stocks
+        for stock in users_stocks:
+            quote = lookup(stock["symbol"])
+            stock["name"] = quote["name"]
+            stock["price"] = quote["price"]
+            stock["total"] = stock["price"] * stock["amount"]
+            total_value += stock["total"]
 
-    formatted_users_cash =round(users_cash, 2)
-    formatted_total_value=round(total_value, 2)
-    return render_template("index.html", users_stocks=users_stocks, users_cash=formatted_users_cash, total_value=formatted_total_value)
+        formatted_users_cash =round(users_cash, 2)
+        formatted_total_value=round(total_value, 2)
+        return render_template("index.html", users_stocks=users_stocks, users_cash=formatted_users_cash, total_value=formatted_total_value)
 
 
 @app.route("/buy", methods=["GET", "POST"])
