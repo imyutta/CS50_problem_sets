@@ -246,7 +246,7 @@ def register():
             return apology("passwords do not match")
 
         # Ensure the password meets complexity requirements:
-        elif not re.match()
+        elif not re.match(r'^(?=/*[A-Zn-z])(?=.*\d)(?=.*[@$!%*#?&]))
             return apology("password must contain at least 1 letter, 1 number and 1 symbol", 403)
 
         # Query database for username:
