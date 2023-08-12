@@ -245,6 +245,9 @@ def register():
         elif password != confirmation:
             return apology("passwords do not match")
 
+        # Ensure the password meets complexity requirements:
+        
+
         # Query database for username:
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
 
