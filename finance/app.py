@@ -1,5 +1,6 @@
 import os
 import sqlite3
+import re
 
 from cs50 import SQL
 from flask import Flask, flash, redirect, render_template, request, session
@@ -246,7 +247,7 @@ def register():
             return apology("passwords do not match")
 
         # Ensure the password meets complexity requirements:
-        
+        elif not re.match()
 
         # Query database for username:
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
