@@ -328,7 +328,8 @@ def sell():
 
         # Update users database, renew cash amount
         db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-
+        # Insert the data into the purchases database:
+        
 
         # Redirect user to home page
         return redirect("/")
