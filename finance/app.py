@@ -145,6 +145,9 @@ def history():
 
     # Get user's stocks, user's numbers of shares:
     users_stocks = db.execute("SELECT symbol, amount, price, transactions_datetime FROM purchases WHERE users_id = ?", users_id)
+
+    # Create a table by iterating over stocks
+
     return apology("TODO")
 
 
