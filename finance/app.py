@@ -108,6 +108,8 @@ def buy():
             # Calculate how much cash will user have after purchase:
             cash_after_purchase = users_cash[0]["cash"] - total_price
 
+            # Get the current date and time:
+            transactions_datetime = datetime
             # Insert the purchase data into the purchases database:
             db.execute("INSERT INTO purchases (users_id, symbol, price, amount) VALUES (?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares)
             # Update users database, renew cash amount:
