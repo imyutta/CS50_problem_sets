@@ -39,69 +39,6 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-    # User reached route via post (as by submitting a form via POST)
-    if request.method == "POST":
-        # Collect the data:
-        # Take a symbol from the user
-        symbol = request.form.get("symbol")
-
-        # Prepare symbol
-        symbol = symbol.upper()
-        # Take the number of shares user wants to buy:
-        number_of_shares = 1
-        # Check if the number of shares provided by the user is digit:
-        if not number_of_shares.isdigit():
-            return apology("a number of shares should be a positive number", 403)
-
-        # Convert the number of shares from string to an integer:
-        number_of_shares = int(number_of_shares)
-
-        # Look up the stock's current price:
-        quotes = lookup(symbol)
-        # Check if the current stock price has been sucsessfully found:
-        if not quotes:
-            return apology("the symbol does not exist", 403)
-        else:
-            # Find the amount of money needed to buy the stocks:
-            share_price = quotes["price"]
-            total_price = share_price * number_of_shares
-
-        # Remember the session id
-        users_id = session["user_id"]
-
-        # Query the database for users money:
-        users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
-
-        # Check if there are enough money user has:
-        if users_cash[0]["cash"] < total_price:
-            return apology("not enough cash", 403)
-        else:
-            # Calculate how much cash will user have after purchase:
-            cash_after_purchase = users_cash[0]["cash"] - total_price
-
-            # Get the current date and time:
-            transactions_datetime = datetime.now()
-            # Insert the purchase data into the purchases database:
-            db.execute("INSERT INTO purchases (users_id, symbol, price, amount, transactions_datetime) VALUES (?, ?, ?, ?, ?)", users_id, symbol, share_price, number_of_shares, transactions_datetime)
-            # Update users database, renew cash amount:
-            db.execute("UPDATE users SET cash = ? WHERE id = ?", cash_after_purchase, users_id)
-
-            # Update users_stocks database:
-            # Check if the users_stocks database already has data about this stock:
-            existing_stock = db.execute("SELECT * FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)
-            if existing_stock:
-                # If existing stock already exists, update the amount by adding number_of_shares to the existing amount:
-                updated_amount = existing_stock[0]["amount"] + number_of_shares
-                db.execute("UPDATE users_stocks SET amount = ? WHERE users_id = ? AND symbol = ?", updated_amount, users_id, symbol)
-            else:
-                # If the stock does not exist, insert a new row into users_stocks database:
-                db.execute("INSERT INTO users_stocks (users_id, symbol, amount) VALUES (?, ?, ?)", users_id, symbol, number_of_shares)
-            # Redirect user to home page
-            return redirect("/")
-
-
-    # User reached the route via GET (as by clicking a link or via redirect)
-    else:
         """Show portfolio of stocks"""
         # Find what user is currently logged in:
         users_id = session["user_id"]
