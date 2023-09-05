@@ -43,7 +43,7 @@ def index():
     if request.method == "POST":
         # Collect the data:
         # Take a symbol from the user
-        symbol = request.form.get("stock.symbol")
+        symbol = request.form.get("symbol")
 
         # Prepare symbol
         symbol = symbol.upper()
