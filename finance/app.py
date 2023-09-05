@@ -86,6 +86,14 @@ def buy():
         # Look up the stock's current price:
         quotes = lookup(symbol)
 
+        # Check if the current stock price has been sucsessfully found:
+        if not quotes:
+            return apology("the symbol does not exist", 403)
+        else:
+            # Find the amount of money needed to buy the stocks:
+            share_price = quotes["price"]
+            total_price = share_price * number_of_shares
+            
         # Take the number of shares user wants to buy:
         number_of_shares = request.form.get("shares")
         bnnn = request.form.get("buy_1_more")
