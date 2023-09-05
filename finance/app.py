@@ -77,6 +77,9 @@ def buy():
         if not symbol:
             return apology("must provide a symbol", 403)
 
+        # Remember the session id
+        users_id = session["user_id"]
+
         # Prepare symbol
         symbol = symbol.upper()
 
@@ -100,9 +103,6 @@ def buy():
             # Find the amount of money needed to buy the stocks:
             share_price = quotes["price"]
             total_price = share_price * number_of_shares
-
-        # Remember the session id
-        users_id = session["user_id"]
 
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
