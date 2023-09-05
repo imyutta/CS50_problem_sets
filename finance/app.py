@@ -80,7 +80,7 @@ def buy():
         # Prepare symbol
         symbol = symbol.upper()
         # Take the number of shares user wants to buy:
-        number_of_shares = request.form.get("shares", default=1)
+        number_of_shares = request.form.get("shares")
         # Check if the number of shares provided by the user is digit:
         if not number_of_shares.isdigit():
             return apology("a number of shares should be a positive number", 403)
