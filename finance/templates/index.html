@@ -24,8 +24,11 @@
                 <td>{{ stock.price }}</td>
                 <td>{{ stock.total }}</td>
                 <td>
-                    <form method="POST" action="/buy"
-                    <input ><button class="btn btn-primary" id="symbol" name="symbol" type="submit">Buy 1 more "{{ stock.symbol }}" stock?</button></td>
+                    <form method="POST" action="/buy">
+                        <input type="hidden" name="symbol" value="{{ stock.symbol }}">
+                        <button class="btn btn-primary" name="buy_one_more" type="submit">Buy 1 more "{{ stock.symbol }}" stock?</button>
+                    </form>
+                </td>
             </tr>
             {% endfor%}
             <tr>
