@@ -83,6 +83,9 @@ def buy():
         # Prepare symbol
         symbol = symbol.upper()
 
+        # Look up the stock's current price:
+        quotes = lookup(symbol)
+
         # Take the number of shares user wants to buy:
         number_of_shares = request.form.get("shares")
         bnnn = request.form.get("buy_1_more")
@@ -94,15 +97,8 @@ def buy():
         # Convert the number of shares from string to an integer:
         number_of_shares = int(number_of_shares)
 
-        # Look up the stock's current price:
-        quotes = lookup(symbol)
-        # Check if the current stock price has been sucsessfully found:
-        if not quotes:
-            return apology("the symbol does not exist", 403)
-        else:
-            # Find the amount of money needed to buy the stocks:
-            share_price = quotes["price"]
-            total_price = share_price * number_of_shares
+
+
 
         # Query the database for users money:
         users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)
