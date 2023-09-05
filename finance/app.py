@@ -40,10 +40,12 @@ def after_request(response):
 @login_required
 def index():
     # User reached route via post (as by submitting a form via POST)
-    #if request.method == "POST":
-
+    if request.method == "POST":
+        # Collect the data:
+        # Take a symbol from the user
+        
     # User reached the route via GET (as by clicking a link or via redirect)
-    #else:
+    else:
         """Show portfolio of stocks"""
         # Find what user is currently logged in:
         users_id = session["user_id"]
