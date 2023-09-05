@@ -90,21 +90,18 @@ def buy():
         if not quotes:
             return apology("the symbol does not exist", 403)
 
-        # Find the amount of money needed to buy the stocks:
-        share_price = quotes["price"]
-        total_price = share_price * number_of_shares
-
-        # Take the number of shares user wants to buy:
+        # Get the number of shares user wants to buy:
         number_of_shares = request.form.get("shares")
-        bnnn = request.form.get("buy_1_more")
-        # Check if the number of shares provided by the user is digit:
-        print("NUMBEROFSHARESSSSSSSSSSSSSS", bnnn)
-        if not number_of_shares.isdigit():
+
+        if not number_of_shares or not number_of_shares.isdigit():
             return apology("a number of shares should be a positive number", 403)
 
         # Convert the number of shares from string to an integer:
         number_of_shares = int(number_of_shares)
 
+        # Find the amount of money needed to buy the stocks:
+        share_price = quotes["price"]
+        total_price = share_price * number_of_shares
 
 
 
