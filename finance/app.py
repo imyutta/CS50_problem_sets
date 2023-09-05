@@ -80,13 +80,13 @@ def buy():
         # Prepare symbol
         symbol = symbol.upper()
         # Take the number of shares user wants to buy:
-        number_of_shares = request.form.get("shares")
+        number_of_shares = request.form.get("shares", default=1)
         # Check if the number of shares provided by the user is digit:
         if not number_of_shares.isdigit():
             return apology("a number of shares should be a positive number", 403)
 
         # Convert the number of shares from string to an integer:
-        number_of_shares = request.form.get(int(number_of_shares)
+        number_of_shares = int(number_of_shares)
 
         # Look up the stock's current price:
         quotes = lookup(symbol)
