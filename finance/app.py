@@ -43,7 +43,8 @@ def index():
     if request.method == "POST":
         # Collect the data:
         # Take a symbol from the user
-        
+        symbol = request.form.get("symbol")
+
     # User reached the route via GET (as by clicking a link or via redirect)
     else:
         """Show portfolio of stocks"""
