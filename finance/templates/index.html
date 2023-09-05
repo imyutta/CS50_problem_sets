@@ -26,7 +26,8 @@
                 <td>
                     <form method="POST" action="/buy">
                         <input type="hidden" name="symbol" value="{{ stock.symbol }}">
-                        <button class="btn btn-primary" id = "buy_1_more" name="buy_1_more"  value="{{ 1 }}" type="submit">Buy 1 more "{{ stock.symbol }}" stock?</button>
+                        <input type="hidden" name="shares" value="1">
+                        <button class="btn btn-primary" id = "buy_1_more" name="buy_1_more" type="submit">Buy 1 more "{{ stock.symbol }}" stock?</button>
                     </form>
                 </td>
             </tr>
