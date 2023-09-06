@@ -359,3 +359,8 @@ def sell():
         return render_template("sell.html", symbols=symbols_list)
 
 
+@app.route("/cash", methods=["GET", "POST"])
+@login_required
+def cash():
+    """Add cash"""
+    
