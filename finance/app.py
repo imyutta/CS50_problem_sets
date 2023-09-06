@@ -411,26 +411,25 @@ def password_change():
     if request.method == "POST":
 
         # Collect the user's data:
-        username = request.form.get("username")
         old_password = request.form.get("old_password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
         hash = generate_password_hash(new_password)
 
-        # Ensure a username was submitted:
-        if len(username) == 0:
+        # Ensure an old password is correct:
+        if len(old_password) == 0:
             return apology("must provide username", 400)
 
-        # Ensure a password was submitted:
+        # Ensure a new password was submitted:
         elif len(password) == 0:
             return apology("must provide password", 400)
 
-        # Ensure passwords match:
-        elif password != confirmation:
-            return apology("passwords do not match")
+        # Ensure new password and confirmation match:
+        elif new_password != confirmation:
+            return apology("new password and confirmation do not match")
 
         # Ensure the password meets complexity requirements:
-        elif not re.match(r'^(?=/*[A-Zn-z])(?=.*\d)(?=.*[@$!%*#?&])', password):
+        elif not re.match(r'^(?=/*[A-Zn-z])(?=.*\d)(?=.*[@$!%*#?&])', new_password):
             return apology("password must contain at least 1 letter, 1 number and 1 symbol", 400)
 
         # Query database for username:
