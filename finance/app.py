@@ -425,10 +425,6 @@ def password_change():
         if not check_password_hash(hash, old_password):
             return apology("invalid password", 400)
 
-
-        if len(old_password) == 0:
-            return apology("the old password is incorrect", 400)
-
         # Ensure a new password was submitted:
         elif len(new_password) == 0:
             return apology("must provide password", 400)
