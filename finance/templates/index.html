@@ -36,9 +36,8 @@
                 <td colspan="4" align="right"><b>Cash</b></td>
                 <td>{{ users_cash | usd }}</td>
                 <td>
-                    <form method="POST" action="/buy">
-                        <input type="hidden" name="amount" value="100">
-                        <button class="btn btn-primary" id = "add_100_dollars" name="add_100_dollars" type="submit">Add $100 of cash?</button>
+                    <form method="POST" action="/cash">
+                        <button class="btn btn-primary" id = "add_cash" name="add_cash" type="submit">Add some cash?</button>
                     </form>
                 </td>
             </td>
