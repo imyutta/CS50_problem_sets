@@ -373,5 +373,31 @@ def cash():
         # Take a symbol from the user
         amount = request.form.get("amount")
 
-        
+        # Ensure user submitted amount number:
+        if not amount or not amount.isdigit():
+            return apology("amount of cash should be a positive integer", 400)
+
+        # Convert the amount of cash from a string to an integer:
+        amount = int(amount)
+
+        # UPDATE DATABASE
+        # Ensure the amount is a positive integer:
+        # Query the database for users money:
+        users_cash = db.execute("SELECT * FROM users WHERE id = ?", users_id)[0]["cash"]
+
+        # Find the updated users_cash:
+        users_cash = users_cash + amount
+
+        # Update users database, renew cash amount:
+        db.execute("UPDATE users SET cash = ? WHERE id = ?", users_cash, users_id)
+
+        # Redirect user to home page
+        return redirect("/")
+
+    # User reached the route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("cash.html")
+
+
+
 
