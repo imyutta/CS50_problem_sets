@@ -419,8 +419,9 @@ def password_change():
 
         # Ensure an old password is correct:
         # Query database for username:
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-        
+        rows = db.execute("SELECT hash FROM users WHERE id = ?", users_id)
+        print("jdjdjdjdjdjdjdjdjdjdjdjdjdjdjdj hash", rows)
+
         if len(old_password) == 0:
             return apology("the old password is incorrect", 400)
 
