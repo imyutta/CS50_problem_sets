@@ -363,4 +363,15 @@ def sell():
 @login_required
 def cash():
     """Add cash"""
-    
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Require that user input amount of cash he wants to add:
+    # User reached route via post (as by submitting a form via POST)
+    if request.method == "POST":
+        # Collect the data:
+        # Take a symbol from the user
+        amount = request.form.get("amount")
+
+        
+
