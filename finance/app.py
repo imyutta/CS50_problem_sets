@@ -416,12 +416,16 @@ def password_change():
         confirmation = request.form.get("confirmation")
         hash = generate_password_hash(new_password)
 
+
         # Ensure an old password is correct:
+        # Query database for username:
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+        
         if len(old_password) == 0:
-            return apology("must provide username", 400)
+            return apology("the old password is incorrect", 400)
 
         # Ensure a new password was submitted:
-        elif len(password) == 0:
+        elif len(new_password) == 0:
             return apology("must provide password", 400)
 
         # Ensure new password and confirmation match:
