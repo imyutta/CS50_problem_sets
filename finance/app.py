@@ -414,7 +414,6 @@ def password_change():
         old_password = request.form.get("old_password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
-        hash = generate_password_hash(new_password)
 
 
         # Ensure an old password is correct:
@@ -437,15 +436,9 @@ def password_change():
         elif not re.match(r'^(?=/*[A-Zn-z])(?=.*\d)(?=.*[@$!%*#?&])', new_password):
             return apology("password must contain at least 1 letter, 1 number and 1 symbol", 400)
 
-        # Query database for username:
-        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
-
-        # Ensure that username does not exist in the database:
-        if not rows:
-            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
-            new_user_id = db.execute("SELECT * FROM users WHERE username = ?", username)
-        else:
-            return apology("username already exists", 400)
+        # Update database:
+        hash = generate_password_hash(new_password)
+        db.execute("UPDATE users SET hash = ? WHERE users_id = ?", hash, users_id)
 
         # Redirect user to home page:
         return redirect("/")
