@@ -410,6 +410,7 @@ def password_change():
     # User reached the route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
+
         # Collect the user's data:
         old_password = request.form.get("old_password")
         new_password = request.form.get("new_password")
@@ -419,7 +420,7 @@ def password_change():
         # Ensure an old password is correct:
         # Query database for the old password hash:
         hash = db.execute("SELECT hash FROM users WHERE id = ?", users_id)
-        print("jashhhhhhhhhhhhaaaaaaassssssshhhh", hash)
+        print("jashhhhhhhhhhhhaaaaaaassssssshhhh", users_id)
 
         # Ensure the old password is correct
         if len(hash) != 1 or not check_password_hash(hash[0]["hash"], old_password):
@@ -439,7 +440,7 @@ def password_change():
 
         # Update database:
         hash = generate_password_hash(new_password)
-        db.execute("UPDATE users SET hash = ? WHERE users_id = ?", hash, users_id)
+        db.execute("UPDATE users SET hash = ? WHERE id = ?", hash, users_id)
 
         # Redirect user to home page:
         return redirect("/")
