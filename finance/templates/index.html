@@ -35,12 +35,12 @@
             <tr>
                 <td colspan="4" align="right"><b>Cash</b></td>
                 <td>{{ users_cash | usd }}</td>
-                <form method="POST" action="/buy">
-                    <input type="hidden" name="symbol" value="{{ stock.symbol }}">
-                    <input type="hidden" name="shares" value="1">
-                    <button class="btn btn-primary" id = "buy_1_more" name="buy_1_more" type="submit">Buy 1 more "{{ stock.symbol }}" stock?</button>
-                </form>
-
+                <td>
+                    <form method="POST" action="/buy">
+                        <input type="hidden" name="amount" value="100">
+                        <button class="btn btn-primary" id = "add_100_dollars" name="add_100_dollars" type="submit">Add $100 of cash?</button>
+                    </form>
+                </td>
             </td>
             </tr>
             <tr>
