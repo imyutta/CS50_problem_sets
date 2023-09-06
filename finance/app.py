@@ -419,7 +419,7 @@ def password_change():
         # Ensure an old password is correct:
         # Query database for the old password hash:
         hash = db.execute("SELECT hash FROM users WHERE id = ?", users_id)[0]["hash"]
-
+        print("jashhhhhhhhhhhhaaaaaaassssssshhhh", hash)
         # Ensure the old password is correct
         if not check_password_hash(hash, old_password):
             return apology("invalid password", 400)
