@@ -76,7 +76,7 @@ def buy():
         # Take a symbol from the user
         symbol = request.form.get("symbol")
         if not symbol:
-            return apology("must provide a symbol", 403)
+            return apology("must provide a symbol", 400)
 
         # Remember the session id
         users_id = session["user_id"]
@@ -89,13 +89,13 @@ def buy():
 
         # Check if the current stock price has been sucsessfully found:
         if not quotes:
-            return apology("the symbol does not exist", 403)
+            return apology("the symbol does not exist", 400)
 
         # Get the number of shares user wants to buy:
         number_of_shares = request.form.get("shares")
 
         if not number_of_shares or not number_of_shares.isdigit():
-            return apology("a number of shares should be a positive number", 403)
+            return apology("a number of shares should be a positive number", 400)
 
         # Convert the number of shares from string to an integer:
         number_of_shares = int(number_of_shares)
@@ -111,7 +111,7 @@ def buy():
 
         # Check if there are enough money user has:
         if users_cash[0]["cash"] < total_price:
-            return apology("not enough cash", 403)
+            return apology("not enough cash", 400)
         else:
             # Calculate how much cash will user have after purchase:
             cash_after_purchase = users_cash[0]["cash"] - total_price
@@ -166,18 +166,18 @@ def login():
 
         # Ensure username was submitted
         if not request.form.get("username"):
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure password was submitted
         elif not request.form.get("password"):
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Query database for username
         rows = db.execute("SELECT * FROM users WHERE username = ?", request.form.get("username"))
 
         # Ensure username exists and password is correct
         if len(rows) != 1 or not check_password_hash(rows[0]["hash"], request.form.get("password")):
-            return apology("invalid username and/or password", 403)
+            return apology("invalid username and/or password", 400)
 
         # Remember which user has logged in
         session["user_id"] = rows[0]["id"]
@@ -212,7 +212,7 @@ def quote():
 
         # Make sure the symbol exists:
         if not quotes:
-            return apology("Invalid symbol", 403)
+            return apology("Invalid symbol", 400)
 
         # If the symbol exists, show user the quote price:
         return render_template("quoted.html", quotes=quotes)
@@ -240,11 +240,11 @@ def register():
 
         # Ensure a username was submitted:
         if len(username) == 0:
-            return apology("must provide username", 403)
+            return apology("must provide username", 400)
 
         # Ensure a password was submitted:
         elif len(password) == 0:
-            return apology("must provide password", 403)
+            return apology("must provide password", 400)
 
         # Ensure passwords match:
         elif password != confirmation:
@@ -252,7 +252,7 @@ def register():
 
         # Ensure the password meets complexity requirements:
         elif not re.match(r'^(?=/*[A-Zn-z])(?=.*\d)(?=.*[@$!%*#?&])', password):
-            return apology("password must contain at least 1 letter, 1 number and 1 symbol", 403)
+            return apology("password must contain at least 1 letter, 1 number and 1 symbol", 400)
 
         # Query database for username:
         rows = db.execute("SELECT * FROM users WHERE username = ?", username)
@@ -262,7 +262,7 @@ def register():
             db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
             new_user_id = db.execute("SELECT * FROM users WHERE username = ?", username)
         else:
-            return apology("username already exists", 403)
+            return apology("username already exists", 400)
 
         # Remember which user has just logged in:
         session["user_id"] = new_user_id[0]["id"]
@@ -292,7 +292,7 @@ def sell():
 
         # Render an apology if the user fails to select a stock
         if not symbol:
-            return apology("must provide a symbol", 403)
+            return apology("must provide a symbol", 400)
         # Prepare symbol
         symbol = symbol.upper()
 
@@ -300,23 +300,23 @@ def sell():
         # Query the database for users purchases with this symbol:
         users_total_share = db.execute("SELECT SUM(amount) AS total_amount FROM users_stocks WHERE users_id = ? AND symbol = ?", users_id, symbol)[0]["total_amount"]
         if users_total_share < 1:
-            return apology("you do not own any shares of that stock", 403)
+            return apology("you do not own any shares of that stock", 400)
 
         # Take the number of shares user wants to sell:
         number_of_shares = request.form.get("shares")
 
         # Check if the number of shares provided by the user is digit:
         if not number_of_shares.isdigit():
-            return apology ("a number of shares should be a positive number", 403)
+            return apology ("a number of shares should be a positive number", 400)
 
         # Convert the number of shares from string to an integer:
         number_of_shares = int(number_of_shares)
 
         # Check if the number of shares provided by the user is a positive integer:
         if  number_of_shares < 1:
-            return apology ("a number of shares should be a positive number", 403)
+            return apology ("a number of shares should be a positive number", 400)
         elif users_total_share < number_of_shares:
-            return apology ("you do not own this many shares of this stock", 403)
+            return apology ("you do not own this many shares of this stock", 400)
 
         # SELL THE STOCK
         # Check the current stock price:
