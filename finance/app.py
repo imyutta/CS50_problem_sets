@@ -442,13 +442,10 @@ def password_change():
         else:
             return apology("username already exists", 400)
 
-        # Remember which user has just logged in:
-        session["user_id"] = new_user_id[0]["id"]
-
         # Redirect user to home page:
         return redirect("/")
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("register.html")
+        return render_template("password_change.html")
 
