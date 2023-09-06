@@ -401,3 +401,55 @@ def cash():
 
 
 
+@app.route("/register", methods=["GET", "POST"])
+def password_change():
+    """Password change"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # User reached the route via POST (as by submitting a form via POST)
+    if request.method == "POST":
+
+        # Collect the user's data:
+        username = request.form.get("username")
+        old_password = request.form.get("old_password")
+        new_password = request.form.get("new_password")
+        confirmation = request.form.get("confirmation")
+        hash = generate_password_hash(new_password)
+
+        # Ensure a username was submitted:
+        if len(username) == 0:
+            return apology("must provide username", 400)
+
+        # Ensure a password was submitted:
+        elif len(password) == 0:
+            return apology("must provide password", 400)
+
+        # Ensure passwords match:
+        elif password != confirmation:
+            return apology("passwords do not match")
+
+        # Ensure the password meets complexity requirements:
+        elif not re.match(r'^(?=/*[A-Zn-z])(?=.*\d)(?=.*[@$!%*#?&])', password):
+            return apology("password must contain at least 1 letter, 1 number and 1 symbol", 400)
+
+        # Query database for username:
+        rows = db.execute("SELECT * FROM users WHERE username = ?", username)
+
+        # Ensure that username does not exist in the database:
+        if not rows:
+            db.execute("INSERT INTO users (username, hash) VALUES (?, ?)", username, hash)
+            new_user_id = db.execute("SELECT * FROM users WHERE username = ?", username)
+        else:
+            return apology("username already exists", 400)
+
+        # Remember which user has just logged in:
+        session["user_id"] = new_user_id[0]["id"]
+
+        # Redirect user to home page:
+        return redirect("/")
+
+    # User reached route via GET (as by clicking a link or via redirect)
+    else:
+        return render_template("register.html")
+
