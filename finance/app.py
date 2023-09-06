@@ -420,6 +420,11 @@ def password_change():
         # Query database for the old password hash:
         hash = db.execute("SELECT hash FROM users WHERE id = ?", users_id)[0]["hash"]
         print("jashhhhhhhhhhhhaaaaaaassssssshhhh", hash)
+
+        # Ensure a hash was found:
+        if not hash:
+            return apology("invalid old_password1", 400)
+
         # Ensure the old password is correct
         if not check_password_hash(hash, old_password):
             return apology("invalid password", 400)
