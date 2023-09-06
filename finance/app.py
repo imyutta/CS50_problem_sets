@@ -214,6 +214,7 @@ def quote():
         if not quotes:
             return apology("Invalid symbol", 400)
 
+        print("quOTES", quotes)
         # If the symbol exists, show user the quote price:
         return render_template("quoted.html", quotes=quotes)
 
