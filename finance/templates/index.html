@@ -22,7 +22,7 @@
                 <td>{{ stock.name }}</td>
                 <td>{{ stock.amount }}</td>
                 <td>{{ stock.price | usd }}</td>
-                <td>{{ stock.total }}</td>
+                <td>{{ stock.total | usd }}</td>
                 <td>
                     <form method="POST" action="/buy">
                         <input type="hidden" name="symbol" value="{{ stock.symbol }}">
@@ -34,13 +34,13 @@
             {% endfor%}
             <tr>
                 <td colspan="4" align="right"><b>Cash</b></td>
-                <td>{{ users_cash }}</td>
+                <td>{{ users_cash | usd }}</td>
 
             </td>
             </tr>
             <tr>
                 <td colspan="4" align="right"><b>TOTAL</b></td>
-                <td>{{ total_value }}</td>
+                <td>{{ total_value | usd }}</td>
             </tr>
         </tbody>
     </table>
