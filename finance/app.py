@@ -401,7 +401,7 @@ def cash():
 
 
 
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/password_change", methods=["GET", "POST"])
 def password_change():
     """Password change"""
     # Find what user is currently logged in:
@@ -418,9 +418,9 @@ def password_change():
 
 
         # Ensure an old password is correct:
-        # Query database for username:
-        rows = db.execute("SELECT hash FROM users WHERE id = ?", users_id)
-        print("jdjdjdjdjdjdjdjdjdjdjdjdjdjdjdj hash", rows)
+        # Query database for the old password:
+        hash = db.execute("SELECT hash FROM users WHERE id = ?", users_id)[0]["hash"]
+
 
         if len(old_password) == 0:
             return apology("the old password is incorrect", 400)
