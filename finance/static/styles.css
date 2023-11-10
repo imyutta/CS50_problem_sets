@@ -1,15 +1,15 @@
-/* Size for brand */
-nav .navbar-brand
+/* Size for site logo */
+nav .site-logo
 {
     font-size: xx-large;
 }
 
-/* Colors for brand */
-nav .navbar-brand .blue
+/* Colors for site logo */
+nav .site-logo .blue
 {
     color: #537fbe;
 }
-nav .navbar-brand .red
+nav .site-logo .red
 {
     color: #ea433b;
 }
