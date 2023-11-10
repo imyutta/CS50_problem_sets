@@ -13,12 +13,23 @@
         <!-- Favicon and Custum Styles -->
         <link href="/static/favicon.ico" rel="icon">
         <link href="/static/styles.css" rel="stylesheet">
-        
+
         <title> C$50 Final Project: {% block title %}{% endblock %}</title>
 
     </head>
 
     <body>
 
+        <nav>
+            <div>
+                <a href="/">ToDo App 1</a>
+            </div>
+        </nav>
+
+        <main>
+            {% block main %}{% endblock %}
+        </main>
+
+        <!-- Boot-->
     </body>
 </html>
