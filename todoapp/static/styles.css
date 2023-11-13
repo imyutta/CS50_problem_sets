@@ -32,3 +32,9 @@ nav .site-logo .green
     --line-height: var(--body-lg-line-height,var(--body-line-height));
     --text-transform: var(--minor-lg-text-transform,var(--body-text-transform));
 }
+
+.intro-section_headersContainer__9NjnT .intro-section_subheading__tcOMz {
+    max-inline-size: 40.625rem;
+    margin-block-end: var(--space-32);
+    color: var(--display-onlight-secondary);
+}
