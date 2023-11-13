@@ -23,13 +23,10 @@ button.btn-primary:focus {
     border-color: #c53b2e;
 }
 
-/* Highlighting the input field */
+/* Input field color */
 input.form-control:focus {
     border-color: #de483a;
     box-shadow: 0 0 0 0.2rem rgba(222, 72, 58, 0.25);
+    background-color: #FFFFFF; !important;
 }
 
-/* Input field color */
-input.form-control:focus {
-    background-color: #FFFFFF;
-}
