@@ -7,3 +7,8 @@ nav .site-logo
 p, span, div, h1 {
     font-family: 'Inter', sans-serif;
 }
+
+body {
+    background-color: #fefdfc;
+}
+
