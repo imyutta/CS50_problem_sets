@@ -4,24 +4,6 @@ nav .site-logo
     font-size: xx-large;
 }
 
-/* Colors for site logo */
-nav .site-logo .blue
-{
-    color: #537fbe;
-}
-nav .site-logo .red
-{
-    color: #ea433b;
-}
-nav .site-logo .yellow
-{
-    color: #f5b82e;
-}
-nav .site-logo .green
-{
-    color: #2e944b;
-}
-
 p, span, div, h1 {
     font-family: 'Inter', sans-serif;
 }
