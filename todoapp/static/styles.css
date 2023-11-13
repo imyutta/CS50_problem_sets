@@ -2,6 +2,7 @@
 nav .site-logo
 {
     font-size: xx-large;
+    text-decoration: none;
 }
 
 p, span, div, h1, button {
