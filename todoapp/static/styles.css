@@ -50,3 +50,10 @@ nav .site-logo .green
     line-height: var(--line-height);
     text-transform: var(--text-transform);
 }
+
+.YttEe7kIjjIAtcbhghld {
+    --inline-size: var(--base-max-width,100%);
+    --inline-size-padded: calc(var(--inline-size) + var(--inline-padding)*2);
+    --max-inline-size: var(--inline-size-padded);
+    --inline-padding: var(--space-24);
+}
