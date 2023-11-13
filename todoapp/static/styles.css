@@ -38,3 +38,15 @@ nav .site-logo .green
     margin-block-end: var(--space-32);
     color: var(--display-onlight-secondary);
 }
+
+.Z2j5FoeQ_umI7vX0SmxF {
+    --slope: (var(--max-font-size) - var(--min-font-size)) /(var(--typography-max-screen) - var(--typography-min-screen));
+    --intersection: ((-1 * var(--typography-min-screen)) * var(--slope) + var(--min-font-size));
+    --font-size: clamp(var(--min-font-size) * 1rem,var(--intersection) * 1rem + var(--slope) * 100vw,var(--max-font-size) * 1rem);
+    font-family: var(--font-family,var(--font-family-body));
+    font-size: var(--font-size);
+    font-weight: var(--font-weight,400);
+    letter-spacing: var(--letter-spacing);
+    line-height: var(--line-height);
+    text-transform: var(--text-transform);
+}
