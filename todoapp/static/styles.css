@@ -23,3 +23,12 @@ nav .site-logo .green
 }
 
 
+.VB6LgUAmqv1DrUQhn1Tq {
+    --min-font-size: var(--body-lg-min-size);
+    --max-font-size: var(--body-lg-max-size);
+    --font-family: var(--body-lg-font-family,var(--font-family-body));
+    --font-weight: var(--body-lg-font-weight,var(--body-font-weight));
+    --letter-spacing: var(--body-lg-letter-spacing,var(--body-letter-spacing));
+    --line-height: var(--body-lg-line-height,var(--body-line-height));
+    --text-transform: var(--minor-lg-text-transform,var(--body-text-transform));
+}
