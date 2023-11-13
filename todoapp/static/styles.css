@@ -22,4 +22,6 @@ nav .site-logo .green
     color: #2e944b;
 }
 
-
+p, span, div, h1 {
+    font-family: 'Inter', sans-serif;
+}
