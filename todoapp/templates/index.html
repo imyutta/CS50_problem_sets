@@ -28,7 +28,24 @@
                         <input type="submit" value="Add">
                     </form>
                 </td>
+                <!-- Add additional columns based on your goal structure -->
+                <td> Timeframe </td>
+                <td> Complection </td>
+                <td> Emotion (before) </td>
+                <td> Emotion (after) </td>
             </tr>
+
+            <!-- Display existing goals in the table -->
+            {% for goal in goals %}
+                <tr>
+                    <td>{{ goal.priority }}</td>
+                    <td>{{ goal.name }}</td>
+                    <td>{{ goal.timeframe }}</td>
+                    <td>{{ goal.complection }}</td>
+                    <td>{{ goal.emotion_before }}</td>
+                    <td>{{ goal.emotion_after }}</td>
+                </tr>
+            {% endfor %}
         </tbody>
     </table>
 
