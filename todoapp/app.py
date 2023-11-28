@@ -50,8 +50,13 @@ def index():
 
 @app.route("add_task", methods=["POST"])
 def /add_task():
-    # Extract data from the form:
-    goal_category = request.form.get("goalCategory")
+    # Extract data from the form (add new task):
+    goal_category = request.form.get("taskCategory")
+    task = request.form.get("task")
+    timeframe = request.form.get("timeframe")
+    priority = request.form.get("priority")
+    completion = request.form.get("completion")
+
 
 
 
