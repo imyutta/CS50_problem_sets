@@ -40,22 +40,31 @@ def index():
     users_id = session["user_id"]
 
     # Get user's goals data:
-    users_goals = db.execute("SELECT goal_category, tasks, timeframe, priority, completion FROM users_goals WHERE users_id =? GROUP BY goal_category", users_id)
+    tasks = db.execute("SELECT category, task, timeframe, priority, completion FROM tasks WHERE users_id =? GROUP BY category", users_id)
 
     # Create a table by iterating over goals:
     # for task in users_goals:
         # task[""]
-    return render_template("index.html", users_goals=users_goals)
+    return render_template("index.html", tasks=tasks)
 
 
 @app.route("add_task", methods=["POST"])
+@login_required
 def /add_task():
+    """Add a new task"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
     # Extract data from the form (add new task):
-    goal_category = request.form.get("taskCategory")
+    category = request.form.get("category")
     task = request.form.get("task")
     timeframe = request.form.get("timeframe")
     priority = request.form.get("priority")
     completion = request.form.get("completion")
+
+    # Insert the new task into the database:
+    db.execute("INSERT INTO users_goals (users_id, category, task, timeframe, priority,completion) VALUES (?, ?, ?, ?, ?, ?)"),
+              (users_id, category, task, timeframe, priority, completion)
 
 
 
