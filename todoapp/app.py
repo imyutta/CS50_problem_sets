@@ -40,10 +40,10 @@ def index():
     users_id = session["user_id"]
 
     # Get user's goals data:
-    user_planer = db.execute("SELECT goal_category, tasks, timeframe, priority, completion FROM users_goals WHERE users_id =? GROUP BY goal_category", users_id)
+    user_goals = db.execute("SELECT goal_category, tasks, timeframe, priority, completion FROM users_goals WHERE users_id =? GROUP BY goal_category", users_id)
 
     # Create a table by iterating over goals:
-    for 
+    for goal_task in users_goals 
     return render_template("index.html", goal_category=goal_category, tasks=tasks, timeframe=timeframe, priority=priority, completion=completion)
 
 
