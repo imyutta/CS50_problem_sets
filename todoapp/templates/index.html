@@ -36,7 +36,7 @@
                 <td> Emotion (after) </td>
             </tr>
 
-            <!-- Display existing goals in the table -->
+            <!-- Display existing tasks in the table -->
             {% for task in users_goals %}
                 <tr>
                     <td>{{ task.goal_category }}</td>
@@ -49,16 +49,16 @@
         </tbody>
     </table>
 
-    <!-- Button that trigger a pop-up form to add a new goal-->
+    <!-- Button that trigger a pop-up form to add a new task-->
     <button id="addTaskButton">Add new task</button>
 
-    <!-- Pop-up form for adding a new goal -->
+    <!-- Pop-up form for adding a new task -->
     <div id="addTaskModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
-            <form id="addGoalForm">
-                <!-- Add form fields for new goal data here -->
-                <label for="goalCategory">Goal Category:</label>
+            <form id="addTaskForm">
+                <!-- Add form fields for new task data here -->
+                <label for="Category">Goal Category:</label>
                 <input type="text" id="goalCategory" name="goalCategory" required>
                 <!-- Add other fields as needed -->
 
