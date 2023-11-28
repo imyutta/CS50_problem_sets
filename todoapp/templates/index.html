@@ -51,7 +51,27 @@
 
     <!-- Button that trigger a pop-up form to add a new goal-->
     <button id="addNewTask">Add new task</button>
-    
+
+    <!-- Pop-up form for adding a new goal -->
+    <div id="addGoalModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <form id="addGoalForm">
+                <!-- Add form fields for new goal data here -->
+                <label for="goalCategory">Goal Category:</label>
+                <input type="text" id="goalCategory" name="goalCategory" required>
+                <!-- Add other fields as needed -->
+
+                <input type="submit" value="Add Goal">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle pop-up form
+        var modal = document.getElementById("addGoalModal");
+        var btn = document.getElementById("addGoalButto")
+    </script>
     <img src="/static/planning2.png" class="wide-image">
 {% endblock %}
 
