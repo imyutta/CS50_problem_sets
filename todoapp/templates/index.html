@@ -73,7 +73,13 @@
         var btn = document.getElementById("addTaslButton");
         var span = document.getElementById("closeModal");
 
-        btn
+        btn.onclock = function() {
+            modal.style.display = "blosk";
+        }
+
+        span.onclock = function() {
+            modal.style.display = ""
+        }
     </script>
     <img src="/static/planning2.png" class="wide-image">
 {% endblock %}
