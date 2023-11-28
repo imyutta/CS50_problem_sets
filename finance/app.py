@@ -39,7 +39,7 @@ def after_request(response):
 @app.route("/")
 @login_required
 def index():
-        print("test")
+
         """Show portfolio of stocks"""
         # Find what user is currently logged in:
         users_id = session["user_id"]
