@@ -37,15 +37,13 @@
             </tr>
 
             <!-- Display existing goals in the table -->
-            {% for goal in goals %}
+            {% for task in users_goals %}
                 <tr>
-                    <td>{{ goal.priority }}</td>
-                    <td>{{ goal.name }}</td>
-                    <td>{{ goal.priority }}</td>
-                    <td>{{ goal.timeframe }}</td>
-                    <td>{{ goal.complection }}</td>
-                    <td>{{ goal.emotion_before }}</td>
-                    <td>{{ goal.emotion_after }}</td>
+                    <td>{{ task.goal_category }}</td>
+                    <td>{{ task.tasks }}</td>
+                    <td>{{ task.timeframe }}</td>
+                    <td>{{ task.priority }}</td>
+                    <td>{{ task.completion }}</td>
                 </tr>
             {% endfor %}
         </tbody>
@@ -53,3 +51,5 @@
 
     <img src="/static/planning2.png" class="wide-image">
 {% endblock %}
+
+
