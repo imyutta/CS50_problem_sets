@@ -40,8 +40,13 @@ def index():
     users_id = session["user_id"]
 
     # Get user's goals data:
-    user_planning = db.execute("SELECT")
+    user_planning = db.execute("SELECT ")
     return render_template("index.html")
+
+
+
+
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
