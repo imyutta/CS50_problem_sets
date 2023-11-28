@@ -48,7 +48,11 @@ def index():
     return render_template("index.html", users_goals=users_goals)
 
 
-
+@app.route("add_task", methods=["POST"])
+def add_task():
+    # Extract data from the form:
+    goal_category = request.form.get("goalCategory")
+    
 
 
 
