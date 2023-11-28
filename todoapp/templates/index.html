@@ -78,7 +78,13 @@
         }
 
         span.onclock = function() {
-            modal.style.display = ""
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
         }
     </script>
     <img src="/static/planning2.png" class="wide-image">
