@@ -49,10 +49,10 @@ def index():
 
 
 @app.route("add_task", methods=["POST"])
-def add_task():
+def /add_task():
     # Extract data from the form:
     goal_category = request.form.get("goalCategory")
-    
+
 
 
 
