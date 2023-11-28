@@ -50,10 +50,10 @@
     </table>
 
     <!-- Button that trigger a pop-up form to add a new goal-->
-    <button id="addNewTask">Add new task</button>
+    <button id="addTaskButton">Add new task</button>
 
     <!-- Pop-up form for adding a new goal -->
-    <div id="addGoalModal" class="modal">
+    <div id="addTaskModal" class="modal">
         <div class="modal-content">
             <span class="close" id="closeModal">&times;</span>
             <form id="addGoalForm">
@@ -70,7 +70,7 @@
     <script>
         // JavaScript to handle pop-up form
         var modal = document.getElementById("addGoalModal");
-        var btn = document.getElementById("addGoalButto")
+        var btn = document.getElementById("addNewTask")
     </script>
     <img src="/static/planning2.png" class="wide-image">
 {% endblock %}
