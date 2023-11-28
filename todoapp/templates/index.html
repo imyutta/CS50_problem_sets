@@ -17,25 +17,6 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>
-                    <form action="/add_goal" method="post">
-                        <select name="priority">
-                            <option value="high">High</option>
-                            <option value="low">Low</option>
-                        </select>
-                        <input type="text" name="goal" placeholder="Enter the goal">
-                        <input type="submit" value="Add">
-                    </form>
-                </td>
-                <!-- Add additional columns based on your goal structure -->
-                <td> Timeframe </td>
-                <td> Priority </td>
-                <td> Complection </td>
-                <td> Emotion (before) </td>
-                <td> Emotion (after) </td>
-            </tr>
-
             <!-- Display existing tasks in the table -->
             {% for task in users_goals %}
                 <tr>
