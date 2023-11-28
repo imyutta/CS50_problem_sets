@@ -48,9 +48,9 @@ def index():
     return render_template("index.html", tasks=tasks)
 
 
-@app.route("add_task", methods=["POST"])
+@app.route("/add_task", methods=["POST"])
 @login_required
-def /add_task():
+def add_task():
     """Add a new task"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
@@ -69,7 +69,8 @@ def /add_task():
     # Commit the changes to the database:
     db.commit()
 
-
+    # Redirect back to the index page after adding the goal:
+    return redirect("/")
 
 
 
