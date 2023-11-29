@@ -68,6 +68,24 @@ def add_task():
     return redirect("/")
 
 
+@app.route("/task_is_done", methods=["POST"])
+@login_required
+def task_is_done():
+    """Add a new task"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Extract data from the index page:
+    completion = request.form.get("completion")
+
+    # Change the data in the database:
+    db.execute("UPDATE tasks SET completion = ?(users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
+              users_id, category, task, timeframe, priority, completion)
+
+
+    # Redirect back to the index page after adding the goal:
+    return redirect("/")
+
 
 @app.route("/login", methods=["GET", "POST"])
 def login():
