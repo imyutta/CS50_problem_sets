@@ -5,57 +5,59 @@
 {% endblock %}
 
 {% block main %}
-    <form class="row gx-3 gy-2 align-items-center mx-auto text-center" method="POST" action="/add_task">
-        <!-- Input Category -->
-        <div class="col-sm-2">
-            <label class="visually-hidden" for="category">Category</label>
-            <input type="text" class="form-control" id="category" placeholder="Category">
-        </div>
+    <div class="container">
+        <form class="row gx-3 gy-2 align-items-center mx-auto text-center" method="POST" action="/add_task">
+            <!-- Input Category -->
+            <div class="col-sm-2">
+                <label class="visually-hidden" for="category">Category</label>
+                <input type="text" class="form-control" id="category" placeholder="Category">
+            </div>
 
-        <!-- Input Task -->
-        <div class="col-auto">
-            <label class="visually-hidden" for="task">Task</label>
-            <input type="text" class="form-control" id="task" placeholder="Add a new task">
-        </div>
+            <!-- Input Task -->
+            <div class="col-auto">
+                <label class="visually-hidden" for="task">Task</label>
+                <input type="text" class="form-control" id="task" placeholder="Add a new task">
+            </div>
 
-        <!-- Input Timeframe -->
-        <div class="col-auto">
-            <label class="visually-hidden" for="timeframe">Timeframe</label>
-            <select class="form-select" id="timeframe">
-                <option selected>Select</option>
-                <option value="1">Mon - Fri (morning)</option>
-                <option value="2">Mon - Fri (noon)</option>
-                <option value="3">Mon - Fri (evening)</option>
-                <option value="4">Sat - Sun</option>
-            </select>
-        </div>
+            <!-- Input Timeframe -->
+            <div class="col-auto">
+                <label class="visually-hidden" for="timeframe">Timeframe</label>
+                <select class="form-select" id="timeframe">
+                    <option selected>Select</option>
+                    <option value="1">Mon - Fri (morning)</option>
+                    <option value="2">Mon - Fri (noon)</option>
+                    <option value="3">Mon - Fri (evening)</option>
+                    <option value="4">Sat - Sun</option>
+                </select>
+            </div>
 
-        <!-- Input Priority -->
-        <div class="col-auto">
-            <label class="visually-hidden" for="priority">Priority</label>
-            <select class="form-select" id="priority">
-                <option selected>Select</option>
-                <option value="1">High</option>
-                <option value="2">Medium</option>
-                <option value="3">Low</option>
-            </select>
-        </div>
+            <!-- Input Priority -->
+            <div class="col-auto">
+                <label class="visually-hidden" for="priority">Priority</label>
+                <select class="form-select" id="priority">
+                    <option selected>Select</option>
+                    <option value="1">High</option>
+                    <option value="2">Medium</option>
+                    <option value="3">Low</option>
+                </select>
+            </div>
 
-        <!-- Input Completion -->
-        <div class="col-auto">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="complection">
-            <label class="form-check-label" for="complection">
-            Completed
-            </label>
-        </div>
+            <!-- Input Completion -->
+            <div class="col-auto">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="complection">
+                <label class="form-check-label" for="complection">
+                Completed
+                </label>
+            </div>
 
-        <!-- Submit -->
-        </div>
-        <div class="col-auto">
-        <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </form>
+            <!-- Submit -->
+            </div>
+            <div class="col-auto">
+            <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
 
 
     <table class="table">
