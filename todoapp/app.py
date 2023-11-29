@@ -60,22 +60,11 @@ def add_task():
     completion = request.form.get("completion")
 
     # Insert the new task into the database:
-    try:
-        # Begin a transaction:
-        db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
-                (users_id, category, task, timeframe, priority, completion))
+    db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
+              (users_id, category, task, timeframe, priority, completion))
 
-        # Commit the changes to the database:
-        db.commit()
-    except Exception as e:
-        # Handle the exception (print an error message)
-        print(f"Error: {e}")
-
-        # Roll back the changes if an error occurs:
-        db.connection.rollback()
-    finally:
-        # Close the database connection (optional, depending on your specific use case)
-        db.connection.close()
+    # Commit the changes to the database:
+    db.commit()
 
     # Redirect back to the index page after adding the goal:
     return redirect("/")
