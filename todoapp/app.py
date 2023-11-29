@@ -62,8 +62,8 @@ def add_task():
     # Insert the new task into the database:
     try:
         # Begin a transaction:
-        db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority,completion) VALUES (?, ?, ?, ?, ?, ?)"),
-                (users_id, category, task, timeframe, priority, completion)
+        db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
+                (users_id, category, task, timeframe, priority, completion))
 
         # Commit the changes to the database:
         db.commit()
