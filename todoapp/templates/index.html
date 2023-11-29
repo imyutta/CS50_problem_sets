@@ -17,34 +17,37 @@
         </thead>
         <tbody>
                 <!-- Input form to add a new task -->
-                <tr>
-                    <form method="POST" action="/add_task">
-                        <!-- Input Category -->
-                        <label for="category">Goal Category:</label>
-                        <input type="text" id="category" name="category" required>
 
-                        <!-- Input Task -->
-                        <label for="task">Task:</label>
-                        <input type="text" id="task" name="task" required>
+                <nav class="bg-light border navbar navbar-expand-md navbar-light">
+                    <div class="container-fluid">
+                        <tr>
+                            <form method="POST" action="/add_task">
+                                <!-- Input Category -->
+                                <label for="category">Goal Category:</label>
+                                <input type="text" id="category" name="category" required>
 
-                        <!-- Input Timeframe -->
-                        <label for="timeframe">Timeframe:</label>
-                        <input type="text" id="timeframe" name="timeframe" required>
+                                <!-- Input Task -->
+                                <label for="task">Task:</label>
+                                <input type="text" id="task" name="task" required>
 
-                        <!-- Input Priority -->
-                        <label for="priority">Priority:</label>
-                        <input type="text" id="priority" name="priority" required>
+                                <!-- Input Timeframe -->
+                                <label for="timeframe">Timeframe:</label>
+                                <input type="text" id="timeframe" name="timeframe" required>
 
-                        <!-- Input Completion -->
-                        <label for="completion">Completion:</label>
-                        <input type="text" id="completion" name="completion" required>
+                                <!-- Input Priority -->
+                                <label for="priority">Priority:</label>
+                                <input type="text" id="priority" name="priority" required>
 
-                        <!-- Submit -->
-                        <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button"  value="Add Task">
+                                <!-- Input Completion -->
+                                <label for="completion">Completion:</label>
+                                <input type="text" id="completion" name="completion" required>
 
-                        </button> 
-                    </form>
-                </tr>
+                                <!-- Submit -->
+                                <button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbar" data-bs-toggle="collapse" type="button"  value="Add Task">
+
+                                </button>
+                            </form>
+                        </tr>
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
                 <tr>
