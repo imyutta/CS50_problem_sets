@@ -80,7 +80,14 @@
                     <td>{{ task.task }}</td>
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
-                    <td>{{ task.completion }}</td>
+                    <td>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="completion_{{ task.id }}" {% if task.completion == '1' %}checked{% endif %} disabled>
+                            <label class="form-check-label" for="completion_{{ task.id }}">
+                                Completed
+                            </label>
+                        </div>
+                    </td>
                 </tr>
             {% endfor %}
         </tbody>
