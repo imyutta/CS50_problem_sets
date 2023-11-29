@@ -40,7 +40,7 @@ def index():
     users_id = session["user_id"]
 
     # Get user's goals data:
-    tasks = db.execute("SELECT category, task, timeframe, priority, completion FROM tasks WHERE users_id =? GROUP BY category", users_id)
+    tasks = db.execute("SELECT category, task, timeframe, priority, completion FROM tasks WHERE users_id =?", users_id)
 
     return render_template("index.html", tasks=tasks)
 
