@@ -72,7 +72,7 @@ def add_task():
         print(f"Error: {e}")
 
         # Roll back the changes if an error occurs:
-        db.rollback()
+        db.db.rollback()
 
     # Redirect back to the index page after adding the goal:
     return redirect("/")
