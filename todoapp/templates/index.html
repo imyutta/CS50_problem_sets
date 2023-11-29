@@ -16,10 +16,31 @@
             </tr>
         </thead>
         <tbody>
-                <!-- Input for a new task -->
+                <!-- Input form to add a new task -->
                 <tr>
                     <form method="POST" action="/add_task">
+                        <!-- Input Category -->
+                        <label for="category">Goal Category:</label>
+                        <input type="text" id="category" name="category" required>
 
+                        <!-- Input Task -->
+                        <label for="task">Task:</label>
+                        <input type="text" id="task" name="task" required>
+
+                        <!-- Input Timeframe -->
+                        <label for="timeframe">Timeframe:</label>
+                        <input type="text" id="timeframe" name="timeframe" required>
+
+                        <!-- Input Priority -->
+                        <label for="priority">Priority:</label>
+                        <input type="text" id="priority" name="priority" required>
+
+                        <!-- Input Completion -->
+                        <label for="completion">Completion:</label>
+                        <input type="text" id="completion" name="completion" required>
+
+                        <!-- Submit -->
+                        <button type="submit" value="Add Task">
                     </form>
                 </tr>
             <!-- Display existing tasks in the table -->
