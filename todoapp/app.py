@@ -42,9 +42,6 @@ def index():
     # Get user's goals data:
     tasks = db.execute("SELECT category, task, timeframe, priority, completion FROM tasks WHERE users_id =? GROUP BY category", users_id)
 
-    # Create a table by iterating over goals:
-    # for task in users_goals:
-        # task[""]
     return render_template("index.html", tasks=tasks)
 
 
