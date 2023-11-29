@@ -10,19 +10,19 @@
             <!-- Input Category -->
             <div class="col-sm-2">
                 <label class="visually-hidden" for="category">Category</label>
-                <input type="text" class="form-control" id="category" name="category" placeholder="Category">
+                <input type="text" class="form-control" id="category" name="category" placeholder="Category" required>
             </div>
 
             <!-- Input Task -->
             <div class="col-auto">
                 <label class="visually-hidden" for="task">Task</label>
-                <input type="text" class="form-control" id="task" name="task" placeholder="Enter a new task">
+                <input type="text" class="form-control" id="task" name="task" placeholder="Enter a new task" required>
             </div>
 
             <!-- Input Timeframe -->
             <div class="col-auto">
                 <label class="visually-hidden" for="timeframe">Timeframe</label>
-                <select class="form-select" id="timeframe" name="timeframe">
+                <select class="form-select" id="timeframe" name="timeframe" required>
                     <option selected>Select</option>
                     <option value="1">Mon - Fri (morning)</option>
                     <option value="2">Mon - Fri (noon)</option>
@@ -34,7 +34,7 @@
             <!-- Input Priority -->
             <div class="col-auto">
                 <label class="visually-hidden" for="priority">Priority</label>
-                <select class="form-select" id="priority" name="priority">
+                <select class="form-select" id="priority" name="priority" required>
                     <option selected>Select</option>
                     <option value="1">High</option>
                     <option value="2">Medium</option>
