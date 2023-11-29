@@ -57,7 +57,7 @@ def add_task():
     task = request.form.get("task")
     timeframe = request.form.get("timeframe")
     priority = request.form.get("priority")
-    completion = request.form.get("completion")
+    completion = request.form.get("completion", "no")
 
     # Insert the new task into the database:
     db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
