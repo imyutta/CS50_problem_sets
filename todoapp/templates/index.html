@@ -45,7 +45,12 @@
             <!-- Input Completion -->
             <div class="col-auto">
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="completion" name="completion">
+                <!-- Hidden input with value 0 -->
+                <input type="hidden" name="completion" value="0">
+
+                <!-- Checkbox with value 1 when checked -->
+                <input class="form-check-input" type="checkbox" id="completion" name="completion" value="1">
+
                 <label class="form-check-label" for="completion">
                 Completed
                 </label>
