@@ -17,10 +17,10 @@
         </thead>
         <tbody>
             <!-- Display existing tasks in the table -->
-            {% for task in users_goals %}
+            {% for task in tasks %}
                 <tr>
-                    <td>{{ task.goal_category }}</td>
-                    <td>{{ task.tasks }}</td>
+                    <td>{{ task.category }}</td>
+                    <td>{{ task.task }}</td>
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
                     <td>{{ task.completion }}</td>
