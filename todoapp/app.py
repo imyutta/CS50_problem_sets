@@ -63,6 +63,7 @@ def add_task():
     db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
               (users_id, category, task, timeframe, priority, int(completion)))
 
+
     # Commit the changes to the database:
     db.commit()
 
