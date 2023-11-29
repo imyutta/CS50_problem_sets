@@ -53,17 +53,16 @@ def add_task():
     users_id = session["user_id"]
 
     # Extract data from the form (add new task):
-    #category = request.form.get("category")
-    #task = request.form.get("task")
-    #timeframe = request.form.get("timeframe")
-    #priority = request.form.get("priority")
-    #completion = request.form.get("completion", "no")
+    category = request.form.get("category")
+    task = request.form.get("task")
+    timeframe = request.form.get("timeframe")
+    priority = request.form.get("priority")
+    completion = request.form.get("completion", "no")
 
     # Insert the new task into the database:
-    #db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?)",
-              #(users_id, category, task, timeframe, priority))
-    db.execute("INSERT INTO tasks (users_id) VALUES (?)",
-              (users_id))
+    db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES ( ?, ?, ?, ?)",
+              (users_id, category, task, timeframe, priority))
+
 
 
     # Commit the changes to the database:
