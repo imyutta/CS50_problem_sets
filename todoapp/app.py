@@ -73,6 +73,9 @@ def add_task():
 
         # Roll back the changes if an error occurs:
         db.connection.rollback()
+    finally:
+        # Close the database connection (optional, depending on your specific use case)
+        db.connection.close()
 
     # Redirect back to the index page after adding the goal:
     return redirect("/")
