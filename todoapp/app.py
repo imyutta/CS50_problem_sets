@@ -79,8 +79,7 @@ def task_is_done():
     completion = request.form.get("completion")
 
     # Change the data in the database:
-    db.execute("UPDATE tasks SET completion = ?(users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?, ?)",
-              users_id, category, task, timeframe, priority, completion)
+    db.execute("UPDATE tasks SET completion = ? WHERE id = ?", completion, users_id)
 
 
     # Redirect back to the index page after adding the goal:
