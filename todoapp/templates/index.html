@@ -16,9 +16,14 @@
             </tr>
         </thead>
         <tbody>
+                <!-- Input for a new task -->
+                <tr>
+                    <form method="POST" action="/add_task">
+
+                    </form>
+                </tr>
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
-                <tr></tr>
                 <tr>
                     <td>{{ task.category }}</td>
                     <td>{{ task.task }}</td>
