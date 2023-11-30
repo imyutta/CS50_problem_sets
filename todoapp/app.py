@@ -86,6 +86,25 @@ def task_is_done():
     return redirect("/")
 
 
+@app.route("/delete_task", methods=["POST"])
+@login_required
+def delete_task():
+    """Delete a new task"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Extract data from the index page:
+    task_id = request.form.get("task_id")
+
+    # Change the data in the database:
+    db.execute("DELETE FROM tasks WHERE users_id = ? AND id = ?", users_id, task_id)
+
+    # Redirect back to the index page after adding the goal:
+    return redirect("/")
+
+
+
+
 @app.route("/login", methods=["GET", "POST"])
 def login():
     """Log user in"""
