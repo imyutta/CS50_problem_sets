@@ -70,7 +70,7 @@ def add_task():
 @app.route("/task_is_done", methods=["POST"])
 @login_required
 def task_is_done():
-    """Add a new task"""
+    """Check the task as completed"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
@@ -89,7 +89,7 @@ def task_is_done():
 @app.route("/delete_task", methods=["POST"])
 @login_required
 def delete_task():
-    """Delete a new task"""
+    """Delete a task"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
