@@ -71,13 +71,12 @@
                     <td>{{ task.priority }}</td>
                     <td>
                         <form method="POST" action="/task_is_done" class="task-form">
-                            <div class="col-auto d-flex justify-content-center align-items-center form-check" >
+                            <div class="col-auto d-flex justify-content-center align-items-center form-check">
                                 <!-- Hidden input to store task_id -->
                                 <input type="hidden" name="task_id" value="{{ task.id }}">
 
-                                <!-- Checkbox with value YES when checked -->
-                                <input class="form-check-input" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == "yes" %}checked{% endif %}>
-
+                                <!-- Checkbox with value 'yes' when checked -->
+                                <input class="form-check-input completion-checkbox" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == "yes" %}checked{% endif %} onchange="updateTaskStatus(this)">
                             </div>
                         </form>
 
