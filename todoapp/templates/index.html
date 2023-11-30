@@ -53,6 +53,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th></th>
                 <th> Goal Category</th>
                 <th> Task </th>
                 <th> Timeframe </th>
@@ -65,10 +66,6 @@
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
                 <tr>
-                    <td>{{ task.category }}</td>
-                    <td>{{ task.task }}</td>
-                    <td>{{ task.timeframe }}</td>
-                    <td>{{ task.priority }}</td>
                     <td>
                         <form method="POST" action="/task_is_done" class="task-form">
                             <div class="col-auto d-flex justify-content-center align-items-center form-check" >
@@ -80,7 +77,12 @@
 
                             </div>
                         </form>
-
+                    </td>
+                    <td>{{ task.category }}</td>
+                    <td>{{ task.task }}</td>
+                    <td>{{ task.timeframe }}</td>
+                    <td>{{ task.priority }}</td>
+                    <td>
                         <!-- Button to delete the task -->
                         <form method="POST" action="/delete_task" class="delete-task-form">
                             <input type="hidden" name="task_id">
