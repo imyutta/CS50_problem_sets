@@ -58,7 +58,7 @@
                 <th> Task </th>
                 <th> Timeframe </th>
                 <th> Priority </th>
-                <th> Completion </th>
+                <th> Remove Task </th>
             </tr>
         </thead>
         <tbody>
@@ -86,7 +86,7 @@
                         <!-- Button to delete the task -->
                         <form method="POST" action="/delete_task" class="delete-task-form">
                             <input type="hidden" name="task_id">
-                            <button type="submit" class="btn btn-primary">Delete</button>
+                            <button type="submit" class="btn-close" aria-label="Close"></button>
                         </form>
                     </td>
 
