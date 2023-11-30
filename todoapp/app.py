@@ -32,7 +32,7 @@ def after_request(response):
     return response
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
     """Show goals and tasks"""
