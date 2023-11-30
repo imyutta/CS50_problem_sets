@@ -88,15 +88,21 @@
     </table>
 
     <script>
-        // Add event listener to each completion checkbox
-        document.querySelectorAll('.completion-checkbox').forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                // Find the closest form and submit it
-                this.closest('.task-form').submit();
+        function updateTaskStatus(checkbox) {
+            const taskId = checkbox.parentElement.querySelector("[name='task_id']").value;
+            const taskCompletion = checkbox.checked ? "yes" : "no";
+
+            // Perform AJAX request to update task completion status
+            fetch("/task_is_done", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/x-www-form-urlencoded",
+                },
+                body: `task_id=${taskId}&task_completion=${taskCompletion}`,
             });
-        });
+        }
     </script>
-    
+
     <img src="/static/planning2.png" class="wide-image">
 {% endblock %}
 
