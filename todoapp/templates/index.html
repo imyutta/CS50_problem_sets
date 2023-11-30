@@ -81,13 +81,12 @@
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
                     <td>
-                        <div class="col-auto">
-                            <div class="form-check">
+                        <div class="col-auto " >
+                            <div class="form-check ">
                                 <input class="form-check-input" type="checkbox" id="completion" name="completion" value="{{ task.completion }}">
-                                <label class="form-check-label" for="completion">
-                                Done
-                                </label>
+                                
                             </div>
+                        </div>
                     </td>
                 </tr>
             {% endfor %}
