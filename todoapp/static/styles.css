@@ -13,6 +13,10 @@ body {
     background-color: # f6f5f4;
 }
 
+.completion-checkbox: {
+    box-shadow: 0 0 5px #000000;
+}
+
 /* Button color
 button.btn-primary {
     background-color: #de483a;
