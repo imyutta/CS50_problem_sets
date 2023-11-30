@@ -85,7 +85,7 @@
                                 <input type="hidden" name="task_id" value="{{ task.id }}">
 
                                 <!-- Checkbox with value YES when checked -->
-                                <input class="form-check-input" type="checkbox" id="completion" name="completion" {% if task.completion == "yes" %}checked{% endif %}>
+                                <input class="form-check-input" type="checkbox" id="completion_{{ task.id }}" name="completion" {% if task.completion == "yes" %}checked{% endif %}>
                             </div>
                         </form>
 
