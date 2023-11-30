@@ -76,11 +76,11 @@ def task_is_done():
     users_id = session["user_id"]
 
     # Extract data from the index page:
-    completion = request.form.get("completion")
+    task_completion = request.form.get("task_completion")
     task_id = request.form.get("task_id")
 
     # Change the data in the database:
-    db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", completion, users_id, task_id)
+    db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", task_completion, users_id, task_id)
 
 
     # Redirect back to the index page after adding the goal:
