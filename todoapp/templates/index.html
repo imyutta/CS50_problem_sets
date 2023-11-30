@@ -70,7 +70,7 @@
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
                     <td>
-                        <form method="POST" action="/task_is_done">
+                        <form method="POST" action="/task_is_done" class="task-form">
                             <div class="col-auto d-flex justify-content-center align-items-center form-check" >
                                 <!-- Hidden input to store task_id -->
                                 <input type="hidden" name="task_id" value="{{ task.id }}">
@@ -78,8 +78,6 @@
                                 <!-- Checkbox with value YES when checked -->
                                 <input class="form-check-input" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == "yes" %}checked{% endif %}>
 
-                                <!-- Button to submit the form -->
-                                <button type="submit" class="btn btn-link">Update</button>
                             </div>
                         </form>
 
@@ -89,6 +87,16 @@
         </tbody>
     </table>
 
+    <script>
+        // Add event listener to each completion checkbox
+        document.querySelectorAll('.completion-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                // Find the closest form and submit it
+                this.closest('.task-form').submit();
+            });
+        });
+    </script>
+    
     <img src="/static/planning2.png" class="wide-image">
 {% endblock %}
 
