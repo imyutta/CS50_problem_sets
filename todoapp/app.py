@@ -59,7 +59,7 @@ def add_task():
     priority = request.form.get("priority")
 
     # Insert the new task into the database:
-    db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority, completion) VALUES (?, ?, ?, ?, ?)",
+    db.execute("INSERT INTO tasks (users_id, category, task, timeframe, priority) VALUES (?, ?, ?, ?, ?)",
               users_id, category, task, timeframe, priority)
 
 
