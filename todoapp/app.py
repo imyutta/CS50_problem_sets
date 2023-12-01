@@ -67,7 +67,7 @@ def add_task():
     return redirect("/")
 
 
-@app.route("/task_status", methods=["POST"])
+@app.route("/update_task_status/<int:task_id>/<int:completion_value>", methods=["POST"])
 @login_required
 def task_status():
     """Check the task as completed"""
