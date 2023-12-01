@@ -135,7 +135,7 @@
 
     <script>
         function updateTaskStatus(checkbox) {
-            const taskId = checkbox.getAttribute("data-task-id");
+            const taskId = checkbox.value;
             const newCompletionValue = checkbox.checked ? 1 : 0;
 
             // Отправляем асинхронный запрос на сервер
