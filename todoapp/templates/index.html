@@ -53,7 +53,6 @@
     <table class="table">
         <thead>
             <tr>
-                <th></th>
                 <th> Goal Category</th>
                 <th> Task </th>
                 <th> Timeframe </th>
@@ -66,23 +65,25 @@
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
                 <tr>
-                    <td colspan="2">
-                        <form method="POST" action="/task_is_done" class="task-form completion-checkbox">
-                            <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
-                                <!-- Hidden input to store task_id -->
-                                <input type="hidden" name="task_id" value="{{ task.id }}">
+                    <td colspan="1">
+                        <div class="form-check">
+                            <form method="POST" action="/task_is_done" class="task-form completion-checkbox">
+                                <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
+                                    <!-- Hidden input to store task_id -->
+                                    <input type="hidden" name="task_id" value="{{ task.id }}">
 
-                                <!-- Checkbox with value YES when checked -->
-                                <input class="form-check-input completion-checkbox" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == "yes" %}checked{% endif %} onchange="updateTaskStatus(this)">
+                                    <!-- Checkbox with value YES when checked -->
+                                    <input class="form-check-input completion-checkbox" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == "yes" %}checked{% endif %} onchange="updateTaskStatus(this)">
 
-                            </div>
-                        </form>
-                        <label class="form-check-label" for="completion_{{ task.id }}">
-                            {{ task.category }}
-                        </label>
+                                </div>
+                            </form>
+                            <label class="form-check-label" for="completion_{{ task.id }}">
+                                {{ task.category }}
+                            </label>
+                        </div>
+                    </td>
 
 
-                    {{ task.category }}</td>
                     <td>{{ task.task }}</td>
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
