@@ -147,8 +147,7 @@
             fetch(`/delete_task/${taskId}`, {
                 method: 'DELETE',
             });
-            debugger;
-            const row = document.querySelector(`todo_row_${taskId}`);
+            const row = document.querySelector(`#todo_row_${taskId}`);
             row.remove();
         }
     </script>
