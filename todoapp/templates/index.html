@@ -146,11 +146,10 @@
                 console.error('Error:', error);
             });
         }
-    </script>
 
-    <sctipt>
+        // Delete task
         function delete_task() {
-            
+
             // Отправляем асинхронный запрос на сервер
             fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
                 method: 'POST',
@@ -163,7 +162,7 @@
                 console.error('Error:', error);
             });
         }
-    </sctipt>
+    </script>
 
 
     <img src="/static/planning2.png" class="wide-image">
