@@ -38,8 +38,8 @@
                 <div class="collapse navbar-collapse" id="navbar">
                     {% if session["user_id"] %}
                         <ul class="navbar-nav me-auto mt-2">
-                            <li class="nav-item"><a class="nav-link" href="/">Planning</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/goals">Daily Agenda</a></li>
+                            <li class="nav-item"><a class="nav-link {% if current_page == 'planning' %}active{% endif %}" href="/">Planning</a></li>
+                            <li class="nav-item"><a class="nav-link {% if current_page == 'daily_agenda' %}active{% endif %}" href="/daily_agenda">Daily Agenda</a></li>
                             <li class="nav-item"><a class="nav-link {% if current_page == 'completed' %}active{% endif %}" href="/completed">Completed Tasks</a></li>
                         </ul>
                         <ul class="navbar-nav ms-auto mt-2">
