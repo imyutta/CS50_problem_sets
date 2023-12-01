@@ -137,13 +137,6 @@
             // Отправляем асинхронный запрос на сервер
             fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
                 method: 'POST',
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
             });
         }
 
@@ -153,14 +146,8 @@
             // Отправляем асинхронный запрос на сервер
             fetch(`/delete_task/${taskId}`, {
                 method: 'DELETE',
-            })
-            .then(response => response.json())
-            .then(data => {
-                console.log(data);
-            })
-            .catch(error => {
-                console.error('Error:', error);
             });
+            const row = taskId;
         }
     </script>
 
