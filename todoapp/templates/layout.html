@@ -40,7 +40,7 @@
                         <ul class="navbar-nav me-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/">Planning</a></li>
                             <li class="nav-item"><a class="nav-link" href="/goals">Daily Agenda</a></li>
-                            <li class="nav-item"><a class="nav-link" href="/completed">Completed Tasks</a></li>
+                            <li class="nav-item"><a class="nav-link {% if current_page == 'completed' %}active{% endif %}" href="/completed">Completed Tasks</a></li>
                         </ul>
                         <ul class="navbar-nav ms-auto mt-2">
                             <li class="nav-item"><a class="nav-link" href="/password_change">Change password</a></li>
