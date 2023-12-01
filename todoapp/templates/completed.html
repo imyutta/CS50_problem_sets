@@ -13,8 +13,6 @@
             <tr>
                 <th> Goal Category</th>
                 <th> Task </th>
-                <th> Timeframe </th>
-                <th> Priority </th>
                 <th> Remove Task </th>
             </tr>
         </thead>
@@ -48,8 +46,6 @@
 
 
                     <td>{{ task.task }}</td>
-                    <td>{{ task.timeframe }}</td>
-                    <td>{{ task.priority }}</td>
                     <td>
                         <!-- Button to open the delete confirmation modal -->
                         <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
