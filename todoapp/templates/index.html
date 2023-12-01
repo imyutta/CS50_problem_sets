@@ -82,42 +82,40 @@
                     <td>{{ task.task }}</td>
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
+                    <td>
+                        <!-- Button to open the delete confirmation modal -->
+                        <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
 
+                        <!-- Delete confirmation modal -->
+                        <div class="modal fade" id="deleteConfirmationModal_{{ task.id }}" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel_{{ task.id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="deleteConfirmationModalLabel_{{ task.id }}">Подтверждение удаления</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Вы уверены, что хотите удалить этот элемент?
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
+                                        <!-- Button to submit the delete form -->
+                                        <button type="submit" form="deleteForm_{{ task.id }}" class="btn btn-danger">Удалить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Form to submit the delete action -->
+                        <form method="POST" action="/delete_task" class="delete-task-form" id="deleteForm_{{ task.id }}">
+                            <input type="hidden" name="task_id" value="{{ task.id }}">
+                        </form>
+                    </td>
 
                 </tr>
             {% endfor %}
         </tbody>
     </table>
-
-    <td>
-        <!-- Button to open the delete confirmation modal -->
-        <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
-
-        <!-- Delete confirmation modal -->
-        <div class="modal fade" id="deleteConfirmationModal_{{ task.id }}" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel_{{ task.id }}" aria-hidden="true">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="deleteConfirmationModalLabel_{{ task.id }}">Подтверждение удаления</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
-                        Вы уверены, что хотите удалить этот элемент?
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Отмена</button>
-                        <!-- Button to submit the delete form -->
-                        <button type="submit" form="deleteForm_{{ task.id }}" class="btn btn-danger">Удалить</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Form to submit the delete action -->
-        <form method="POST" action="/delete_task" class="delete-task-form" id="deleteForm_{{ task.id }}">
-            <input type="hidden" name="task_id" value="{{ task.id }}">
-        </form>
-    </td>
 
 
     <script>
