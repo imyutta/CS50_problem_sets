@@ -67,23 +67,21 @@
                 <tr id="todo_row_{{ task.id }}" >
                     <td class="align-middle">
                         <div class="d-flex align-items-center " >
-                            <form method="POST" action="/updateTaskStatus/{{ task.id }}" class="task-form completion-checkbox">
-                                <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
-                                    <!-- Hidden input to store task_id -->
-                                    <input type="hidden" name="task_id" value="{{ task.id }}">
+                            <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
+                                <!-- Hidden input to store task_id -->
+                                <input type="hidden" name="task_id" value="{{ task.id }}">
 
-                                    <!-- Checkbox with value 1 when checked -->
-                                    <input class="form-check-input completion-checkbox"
-                                           type="checkbox"
-                                           id="completion_{{ task.id }}"
-                                           name="task_completion"
-                                           data-task-id="{{ task.id }}"
-                                           data-completion="{{ task.completion}}"
-                                           {% if task.completion == 1 %}checked{% endif %}
-                                           onchange="updateTaskStatus(this)">
+                                <!-- Checkbox with value 1 when checked -->
+                                <input class="form-check-input completion-checkbox"
+                                        type="checkbox"
+                                        id="completion_{{ task.id }}"
+                                        name="task_completion"
+                                        data-task-id="{{ task.id }}"
+                                        data-completion="{{ task.completion}}"
+                                        {% if task.completion == 1 %}checked{% endif %}
+                                        onchange="updateTaskStatus(this)">
 
-                                </div>
-                            </form>
+                            </div>
                             <label class="form-check-label ms-5" for="completion_{{ task.id }}">
                                 {{ task.category }}
                             </label>
