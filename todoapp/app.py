@@ -82,7 +82,7 @@ def update_task_status(task_id, completion_value):
     return jsonify({"success": True})
 
 
-@app.route("/delete_task", methods=["POST"])
+@app.route("/delete_task", methods=["DELETE"])
 @login_required
 def delete_task():
     """Delete a task"""
