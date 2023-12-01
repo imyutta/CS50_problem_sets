@@ -114,7 +114,7 @@ def completed():
     welcome_message_h1 = "You did a great job "
     welcome_message_p = "continue moving on with "
 
-    return render_template("completed.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p)
+    return render_template("completed.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="completed")
 
 
 
