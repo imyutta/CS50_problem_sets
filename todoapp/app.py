@@ -108,7 +108,7 @@ def completed():
     users_id = session["user_id"]
 
     # Get user's goals data:
-    tasks = db.execute("SELECT catefory, task, completion FROM tasks WHERE users_id =? AND completion = 1", users_id)
+    tasks = db.execute("SELECT category, task, completion FROM tasks WHERE users_id =? AND completion = 1", users_id)
 
     # Text in the head
     welcome_message_h1 = "You did a great job "
