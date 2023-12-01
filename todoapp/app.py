@@ -110,8 +110,11 @@ def completed():
     # Get user's goals data:
     tasks = db.execute("SELECT catefory, task, completion FROM tasks WHERE users_id =? AND completion = 1", users_id)
 
-    return render_template("index.html", tasks=tasks)
+    # Text in the head
+    welcome_message_h1 = "You did a great job "
+    welcome_message_p = "continue moving on with "
 
+    return render_template("completed.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p)
 
 
 
