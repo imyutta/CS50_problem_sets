@@ -93,7 +93,7 @@ def delete_task(task_id):
     db.execute("DELETE FROM tasks WHERE users_id = ? AND id = ?", users_id, task_id)
 
     # Redirect back to the index page after adding the goal:
-    return redirect("/")
+    return jsonify({"success": True})
 
 
 
