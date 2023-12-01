@@ -43,9 +43,10 @@ def index():
     tasks = db.execute("SELECT * FROM tasks WHERE users_id =? AND completion = 0", users_id)
 
     # Text in the head
-    welcome_message = "Chart a course toward\n your loftiest goals \n through step-by-step planning with "
+    welcome_message_h1 = "Chart a course toward\n your loftiest goals "
+    welcome_message_p = "through step-by-step planning with "
 
-    return render_template("index.html", tasks=tasks, welcome_message = welcome_message)
+    return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p)
 
 
 @app.route("/add_task", methods=["POST"])
