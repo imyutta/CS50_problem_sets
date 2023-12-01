@@ -77,6 +77,8 @@ def update_task_status(task_id, completion_value):
     # Change the data in the database:
     db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", completion_value, users_id, task_id)
 
+    
+
 
     # Redirect back to the index page after adding the goal:
     return jsonify({"success": True})
