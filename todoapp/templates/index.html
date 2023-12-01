@@ -112,16 +112,16 @@
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                                         <!-- Button to submit the delete form -->
-                                        <button type="button" form="deleteForm_{{ task.id }}" class="btn btn-primary">Delete</button>
+                                        <button type="button" class="btn btn-primary">Delete</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Form to submit the delete action -->
-                        <form method="POST" action="/delete_task" class="delete-task-form" id="deleteForm_{{ task.id }}">
+                        <!-- <form method="POST" action="/delete_task" class="delete-task-form" id="deleteForm_{{ task.id }}">
                             <input type="hidden" name="task_id" value="{{ task.id }}">
-                        </form>
+                        </form> -->
                     </td>
 
                 </tr>
@@ -147,6 +147,23 @@
             });
         }
     </script>
+
+    <sctipt>
+        function delete_task() {
+            
+            // Отправляем асинхронный запрос на сервер
+            fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
+                method: 'POST',
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+    </sctipt>
 
 
     <img src="/static/planning2.png" class="wide-image">
