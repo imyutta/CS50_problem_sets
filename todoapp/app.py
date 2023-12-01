@@ -74,10 +74,6 @@ def update_task_status():
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
-    # Extract data from the index page:
-    task_completion = request.form.get("task_completion")
-    task_id = request.form.get("task_id")
-
     # Change the data in the database:
     db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", task_completion, users_id, task_id)
 
