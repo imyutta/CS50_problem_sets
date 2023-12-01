@@ -64,7 +64,7 @@
         <tbody>
 
             <!-- Display existing tasks in the table -->
-            {% for task in tasks %}
+
                 <tr>
                     <td>
                         <form method="POST" action="/task_is_done" class="task-form completion-checkbox">
@@ -78,10 +78,12 @@
                             </div>
                         </form>
                     </td>
+                    {% for task in tasks %}
                     <td>{{ task.category }}</td>
                     <td>{{ task.task }}</td>
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
+                    {% endfor %}
                     <td>
                         <!-- Button to delete the task -->
                         <form method="POST" action="/delete_task" class="delete-task-form">
@@ -91,7 +93,7 @@
                     </td>
 
                 </tr>
-            {% endfor %}
+
         </tbody>
     </table>
 
