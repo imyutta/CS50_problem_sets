@@ -56,10 +56,50 @@
             </div>
         </nav>
 
-        <div class="container-fluid text-center mt-4">
-            <h1 class="mb-4"> Chart a course toward <br>
-                your loftiest goals </h1>
-            <p>through step-by-step planning with <b>todo app</b> </p>
+
+
+        <div class="container">
+            <form method="POST" action="/add_task" class="row gx-3 gy-2 align-items-center mx-auto text-center"  style="background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
+                <!-- Input Category -->
+                <div class="col-sm-2">
+                    <label class="visually-hidden" for="category">Category</label>
+                    <input type="text" class="form-control" id="category" name="category" placeholder="Category" autocomplete="off" required>
+                </div>
+
+                <!-- Input Task -->
+                <div class="col-auto">
+                    <label class="visually-hidden" for="task">Task</label>
+                    <input type="text" class="form-control" id="task" name="task" placeholder="Enter a new task" autocomplete="off" required>
+                </div>
+
+                <!-- Input Timeframe -->
+                <div class="col-auto">
+                    <label class="visually-hidden" for="timeframe">Select Timeframe</label>
+                    <select class="form-select" id="timeframe" name="timeframe" required>
+                        <option selected disabled>Select Timeframe</option>
+                        <option value="Mon - Fri (morning)">Mon - Fri (morning)</option>
+                        <option value="Mon - Fri (noon)">Mon - Fri (noon)</option>
+                        <option value="Mon - Fri (evening)">Mon - Fri (evening)</option>
+                        <option value="Sat - Sun">Sat - Sun</option>
+                    </select>
+                </div>
+
+                <!-- Input Priority -->
+                <div class="col-auto">
+                    <label class="visually-hidden" for="priority">Select Priority</label>
+                    <select class="form-select" id="priority" name="priority" required>
+                        <option selected disabled>Select Priority</option>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+                <!-- Submit -->
+                <div class="col-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
 
         <main class="container-fluid py-4 text-center">
