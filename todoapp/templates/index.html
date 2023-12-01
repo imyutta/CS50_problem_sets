@@ -129,17 +129,6 @@
         </tbody>
     </table>
 
-
-    <script>
-        // Add event listener to each completion checkbox
-        document.querySelectorAll('.completion-checkbox').forEach(function(checkbox) {
-            checkbox.addEventListener('change', function() {
-                // Find the closest form and submit it
-                this.closest('.task-form').submit();
-            });
-        });
-    </script>
-
     <script>
         function updateTaskStatus(checkbox) {
             const taskId = checkbox.getAttribute("data-task-id");
