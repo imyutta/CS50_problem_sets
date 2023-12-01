@@ -148,7 +148,7 @@
         }
 
         // Delete task
-        function delete_task() {
+        function delete_task(taskId) {
 
             // Отправляем асинхронный запрос на сервер
             fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
