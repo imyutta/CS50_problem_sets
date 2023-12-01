@@ -17,9 +17,7 @@ body {
     box-shadow: 0 0 5px #000000;
 }
 
-.table tbody tr:nth-child(even) {
-    background-color: #f2f2f2; /* Серый цвет фона */
-  }
+
 
 /* Button color
 button.btn-primary {
