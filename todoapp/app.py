@@ -69,7 +69,7 @@ def add_task():
 
 @app.route("/update_task_status/<int:task_id>/<int:completion_value>", methods=["POST"])
 @login_required
-def task_status():
+def update_task_status():
     """Check the task as completed"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
