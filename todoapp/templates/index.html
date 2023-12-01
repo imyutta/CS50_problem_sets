@@ -130,6 +130,12 @@
             // Отправляем асинхронный запрос на сервер
             fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
                 method: 'POST',
+            }); .then(response => {
+            if (response.ok) {
+                // Если запрос успешен, скрываем задачу на клиентской стороне
+                const row = document.querySelector(`#todo_row_${taskId}`);
+                row.style.display = 'none';
+            }
             });
         }
 
