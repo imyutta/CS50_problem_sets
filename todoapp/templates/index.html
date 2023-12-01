@@ -66,7 +66,7 @@
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
                 <tr>
-                    <td>
+                    <td colspan="2">
                         <form method="POST" action="/task_is_done" class="task-form completion-checkbox">
                             <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
                                 <!-- Hidden input to store task_id -->
@@ -77,8 +77,8 @@
 
                             </div>
                         </form>
-                    </td>
-                    <td>{{ task.category }}</td>
+
+                    {{ task.category }}</td>
                     <td>{{ task.task }}</td>
                     <td>{{ task.timeframe }}</td>
                     <td>{{ task.priority }}</td>
