@@ -82,15 +82,12 @@ def update_task_status(task_id, completion_value):
     return jsonify({"success": True})
 
 
-@app.route("/delete_task", methods=["DELETE"])
+@app.route("/delete_task/<int:task_id>", methods=["DELETE"])
 @login_required
-def delete_task():
+def delete_task(task_id):
     """Delete a task"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
-
-    # Extract data from the index page:
-    task_id = request.form.get("task_id")
 
     # Change the data in the database:
     db.execute("DELETE FROM tasks WHERE users_id = ? AND id = ?", users_id, task_id)
