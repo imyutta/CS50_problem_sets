@@ -73,7 +73,7 @@
                                     <input type="hidden" name="task_id" value="{{ task.id }}">
 
                                     <!-- Checkbox with value 1 when checked -->
-                                    <input class="form-check-input completion-checkbox" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == 1 %}checked{% endif %} onchange="updateTaskStatus(this)">
+                                    <input class="form-check-input completion-checkbox" type="checkbox" id="completion_{{ task.id }}" name="task_completion" {% if task.completion == 0 %}checked{% endif %} onchange="updateTaskStatus(this)">
 
                                 </div>
                             </form>
