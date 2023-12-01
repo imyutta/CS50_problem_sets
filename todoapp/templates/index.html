@@ -64,7 +64,7 @@
 
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
-                <tr>
+                <tr id="todo_row_{{ task.id }}" >
                     <td class="align-middle">
                         <div class="d-flex align-items-center " >
                             <form method="POST" action="/updateTaskStatus/{{ task.id }}" class="task-form completion-checkbox">
