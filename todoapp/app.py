@@ -44,7 +44,6 @@ def index():
 
     return render_template("index.html", tasks=tasks)
 
-
 @app.route("/add_task", methods=["POST"])
 @login_required
 def add_task():
@@ -94,6 +93,19 @@ def delete_task(task_id):
 
     # Redirect back to the index page after adding the goal:
     return jsonify({"success": True})
+
+
+@app.route("/completed", methods=["GET", "POST"])
+@login_required
+def completed():
+    """Completed tasks"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Get user's goals data:
+    tasks = db.execute("SELECT catefory, task, completion FROM tasks WHERE users_id =? AND completion = 1", users_id)
+
+    return render_template("index.html", tasks=tasks)
 
 
 
