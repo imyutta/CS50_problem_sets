@@ -65,8 +65,8 @@
             <!-- Display existing tasks in the table -->
             {% for task in tasks %}
                 <tr>
-                    <td colspan="1">
-                        <div class="form-check">
+                    <td>
+                        <div class="d-flex align-items-center">
                             <form method="POST" action="/task_is_done" class="task-form completion-checkbox">
                                 <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
                                     <!-- Hidden input to store task_id -->
