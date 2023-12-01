@@ -67,9 +67,9 @@ def add_task():
     return redirect("/")
 
 
-@app.route("/task_is_done", methods=["POST"])
+@app.route("/task_status", methods=["POST"])
 @login_required
-def task_is_done():
+def task_status():
     """Check the task as completed"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
