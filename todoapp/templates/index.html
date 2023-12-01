@@ -85,7 +85,7 @@
                     <td>
                         <!-- Button to delete the task -->
                         <form method="POST" action="/delete_task" class="delete-task-form">
-                            <input type="hidden" name="task_id">
+                            <input type="hidden" name="task_id" value="{{ task.id }}">
                             <button type="submit" class="btn-close" aria-label="Close"></button>
                         </form>
                     </td>
