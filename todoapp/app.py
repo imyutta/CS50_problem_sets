@@ -69,13 +69,13 @@ def add_task():
 
 @app.route("/update_task_status/<int:task_id>/<int:completion_value>", methods=["POST"])
 @login_required
-def update_task_status():
+def update_task_status(task_id, completion_value):
     """Check the task as completed"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
     # Change the data in the database:
-    db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", task_completion, users_id, task_id)
+    db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", completion_value, users_id, task_id)
 
 
     # Redirect back to the index page after adding the goal:
