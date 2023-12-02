@@ -113,8 +113,8 @@ def agenda():
     tasks = db.execute("SELECT * FROM tasks WHERE users_id =? AND completion = 0", users_id)
 
     # Text in the head
-    welcome_message_h1 = "  "
-    welcome_message_p = "through step-by-step planning with todo app"
+    welcome_message_h1 = " Weekly Schedule "
+    welcome_message_p = "follow "
 
     return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="planning")
 
