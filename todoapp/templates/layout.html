@@ -78,9 +78,8 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {% for task in tasks %}
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                <option value="{{ task.category }}">{{ task.category }}</option>
+                            {% endfor %}
                         </ul>
                       </div>
 
@@ -90,12 +89,7 @@
                       <div class="mb-3 row mt-3">
                         <label class="visually-hidden" for="category">Category</label>
 
-                        <div class="input-group col-sm-5 mx-auto">
-                            <select class="form-control" id="category" name="category">
-                                {% for task in tasks %}
-                                    <option value="{{ task.category }}">{{ task.category }}</option>
-                                {% endfor %}
-                            </select>
+
 
 
 
