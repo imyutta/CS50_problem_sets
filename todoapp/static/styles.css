@@ -22,21 +22,8 @@ body {
     font-weight: bold;
 }
 
-/* Button color
-button.btn-primary {
-    background-color: #de483a;
-    border-color: #de483a;
+/* Checkbox color gray when on the completed.html */
+.completed-page .form-check-input.completion-checkbox {
+    background-color: gray; /* Задайте цвет фона чекбокса */
+    border-color: gray; /* Задайте цвет рамки чекбокса */
 }
-button.btn-primary:hover,
-button.btn-primary:focus {
-    background-color: #c53b2e;
-    border-color: #c53b2e;
-}
-
-/* Input field color */
-/* input.form-control:focus {
-    border-color: #de483a;
-    box-shadow: 0 0 0 0.2rem rgba(222, 72, 58, 0.25);
-    background-color: #FFFFFF; !important;
-} */ */
-
