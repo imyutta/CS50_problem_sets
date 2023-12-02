@@ -50,7 +50,7 @@
 
 
                     <td>{{ task.task }}</td>
-                    <td>{{ task.timeframe if task.date is none or task.date =='' else '' }}</td>
+                    <td>{{ task.timeframe if (task.date is none or task.date =='') and task.timeframe is not none else '' }}</td>
                     <td>{{ task.date or '' }}</td>
                     <td>{{ task.time or '' }}</td>
                     <td>{{ task.priority or '' }}</td>
