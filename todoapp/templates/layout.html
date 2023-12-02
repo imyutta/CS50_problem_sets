@@ -72,25 +72,21 @@
                     <label><b>Add a new task:</b></label>
                 </div>
 
-                <!-- Input Category -->
-                    <div class="input-group mb-3">
-                        <input type="text" id="category" name="category" class="form-control" placeholder="Enter a new category" autocomplete="off" aria-label="Text input with dropdown button">
-                        <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
-                        <ul class="dropdown-menu dropdown-menu-end">
-                            {% for task in tasks %}
-                                <li value="{{ task.category }}">
-                                    <a class="dropdown-item" href="#" onclick="setCategory('{{ task.category }}')">
-                                        {{ task.category }}
-                                    </a>
-                                </li>
-                            {% endfor %}
-                        </ul>
-                      </div>
-
-
-
-
                 <div class="mb-3 row mt-3">
+                    <!-- Input Category -->
+                    <div class="input-group col-sm-7">
+                    <input type="text" id="category" name="category" class="form-control" placeholder="Enter a new category" autocomplete="off" aria-label="Text input with dropdown button">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        {% for task in tasks %}
+                            <li value="{{ task.category }}">
+                                <a class="dropdown-item" href="#" onclick="setCategory('{{ task.category }}')">
+                                    {{ task.category }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                    </div>
                     <!-- Input Task -->
                     <div class="col-sm-6 mx-auto">
                         <label class="visually-hidden" for="task">Task</label>
@@ -111,7 +107,7 @@
                     </div>
 
                     <!-- Input Timeframe -->
-                    <div class="col-sm-6 mx-auto">
+                    <div class="col-sm-7 mx-auto">
                         <label class="visually-hidden" for="timeframe">Possible Timeframe</label>
                         <select class="form-select" id="timeframe" name="timeframe" required>
                             <option selected disabled>Possible Timeframe</option>
