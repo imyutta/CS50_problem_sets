@@ -50,7 +50,7 @@
 
 
                     <td>{{ task.task }}</td>
-                    <td>{{ '' if task.date is defined else task.timeframe }}</td>
+                    <td>{{ task.timeframe if task.date is none or task.date =='' else '' }}</td>
                     <td>{{ task.date or '' }}</td>
                     <td>{{ task.time or '' }}</td>
                     <td>{{ task.priority or '' }}</td>
