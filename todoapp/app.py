@@ -110,7 +110,7 @@ def agenda():
     users_id = session["user_id"]
 
     # Get user's goals data:
-    tasks = db.execute("SELECT id, category, task, completion, date, time FROM tasks WHERE users_id =? AND completion = 0 AND date ", users_id)
+    tasks = db.execute("SELECT id, category, task, completion, date, time FROM tasks WHERE users_id =? AND completion = 0 AND date IS DEFINED", users_id)
 
     # Text in the head
     welcome_message_h1 = " Weekly Schedule "
