@@ -102,6 +102,23 @@ def delete_task(task_id):
     # Redirect back to the index page after adding the goal:
     return jsonify({"success": True})
 
+@app.route("/agenda", methods=["GET", "POST"])
+@login_required
+def agenda():
+    """Daily agenda"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Get user's goals data:
+    tasks = db.execute("SELECT * FROM tasks WHERE users_id =? AND completion = 0", users_id)
+
+    # Text in the head
+    welcome_message_h1 = "  "
+    welcome_message_p = "through step-by-step planning with todo app"
+
+    return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="planning")
+
+
 
 @app.route("/completed", methods=["GET", "POST"])
 @login_required
