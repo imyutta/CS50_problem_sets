@@ -22,8 +22,4 @@ body {
     font-weight: bold;
 }
 
-/* Checkbox color gray when on the completed.html */
-.completed-page .form-check-input.completion-checkbox {
-    background-color: gray; /* Задайте цвет фона чекбокса */
-    border-color: gray; /* Задайте цвет рамки чекбокса */
-}
+
