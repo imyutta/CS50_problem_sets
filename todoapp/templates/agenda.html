@@ -110,7 +110,7 @@
         <tbody>
 
             <!-- Display existing tasks in the table -->
-            {% for task in tasks %}
+            {% for task in weekdays %}
                 <tr id="todo_row_{{ task.id }}" >
                     <td class="align-middle ">
                         <div class="d-flex align-items-center " >
@@ -139,7 +139,7 @@
                     <td class="align-middle ">{{ task.task }}</td>
                     <td>
                         <div>
-                            {{ task.date or '' }}
+                            {{ task.timeframe or '' }}
                         </div>
                     </td>
                     <td>
