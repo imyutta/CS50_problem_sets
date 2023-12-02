@@ -74,11 +74,15 @@
 
                 <!-- Input Category -->
                     <div class="input-group mb-3">
-                        <input type="text" name="category" class="form-control" placeholder="Enter a new category" autocomplete="off" aria-label="Text input with dropdown button">
+                        <input type="text" id="category" name="category" class="form-control" placeholder="Enter a new category" autocomplete="off" aria-label="Text input with dropdown button">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {% for task in tasks %}
-                                <li value="{{ task.category }}" id="category-{{ task.category }}" required>{{ task.category }}</li>
+                                <li value="{{ task.category }}">
+                                    <a class="dropdown-item" href="#" onclick="setCategory('{{ task.category }}')">
+                                        {{ task.category }}
+                                    </a>
+                                </li>
                             {% endfor %}
                         </ul>
                       </div>
@@ -148,5 +152,11 @@
 
         <!-- Bootstrap JS -->
         <script crossorigin="anonymous" src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"></script>
+        <script>
+            function setCategory(category) {
+                const input = document.querySelector('#category');
+                input.value = category;
+            }
+        </script>
     </body>
 </html>
