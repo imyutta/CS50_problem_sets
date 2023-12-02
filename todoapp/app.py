@@ -114,9 +114,8 @@ def agenda():
 
     # Text in the head
     welcome_message_h1 = " Weekly Schedule "
-    welcome_message_p = "follow "
 
-    return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="planning")
+    return render_template("agenda.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, current_page="agenda")
 
 
 
