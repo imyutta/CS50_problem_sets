@@ -115,11 +115,14 @@ def agenda():
     # Get user's goals data:
     weekdays = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
 
+    # Get user's goals data:
+    weekends = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
+
     # Text in the head
-    welcome_message_h1 = " Schedule "
+    welcome_message_h1 = " MY TASKS "
     welcome_message_p = "NOTICE: Weekly schedule shows your 'high priority' tasks "
 
-    return render_template("agenda.html", appointments=appointments, weekdays = weekdays, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="agenda")
+    return render_template("agenda.html", appointments=appointments, weekdays = weekdays, weekends=weekends, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="agenda")
 
 
 
