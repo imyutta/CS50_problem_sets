@@ -73,36 +73,29 @@
                 </div>
 
                 <!-- Input Category -->
-                <div class="mb-3 row mt-3">
-                    <label class="visually-hidden" for="category">Category</label>
-
-                    <div class="input-group col-sm-5 mx-auto">
-                        <select class="form-control" id="category" name="category">
-                            {% for task in tasks %}
-                                <option value="{{ task.category }}">{{ task.category }}</option>
-                            {% endfor %}
-                        </select>
-
-
-
-
-                    <!-- Input Task -->
                     <div class="input-group mb-3">
                         <input type="text" class="form-control" aria-label="Text input with dropdown button">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu dropdown-menu-end">
-                          <li><a class="dropdown-item" href="#">Action</a></li>
-                          <li><a class="dropdown-item" href="#">Another action</a></li>
-                          <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          <li><hr class="dropdown-divider"></li>
-                          <li><a class="dropdown-item" href="#">Separated link</a></li>
+                            {% for task in tasks %}
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                       </div>
 
-                    </div>
-                    <div class="input-group-append"
-                        <input type="text" class="form-control" id="custom_Category" name="customCategory" placeholder="Category" autocomplete="off" required>
-                    </div>
+
+
+
+                      <div class="mb-3 row mt-3">
+                        <label class="visually-hidden" for="category">Category</label>
+
+                        <div class="input-group col-sm-5 mx-auto">
+                            <select class="form-control" id="category" name="category">
+                                {% for task in tasks %}
+                                    <option value="{{ task.category }}">{{ task.category }}</option>
+                                {% endfor %}
+                            </select>
 
 
 
