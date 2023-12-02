@@ -78,7 +78,7 @@
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {% for task in tasks %}
-                                <option value="{{ task.category }}" id="category-{{ task.category }}" required>{{ task.category }}</option>
+                                <li value="{{ task.category }}" id="category-{{ task.category }}" required>{{ task.category }}</li>
                             {% endfor %}
                         </ul>
                       </div>
