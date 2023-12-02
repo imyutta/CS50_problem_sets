@@ -44,7 +44,7 @@ def index():
 
     # Text in the head
     welcome_message_h1 = "Chart a course toward\n your loftiest goals "
-    welcome_message_p = "through step-by-step planning with "
+    welcome_message_p = "through step-by-step planning with todo app"
 
     return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="planning")
 
@@ -111,10 +111,9 @@ def completed():
     tasks = db.execute("SELECT id, category, task, completion FROM tasks WHERE users_id =? AND completion = 1", users_id)
 
     # Text in the head
-    welcome_message_h1 = "You did a great job "
-    welcome_message_p = "continue moving on with "
+    welcome_message_h1 = "History "
 
-    return render_template("completed.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="completed")
+    return render_template("completed.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, current_page="completed")
 
 
 
