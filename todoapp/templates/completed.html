@@ -35,7 +35,8 @@
                                         data-task-id="{{ task.id }}"
                                         data-completion="{{ task.completion}}"
                                         {% if task.completion == 1 %}checked{% endif %}
-                                        onchange="updateTaskStatus(this)">
+                                        onchange="updateTaskStatus(this)"
+                                        style="background-color: gray; border-color: gray;">
 
                             </div>
                             <label class="form-check-label ms-5" for="completion_{{ task.id }}">
