@@ -47,7 +47,7 @@
                     <td style="text-decoration: line-through;">{{ task.task }}</td>
                     <td>
                         <!-- Button to open the delete confirmation modal -->
-                        <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
+                        <button class="btn-close" onclick="delete_task({{ task.id }})"></button>
 
                         <!-- Delete confirmation modal -->
                         <div class="modal fade" id="deleteConfirmationModal_{{ task.id }}" tabindex="-1" aria-labelledby="deleteConfirmationModalLabel_{{ task.id }}" aria-hidden="true">
