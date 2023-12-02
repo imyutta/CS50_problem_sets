@@ -51,7 +51,7 @@
 
                     <td>{{ task.task }}</td>
                     <td>{{ task.timeframe or '' }}</td>
-                    <td>{{ task.date or '' }}</td>
+                    <td>{{ task.date or (task.date ? '': 'Default Timeframe') }}</td>
                     <td>{{ task.time or '' }}</td>
                     <td>{{ task.priority or '' }}</td>
                     <td>
