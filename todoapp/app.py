@@ -113,7 +113,7 @@ def agenda():
     appointments = db.execute("SELECT id, category, task, completion, date, time FROM tasks WHERE users_id =? AND completion = 0 AND (date IS NOT NULL AND date != '' OR time IS NOT NULL AND time != '')", users_id)
 
     # Get user's goals data:
-    weekdays = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'high'", users_id)
+    weekdays = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
 
     # Text in the head
     welcome_message_h1 = " Schedule "
