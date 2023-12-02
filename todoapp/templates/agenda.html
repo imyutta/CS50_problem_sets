@@ -7,12 +7,12 @@
 {% block main %}
 
 
-
+    <h5>
+        Scheduled meetings, appointments:
+    </h5>
     <table class="table">
         <thead>
-            <p>
-                Scheduled meetings, appointments:
-            </p>
+
             <tr>
                 <th> Goal Category</th>
                 <th> Task </th>
@@ -50,8 +50,15 @@
                     </td>
 
 
-                    <td>{{ task.task }}</td>
-                    <td style="padding-right: 100px;">{{ task.date or '' }}  {{ task.time or '' }}</td>
+                    <td class="align-middle ">{{ task.task }}</td>
+                    <td>
+                        <div>
+                            {{ task.date or '' }}
+                        </div>
+                        <div>
+                            {{ task.time or '' }}
+                        </div>
+                    </td>
                     <td>{{ task.priority or '' }}</td>
                     <td>
                         <!-- Button to open the delete confirmation modal -->
