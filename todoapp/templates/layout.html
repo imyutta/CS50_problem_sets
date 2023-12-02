@@ -61,68 +61,70 @@
             </h1>
             <p>{{ welcome_message_p }}</p>
         </div>
-
         <div class="container container-fluid mt-5">
+            <form method="POST" action="/add_task" class="mx-auto text-center" style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; width: 80%;">
 
-                <form method="POST" action="/add_task" class="row gx-3 gy-2 align-items-center mx-auto text-center"  style="background-color: #f2f2f2; padding: 20px; border-radius: 10px;">
-                    <div class="row mb-3">
-                        <!-- Input Category -->
-                        <div class="col-sm-2">
-                            <label class="visually-hidden" for="category">Category</label>
-                            <input type="text" class="form-control" id="category" name="category" placeholder="Category" autocomplete="off" required>
-                        </div>
-
-                        <!-- Input Task -->
-                        <div class="col-sm-4">
-                            <label class="visually-hidden" for="task">Task</label>
-                            <input type="text" class="form-control" id="task" name="task" placeholder="Enter a new task" autocomplete="off" required>
-                        </div>
-
-
-                        <!-- Input Priority -->
-                        <div class="col-auto">
-                            <label class="visually-hidden" for="priority">Select Priority</label>
-                            <select class="form-select" id="priority" name="priority" required>
-                                <option selected disabled>Priority</option>
-                                <option value="High">High</option>
-                                <option value="Medium">Medium</option>
-                                <option value="Low">Low</option>
-                            </select>
-                        </div>
-
-                        <!-- Input Timeframe -->
-                        <div class="col-auto">
-                            <label class="visually-hidden" for="timeframe"> Possible Timeframe</label>
-                            <select class="form-select" id="timeframe" name="timeframe" required>
-                                <option selected disabled>Possible Timeframe</option>
-                                <option value="Mon - Fri (morning)">Mon - Fri (morning)</option>
-                                <option value="Mon - Fri (noon)">Mon - Fri (noon)</option>
-                                <option value="Mon - Fri (evening)">Mon - Fri (evening)</option>
-                                <option value="Sat - Sun">Sat - Sun</option>
-                            </select>
-                        </div>
-
+                <div class="mb-3 row">
+                    <!-- Input Category -->
+                    <div class="col-sm-4 mx-auto">
+                        <label class="visually-hidden" for="category">Category</label>
+                        <input type="text" class="form-control" id="category" name="category" placeholder="Category" autocomplete="off" required>
                     </div>
 
-                    <div class="row">
-                        <!-- Specify date -->
-                        <label for="date" class="col-sm-4 col-form-label text-end">Specify date and time if needed:</label>
-                        <div class="col-sm-2">
-                            <input type="date" class="form-control" id="date" name="date" autocomplete="off">
-                        </div>
-                        <!-- Specify TIME -->
-                        <div class="col-sm-2">
-                            <input type="time" class="form-control" id="time" name="time"  autocomplete="off">
-                        </div>
-
-                        <!-- Submit -->
-                        <div class="col-auto">
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-
+                    <!-- Input Task -->
+                    <div class="col-sm-6 mx-auto">
+                        <label class="visually-hidden" for="task">Task</label>
+                        <input type="text" class="form-control" id="task" name="task" placeholder="Enter a new task" autocomplete="off" required>
                     </div>
-                </form>
+                </div>
+
+                <div class="mb-3 row">
+                    <!-- Input Priority -->
+                    <div class="col-sm-4 mx-auto">
+                        <label class="visually-hidden" for="priority">Select Priority</label>
+                        <select class="form-select" id="priority" name="priority" required>
+                            <option selected disabled>Priority</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+                    </div>
+
+                    <!-- Input Timeframe -->
+                    <div class="col-sm-6 mx-auto">
+                        <label class="visually-hidden" for="timeframe">Possible Timeframe</label>
+                        <select class="form-select" id="timeframe" name="timeframe" required>
+                            <option selected disabled>Possible Timeframe</option>
+                            <option value="Mon - Fri (morning)">Mon - Fri (morning)</option>
+                            <option value="Mon - Fri (noon)">Mon - Fri (noon)</option>
+                            <option value="Mon - Fri (evening)">Mon - Fri (evening)</option>
+                            <option value="Sat - Sun">Sat - Sun</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <!-- Specify date -->
+                    <label for="date" class="col-sm-4 col-form-label text-end">Specify date and time if needed:</label>
+                    <div class="col-sm-4 mx-auto">
+                        <input type="date" class="form-control" id="date" name="date" autocomplete="off">
+                    </div>
+
+                    <!-- Specify TIME -->
+                    <div class="col-sm-4 mx-auto">
+                        <input type="time" class="form-control" id="time" name="time" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="mb-3 row">
+                    <!-- Submit -->
+                    <div class="col-sm-4 mx-auto">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
         </div>
+
 
         <main class="container container-fluid py-4 text-center">
             {% block main %}{% endblock %}
