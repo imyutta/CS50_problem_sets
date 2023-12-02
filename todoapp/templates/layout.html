@@ -74,11 +74,11 @@
 
                 <!-- Input Category -->
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" aria-label="Text input with dropdown button">
+                        <input type="text" class="form-control" placeholder="Enter a new category" autocomplete="off" aria-label="Text input with dropdown button">
                         <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
                         <ul class="dropdown-menu dropdown-menu-end">
                             {% for task in tasks %}
-                                <option value="{{ task.category }}" id="task" placeholder="Enter a new task" autocomplete="off" required>{{ task.category }}</option>
+                                <option value="{{ task.category }}" id="category" required>{{ task.category }}</option>
                             {% endfor %}
                         </ul>
                       </div>
@@ -86,11 +86,7 @@
 
 
 
-                      <div class="mb-3 row mt-3">
-                        <label class="visually-hidden" for="category">Category</label>
-
-
-
+                <div class="mb-3 row mt-3">
                     <!-- Input Task -->
                     <div class="col-sm-6 mx-auto">
                         <label class="visually-hidden" for="task">Task</label>
