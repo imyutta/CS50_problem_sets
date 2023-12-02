@@ -50,10 +50,10 @@
 
 
                     <td>{{ task.task }}</td>
-                    <td>{{ task.timeframe }}</td>
-                    <td>{{ task.date }}</td>
-                    <td>{{ task.time }}</td>
-                    <td>{{ task.priority }}</td>
+                    <td>{{ task.timeframe or '' }}</td>
+                    <td>{{ task.date or '' }}</td>
+                    <td>{{ task.time or '' }}</td>
+                    <td>{{ task.priority or '' }}</td>
                     <td>
                         <!-- Button to open the delete confirmation modal -->
                         <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
