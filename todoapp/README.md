@@ -14,8 +14,9 @@ their list. This form collects various details about the task, includding:
 - **Category:** Represents a broader goal that ecompasses several tasks.
 - **Task Name:** Describes the specific task.
 - **Priority:** Indicates the priority of the task.
-- **Category:** Users can specify a preffered time range and the day of the 
-- **Category:**
-- **Category:**
+- **Timeframe:** Users can specify a preffered time range and the day of the week when they have time to complete the task.
+- **Date:** If the task if a scheduled event, users can input the date
+- **Time:** If the task if a scheduled event, users can input the time
+- **Completeon status:**
 #### SCREENSHOTS:
 ![Pplanning]
