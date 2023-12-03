@@ -267,17 +267,14 @@ def password_change():
     # User reached the route via POST (as by submitting a form via POST)
     if request.method == "POST":
 
-
         # Collect the user's data:
         old_password = request.form.get("old_password")
         new_password = request.form.get("new_password")
         confirmation = request.form.get("confirmation")
 
-
         # Ensure an old password is correct:
         # Query database for the old password hash:
         hash = db.execute("SELECT hash FROM users WHERE id = ?", users_id)
-        print("jashhhhhhhhhhhhaaaaaaassssssshhhh", users_id)
 
         # Ensure the old password is correct
         if len(hash) != 1 or not check_password_hash(hash[0]["hash"], old_password):
