@@ -114,21 +114,21 @@ def agenda():
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
-    # Get user's goals data:
+    # Get user's tasks with specified date and time information (for the appointments html table):
     appointments = db.execute("SELECT id, category, task, completion, date, time FROM tasks WHERE users_id =? AND completion = 0 AND (date IS NOT NULL AND date != '' OR time IS NOT NULL AND time != '')", users_id)
 
-    # Get user's goals data:
+    # Get user's high priority tasks for weekdays-planning  html table:
     weekdays = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
 
-    # Get user's goals data:
+    # Get user's high priority tasks for weekends-planning  html table:
     weekends = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
 
-    # Text in the head
+    # Text in the head of the HTML template:
     welcome_message_h1 = " MY TASKS "
     welcome_message_p = "NOTICE: Weekly schedule shows your 'high priority' tasks "
 
+    # Render the HTML template with data to display:
     return render_template("agenda.html", appointments=appointments, weekdays = weekdays, weekends=weekends, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="agenda")
-
 
 
 @app.route("/completed", methods=["GET", "POST"])
