@@ -146,7 +146,7 @@
                 <td>{{ task.date or '' }}</td>
                 <td>{{ task.time or '' }}</td>
                 <td>
-                    <button onclick="changePriority({{ task.id }}, this)">{{ task.priority or 'Low' }}</button>
+                    <button class="btn btn-primary" onclick="changePriority({{ task.id }}, this)">{{ task.priority or 'Low' }}</button>
                 </td>
 
                 <!-- Remove Task -->
