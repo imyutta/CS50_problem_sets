@@ -146,7 +146,7 @@
                 <td>{{ task.date or '' }}</td>
                 <td>{{ task.time or '' }}</td>
                 <td>
-                    <button class="btn btn-primary" onclick="changePriority({{ task.id }}, this)">{{ task.priority or 'Low' }}</button>
+                    <button class="btn btn-primary {{ 'btn-success' if (task.priority or 'Low') == 'Low' else '' }}" onclick="changePriority({{ task.id }}, this)">{{ task.priority or 'Low' }}</button>
                 </td>
 
                 <!-- Remove Task -->
@@ -221,6 +221,7 @@
         row.remove();
     }
 
+
     // Function to change task priority
     function changePriority(taskId, button) {
 
@@ -233,6 +234,7 @@
             if (response.ok) {
                 // If the request is successful, update the task priority on the client side:
                 button.textContent = newPriority;
+                button.toggleClass('btn-success')
             }
         });
     }
