@@ -232,7 +232,7 @@
         }) .then(response => {
             if (response.ok) {
                 // If the request is successful, update the task priority on the client side:
-                button.
+                button.textContent = newPriority;
             }
         });
     }
