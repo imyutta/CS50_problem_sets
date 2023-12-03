@@ -177,37 +177,44 @@
     </tbody>
 </table>
 
-    <script>
-        function updateTaskStatus(checkbox) {
-            const taskId = checkbox.getAttribute("data-task-id");
-            const newCompletionValue = checkbox.checked ? 1 : 0;
 
-            // Отправляем асинхронный запрос на сервер
-            fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
-                method: 'POST',
-            }) .then(response => {
-                if (response.ok) {
-                    // Если запрос успешен, скрываем задачу на клиентской стороне
-                    const row = document.querySelector(`#todo_row_${taskId}`);
-                    row.style.display = 'none';
+<!-- JavaScript for handling task status updates and deletions -->
+<script>
+    // Function to update the completion status of a task
+    function updateTaskStatus(checkbox) {
+        // Get the task ID and new completion value from the checkbox attributes:
+        const taskId = checkbox.getAttribute("data-task-id");
+        const newCompletionValue = checkbox.checked ? 1 : 0;
+
+        // Send an asynchronous request to the server to update the task status
+        fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
+            method: 'POST',
+        }) .then(response => {
+            if (response.ok) {
+                // If the request is successful, hide the task on the client side:
+                const row = document.querySelector(`#todo_row_${taskId}`);
+                row.style.display = 'none';
             }
-            });
-        }
-
-        // Delete task
-        function delete_task(taskId) {
-
-            // Отправляем асинхронный запрос на сервер
-            fetch(`/delete_task/${taskId}`, {
-                method: 'DELETE',
-            });
-            const row = document.querySelector(`#todo_row_${taskId}`);
-            row.remove();
-        }
-    </script>
+        });
+    }
 
 
-    <img src="/static/planning2.png" class="wide-image">
+    // Function to delete a task
+    function delete_task(taskId) {
+
+        // Send an asynchronous request to the server to delete the task
+        fetch(`/delete_task/${taskId}`, {
+            method: 'DELETE',
+        });
+
+        // Remove the corresponding row from the HTML table on the client side
+        const row = document.querySelector(`#todo_row_${taskId}`);
+        row.remove();
+    }
+</script>
+
+<!-- Display an image -->
+<img src="/static/planning2.png" class="wide-image">
 {% endblock %}
 
 
