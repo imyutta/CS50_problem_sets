@@ -180,6 +180,13 @@
 
 <!-- JavaScript for handling task status updates and deletions -->
 <script>
+    // Function to set the category in the form
+    function setCategory(category) {
+        const input = document.querySelector('#category');
+        input.value = category;
+    }
+
+
     // Function to update the completion status of a task
     function updateTaskStatus(checkbox) {
         // Get the task ID and new completion value from the checkbox attributes:
