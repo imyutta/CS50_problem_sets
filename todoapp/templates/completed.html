@@ -5,12 +5,13 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Main content block for the Completed Tasks page -->
 
-
-
+    <!-- Table to display completed tasks -->
     <table class="table mx-auto text-center mb-5" style="width: 60%;">
         <thead>
             <tr>
+                <!-- Table header columns -->
                 <th> Done </th>
                 <th> Task </th>
                 <th> Remove Task </th>
@@ -18,10 +19,13 @@
         </thead>
         <tbody>
 
-            <!-- Display existing tasks in the table -->
+            <!-- Display existing completed tasks in the table -->
             {% for task in tasks %}
                 <tr id="todo_row_{{ task.id }}" >
                     <td class="align-middle">
+                        <!-- Table row for each completed task -->
+
+                        <!-- Checkbox column to mark task as done -->
                         <div class="d-flex align-items-center " >
                             <div class=" col-auto d-flex justify-content-center align-items-center form-check" >
                                 <!-- Hidden input to store task_id -->
@@ -37,14 +41,13 @@
                                         {% if task.completion == 1 %}checked{% endif %}
                                         onchange="updateTaskStatus(this)"
                                         style="background-color: gray; border-color: gray;">
-
                             </div>
-
                         </div>
                     </td>
 
-
+                    <!-- Task column with line-through style for completed tasks -->
                     <td style="text-decoration: line-through;">{{ task.task }}</td>
+                    <!-- Column for removing the completed task -->
                     <td>
                         <!-- Button to open the delete confirmation modal -->
                         <button class="btn-close" onclick="delete_task({{ task.id }})"></button>
@@ -69,42 +72,44 @@
                             </div>
                         </div>
                     </td>
-
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
+
+    <!-- JavaScript script for updating task status and deleting tasks -->
     <script>
         function updateTaskStatus(checkbox) {
             const taskId = checkbox.getAttribute("data-task-id");
             const newCompletionValue = checkbox.checked ? 1 : 0;
 
-            // Отправляем асинхронный запрос на сервер
+            // Send asynchronous request to the server
             fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
                 method: 'POST',
             }) .then(response => {
                 if (response.ok) {
-                    // Если запрос успешен, скрываем задачу на клиентской стороне
+                    // If the request is successful, hide the task on the client side
                     const row = document.querySelector(`#todo_row_${taskId}`);
                     row.style.display = 'none';
-            }
+                }
             });
         }
 
-        // Delete task
+        // Function to delete a completed task
         function delete_task(taskId) {
 
-            // Отправляем асинхронный запрос на сервер
+            // Send asynchronous request to the server
             fetch(`/delete_task/${taskId}`, {
                 method: 'DELETE',
             });
+            // Remove the corresponding row from the table
             const row = document.querySelector(`#todo_row_${taskId}`);
             row.remove();
         }
     </script>
 
-
+    <!-- Image at the bottom of the page -->
     <img src="/static/completed.png" class="wide-image">
 {% endblock %}
 

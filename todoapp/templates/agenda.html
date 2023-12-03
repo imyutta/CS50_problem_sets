@@ -5,15 +5,16 @@
 {% endblock %}
 
 {% block main %}
+<!-- Main content block for the Agenda page -->
 
-
-
+    <!-- Table for Scheduled Meetings and Appointments -->
     <table class="table  mt-5">
         <thead>
+            <!-- Heading for Scheduled Meetings and Appointments -->
             <h5>
                 SCHEDULED MEETINGS, APPOINTMENTS:
             </h5>
-
+            <!-- Table header columns -->
             <tr>
                 <th> Goal Category</th>
                 <th> Task </th>
@@ -23,9 +24,12 @@
         </thead>
         <tbody>
 
-            <!-- Display existing tasks in the table -->
+            <!-- Display existing scheduled meetings and appointments in the table -->
             {% for task in appointments %}
                 <tr id="todo_row_{{ task.id }}" >
+                    <!-- Table row for each appointment -->
+
+                    <!-- Goal Category column with checkbox for completion -->
                     <td class="align-middle ">
                         <div class="d-flex align-items-center " >
                             <div class=" col-sm-2 d-flex justify-content-center align-items-center form-check" >
@@ -41,16 +45,18 @@
                                         data-completion="{{ task.completion}}"
                                         {% if task.completion == 1 %}checked{% endif %}
                                         onchange="updateTaskStatus(this)">
-
                             </div>
+                            <!-- Label for the Goal Category -->
                             <label class="form-check-label ms-5" for="completion_{{ task.id }}">
                                 {{ task.category }}
                             </label>
                         </div>
                     </td>
 
-
+                    <!-- Task column -->
                     <td class="align-middle ">{{ task.task }}</td>
+
+                    <!-- Date and time column -->
                     <td>
                         <div>
                             {{ task.date or '' }}
@@ -59,6 +65,8 @@
                             {{ task.time or '' }}
                         </div>
                     </td>
+
+                    <!-- Column for removing the task -->
                     <td>
                         <!-- Button to open the delete confirmation modal -->
                         <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
@@ -83,21 +91,23 @@
                             </div>
                         </div>
                     </td>
-
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
-<br>
+    <br>
 
     <!-- WEEKDAY TASKS-->
     <h5>
+        <!-- Heading for Weekly Tasks Table-->
         WEEKLY TASKS:
     </h5>
     <span>
+        <!-- Subheading for Weekdays -->
         WEEKDAYS:
     </span>
+    
     <table class="table  mt-5">
         <thead>
             <tr>
