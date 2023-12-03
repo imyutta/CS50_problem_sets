@@ -146,7 +146,7 @@
                 <td>{{ task.date or '' }}</td>
                 <td>{{ task.time or '' }}</td>
                 <td>
-                    <button onclick="changePriority({{ task.id }}, '{{ task.priority or 'Low' }}')">{{ task.priority or 'Low' }}</button>
+                    <button onclick="changePriority({{ task.id }}, '{{ task.priority or 'Low' }}', this)">{{ task.priority or 'Low' }}</button>
                 </td>
 
                 <!-- Remove Task -->
@@ -222,11 +222,19 @@
     }
 
     // Function to change task priority
-    function changePriority(taskId, taskPriority) {
+    function changePriority(taskId, taskPriority, button) {
 
         const newPriority = taskPriority === 'Low' ? 'High' : 'Low';
 
         // Send an asynchronous request to the server to update the task priority
+        fetch(`/update_task_priority/${taskId}/${newPriority}`, {
+            method: 'POST',
+        }) .then(response => {
+            if (response.ok) {
+                // If the request is successful, update the task priority on the client side:
+                button.
+            }
+        });
     }
 </script>
 
