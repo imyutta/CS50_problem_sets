@@ -107,9 +107,10 @@
         <!-- Subheading for Weekdays -->
         WEEKDAYS:
     </span>
-    
+    <!-- Table for Weekday Tasks -->
     <table class="table  mt-5">
         <thead>
+            <!-- Table header columns for Weekday Tasks -->
             <tr>
                 <th> Goal Category</th>
                 <th> Task </th>
@@ -119,9 +120,12 @@
         </thead>
         <tbody>
 
-            <!-- Display existing tasks in the table -->
+            <!-- Display existing tasks for weekdays in the table -->
             {% for task in weekdays %}
                 <tr id="todo_row_{{ task.id }}" >
+                    <!-- Table row for each weekday task -->
+
+                    <!-- Goal Category column with checkbox for completion -->
                     <td class="align-middle ">
                         <div class="d-flex align-items-center " >
                             <div class=" col-sm-2 d-flex justify-content-center align-items-center form-check" >
@@ -137,21 +141,25 @@
                                         data-completion="{{ task.completion}}"
                                         {% if task.completion == 1 %}checked{% endif %}
                                         onchange="updateTaskStatus(this)">
-
                             </div>
+                            <!-- Label for the Goal Category -->
                             <label class="form-check-label ms-5" for="completion_{{ task.id }}">
                                 {{ task.category }}
                             </label>
                         </div>
                     </td>
 
-
+                    <!-- Task column -->
                     <td class="align-middle ">{{ task.task }}</td>
+
+                    <!-- Timeframe column -->
                     <td>
                         <div>
                             {{ task.timeframe or '' }}
                         </div>
                     </td>
+
+                    <!-- Column for removing the task -->
                     <td>
                         <!-- Button to open the delete confirmation modal -->
                         <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
@@ -176,7 +184,6 @@
                             </div>
                         </div>
                     </td>
-
                 </tr>
             {% endfor %}
         </tbody>
@@ -186,6 +193,7 @@
 
     <!-- WEEKEND TASKS-->
     <span>
+        <!-- Subheading for Weekends -->
         WEEKENDS:
     </span>
     <table class="table  mt-5">
