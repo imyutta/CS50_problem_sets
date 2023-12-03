@@ -6,7 +6,6 @@ The application provides an intuitive interface.
 
 #### FEATURES:
 
-
 ##### PLANNING:
 
 The Planning section serves as starting point for users to initiate their planning process.
@@ -68,5 +67,53 @@ Similar to the Planning and Agenda sections, a delete button is available on the
 completed task. Clicking this button removes the completed task from the records without the pop-up
 window.
 
+##### USER AUTHENTICATION AND REGISTRATION
+
+The application includes user authentication functionalities with the following features:
+login, logout, and user registration.
+
+**Login**
+The Login page provides a simple form where users can input their username and password to access
+their personalized TODO list. Upon successful login, users are directed to the Planning section,
+where they can start organizing their tasks.
+
+**Logout**
+The logout option allows users to securely sign out their accounts. This action clears the user's
+session, ensuring the protection of personal information and preventing anauthorized access.
+
+**Register**
+The registration page allows new users to create an account by providing a unique username and a
+secure password. The registration form includes password strength rewuirements, ensuring users
+create robust and secure passwords.
+
+##### DATABASE STRUCTURE
+The application employs a SQL database to store and manage user data and task information.
+The tables are designed to facilitate efficient data retrieval and storage.
+
+**UserTable**
+
+-**user_id** Unique identifier for each user
+-**username** User's chosen name
+-**hashed_password** Securely stored hashed password.
+
+**TaskTable**
+
+-**task_id** Unique identifier for each task
+-**user_id** Foreign key linking tasks to their respective users
+-**category** Category of the task (goal category)
+-**task** Description of the task
+-**date** Date (if a completion of the task is scheduled)
+-**time** Time (if a completion of the task is scheduled)
+-**Priority** Priority level of the task
+-**Completion** Completion status of the task
+
+This structured database layout ensures data integrity, allowing the application to effectively manage user-specific tasks and related details
+
+
 #### SCREENSHOTS:
-![Pplanning]
+![Planning](/static/planning_screenshort.png)
+![DailyAgenda](/static/agenda_screenshort.png)
+![Completed](/static/completed_screenshort.png)
+![Login](/static/login_screenshort.png)
+![Register](/static/register_screenshort.png)
+
