@@ -53,6 +53,8 @@ def index():
     welcome_message_h1 = "Chart a course toward\n your loftiest goals "
     welcome_message_p = "through step-by-step planning with todo app"
 
+    
+
     # Render the HTML template with data to display:
     return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="planning")
 
