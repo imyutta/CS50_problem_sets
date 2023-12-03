@@ -5,6 +5,88 @@
 {% endblock %}
 
 {% block main %}
+<!-- HTML form for adding a new task -->
+<div class="container container-fluid mt-5">
+    <form method="POST" action="/add_task" class="mx-auto text-center mb-5" style="background-color: #f2f2f2; padding: 20px; border-radius: 10px; width: 60%;">
+
+        <!-- Header for the form -->
+        <div class="col-sm-5 mx-auto">
+            <label><b>Add a new task:</b></label>
+        </div>
+        <!-- Task and Category input fields -->
+        <div class="mb-3 row mt-3">
+            <!-- Input Category -->
+            <div class="col-sm-6">
+                <!-- Category input with dropdown -->
+                <div class="input-group">
+                    <input type="text" id="category" name="category" class="form-control" placeholder="Enter a new category" autocomplete="off" aria-label="Text input with dropdown button">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"></button>
+                    <!-- Dropdown menu for category suggestions -->
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <!-- Loop through tasks to provide existing category list-->
+                        {% for task in tasks %}
+                            <li value="{{ task.category }}">
+                                <a class="dropdown-item" href="#" onclick="setCategory('{{ task.category }}')">
+                                    {{ task.category }}
+                                </a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                  </div>
+            </div>
+            <!-- Input Task -->
+            <div class="col-sm-6 mx-auto">
+                <label class="visually-hidden" for="task">Task</label>
+                <input type="text" class="form-control" id="task" name="task" placeholder="Enter a new task" autocomplete="off" required>
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <!-- Input Priority -->
+            <div class="col-sm-5 mx-auto">
+                <label class="visually-hidden" for="priority">Select Priority</label>
+                <select class="form-select" id="priority" name="priority" required>
+                    <option selected disabled>Priority</option>
+                    <option value="High">High</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Low">Low</option>
+                </select>
+            </div>
+
+            <!-- Input Timeframe -->
+            <div class="col-sm-7 mx-auto">
+                <label class="visually-hidden" for="timeframe">Possible Timeframe</label>
+                <select class="form-select" id="timeframe" name="timeframe" required>
+                    <option selected disabled>Possible Timeframe</option>
+                    <option value="Mon - Fri (morning)">Mon - Fri (morning)</option>
+                    <option value="Mon - Fri (noon)">Mon - Fri (noon)</option>
+                    <option value="Mon - Fri (evening)">Mon - Fri (evening)</option>
+                    <option value="Sat - Sun">Sat - Sun</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <!-- Specify date -->
+            <label for="date" class="col-sm-4 col-form-label text-end">Specify date and time if needed:</label>
+            <div class="col-sm-4 mx-auto">
+                <input type="date" class="form-control" id="date" name="date" autocomplete="off">
+            </div>
+
+            <!-- Specify TIME -->
+            <div class="col-sm-4 mx-auto">
+                <input type="time" class="form-control" id="time" name="time" autocomplete="off">
+            </div>
+        </div>
+
+        <div class="mb-3 row">
+            <!-- Submit -->
+            <div class="col-sm-4 mx-auto">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+</div>
 
 
 
