@@ -273,12 +273,11 @@ def register():
         # Redirect user to home page:
         return redirect("/")
 
-        # Text in the head for the HTML template:
-            welcome_message_p = "To register e"
-
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("register.html")
+        # Text in the head for the HTML template:
+        welcome_message_p = "To register in the TODOapp, please enter your username and password"
+        return render_template("register.html", welcome_message_p=welcome_message_p)
 
 
 
