@@ -13,17 +13,35 @@ The application provides an intuitive interface.
 
 ## GETTING STARTED
 -**PREREQUISITES**
-ENSURE YOU HAVE THE NECESSARY DEPENDENCIES INSTALLED
-## USAGE:
+Ensure you have the necessary dependencies installed:
+- Python
+- Flask
+- Bootstrap
+- SQLite (or another preferred database)
+
+-**Installation**
+1. Navigate progect directory
+
+'''bash
+cd todoapp
+'''
+
+2. Install dependencies:
+
+'''bash
+pip instal -r requirements.txt
+'''
+
+-**Usage**
 
 Start the Flask application:
 '''bash
 flask run
 
-#### FEATURES:
 
-##### PLANNING:
+### FEATURES:
 
+#### PLANNING:
 The Planning section serves as starting point for users to initiate their planning process.
 At the top of the screen, a user-friendly form allows users to seamlessly add new tasks to
 their list. This form collects various details about the task, includding:
@@ -47,7 +65,7 @@ window, confirming whether the user wishes to delete the task. If confirmed, the
 removed from the list.
 
 
-##### AGENDA:
+#### AGENDA:
 The Agenda section serves as a dedicated space for users to view their scheduled meetings and
 appointments. Also it provides a focused perspective of the tasks that the user mentioned as
 high priority tasks. So that user can concentrate on the most important tasks.
@@ -67,8 +85,7 @@ wants to concentrate on now. Users can manage these tasks similarly to the sched
 utilizing checkboxes for completion and a delete button for removal.
 
 
-##### COMPLETED:
-
+#### COMPLETED:
 The Completed section provides users a retrospective view of tasks that habe been successfully
 accomplished. Tasks that were marked as completed from the Planning or Agenda sections are
 automatically moved to this dedicated area.
@@ -83,8 +100,7 @@ Similar to the Planning and Agenda sections, a delete button is available on the
 completed task. Clicking this button removes the completed task from the records without the pop-up
 window.
 
-##### USER AUTHENTICATION AND REGISTRATION
-
+#### USER AUTHENTICATION AND REGISTRATION
 The application includes user authentication functionalities with the following features:
 login, logout, and user registration.
 
@@ -101,6 +117,7 @@ session, ensuring the protection of personal information and preventing anauthor
 The registration page allows new users to create an account by providing a unique username and a
 secure password. The registration form includes password strength rewuirements, ensuring users
 create robust and secure passwords.
+
 
 ##### DATABASE STRUCTURE
 The application employs a SQL database to store and manage user data and task information.
@@ -123,7 +140,8 @@ The tables are designed to facilitate efficient data retrieval and storage.
 -**Priority** Priority level of the task
 -**Completion** Completion status of the task
 
-This structured database layout ensures data integrity, allowing the application to effectively manage user-specific tasks and related details
+This structured database layout ensures data integrity, allowing the application to effectively
+manage user-specific tasks and related details
 
 
 
