@@ -144,10 +144,10 @@ def agenda():
     appointments = db.execute("SELECT id, category, task, completion, date, time FROM tasks WHERE users_id =? AND completion = 0 AND (date IS NOT NULL AND date != '' OR time IS NOT NULL AND time != '')", users_id)
 
     # Get user's high priority tasks for weekdays-planning  html table:
-    weekdays = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
+    weekdays = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High' AND timeframe != 'Sat - Sun'", users_id)
 
     # Get user's high priority tasks for weekends-planning  html table:
-    weekends = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High'", users_id)
+    weekends = db.execute("SELECT id, category, task, completion, timeframe FROM tasks WHERE users_id =? AND completion = 0 AND priority = 'High' AND timeframe == 'Sat - Sun'", users_id)
 
     # Text in the head of the HTML template:
     welcome_message_h1 = " MY TASKS "
