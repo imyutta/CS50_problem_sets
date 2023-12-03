@@ -38,6 +38,7 @@ def after_request(response):
     return response
 
 
+
 @app.route("/", methods=["GET", "POST"])
 @login_required
 def index():
@@ -54,6 +55,7 @@ def index():
 
     # Render the HTML template with data to display:
     return render_template("index.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="planning")
+
 
 
 @app.route("/add_task", methods=["POST"])
@@ -79,6 +81,7 @@ def add_task():
     return redirect("/")
 
 
+
 @app.route("/update_task_status/<int:task_id>/<int:completion_value>", methods=["POST"])
 @login_required
 def update_task_status(task_id, completion_value):
@@ -93,6 +96,7 @@ def update_task_status(task_id, completion_value):
     return jsonify({"success": True})
 
 
+
 @app.route("/delete_task/<int:task_id>", methods=["DELETE"])
 @login_required
 def delete_task(task_id):
@@ -105,6 +109,7 @@ def delete_task(task_id):
 
     # Redirect back to the index page after deleting the task:
     return jsonify({"success": True})
+
 
 
 @app.route("/agenda", methods=["GET", "POST"])
@@ -131,6 +136,7 @@ def agenda():
     return render_template("agenda.html", appointments=appointments, weekdays = weekdays, weekends=weekends, welcome_message_h1 = welcome_message_h1, welcome_message_p = welcome_message_p, current_page="agenda")
 
 
+
 @app.route("/completed", methods=["GET", "POST"])
 @login_required
 def completed():
@@ -138,12 +144,13 @@ def completed():
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
-    # Get user's goals data:
+    # Get user's completed tasks data:
     tasks = db.execute("SELECT id, category, task, completion FROM tasks WHERE users_id =? AND completion = 1", users_id)
 
-    # Text in the head
+    # Text in the head for the HTML template:
     welcome_message_h1 = "History "
 
+    # Render the HTML template with data to display:
     return render_template("completed.html", tasks=tasks, welcome_message_h1 = welcome_message_h1, current_page="completed")
 
 
@@ -184,6 +191,7 @@ def login():
         return render_template("login.html")
 
 
+
 @app.route("/logout")
 def logout():
     """Log user out"""
@@ -193,6 +201,7 @@ def logout():
 
     # Redirect user to login form:
     return redirect("/")
+
 
 
 @app.route("/register", methods=["GET", "POST"])
