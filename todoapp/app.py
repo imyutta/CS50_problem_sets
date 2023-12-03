@@ -209,7 +209,9 @@ def login():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("login.html")
+        # Text in the head for the HTML template:
+        welcome_message_p = "To login, please enter username and password"
+        return render_template("login.html", welcome_message_p=welcome_message_p)
 
 
 
@@ -324,4 +326,6 @@ def password_change():
 
     # User reached route via GET (as by clicking a link or via redirect)
     else:
-        return render_template("password_change.html")
+        # Text in the head for the HTML template:
+        welcome_message_p = "To change your password, please enter the following data"
+        return render_template("password_change.html", welcome_message_p=welcome_message_p)
