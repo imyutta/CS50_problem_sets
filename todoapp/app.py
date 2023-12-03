@@ -273,6 +273,9 @@ def register():
         # Redirect user to home page:
         return redirect("/")
 
+        # Text in the head for the HTML template:
+            welcome_message_p = "To register e"
+
     # User reached route via GET (as by clicking a link or via redirect)
     else:
         return render_template("register.html")
