@@ -32,7 +32,7 @@
                             </li>
                         {% endfor %}
                     </ul>
-                  </div>
+                </div>
             </div>
             <!-- Input Task -->
             <div class="col-sm-6 mx-auto">
@@ -57,7 +57,9 @@
 
             <!-- Input Timeframe -->
             <div class="col-sm-7 mx-auto">
+                <!-- Label for selecting a possible timeframe -->
                 <label class="visually-hidden" for="timeframe">Possible Timeframe</label>
+                <!-- Dropdown for selecting a possible timeframe -->
                 <select class="form-select" id="timeframe" name="timeframe" required>
                     <option selected disabled>Possible Timeframe</option>
                     <option value="Mon - Fri (morning)">Mon - Fri (morning)</option>
@@ -68,19 +70,22 @@
             </div>
         </div>
 
+        <!-- Specify date and time if needed -->
         <div class="mb-3 row">
-            <!-- Specify date -->
+            <!-- Label for specifying the date -->
             <label for="date" class="col-sm-4 col-form-label text-end">Specify date and time if needed:</label>
+            <!-- Input field for specifying the date -->
             <div class="col-sm-4 mx-auto">
                 <input type="date" class="form-control" id="date" name="date" autocomplete="off">
             </div>
 
-            <!-- Specify TIME -->
+            <!-- Input field for specifying the TIME -->
             <div class="col-sm-4 mx-auto">
                 <input type="time" class="form-control" id="time" name="time" autocomplete="off">
             </div>
         </div>
 
+        
         <div class="mb-3 row">
             <!-- Submit -->
             <div class="col-sm-4 mx-auto">
