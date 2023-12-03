@@ -115,7 +115,7 @@
         {% for task in tasks %}
             <tr id="todo_row_{{ task.id }}" >
                 <!-- Goal Category -->
-                <td class="align-middle ">
+                <td class="align-middle " style="text-align: left;">
                     <!-- Task completion checkbox and label -->
                     <div class="d-flex align-items-center " >
                         <div class=" col-sm-2 d-flex justify-content-center align-items-center form-check" >
@@ -141,7 +141,7 @@
                 </td>
 
                 <!-- Tasks Details -->
-                <td>{{ task.task }}</td>
+                <td style="text-align: left;">{{ task.task }}</td>
                 <td>{{ task.timeframe if (task.date is none or task.date =='') and task.timeframe is not none else '' }}</td>
                 <td>{{ task.date or '' }}</td>
                 <td>{{ task.time or '' }}</td>
