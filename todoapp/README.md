@@ -1,7 +1,7 @@
 # TODOAPP
 ## VIDEO DEMO: <>
 ### DESCRIPTION:
-ToDo app is a web application that allows users to manage their tasks, and keep track of completed tasks.
+ToDo app is a comprehensive web application designed to help users organize their tasks, and keep track of completed tasks.
 
 #### SCREENSHOTS:
 ![Pplanning]
