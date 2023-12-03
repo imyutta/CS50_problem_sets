@@ -71,11 +71,9 @@ def add_task():
     time = request.form.get("time")
     priority = request.form.get("priority")
 
-
     # Insert the new task into the database:
     db.execute("INSERT INTO tasks (users_id, category, task, timeframe, date, time, priority) VALUES (?, ?, ?, ?, ?, ?, ?)",
               users_id, category, task, timeframe, date, time, priority)
-
 
     # Redirect back to the index page after adding the goal:
     return redirect("/")
