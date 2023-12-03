@@ -50,7 +50,7 @@ def index():
     tasks = db.execute("SELECT * FROM tasks WHERE users_id =? AND completion = 0 ORDER BY category", users_id)
 
     # Get tasks categories (distinct list):
-    task_categories = db.execute("SELECT distinct category FROM tasks WHERE users_id =? ORDER BY ", users_id)
+    task_categories = db.execute("SELECT distinct category FROM tasks WHERE users_id =? ORDER BY category COLLATE NOCASE", users_id)
 
     # Text in the head for the HTML template:
     welcome_message_h1 = "Chart a course toward\n your loftiest goals "
