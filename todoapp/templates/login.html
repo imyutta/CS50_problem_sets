@@ -5,13 +5,19 @@
 {% endblock %}
 
 {% block main %}
+    <!-- Login form -->
     <form action="/login" method="post">
+        <!-- Input field for the username -->
         <div class="mb-3">
             <input autocomplete="off" autofocus class="form-control mx-auto w-auto bg-white" id="username" name="username" placeholder="Username" type="text">
         </div>
+
+        <!-- Input field for the password -->
         <div class="mb-3">
             <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
         </div>
+
+        <!-- Button to submit the login form -->
         <button class="btn btn-primary" type="submit">Log In</button>
     </form>
 {% endblock %}
