@@ -196,8 +196,10 @@
         <!-- Subheading for Weekends -->
         WEEKENDS:
     </span>
+    <!-- Table for Weekend Tasks -->
     <table class="table  mt-5">
         <thead>
+            <!-- Table header columns for Weekend Tasks -->
             <tr>
                 <th> Goal Category</th>
                 <th> Task </th>
@@ -207,9 +209,12 @@
         </thead>
         <tbody>
 
-            <!-- Display existing tasks in the table -->
+            <!-- Display existing tasks for weekends in the table -->
             {% for task in weekends %}
                 <tr id="todo_row_{{ task.id }}" >
+                    <!-- Table row for each weekend task -->
+
+                    <!-- Goal Category column with checkbox for completion -->
                     <td class="align-middle ">
                         <div class="d-flex align-items-center " >
                             <div class=" col-sm-2 d-flex justify-content-center align-items-center form-check" >
@@ -225,21 +230,25 @@
                                         data-completion="{{ task.completion}}"
                                         {% if task.completion == 1 %}checked{% endif %}
                                         onchange="updateTaskStatus(this)">
-
                             </div>
+                            <!-- Label for the Goal Category -->
                             <label class="form-check-label ms-5" for="completion_{{ task.id }}">
                                 {{ task.category }}
                             </label>
                         </div>
                     </td>
 
-
+                    <!-- Task column -->
                     <td class="align-middle ">{{ task.task }}</td>
+
+                    <!-- Timeframe column -->
                     <td>
                         <div>
                             {{ task.timeframe or '' }}
                         </div>
                     </td>
+
+                    <!-- Column for removing the task -->
                     <td>
                         <!-- Button to open the delete confirmation modal -->
                         <button class="btn-close" data-bs-toggle="modal" data-bs-target="#deleteConfirmationModal_{{ task.id }}"></button>
@@ -264,42 +273,45 @@
                             </div>
                         </div>
                     </td>
-
                 </tr>
             {% endfor %}
         </tbody>
     </table>
 
+
+    <!-- JavaScript script for updating task status and deleting tasks -->
     <script>
         function updateTaskStatus(checkbox) {
             const taskId = checkbox.getAttribute("data-task-id");
             const newCompletionValue = checkbox.checked ? 1 : 0;
 
-            // Отправляем асинхронный запрос на сервер
+            // Send asynchronous request to the server
             fetch(`/update_task_status/${taskId}/${newCompletionValue}`, {
                 method: 'POST',
             }) .then(response => {
                 if (response.ok) {
-                    // Если запрос успешен, скрываем задачу на клиентской стороне
+                    // If the request is successful, hide the task on the client side
                     const row = document.querySelector(`#todo_row_${taskId}`);
                     row.style.display = 'none';
             }
             });
         }
 
-        // Delete task
+        // Function to delete a completed task
         function delete_task(taskId) {
 
-            // Отправляем асинхронный запрос на сервер
+            // Send asynchronous request to the server
             fetch(`/delete_task/${taskId}`, {
                 method: 'DELETE',
             });
+
+            // Remove the corresponding row from the table
             const row = document.querySelector(`#todo_row_${taskId}`);
             row.remove();
         }
     </script>
 
-
+    <!-- Image at the bottom of the page -->
     <img src="/static/agenda.png" class="wide-image">
 {% endblock %}
 
