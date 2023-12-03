@@ -5,7 +5,7 @@ ToDo app is a comprehensive web application designed to help users organize thei
 The application provides an intuitive interface.
 
 #### FEATURES:
-Planning
+PLANNING
 
 The Planning section serves as starting point for users to initiate their planning process.
 At the top of the screen, a user-friendly form allows users to seamlessly add new tasks to
@@ -28,6 +28,9 @@ from the list. Users can reviev their completed tasks in the "Completed" tab.
 On the right side of each task, there is a delete button. Clicking this button triggers a pop-up
 window, confirming whether the user wishes to delete the task. If confirmed, the task is promptly
 removed from the list.
+
+
+COMPLETED
 
 #### SCREENSHOTS:
 ![Pplanning]
