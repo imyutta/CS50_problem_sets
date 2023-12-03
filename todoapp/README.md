@@ -34,7 +34,23 @@ removed from the list.
 
 ##### AGENDA:
 The Agenda section serves as a dedicated space for users to view their scheduled meetings and
-appointments. Also it provides an overview of
+appointments. Also it provides a focused perspective of the tasks that the user mentioned as
+high priority tasks. So that user can concentrate on the most important tasks.
+
+The Agenda is divided into two main categories: "Scheduled Meetings and Appointments" and
+"Weekly tasks". Each category is presented in a table format for clarity and ease of use.
+
+-**Scheduled Meetings and Appointments:**
+This section lists tasks that are time-specific, such as meetings or appointments. Each task
+is assosiated with a category. Users can mark these tasks as completed using the provided
+checkboxes and can delete them when necesary.
+
+-**Weekly Tasks:**
+The Weekly tasks section is futher divided into two subcategories: Weekdays and Weekends.
+It displays tasks that the user marked as high priority tasks. The tasks that the user
+wants to concentrate on now. Users can manage these tasks similarly to the scheduled events,
+utilizing checkboxes for completion and a delete button for removal.
+
 
 ##### COMPLETED:
 
