@@ -24,7 +24,7 @@
                     <!-- Dropdown menu for category suggestions -->
                     <ul class="dropdown-menu dropdown-menu-end">
                         <!-- Loop through tasks to provide existing category list-->
-                        {% for task in tasks %}
+                        {% for task in task_categories %}
                             <li value="{{ task.category }}">
                                 <a class="dropdown-item" href="#" onclick="setCategory('{{ task.category }}')">
                                     {{ task.category }}
@@ -41,9 +41,11 @@
             </div>
         </div>
 
+        <!-- Priority selection -->
         <div class="mb-3 row">
             <!-- Input Priority -->
             <div class="col-sm-5 mx-auto">
+                <!-- Priority dropdown -->
                 <label class="visually-hidden" for="priority">Select Priority</label>
                 <select class="form-select" id="priority" name="priority" required>
                     <option selected disabled>Priority</option>
