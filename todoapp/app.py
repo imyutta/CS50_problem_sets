@@ -62,6 +62,8 @@ def index():
 
 
 
+
+
 @app.route("/add_task", methods=["POST"])
 @login_required
 def add_task():
@@ -95,6 +97,21 @@ def update_task_status(task_id, completion_value):
 
     # Change the completion status in the database:
     db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", completion_value, users_id, task_id)
+
+    # Redirect back to the index page after updating the task status:
+    return jsonify({"success": True})
+
+
+
+@app.route("/update_task_priority/<int:task_id>/<string:priority>", methods=["POST"])
+@login_required
+def update_task_priority(task_id, priority):
+    """Update task priority"""
+    # Find what user is currently logged in:
+    users_id = session["user_id"]
+
+    # Change the priority in the database:
+    db.execute("UPDATE tasks SET priority = ? WHERE users_id = ? AND id = ?", priority, users_id, task_id)
 
     # Redirect back to the index page after updating the task status:
     return jsonify({"success": True})
