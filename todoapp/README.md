@@ -32,6 +32,9 @@ window, confirming whether the user wishes to delete the task. If confirmed, the
 removed from the list.
 
 
+##### AGENDA:
+The Agenda section serves as a dedicated space
+
 ##### COMPLETED:
 
 The Completed section provides users a retrospective view of tasks that habe been successfully
