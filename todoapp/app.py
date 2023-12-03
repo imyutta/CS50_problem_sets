@@ -1,3 +1,4 @@
+# Import necessary modules and libraries:
 import os
 import sqlite3
 import re
@@ -8,11 +9,13 @@ from flask_session import Session
 from tempfile import mkdtemp
 from werkzeug.security import check_password_hash, generate_password_hash
 
+# Import helper functions from helpers.py
 from helpers import apology, login_required
 
+# Import datetime module:
 from datetime import datetime
 
-# Configure application
+# Configure the Flask application:
 app = Flask(__name__)
 
 # Configure session to use filesystem (instead of signed cookies)
@@ -23,6 +26,9 @@ Session(app)
 # Configure CS50 Library to use SQLite database
 db = SQL("sqlite:///todoapp.db")
 
+
+# Flask after_request callback (executed after each request)
+# Insures that responses are not cached:
 @app.after_request
 def after_request(response):
     """Ensure responses aren't cached"""
