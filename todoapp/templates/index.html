@@ -234,7 +234,7 @@
             if (response.ok) {
                 // If the request is successful, update the task priority on the client side:
                 button.textContent = newPriority;
-                button.toggleClass('btn-success')
+                button.classList.toggle('btn-success')
             }
         });
     }
