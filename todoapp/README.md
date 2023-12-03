@@ -33,7 +33,8 @@ removed from the list.
 
 
 ##### AGENDA:
-The Agenda section serves as a dedicated space
+The Agenda section serves as a dedicated space for users to view their scheduled meetings and
+appointments. Also it provides an overview of
 
 ##### COMPLETED:
 
