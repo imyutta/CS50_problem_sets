@@ -4,13 +4,6 @@
 ToDo app is a comprehensive web application designed to help users organize their daily tasks, as well as keep track of completed tasks.
 The application provides an intuitive interface.
 
-## SCREENSHOTS:
-![Planning](/static/planning_screenshort.png)
-![DailyAgenda](/static/agenda_screenshort.png)
-![Completed](/static/completed_screenshort.png)
-![Login](/static/login_screenshort.png)
-![Register](/static/register_screenshort.png)
-
 ## GETTING STARTED
 -**PREREQUISITES**
 Ensure you have the necessary dependencies installed:
