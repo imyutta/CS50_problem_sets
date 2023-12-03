@@ -82,15 +82,14 @@ def add_task():
 @app.route("/update_task_status/<int:task_id>/<int:completion_value>", methods=["POST"])
 @login_required
 def update_task_status(task_id, completion_value):
-    """Check the task as completed"""
+    """Update task status"""
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
-    # Change the data in the database:
+    # Change the completion status in the database:
     db.execute("UPDATE tasks SET completion = ? WHERE users_id = ? AND id = ?", completion_value, users_id, task_id)
 
-
-    # Redirect back to the index page after adding the goal:
+    # Redirect back to the index page after updating the task status:
     return jsonify({"success": True})
 
 
@@ -101,11 +100,12 @@ def delete_task(task_id):
     # Find what user is currently logged in:
     users_id = session["user_id"]
 
-    # Change the data in the database:
+    # Delete the task from the database:
     db.execute("DELETE FROM tasks WHERE users_id = ? AND id = ?", users_id, task_id)
 
-    # Redirect back to the index page after adding the goal:
+    # Redirect back to the index page after deleting the task:
     return jsonify({"success": True})
+
 
 @app.route("/agenda", methods=["GET", "POST"])
 @login_required
