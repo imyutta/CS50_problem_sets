@@ -458,4 +458,5 @@ coordination_skills = ["Strategic Project Coordination", "Proactive Solutions Se
 
 # Print a creative message
 print("LinkedIn Profile: Skills Showcase")
-print("\n".join([f"print('Skilled in {skill}')" for skill in engineering_skills + qa_general_skills + qa_specific_skills + coordination_skills]))
+print("\n".join([f"print('Skilled in {skill}')" for skill in engineering_skills + qa_general_skills + qa_specific_skills
+                 + coordination_skills]))
