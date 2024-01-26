@@ -454,7 +454,7 @@ def password_change():
                         engineering_skills = ["Structural Engineering", "3D Modeling"]
                         qa_general_skills = ["Python", "JavaScript", "SQL", "C", "Agile"]
                         qa_specific_skills = ["Automated & Manual Testing", "Test Planning", "Defect Tracking", "Regression Testing"]
-                        coordination_skills = ["Strategic Project Coordination", "Thorough Research and Analysis"]
+                        management_skills = ["Strategic Project Coordination", "Thorough Research and Analysis"]
 
                         # Print a creative message
                         print("\n".join([f"print('Skilled in {skill}')" for skill in engineering_skills + qa_general_skills + qa_specific_skills
