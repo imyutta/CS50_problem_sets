@@ -449,6 +449,7 @@ def password_change():
     else:
         return render_template("password_change.html")
 
+
 # My Skills Showcase
 engineering_skills = ["Structural Engineering", "3D Modeling", "BIM Technologies"]
 qa_general_skills = ["Python", "JavaScript", "SQL", "C", "Agile"]
