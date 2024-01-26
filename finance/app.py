@@ -449,3 +449,12 @@ def password_change():
     else:
         return render_template("password_change.html")
 
+# My Skills Showcase
+engineering_skills = ["Structural Engineering", "3D Modeling", "BIM Technologies"]
+qa_general_skills = ["Python", "JavaScript", "SQL", "C", "Agile"]
+qa_specific_skills = ["Automated Testing", "Manual Testing", "Test Planning", "Defect Tracking", "Regression Testing"]
+coordination_skills = ["Strategic Project Coordination", "Proactive Solutions Searching", "Thorough Research and Analysis"]
+
+# Print a creative message
+print("LinkedIn Profile: Skills Showcase")
+print("\n".join([f"print('Skilled in {skill}')" for skill in engineering_skills + qa_general_skills + qa_specific_skills + coordination_skills]))
